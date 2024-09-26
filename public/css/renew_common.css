@@ -11,10 +11,16 @@ ul, ol {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color:#272727;
+}
+
 p {
     margin:0px;
     padding:0px;
 }
+
 
 /* common */
 
@@ -33,7 +39,6 @@ body {
 
 
 
-
 /* header */
 
 
@@ -46,4 +51,5 @@ body {
 
 
 
-/*    */
+/*  footer  */
+

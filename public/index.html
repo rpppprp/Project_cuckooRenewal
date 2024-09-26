@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>쿠쿠 리뉴얼</title>
+        <!-- style sheets -->
+         <link rel="stylesheet" href="./css/renew_common.css">
     </head>
     <body>    
         <!-- 검색창 모달 -->
@@ -13,9 +15,11 @@
                     <form class="rn-search-form">
                         <input type="rn-search-input" placeholder="검색어를 입력해 주세요." maxlength="16">
                         <button class="rn-search-del">
-                            <svg><use xlink:href="images/sprite-sheet.svg#arrow-right"/></svg>
+                            <svg class="icon"><use xlink:href="images/sprite-sheet.svg#close-x"/></svg>
                         </button>
-                        <button class="rn-search-icon"></button>
+                        <button class="rn-search-icon">
+                            <svg class="icon"><use xlink:href="images/sprite-sheet.svg#search-icon"/></svg>
+                        </button>
                     </form>
                     <div class="search-keyword-wrap">
                         <div class="recent_keyword-wrap">
@@ -126,10 +130,17 @@
                                 <li>9. 레스티노 매트리스</li>
                                 <li>10. 리네이쳐 안마의자</li>
                             </ul>
+                            <span>
+                                <svg class="icon"><use xlink:href="images/sprite-sheet.svg#search-icon"/></svg>
+                            </span>
                         </div>
                         <div class="icon-wrap">
-                            <a class="cart-icon"></a>
-                            <a class="user-icon"></a>
+                            <a class="cart-icon">
+                                <svg class="icon"><use xlink:href="images/sprite-sheet.svg#cart-icon"/></svg>
+                            </a>
+                            <a class="user-icon">
+                                <svg class="icon"><use xlink:href="images/sprite-sheet.svg#user-icon"/></svg>
+                            </a>
                         </div>
                     </div>                    
                 </div>
@@ -146,7 +157,12 @@
                         <li class="nav-link"><a class="nav-link_a" href="">스토리</a></li>
                     </ul>
                     <div class="brand-gnb">
-                        <a class="brand-link">브랜드관</a>
+                        <a class="brand-link">
+                            브랜드관
+                            <span class="icon dropdown-icon">
+                                <svg class="icon"><use xlink:href="images/sprite-sheet.svg#arrow-bottom"/></svg>
+                            </span>
+                        </a>
                         <ul class="brand-lnb">
                             <li><a href="https://nelloshop.co.kr/" target="_blank">넬로</a></li>
                             <li><a href="#" target="_blank">레스티노</a></li>
@@ -155,7 +171,12 @@
                     </div>
                     <ul class="nav-etc">
                         <li>
-                            <a class="compant-btn">회사소개</a>
+                            <a class="compant-btn">
+                                회사소개
+                                <span class="icon dropdown-icon">
+                                    <svg class="icon"><use xlink:href="images/sprite-sheet.svg#arrow-bottom"/></svg>
+                                </span>
+                            </a>
                             <ul class="company-lnb">
                                 <li><a href="/company/cuckooGuideCuckooIntroduce">쿠쿠소개</a></li>
                                 <li><a href="https://recruit.cuckoo.co.kr/recruit/Main.do" target="_blank">채용정보</a></li>
@@ -206,49 +227,65 @@
                         <ul class="quick-icon-list">
                             <li>
                                 <a class="quick-icon quick-menu01">
-                                    <div class="icon-bg"></div>
+                                    <div class="icon-bg">
+                                        <svg class="icon"><use xlink:href="images/sprite-sheet.svg#q-icon01"/></svg>
+                                    </div>
                                     <div class="quick-txt"></div>
                                 </a>
                             </li>
                             <li>
                                 <a class="quick-icon quick-menu02">
-                                    <div class="icon-bg"></div>
+                                    <div class="icon-bg">
+                                        <svg class="icon"><use xlink:href="images/sprite-sheet.svg#q-icon02"/></svg>
+                                    </div>
                                     <div class="quick-txt"></div>                                
                                 </a>
                             </li>
                             <li>
                                 <a class="quick-icon quick-menu03">
-                                    <div class="icon-bg"></div>
+                                    <div class="icon-bg">
+                                        <svg class="icon"><use xlink:href="images/sprite-sheet.svg#q-icon03"/></svg>
+                                    </div>
                                     <div class="quick-txt"></div>                                
                                 </a>
                             </li>
                             <li>
                                 <a class="quick-icon quick-menu04">
-                                    <div class="icon-bg"></div>
+                                    <div class="icon-bg">
+                                        <svg class="icon"><use xlink:href="images/sprite-sheet.svg#q-icon04"/></svg>
+                                    </div>
                                     <div class="quick-txt"></div>                                
                                 </a>
                             </li>
                             <li>
                                 <a class="quick-icon quick-menu05">
-                                    <div class="icon-bg"></div>
+                                    <div class="icon-bg">
+                                        <svg class="icon"><use xlink:href="images/sprite-sheet.svg#q-icon05"/></svg>
+                                    </div>
                                     <div class="quick-txt"></div>                                
                                 </a>
                             </li>
                             <li>
                                 <a class="quick-icon quick-menu06">
-                                    <div class="icon-bg"></div>
+                                    <div class="icon-bg">
+                                        <svg class="icon"><use xlink:href="images/sprite-sheet.svg#q-icon06"/></svg>
+                                    </div>
                                     <div class="quick-txt"></div>                                
                                 </a>
                             </li>
                             <li>
                                 <a class="quick-icon quick-menu07">
-                                    <div class="icon-bg"></div>
+                                    <div class="icon-bg">
+                                        <svg class="icon"><use xlink:href="images/sprite-sheet.svg#q-icon07"/></svg>
+                                    </div>
                                     <div class="quick-txt"></div>                                
                                 </a>
                             </li>
                             <li>
                                 <a class="quick-icon quick-menu08">
-                                    <div class="icon-bg"></div>
+                                    <div class="icon-bg">
+                                        <svg class="icon"><use xlink:href="images/sprite-sheet.svg#q-icon08"/></svg>
+                                    </div>
                                     <div class="quick-txt"></div>                                
                                 </a>
                             </li>
@@ -511,7 +548,7 @@
                     </div>
                     <div class="daily-product-wrap">
                         <ul class="daily-product-track">
-                            <li class="daily-product">
+                            <li class="daily-product-item">
                                 <div class="daily-product-thum"></div>
                                 <div class="daily-product-info">
                                     <p class="d-product-name">인스퓨어 STEAM 100 바리스타</p>
@@ -532,7 +569,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="daily-product">
+                            <li class="daily-product-item">
                                 <div class="daily-product-thum"></div>
                                 <div class="daily-product-info">
                                     <p class="d-product-name">리네이처 안마의자</p>
@@ -553,7 +590,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="daily-product">
+                            <li class="daily-product-item">
                                 <div class="daily-product-thum"></div>
                                 <div class="daily-product-info">
                                     <p class="d-product-name">프리미엄 듀얼인버터 창문형 에어컨</p>
@@ -574,7 +611,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="daily-product">
+                            <li class="daily-product-item">
                                 <div class="daily-product-thum"></div>
                                 <div class="daily-product-info">
                                     <p class="d-product-name">파워클론 로봇청소기R 스테이션 물걸레형</p>
@@ -976,7 +1013,7 @@
                 <!-- 회사정보 -->
                 <article class="company-address">
                     <ul class="holdings-info">
-                        <li><img src="" alt="쿠쿠 홀딩스"></li>
+                        <li><svg class="icon cc-logo" alt="쿠쿠 홀딩스"><use xlink:href="images/sprite-sheet.svg#cuckoo-holdings-logo"/></svg></li>
                         <li>대표이사 : 구자신</li>
                         <li>본사 : 경상남도 양산시 유산공단 2길 14</li>
                         <li>사업자등록번호 : <a>621-81-02895</a></li>
@@ -984,7 +1021,7 @@
                         <li>CopyrighyⓒCuckoo Holdings All Rights Reserved.</li>
                     </ul>
                     <ul class="electronics-info">
-                        <li><img src="" alt="쿠쿠 일레트로닉스"></li>
+                        <li><svg class="icon cc-logo" alt="쿠쿠 일레트로닉스"><use xlink:href="images/sprite-sheet.svg#cuckoo-eletronics-logo" clsss="cc-logo"/></svg></li>
                         <li>대표이사 : 구본학</li>
                         <li>본사 : 경상남도 양산시 유산공단 2길 14</li>
                         <li>사업자등록번호 : <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=3378700918" target="_blank">337-87-00918</a></li>
@@ -995,7 +1032,7 @@
                         <li>CopyrighyⓒCuckoo Eletronics All Rights Reserved.</li>
                     </ul>
                     <ul class="homesys-info">
-                        <li><img src="" alt="쿠쿠 홈시스"></li>
+                        <li><svg class="icon cc-logo" alt="쿠쿠 홈시스"><use xlink:href="images/sprite-sheet.svg#cuckoo-homesys-logo"/></svg></li>
                         <li>대표이사 : 구본학</li>
                         <li>본사 : 경기도 시흥시 엠티브이북로 349</li>
                         <li>사업자등록번호 : <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=5908700993" target="_blank">590-87-00993</a></li>
