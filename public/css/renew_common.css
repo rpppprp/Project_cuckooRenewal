@@ -22,6 +22,38 @@ p {
 }
 
 
+#icon svg polyline, path {
+    fill:inherit;
+    stroke:inherit;
+}
+
+
+div {
+    box-sizing: border-box;
+}
+
+
+/* root */
+
+:root {
+    --color-primary: #ff5b53;
+    --color-secondary: #f3332b;
+    --color-txt : #272727;
+    --color-dark: #585856;
+    --color-darkgray : #767676;
+    --color-gray: #f7f7f7;
+    --color-line: #eaeaea;
+    --font-normal : 16px;
+    --font-small: 14px;
+    --font-mid: 20px;
+    --font-big : 32px;
+    --radius: 16px;
+    --obj-size-small: 28px;
+    --obj-size-mid: 32px;
+    --obj-size-big: 40px;
+}
+
+
 /* common */
 
 
@@ -36,6 +68,14 @@ html, body {
 body {
     background:#fff;
 }
+
+
+.icon-svg {
+    width:0px;
+    height:0px;
+}
+
+
 
 
 
