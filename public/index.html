@@ -27,10 +27,10 @@
                     <form class="rn-search-form">
                         <input type="rn-search-input" placeholder="검색어를 입력해 주세요." maxlength="16">
                         <button class="rn-search-del">
-                            <svg class="icon"><use xlink:href="#close-x"/></svg>
+                            <svg class="icon search-del-icon"><use xlink:href="#close-x"/></svg>
                         </button>
                         <button class="rn-search-icon">
-                            <svg class="icon"><use xlink:href="#search-icon"/></svg>
+                            <svg class="icon search-icon"><use xlink:href="#search-icon"/></svg>
                         </button>
                     </form>
                     <div class="search-keyword-wrap">
@@ -40,7 +40,7 @@
                                 <span class="keyword-item">
                                     밥솥
                                     <a class="keyword-delete">
-                                        <svg class="icon"><use xlink:href="#close-x"/></svg>
+                                        <svg class="icon keyword-delete-icon"><use xlink:href="#close-x"/></svg>
                                     </a>
                                 </span>
                                 <p class="no-keyword">최근 검색한 단어가 없습니다.</p>
@@ -120,16 +120,28 @@
         <!-- 상단 탑배너 -->
         <div class="rn-top">
             <div class="top-wrap">
-                <div class="top-txt"></div>
+                <div class="top-txt-track">
+                    <p class="top-txt-item">
+                        1초 회원가입 시 전 상품 추가 할인 쿠폰 증정
+                    </p>
+                </div>
+                <a class="close-top">
+                    <svg class="icon"><use xlink:href="#close-x"/></svg>
+                </a>
             </div>
         </div>
         <!-- // 상단 탑배너  -->
+         
         <!-- 헤더 -->
         <header id="rn-header" class="rn-header">
             <!-- 헤더 로고&아이콘 영역 -->
             <div class="rn-header-top">
                 <div class="rn-header-inner">
-                    <div class="logo-wrap"></div>
+                    <div class="logo-wrap">
+                        <a href="/">
+                            <svg class="icon logo"><use xlink:href="#cuckoo-logo"/></svg>
+                        </a>
+                    </div>
                     <div class="search-wrap">
                         <div class="search-form">
                             <ul class="search-slide popular-keyword">
@@ -144,7 +156,7 @@
                                 <li>9. 레스티노 매트리스</li>
                                 <li>10. 리네이쳐 안마의자</li>
                             </ul>
-                            <span>
+                            <span class="search-icon">
                                 <svg class="icon"><use xlink:href="#search-icon"/></svg>
                             </span>
                         </div>
@@ -159,7 +171,7 @@
                     </div>                    
                 </div>
             </div>
-            <!-- //헤더 로고&아이콘 영역 -->
+            <!-- // 헤더 로고&아이콘 영역 -->
             <!-- GNB -->
             <nav class="rn-gnb">
                 <div class="nav-inner">
@@ -1003,10 +1015,10 @@
         <footer id="rn-footer" class="rn-footer">
             <!-- 따라다니는 메뉴 -->
              <div class="floating-quick">
-                <button class="cs-btn">
+                <a class="cs-btn">
                     <svg class="icon"><use xlink:href="#cs-icon"/></svg>
                     빠른 상담
-                </button>
+                </a>
                 <div class="cs-btn-wrap">
                     <a class="cs-close">
                         <svg class="icon"><use xlink:href="#close-x"/></svg>
