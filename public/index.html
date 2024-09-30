@@ -27,10 +27,10 @@
                     <form class="rn-search-form">
                         <input type="rn-search-input" placeholder="검색어를 입력해 주세요." maxlength="16">
                         <button class="rn-search-del">
-                            <svg class="icon search-del-icon"><use xlink:href="#close-x"/></svg>
+                            <svg class="icon search-del-icon" aria-label="닫기"><use xlink:href="#close-x"/></svg>
                         </button>
                         <button class="rn-search-icon">
-                            <svg class="icon search-icon"><use xlink:href="#search-icon"/></svg>
+                            <svg class="icon search-icon" aria-label="검색"><use xlink:href="#search-icon"/></svg>
                         </button>
                     </form>
                     <div class="search-keyword-wrap">
@@ -40,7 +40,7 @@
                                 <span class="keyword-item">
                                     밥솥
                                     <a class="keyword-delete">
-                                        <svg class="icon keyword-delete-icon"><use xlink:href="#close-x"/></svg>
+                                        <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="#close-x"/></svg>
                                     </a>
                                 </span>
                                 <p class="no-keyword">최근 검색한 단어가 없습니다.</p>
@@ -126,7 +126,7 @@
                     </p>
                 </div>
                 <a class="close-top">
-                    <svg class="icon"><use xlink:href="#close-x"/></svg>
+                    <svg class="icon" aria-label="닫기"><use xlink:href="#close-x"/></svg>
                 </a>
             </div>
         </div>
@@ -139,7 +139,7 @@
                 <div class="rn-header-inner">
                     <div class="logo-wrap">
                         <a href="/">
-                            <svg class="icon logo"><use xlink:href="#cuckoo-logo"/></svg>
+                            <svg class="icon logo" aria-label="쿠쿠"><use xlink:href="#cuckoo-logo"/></svg>
                         </a>
                     </div>
                     <div class="search-wrap">
@@ -157,15 +157,15 @@
                                 <li>10. 리네이쳐 안마의자</li>
                             </ul>
                             <span class="search-icon">
-                                <svg class="icon"><use xlink:href="#search-icon"/></svg>
+                                <svg class="icon" aria-labe="찾기"><use xlink:href="#search-icon"/></svg>
                             </span>
                         </div>
                         <div class="icon-wrap">
                             <a class="cart-icon">
-                                <svg class="icon"><use xlink:href="#cart-icon"/></svg>
+                                <svg class="icon" aria-label="장바구니"><use xlink:href="#cart-icon"/></svg>
                             </a>
                             <a class="user-icon">
-                                <svg class="icon"><use xlink:href="#user-icon"/></svg>
+                                <svg class="icon" aria-label="마이페이지"><use xlink:href="#user-icon"/></svg>
                             </a>
                         </div>
                     </div>                    
@@ -232,17 +232,22 @@
             <section class="rn-visual">
                 <div class="rn-visual-wrap">
                     <div class="visual-track">
-                        <div class="visual-box"></div>
-                        <div class="visual-box"></div>
-                        <div class="visual-box"></div>
+                        <a class="visual-box img01"></a>
+                        <a class="visual-box"></a>
+                        <a class="visual-box"></a>
                     </div>
                     <div class="visual-nav">
+                        <div class="visual-nav-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <span class="visual-nav-progress-bar" style="width:80%"></span>
+                        </div>
                         <div class="visual-control">
                             <a class="prev-btn">
                                 <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
                             </a>
                             <p class="pager-txt">
-                                2/10
+                                <span class="now">2</span>
+                                <em>/</em>
+                                <span class="all">14</span>
                             </p>
                             <a class="next-btn">
                                 <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
@@ -268,7 +273,9 @@
                                     <div class="icon-bg">
                                         <svg class="icon"><use xlink:href="images/icon/quick_img.svg#q-icon01"/></svg>
                                     </div>
-                                    <div class="quick-txt"></div>
+                                    <div class="quick-txt">
+                                        혜택모음
+                                    </div>
                                 </a>
                             </li>
                             <li>
@@ -276,7 +283,9 @@
                                     <div class="icon-bg">
                                         <svg class="icon"><use xlink:href="images/icon/quick_img.svg#q-icon02"/></svg>
                                     </div>
-                                    <div class="quick-txt"></div>                                
+                                    <div class="quick-txt">
+                                        렌탈 기획전
+                                    </div>                                
                                 </a>
                             </li>
                             <li>
@@ -284,7 +293,9 @@
                                     <div class="icon-bg">
                                         <svg class="icon"><use xlink:href="images/icon/quick_img.svg#q-icon03"/></svg>
                                     </div>
-                                    <div class="quick-txt"></div>                                
+                                    <div class="quick-txt">
+                                        쿠쿠라이브
+                                    </div>                                
                                 </a>
                             </li>
                             <li>
@@ -292,7 +303,9 @@
                                     <div class="icon-bg">
                                         <svg class="icon"><use xlink:href="images/icon/quick_img.svg#q-icon04"/></svg>
                                     </div>
-                                    <div class="quick-txt"></div>                                
+                                    <div class="quick-txt">
+                                        쿠쿠플러스
+                                    </div>                                
                                 </a>
                             </li>
                             <li>
@@ -300,7 +313,9 @@
                                     <div class="icon-bg">
                                         <svg class="icon"><use xlink:href="images/icon/quick_img.svg#q-icon05"/></svg>
                                     </div>
-                                    <div class="quick-txt"></div>                                
+                                    <div class="quick-txt">
+                                        정기구독
+                                    </div>                                
                                 </a>
                             </li>
                             <li>
@@ -308,7 +323,9 @@
                                     <div class="icon-bg">
                                         <svg class="icon"><use xlink:href="images/icon/quick_img.svg#q-icon06"/></svg>
                                     </div>
-                                    <div class="quick-txt"></div>                                
+                                    <div class="quick-txt">
+                                        베스트 랭킹
+                                    </div>                                
                                 </a>
                             </li>
                             <li>
@@ -316,7 +333,9 @@
                                     <div class="icon-bg">
                                         <svg class="icon"><use xlink:href="images/icon/quick_img.svg#q-icon07"/></svg>
                                     </div>
-                                    <div class="quick-txt"></div>                                
+                                    <div class="quick-txt">
+                                        선물하기
+                                    </div>                                
                                 </a>
                             </li>
                             <li>
@@ -324,7 +343,9 @@
                                     <div class="icon-bg">
                                         <svg class="icon"><use xlink:href="images/icon/quick_img.svg#q-icon08"/></svg>
                                     </div>
-                                    <div class="quick-txt"></div>                                
+                                    <div class="quick-txt">
+                                        스스로 해결
+                                    </div>                                
                                 </a>
                             </li>
                         </ul>
@@ -333,7 +354,7 @@
             </section>
             <!-- // 퀵 메뉴 -->
             <!-- 이벤트 -->
-            <section class="rn-section02 event">
+            <section class="rn-section02 rn-event">
                 <article class="inner">
                     <div class="section-tit">
                         <h1 class="tit-txt">이벤트</h1>
@@ -345,10 +366,22 @@
                         </a>
                     </div>
                     <div class="event-wrap">
-                        <ul class="evnet-list">
-                            <li class="event-slide"></li>
-                            <li class="event-slide"></li>
-                            <li class="event-slide"></li>
+                        <ul class="evnet-track">
+                            <li class="event-slide">
+                                <a href="#">
+                                    <img src="./images/event01.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="event-slide">
+                                <a href="#">
+                                    <img src="./images/event02.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="event-slide">
+                                <a href="#">
+                                    <img src="./images/event03.jpg" alt="">
+                                </a>
+                            </li>
                         </ul>
                         <div class="event-arrow">
                             <a class="e-prev arrow-button">
@@ -359,7 +392,7 @@
                             </a>
                         </div>
                         <div class="event-pager">
-                            <a class="page"></a>
+                            <a class="page active"></a>
                             <a class="page"></a>
                             <a class="page"></a>
                         </div>
@@ -386,63 +419,71 @@
                                 <h2 class="sub-txt">라이브 예고</h2>
                             </div>
                             <div class="stream-wrap">
-                                <ul class="stream-slide">
-                                    <li class="stream-card">
-                                        <div class="video-thum"></div>
-                                        <div class="live-content">
-                                            <div class="live-time">
-                                                <span class="live_on">LIVE</span>
-                                                <p>8월 21일(수) 11시 예정</p>
+                                <ul class="stream-track">
+                                    <li class="stream-item">
+                                        <a href="#">
+                                            <div class="stream-video-thum">
+                                                <img src="./images/stream01.png">
                                             </div>
-                                            <div class="live-tit">
-                                                [유튜브라이브] 쿠쿠와 함께 먹으면서 하는 다이어트! #저당밥솥 #당뇨밥솥 #식단관리 #혈당조절 ! 역대급 할인 혜택 라방에서 확인해보세요!
-                                            </div>
-                                            <div class="live-txt">
-                                                라이브 2만 포인트 & 사은품 증정
-                                            </div>
-                                            <div class="live-product">
-                                                <div class="live-product-thumn"></div>
-                                                <div class="live-product-ctn">
-                                                    <h6 class="live-product-name"></h6>
-                                                    <p class="live-product-price">
-                                                        <b>618000</b>
-                                                        <span>원</span>
-                                                    </p>
+                                            <div class="stream-live-content">
+                                                <div class="live-time">
+                                                    <span class="live_on">LIVE</span>
+                                                    <p>8월 21일(수) 11시 예정</p>
+                                                </div>
+                                                <div class="live-tit">
+                                                    [유튜브라이브] 쿠쿠와 함께 먹으면서 하는 다이어트! #저당밥솥 #당뇨밥솥 #식단관리 #혈당조절 ! 역대급 할인 혜택 라방에서 확인해보세요!
+                                                </div>
+                                                <div class="live-txt">
+                                                    라이브 2만 포인트 & 사은품 증정
+                                                </div>
+                                                <div class="live-product">
+                                                    <div class="live-product-thumn"></div>
+                                                    <div class="live-product-ctn">
+                                                        <h6 class="live-product-name"></h6>
+                                                        <p class="live-product-price">
+                                                            <b>618000</b>
+                                                            <span>원</span>
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </li>
-                                    <li class="stream-card">
-                                        <div class="stream-video-thum"></div>
-                                        <div class="stream-live-content">
-                                            <div class="live-time">
-                                                <span class="live_on">LIVE</span>
-                                                <p>8월 21일(수) 11시 예정</p>
+                                    <li class="stream-item">
+                                        <a href="#">
+                                            <div class="stream-video-thum">
+                                                <img src="./images/stream02.png">
                                             </div>
-                                            <div class="live-tit">
-                                                [유튜브라이브] 쿠쿠와 함께 먹으면서 하는 다이어트! #저당밥솥 #당뇨밥솥 #식단관리 #혈당조절 ! 역대급 할인 혜택 라방에서 확인해보세요!
-                                            </div>
-                                            <div class="live-txt">
-                                                라이브 2만 포인트 & 사은품 증정
-                                            </div>
-                                            <div class="live-product">
-                                                <div class="live-product-thumn"></div>
-                                                <div class="live-product-ctn">
-                                                    <h6 class="live-product-name"></h6>
-                                                    <p class="live-product-price">
-                                                        <b>618000</b>
-                                                        <span>원</span>
-                                                    </p>
+                                            <div class="stream-live-content">
+                                                <div class="live-time">
+                                                    <span class="live_on">LIVE</span>
+                                                    <p>8월 21일(수) 11시 예정</p>
+                                                </div>
+                                                <div class="live-tit">
+                                                    [유튜브라이브] 쿠쿠와 함께 먹으면서 하는 다이어트! #저당밥솥 #당뇨밥솥 #식단관리 #혈당조절 ! 역대급 할인 혜택 라방에서 확인해보세요!
+                                                </div>
+                                                <div class="live-txt">
+                                                    라이브 2만 포인트 & 사은품 증정
+                                                </div>
+                                                <div class="live-product">
+                                                    <div class="live-product-thumn"></div>
+                                                    <div class="live-product-ctn">
+                                                        <h6 class="live-product-name"></h6>
+                                                        <p class="live-product-price">
+                                                            <b>618000</b>
+                                                            <span>원</span>
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </li>
                                 </ul>
                                 <div class="stream-arrow">
-                                    <a class="s-prev">
+                                    <a class="s-prev arrow-button">
                                         <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
                                     </a>
-                                    <a class="s-next">
+                                    <a class="s-next arrow-button">
                                         <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
                                     </a>
                                 </div>
@@ -460,17 +501,21 @@
                                 <h2 class="sub-txt">쿠쿠 라이브 숏폼</h2>
                             </div>
                             <div class="short-form-wrap">
-                                <ul class="short-form-slide">
-                                    <li class="shortform-box">
-                                        <div class="video-clip"></div>
-                                        <div class="product-box"></div>
+                                <ul class="short-form-track">
+                                    <li class="shortform-item">
+                                        <a href="#">
+                                            <div class="video-clip">
+                                                <img src="./images/01.gif">
+                                            </div>
+                                            <div class="product-box"></div>
+                                        </a>
                                     </li>
                                 </ul>
                                 <div class="short-form-arrow">
-                                    <a class="sh-prev">
+                                    <a class="sh-prev arrow-button">
                                         <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
                                     </a>
-                                    <a class="sh-next">
+                                    <a class="sh-next arrow-button">
                                         <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
                                     </a>
                                 </div>
@@ -576,10 +621,10 @@
                             </li>
                         </ul>
                         <div class="timedeal-arrow">
-                            <a class="t-prev">
+                            <a class="t-prev arrow-button">
                                 <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
                             </a>
-                            <a class="t-next">
+                            <a class="t-next arrow-button">
                                 <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
                             </a>
                         </div>
@@ -704,10 +749,10 @@
                             </li>
                         </ul>
                         <div class="daily-product-arrow">
-                            <a class="d-prev">
+                            <a class="d-prev arrow-button">
                                 <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
                             </a>
-                            <a class="d-next">
+                            <a class="d-next arrow-button">
                                 <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
                             </a>
                         </div>
@@ -728,7 +773,7 @@
                                     <a class="category-icon">
                                         <div class="category-img"></div>
                                         <p class="categoty-name"></p>
-                                    </a>`
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="category-icon">
