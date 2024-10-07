@@ -20,12 +20,12 @@
             <object type="image/svg+xml" data="./images/icon/sprite-sheet.svg" width="0" height="0"></object>
         </div>
         <!-- 검색창 모달 -->
-        <div class="search-modal-wrap">
+        <div class="search-modal-wrap hidden">
             <div class="overlay"></div>
             <div class="search-modal">
                 <div class="inner">
                     <form class="rn-search-form">
-                        <input type="rn-search-input" placeholder="검색어를 입력해 주세요." maxlength="16">
+                        <input type="text" class="rn-search-input" placeholder="검색어를 입력해 주세요." maxlength="16">
                         <button class="rn-search-del">
                             <svg class="icon search-del-icon" aria-label="닫기"><use xlink:href="#close-x"/></svg>
                         </button>
@@ -845,7 +845,7 @@
                         <div class="best-ranking-tab">
                             <ul class="best-ranking-category">
                                 <li>
-                                    <a class="category-icon">
+                                    <a class="category-icon active">
                                         <div class="category-img cate_01">
                                             <img src="./images/cate_01.png" alt="">
                                         </div>
@@ -1124,7 +1124,7 @@
             </section>
             <!-- // 베스트 랭킹 -->
             <!-- 서비스 -->
-            <section class="rn-section08 service">
+            <section class="rn-section08 rn-service">
                 <article class="inner">
                     <div class="section-tit">
                         <h1 class="tit-txt">다양한 서비스를 쿠쿠하세요.</h1>
@@ -1181,7 +1181,7 @@
                                 </div>
                                 <div class="qs-content">
                                     <h4 class="qs-tit">서비스 센터 찾기</h4>
-                                    <p class="qs-txt">가까운 서비스 센터에서 빠르게 수리하세요.</p>
+                                    <p class="qs-txt">가까운 서비스 센터에서 빠르게<br>수리하세요.</p>
                                 </div>   
                             </a>
                         </div>
@@ -1192,7 +1192,7 @@
                                 </div>
                                 <div class="qs-content">
                                     <h4 class="qs-tit">쿠쿠 매장 찾기</h4>
-                                    <p class="qs-txt">매장에서 다양한 제품을 직접 보고 구매하세요.</p>
+                                    <p class="qs-txt">매장에서 다양한 제품을 직접<br>보고 구매하세요.</p>
                                 </div>   
                             </a>
                         </div>
@@ -1203,7 +1203,7 @@
                                 </div>
                                 <div class="qs-content">
                                     <h4 class="qs-tit">출장 A/S 신청</h4>
-                                    <p class="qs-txt">전문 기사가 방문하여 맞춤 서비스를 제공합니다.</p>
+                                    <p class="qs-txt">전문 기사가 방문하여<br>맞춤 서비스를 제공합니다.</p>
                                 </div>   
                             </a>
                         </div>
@@ -1214,7 +1214,7 @@
                                 </div>
                                 <div class="qs-content">
                                     <h4 class="qs-tit">스스로 제품 점검</h4>
-                                    <p class="qs-txt">스스로 제품을 점검하고 손쉽게 해결하세요.</p>
+                                    <p class="qs-txt">스스로 제품을 점검하고<br>손쉽게 해결하세요.</p>
                                 </div>   
                             </a>
                         </div>
@@ -1226,68 +1226,37 @@
         <!-- // 컨테이너 -->
         <!-- 푸터 -->
         <footer id="rn-footer" class="rn-footer">
-            <!-- 따라다니는 메뉴 -->
-             <div class="floating-quick">
-                <a class="cs-btn">
-                    <svg class="icon"><use xlink:href="#cs-icon"/></svg>
-                    빠른 상담
-                </a>
-                <div class="cs-btn-wrap">
-                    <a class="cs-close">
-                        <svg class="icon"><use xlink:href="#close-x"/></svg>
-                    </a>
-                    <ul class="cs-btn-list">
-                        <li>
-                            <button class="rental-btn">
-                                렌탈신청문의
-                                <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="service-ask">
-                                서비스문의
-                                <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="media-ask">
-                                사진/영상상담
-                                <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>  
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-             </div>
-            <!-- // 따라다니는 메뉴 -->
-            <section class="footer-sec01">
-                <article class="">
-                    <h4>고객센터</h4>
-                    <ul class="tel-list">
-                        <li>
-                            <h6 class="tel-tit">쿠쿠몰</h6> 
-                            <p class="tel">080-720-9999</p>
-                        </li>
-                        <li>
-                            <h6 class="tel-tit">렌탈 문의</h6>
-                            <p class="tel">1577-0010</p>
-                        </li>
-                        <li>
-                            <h6 class="tel-tit">서비스 문의</h6>
-                            <p class="tel">1588-8899</p>
-                        </li>
-                    </ul>
-                </article>
-                <article class="cs-list">
-                    <h4>상담시간</h4>
-                    <ul class="cs-info">
-                        <li>평일 : 09~18시</li>
-                        <li>토요일 : 09~13시 일요일, 공휴일 : 휴무</li>
-                    </ul>
+            <section class="footer-cs">
+                <article class="footer-cs-wrap">
+                    <div class="cs-info-wrap">
+                        <h4>고객센터</h4>
+                        <ul class="tel-list">
+                            <li>
+                                <h6 class="tel-tit">쿠쿠몰</h6> 
+                                <p class="tel">080-720-9999</p>
+                            </li>
+                            <li>
+                                <h6 class="tel-tit">렌탈 문의</h6>
+                                <p class="tel">1577-0010</p>
+                            </li>
+                            <li>
+                                <h6 class="tel-tit">서비스 문의</h6>
+                                <p class="tel">1588-8899</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cs-time-wrap">
+                        <h4>상담시간</h4>
+                        <ul class="cs-time">
+                            <li>평일 : 09~18시</li>
+                            <li>토요일 : 09~13시 일요일, 공휴일 : 휴무</li>
+                        </ul>
+                    </div>
                 </article>
             </section>
-            <section class="footer-sec02">
+            <section class="footer-fnb01">
                 <nav class="rn-fnb">
-                    <!--  -->
+                    <!-- fnb -->
                     <ul class="fnb-wrap site-link">
                         <li class="fnb-link"><a href="/policy/service">이용안내</a></li>
                         <li class="fnb-link"><a href="/policy/accessTerms">렌탈이용약관</a></li>
@@ -1324,7 +1293,7 @@
                     </ul>
                 </nav>
             </section>
-            <section class="footer-sec03">
+            <section class="footer-fnb02">
                 <article class="family-wrap">
                     <ul class="company-link">
                         <li><p>쿠쿠안내</p></li>
@@ -1347,11 +1316,14 @@
                     </div>
                 </article>
             </section>
-            <section class="footer-sec04">
+            <section class="footer-company">
                 <!-- 회사정보 -->
                 <article class="company-address">
                     <ul class="holdings-info">
-                        <li><svg class="icon cc-logo" alt="쿠쿠 홀딩스"><use xlink:href="#cuckoo-holdings-logo"/></svg></li>
+                        <li>
+                            <a></a>
+                            <svg class="icon cc-logo" alt="쿠쿠 홀딩스"><use xlink:href="#cuckoo-holdings-logo"/></svg>
+                        </li>
                         <li>대표이사 : 구자신</li>
                         <li>본사 : 경상남도 양산시 유산공단 2길 14</li>
                         <li>사업자등록번호 : <a>621-81-02895</a></li>
@@ -1382,11 +1354,48 @@
                         <li>CopyrighyⓒCuckoo Homesys All Rights Reserved.</li>
                     </ul>
                 </article>
-                <article class="footer-sec05">
+                <article class="footer-txt">
                     <p>쿠쿠홀딩스/전자/홈시스 사이트의 콘텐츠는 저작권법의 보호를 받는 바 무단 전재, 복사, 배포를 금합니다.</p>
                 </article>
             </section>
         </footer>
         <!-- //footer -->
+        <!-- 따라다니는 메뉴 -->
+        <div class="floating-quick">
+            <a class="cs-btn">
+                <svg class="icon"><use xlink:href="#cs-icon"/></svg>
+                빠른 상담
+            </a>
+            <div class="cs-btn-wrap">
+                <a class="cs-close">
+                    <svg class="icon"><use xlink:href="#close-x"/></svg>
+                </a>
+                <ul class="cs-btn-list">
+                    <li>
+                        <button class="rental-btn">
+                            렌탈신청문의
+                            <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="service-ask">
+                            서비스문의
+                            <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="media-ask">
+                            사진/영상상담
+                            <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>  
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <a class="top-btn" href="#">
+                <svg class="icon"><use xlink:href="#top-arrow"/></svg>
+                위로
+            </a>
+            </div>
+        <!-- // 따라다니는 메뉴 -->
     </body>
 </html>
