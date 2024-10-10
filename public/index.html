@@ -4,7 +4,10 @@
         <meta charset="utf-8">
         <title>쿠쿠 리뉴얼</title>
         <!-- style sheets -->
-        <link rel="stylesheet" href="./css/renew_common.css">      
+        <link rel="stylesheet" href="./css/renew_common.css">
+        <!-- script -->
+        <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="./js/plugin.js"></script>
         <!-- svg import -->
         <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', e => {
@@ -16,12 +19,55 @@
         </script>
     </head>
     <body>
+        <!-- sprite svg -->
         <div class="icon-svg">
             <object type="image/svg+xml" data="./images/icon/sprite-sheet.svg" width="0" height="0"></object>
         </div>
+        <!-- // sprite svg -->
+        <!-- 메인 모달 팝업 -->
+        <div class="main-popup-wrap hidden">
+            <div class="main-popup">
+                <div class="main-popup-content">
+                    <ul class="main-popup-track">
+                        <li class="main-popup-item">
+                            <a href="#">
+                                <img src="./images/popip_img.png">
+                            </a>
+                        </li>
+                        <li class="main-popup-item">
+                            <a href="#">
+                                <img src="./images/popip_img02.png">
+                            </a>
+                        </li>
+                        <li class="main-popup-item">
+                            <a href="#">
+                                <img src="./images/popip_img03.png">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="main-popup-arrow">
+                        <a class="popup-prev prev">
+                            <svg class="icon"><use xlink:href="#arrow-left"/></svg>
+                        </a>
+                        <a class="popup-next next">
+                            <svg class="icon"><use xlink:href="#arrow-right"/></svg>
+                        </a>
+                    </div>
+                    <div class="main-popup-page">
+                        <b class="now">2</b>
+                        <em>/</em>
+                        <span clas="all">24</span>
+                    </div>
+                </div>
+                <div class="main-popup-footer">
+                    <a class="today-close">오늘하루 안 보기</a>
+                    <a class="main-popup-close">닫기</a>
+                </div>
+            </div>
+        </div>
+        <!-- // 메인 모달 팝업 --> 
         <!-- 검색창 모달 -->
         <div class="search-modal-wrap hidden">
-            <div class="overlay"></div>
             <div class="search-modal">
                 <div class="inner">
                     <form class="rn-search-form">
@@ -37,12 +83,12 @@
                         <div class="recent_keyword-wrap">
                             <h3 class="keyword-tit">최근 검색어</h3>
                             <div class="recent-keyword-list">
-                                <span class="keyword-item">
+                                <a class="keyword-item">
                                     밥솥
-                                    <a class="keyword-delete">
+                                    <span class="keyword-delete">
                                         <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="#close-x"/></svg>
-                                    </a>
-                                </span>
+                                    </span>
+                                </a>
                                 <p class="no-keyword">최근 검색한 단어가 없습니다.</p>
                             </div>
                         </div>
@@ -51,61 +97,61 @@
                             <ul class="keyword-rank">
                                 <li>
                                     <a>
-                                        <em class="keyword-rank">1</em>
+                                        <em class="keyword-rank rank-top">1.</em>
                                         <span class="keyword-txt">밥솥</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a>
-                                        <em class="keyword-rank">2</em>
+                                        <em class="keyword-rank rank-top">2.</em>
                                         <span class="keyword-txt">트윈프레셔 밥솥</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a>
-                                        <em class="keyword-rank">3</em>
+                                        <em class="keyword-rank">3.</em>
                                         <span class="keyword-txt">리퍼브 상품</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a>
-                                        <em class="keyword-rank">4</em>
+                                        <em class="keyword-rank">4.</em>
                                         <span class="keyword-txt">음식물 처리기</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a>
-                                        <em class="keyword-rank">5</em>
+                                        <em class="keyword-rank">5.</em>
                                         <span class="keyword-txt">정수기 렌탈</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a>
-                                        <em class="keyword-rank">6</em>
+                                        <em class="keyword-rank">6.</em>
                                         <span class="keyword-txt">정수기</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a>
-                                        <em class="keyword-rank">7</em>
+                                        <em class="keyword-rank">7.</em>
                                         <span class="keyword-txt">공기청정기</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a>
-                                        <em class="keyword-rank">8</em>
+                                        <em class="keyword-rank">8.</em>
                                         <span class="keyword-txt">무선청소기</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a>
-                                        <em class="keyword-rank">9</em>
+                                        <em class="keyword-rank">9.</em>
                                         <span class="keyword-txt">레스티노</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a>
-                                        <em class="keyword-rank">10</em>
+                                        <em class="keyword-rank">10.</em>
                                         <span class="keyword-txt">안마의자</span>
                                     </a>
                                 </li>
@@ -116,7 +162,6 @@
             </div>
         </div>
         <!-- // 검색창 모달 -->
-         
         <!-- 상단 탑배너 -->
         <div class="rn-top">
             <div class="top-wrap">
@@ -131,7 +176,6 @@
             </div>
         </div>
         <!-- // 상단 탑배너  -->
-         
         <!-- 헤더 -->
         <header id="rn-header" class="rn-header">
             <!-- 헤더 로고&아이콘 영역 -->
@@ -215,15 +259,450 @@
                         <li><a href="https://bid.cuckoo.co.kr/board/Main.do">열린구매</a></li>
                     </ul>
                 </div>
+                <!-- LNB -->
+                <div class="rn-lnb-wrap hidden">
+                    <div class="inner">
+                        <ul class="lnb-cetegory-wrap lnb-1">
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">밥솥</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">사일런스 시리즈</a></li>
+                                        <li><a href="#">트윈프레셔 밥솥</a></li>
+                                        <li><a href="#">IH압력 밥솥</a></li>
+                                        <li><a href="#">전기압력 밥솥</a></li>
+                                        <li><a href="#">전기보온 밥솥</a></li>
+                                        <li><a href="#">대용량 밥솥</a></li>
+                                        <li><a href="#">저당 밥솥</a></li>
+                                        <li><a href="#">올 스테인리스 밥솥</a></li>
+                                        <li><a href="#">부속품</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">정수기</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">100°C 고온 정수기</a></li>
+                                        <li><a href="#">직수 정수기</a></li>
+                                        <li><a href="#">얼음 정수기</a></li>
+                                        <li><a href="#">커피 정수기</a></li>
+                                        <li><a href="#">피쳐 정수기</a></li>
+                                        <li><a href="#">대용량 정수기</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">주방가전</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">인덕션 레인지</a></li>
+                                        <li><a href="#">레인지 후드</a></li>
+                                        <li><a href="#">전자레인지/오븐</a></li>
+                                        <li><a href="#">에어프라이어</a></li>
+                                        <li><a href="#">멀티쿠커</a></li>
+                                        <li><a href="#">음식물 처리기</a></li>
+                                        <li><a href="#">식기세척/건조기</a></li>
+                                        <li><a href="#">제빙기</a></li>
+                                        <li><a href="#">냉동고</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">소형 주방가전</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">블렌더</a></li>
+                                        <li><a href="#">전기주전자</a></li>
+                                        <li><a href="#">토스터기</a></li>
+                                        <li><a href="#">제빵기</a></li>
+                                        <li><a href="#">생선구이기</a></li>
+                                        <li><a href="#">전기그릴</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">생활가전</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">공기청정기</a></li>
+                                        <li><a href="#">무선청소기</a></li>
+                                        <li><a href="#">로봇청소기</a></li>
+                                        <li><a href="#">비데</a></li>
+                                        <li><a href="#">기타</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">계절가전</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">제습기</a></li>
+                                        <li><a href="#">에어서큘레이터</a></li>
+                                        <li><a href="#">창문형 에어컨</a></li>
+                                        <li><a href="#">가습기</a></li>
+                                        <li><a href="#">카본히터</a></li>
+                                        <li><a href="#">카본매트</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">건강/뷰티</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">헤어 기기</a></li>
+                                        <li><a href="#">미용기기/기타</a></li>
+                                        <li><a href="#">안마의자</a></li>
+                                        <li><a href="#">마사지기</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">가구</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">매트리스</a></li>
+                                        <li><a href="#">프레임</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">커피</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">커피 원두</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">펫 가전/용품</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">리빙</a></li>
+                                        <li><a href="#">미용/위생</a></li>
+                                        <li><a href="#">펫 식료품</a></li>
+                                        <li><a href="#">소모품/기타</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">소모품/기물류</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">밥솥</a></li>
+                                        <li><a href="#">필터</a></li>
+                                        <li><a href="#">기타 소모품</a></li>
+                                        <li><a href="#">프라이팬</a></li>
+                                        <li><a href="#">텀블러</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">제휴 제품</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">주방 용품</a></li>
+                                        <li><a href="#">생활 용품</a></li>
+                                        <li><a href="#">식품</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">리퍼브 가전</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">리퍼브 밥솥</a></li>
+                                        <li><a href="#">리퍼브 안마의자</a></li>
+                                        <li><a href="#">리퍼브 공기청정기</a></li>
+                                        <li><a href="#">한정 판매</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="lnb-cetegory-wrap lnb-2">
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">렌탈 제품</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">정수기</a></li>
+                                        <li><a href="#">공기청정기</a></li>
+                                        <li><a href="#">비데</a></li>
+                                        <li><a href="#">안마의자</a></li>
+                                        <li><a href="#">침대</a></li>
+                                        <li><a href="#">기타</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">렌탈 관리/결제</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">설치 조회/변경</a></li>
+                                        <li><a href="#">렌탈료/만료일 조회</a></li>
+                                        <li><a href="#">미납요금 조회/결제</a></li>
+                                        <li><a href="#">결제 카드 변경</a></li>
+                                        <li><a href="#">입금 확인증 조회</a></li>
+                                        <li><a href="#">동영상 조회</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">렌탈 상담</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">렌탈 상담 신청</a></li>
+                                        <li><a href="#">카카오톡 상담</a></li>
+                                        <li><a href="#">1:1 문의하기</a></li>
+                                        <li><a href="#">해피콜</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">공지사항</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="lnb-cetegory-wrap lnb-3">
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">쿠쿠몰</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">렌탈</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="lnb-cetegory-wrap lnb-4">
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">구독 안내</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">구독 제품</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="lnb-cetegory-wrap lnb-5">
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">고객지원 홈</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">서비스</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">출장 A/S 신청</a></li>
+                                        <li><a href="#">제품 설치 서비스</a></li>
+                                        <li><a href="#">서비스 센터 찾기</a></li>
+                                        <li><a href="#">해외 서비스 안내</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">상담</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">카카오톡 상담</a></li>
+                                        <li><a href="#">렌탈 상담 신청</a></li>
+                                        <li><a href="#">1:1 문의하기</a></li>
+                                        <li><a href="#">해피콜</a></li>
+                                    </ul>
+                                </div> 
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">렌탈 서비스</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">설치 조회/변경</a></li>
+                                        <li><a href="#">렌탈료/만료일 조회</a></li>
+                                        <li><a href="#">미납요금 조회/결제</a></li>
+                                        <li><a href="#">결제 카드 변경</a></li>
+                                        <li><a href="#">입금 확인증 조회</a></li>
+                                        <li><a href="#">동영상 조회</a></li>
+                                        <li><a href="#">렌탈료 포인트 납부</a></li>
+                                    </ul>
+                                </div> 
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">제품 관리</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">스스로 문제 해결</a></li>
+                                        <li><a href="#">제품 등록</a></li>
+                                        <li><a href="#">제품 설명서</a></li>
+                                    </ul>
+                                </div> 
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">안내</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                    <ul class="lnb-sub-category">
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">공지사항</a></li>
+                                    </ul>
+                                </div> 
+                            </li>
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">매장 찾기</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                </div> 
+                            </li>
+                        </ul>
+                        <ul class="lnb-cetegory-wrap lnb-6">
+                            <li>
+                                <div class="lnb-sub-category-wrap">
+                                    <a href="#">
+                                        <h5 class="lnb-cate-title">쿠쿠 스토리</h5>
+                                        <span class="lnb-more">
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        </span>
+                                    </a>
+                                </div> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- // LNB -->
             </nav>
             <!-- // GNB -->
-            <!-- LNB -->
-            <div class="lnb-wrap">
-                <div class="inner">
-                    
-                </div>
-            </div>
-            <!-- // LNB -->
         </header>
         <!-- // 헤더 -->
         <!-- 메인 -->
@@ -261,6 +740,72 @@
                         </div>
                     </div>
                 </div>
+                <!-- 메인빌보드 전체보기 팝업 -->
+                <div class="visual-detail-wrap hidden">
+                    <div class="visual-detail-modal">
+                        <div class="vs-modal-header">
+                            <h2 class="tit">전체보기</h2>
+                            <a class="vs-close">
+                                <svg class="icon" aria-label="닫기"><use xlink:href="#close-x"/></svg>
+                            </a>
+                        </div>
+                        <div class="vs-modal-content">
+                            <ul class="vs-detail">
+                                <li class="vs-detail-item">
+                                    <a class="vs-detail-wrap">
+                                        <div class="vs-detail-thumnail">
+                                            <img src="./images/vs_sample01.png">
+                                        </div>
+                                        <div class="vs-detail-txt">
+                                            [이달의추천템] 시월이 오면 할인을 하겠어요 가을엔 어썸한 혜택! 20%전용쿠폰+앱다운로드2만포인트+구매포인트5%까지★
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="vs-detail-item">
+                                    <a class="vs-detail-wrap">
+                                        <div class="vs-detail-thumnail">
+                                            <img src="./images/vs_sample02.png">
+                                        </div>
+                                        <div class="vs-detail-txt">
+                                            [계절가전 기획전] 쌀쌀한 가을에는 쏠쏠한 상품으로! 득템으로 가을맞이! (가습기,히터,온열매트~)
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="vs-detail-item">
+                                    <a class="vs-detail-wrap">
+                                        <div class="vs-detail-thumnail">
+                                            <img src="./images/vs_sample03.png">
+                                        </div>
+                                        <div class="vs-detail-txt">
+                                            [유튜브 라이브] 밥솥 찾으신다면 저당밥솥 어때요? 당은 낮추고 건강은 높히고!
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="vs-detail-item">
+                                    <a class="vs-detail-wrap">
+                                        <div class="vs-detail-thumnail">
+                                            <img src="./images/vs_sample04.png">
+                                        </div>
+                                        <div class="vs-detail-txt">
+                                            [유튜브 라이브] 소이현과 함께하는 어썸한 LIVE! 신상 프리존인덕션 최저가 혜택! 신제품 특가 최대 58% OFF!
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="vs-detail-item">
+                                    <a class="vs-detail-wrap">
+                                        <div class="vs-detail-thumnail">
+                                            <img src="./images/vs_sample05.png">
+                                        </div>
+                                        <div class="vs-detail-txt">
+                                            [카드프로모션기획전] 쿠쿠몰 전용 하나/국민/농협카드 최대 5만원 즉시 할인 프로모션 안내!
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 메인빌보드 전체보기 팝업 -->
             </section>
             <!-- //visual -->
             <!-- 퀵 메뉴 -->
