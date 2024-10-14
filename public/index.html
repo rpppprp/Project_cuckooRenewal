@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./css/renew_common.css">
         <!-- script -->
         <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="./js/freezeframe.min.js"></script><!-- gif 제어 -->
         <script type="text/javascript" src="./js/plugin.js"></script>
         <!-- index js -->
         <script type="text/javascript" src="./js/rn-index.js" charset="utf-8"></script>
@@ -87,12 +88,32 @@
                         <div class="recent_keyword-wrap">
                             <h3 class="keyword-tit">최근 검색어</h3>
                             <div class="recent-keyword-list">
+                                <!-- 검색어가 있을때 -->
                                 <a class="keyword-item">
-                                    밥솥
+                                    <em>밥솥</em>
                                     <span class="keyword-delete">
                                         <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="#close-x"/></svg>
                                     </span>
                                 </a>
+                                <a class="keyword-item">
+                                    <em>정수기</em>
+                                    <span class="keyword-delete">
+                                        <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="#close-x"/></svg>
+                                    </span>
+                                </a>
+                                <a class="keyword-item">
+                                    <em>정수기 렌탈</em>
+                                    <span class="keyword-delete">
+                                        <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="#close-x"/></svg>
+                                    </span>
+                                </a>
+                                <a class="keyword-item">
+                                    <em>음식물처리기</em>
+                                    <span class="keyword-delete">
+                                        <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="#close-x"/></svg>
+                                    </span>
+                                </a>
+                                <!-- 저장된 검색어가 없을때 -->
                                 <p class="no-keyword">최근 검색한 단어가 없습니다.</p>
                             </div>
                         </div>
@@ -225,11 +246,12 @@
             <nav class="rn-gnb">
                 <div class="nav-inner">
                     <ul class="rn-nav-wrap">
-                        <li class="nav-link"><a class="nav-link_a" href="">제품</a></li>
-                        <li class="nav-link"><a class="nav-link_a" href="">렌탈</a></li>
-                        <li class="nav-link"><a class="nav-link_a" href="">기획전/이벤트</a></li>
-                        <li class="nav-link"><a class="nav-link_a" href="">고객지원</a></li>
-                        <li class="nav-link"><a class="nav-link_a" href="">스토리</a></li>
+                        <li class="nav-link" data-lnb="0"><a class="nav-link_a" href="#">제품</a></li>
+                        <li class="nav-link" data-lnb="1"><a class="nav-link_a" href="#">렌탈</a></li>
+                        <li class="nav-link" data-lnb="2"><a class="nav-link_a" href="#">기획전/이벤트</a></li>
+                        <li class="nav-link" data-lnb="3"><a class="nav-link_a" href="#">정기구독</a></li>
+                        <li class="nav-link" data-lnb="4"><a class="nav-link_a" href="#">고객지원</a></li>
+                        <li class="nav-link" data-lnb="5"><a class="nav-link_a" href="#">스토리</a></li>
                     </ul>
                     <div class="brand-gnb">
                         <a class="brand-link">
@@ -1756,6 +1778,45 @@
                 </article>
             </section>
             <!-- // 빠른 서비스 -->
+            <!-- 따라다니는 메뉴 -->
+            <div class="floating-quick stop">
+                <div class="inner">
+                    <a class="cs-btn">
+                        <svg class="icon"><use xlink:href="#cs-icon"/></svg>
+                        빠른 상담
+                    </a>
+                    <div class="cs-btn-wrap">
+                        <a class="cs-close">
+                            <svg class="icon"><use xlink:href="#close-x"/></svg>
+                        </a>
+                        <ul class="cs-btn-list">
+                            <li>
+                                <button class="rental-btn">
+                                    렌탈신청문의
+                                    <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="service-ask">
+                                    서비스문의
+                                    <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="media-ask">
+                                    사진/영상상담
+                                    <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>  
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="top-btn" href="#">
+                        <svg class="icon"><use xlink:href="#top-arrow"/></svg>
+                        위로
+                    </a>
+                </div>
+            </div>
+            <!-- // 따라다니는 메뉴 -->
         </div>
         <!-- // 컨테이너 -->
         <!-- 푸터 -->
@@ -1894,42 +1955,5 @@
             </section>
         </footer>
         <!-- //footer -->
-        <!-- 따라다니는 메뉴 -->
-        <div class="floating-quick">
-            <a class="cs-btn">
-                <svg class="icon"><use xlink:href="#cs-icon"/></svg>
-                빠른 상담
-            </a>
-            <div class="cs-btn-wrap">
-                <a class="cs-close">
-                    <svg class="icon"><use xlink:href="#close-x"/></svg>
-                </a>
-                <ul class="cs-btn-list">
-                    <li>
-                        <button class="rental-btn">
-                            렌탈신청문의
-                            <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="service-ask">
-                            서비스문의
-                            <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="media-ask">
-                            사진/영상상담
-                            <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>  
-                        </button>
-                    </li>
-                </ul>
-            </div>
-            <a class="top-btn" href="#">
-                <svg class="icon"><use xlink:href="#top-arrow"/></svg>
-                위로
-            </a>
-            </div>
-        <!-- // 따라다니는 메뉴 -->
     </body>
 </html>
