@@ -130,6 +130,7 @@ body {
 body {
     background: #fff;
     transition: all 0.2s;
+    min-width: 1280px;
 }
 
 
@@ -341,16 +342,24 @@ a:visited {
     font-size: var(--font-small)
 }
 
-.main-popup .main-popup-content .main-popup-page > span,
-.main-popup .main-popup-content .main-popup-page > b,
-.main-popup .main-popup-content .main-popup-page > em {
+.main-popup .main-popup-content .main-popup-page .slick-dots {
+    position:static;
+}
+
+.main-popup .main-popup-content .main-popup-page  span,
+.main-popup .main-popup-content .main-popup-page  b,
+.main-popup .main-popup-content .main-popup-page  em {
     text-shadow: 0px 0px 3px rgba(0,0,0,0.7);
 }
 
-.main-popup .main-popup-content .main-popup-page > b.now {
+.main-popup .main-popup-content .main-popup-page  b.now {
     color:#fff;
 }
 
+.main-popup .main-popup-content .main-popup-page  em {
+    display:inline-block;
+    margin:0 4px;
+}
 
 .main-popup .main-popup-footer {
     display:flex;
@@ -1012,19 +1021,29 @@ nav.rn-gnb .nav-inner {
     width:100%;
     height:100%;
     overflow:hidden;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .visual-track .visual-box {
+    display: block !important;
     width:100%;
     height:100%;
     flex-shrink: 0;
     background-position:center top;
     background-repeat: no-repeat;
+    text-align:center;
+}
+
+.visual-track .visual-box img {
+    display: block;
+    margin:0 auto;
 }
 
 .visual-track .visual-box.img01 {
     background-image:url(../images/visual01.png);
 }
+
 
 
 /* visual controller */
@@ -1041,24 +1060,21 @@ nav.rn-gnb .nav-inner {
 
 .visual-nav .visual-nav-progress {
     width:100%;
-    height:2px;
-    background:rgba(0,0,0,0.4);
+    height:3px;
     margin-right:20px;
     align-self:center;
+    background-color:rgba(0,0,0,0.4);
+    background-image:linear-gradient(to right, #fff, #fff);
+    background-size:0 100%;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+    border-radius:3px;
 }
-
-.visual-nav .visual-nav-progress .visual-nav-progress-bar {
-    content:"";
-    height:2px;
-    display:block;
-    background:#fff;
-}
-
 
 .rn-visual-wrap .visual-nav .visual-control {
     display:flex;
     margin-left:auto;
-    background:rgba(0,0,0,0.2);
+    background:rgba(0,0,0,0.3);
     padding:2px 15px;
     border-radius:var(--radius-big);
 }
@@ -1072,17 +1088,29 @@ nav.rn-gnb .nav-inner {
     justify-content: center;
 }
 
+.visual-control a.play-btn > svg {
+    width:20px;
+    height:20px;
+}
+
 .visual-control svg {
     fill:#fff;
     align-self:center;
 }
 
 .visual-control .pager-txt {
+    position:relative;
     display:flex;
+    width:50px;
     color:#fff;
     font-family: var(--font);
     padding:0 10px;
     font-weight: 200;
+}
+
+.visual-control .pager-txt .slick-dots {
+    position:static;
+    align-self:center
 }
 
 .visual-control .pager-txt span {
@@ -1319,7 +1347,14 @@ a.quick-icon .quick-txt {
     display:flex;
     flex-direction: row;
     overflow:hidden;
-    gap:30px
+}
+
+.rn-event .event-wrap .slick-slide {
+    margin: 0 15px;
+}
+
+.rn-event .event-wrap .slick-list {
+    margin: 0 -15px;
 }
 
 .rn-event .event-wrap .evnet-track li {
@@ -1339,11 +1374,10 @@ a.quick-icon .quick-txt {
     height:100%;
 }
 
+
 .rn-event .event-arrow {
     width:100%;
 }
-
-
 
 .rn-event .event-pager {
     width:100%;
@@ -1537,21 +1571,17 @@ a.quick-icon .quick-txt {
 }
 
 .stream-pager .stream-page-progress {
-    width: 100%;
-    height: 3px;
-    background: rgba(0,0,0,0.12);
-    border-radius: 3px;
-    overflow:hidden;
-}
-
-.stream-pager .stream-page-progress .stream-progress-bar {
     width:100%;
     height:3px;
-    display:block;
+    margin-right:20px;
+    align-self:center;
+    background-color:rgba(0,0,0,0.4);
+    background-image:linear-gradient(to right, #222, #222);
+    background-size:0 100%;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
     border-radius: 3px;
-    background:var(--color-dark);
 }
-
 
 /* 쿠쿠 라이브 숏폼 */
 
@@ -1570,6 +1600,14 @@ a.quick-icon .quick-txt {
     flex-direction: row;
     gap:15px;
     overflow:hidden;
+}
+
+.cclive-wrap .short-form-video .slick-slide {
+    margin: 0 15px;
+}
+
+.cclive-wrap .short-form-video .slick-list {
+    margin: 0 -15px;
 }
 
 .short-form-track .shortform-item {
@@ -1591,7 +1629,7 @@ a.quick-icon .quick-txt {
     text-overflow: ellipsis;
     white-space: nowrap;
     width:calc(100% - 30px);
-    z-index:1;
+    z-index:3;
 }
 
 .short-form-track .shortform-item .video-clip {
@@ -1605,6 +1643,7 @@ a.quick-icon .quick-txt {
     width:100%;
     height:50%;
     background:linear-gradient(rgba(0,0,0,0.6), transparent);
+    z-index:2;
 }
 
 .shortform-item .video-clip img {
@@ -1691,21 +1730,17 @@ a.quick-icon .quick-txt {
 }
 
 .short-form-pager .short-page-progress {
-    width: 100%;
-    height: 3px;
-    background: rgba(0,0,0,0.12);
-    border-radius: 3px;
-    overflow:hidden;
-}
-
-.short-form-pager .short-page-progress .short-progress-bar {
     width:100%;
     height:3px;
-    display:block;
+    margin-right:20px;
+    align-self:center;
+    background-color:rgba(0,0,0,0.4);
+    background-image:linear-gradient(to right, #222, #222);
+    background-size:0 100%;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
     border-radius: 3px;
-    background:var(--color-dark);
 }
-
 
 /* -------- section 04/ 타임딜 -------- */
 
@@ -1730,6 +1765,14 @@ a.quick-icon .quick-txt {
 
 .timedeal-wrap .timedeal-track .timedeal-item {
     width:calc(100% / 2);
+}
+
+.timedeal-wrap .slick-slide {
+    margin: 0 30px;
+}
+
+.timedeal-wrap .slick-list {
+    margin: 0 -30px;
 }
 
 .timedeal-item .timedeal-time {
@@ -1930,6 +1973,8 @@ a.quick-icon .quick-txt {
     width:100%;
     height:100%;
     background-repeat: no-repeat;
+    background-position:top center;
+    background-size:cover;
 }
 
 .new-product-content .new-product-img:before {
@@ -2001,6 +2046,13 @@ a.quick-icon .quick-txt {
     width:100%;
 }
 
+.daily-product-wrap .slick-slide {
+    margin: 0 15px;
+}
+
+.daily-product-wrap .slick-list {
+    margin: 0 -15px;
+}
 
 .daily-product-track .daily-product-item .daily-product-thum {
     display:flex;
@@ -2131,6 +2183,14 @@ a.quick-icon .quick-txt {
     margin:0 auto;
     overflow:hidden;
     gap:40px;
+}
+
+.best-ranking-wrap .slick-slide {
+    margin: 0 20px;
+}
+
+.best-ranking-wrap .slick-list {
+    margin: 0 -20px;
 }
 
 .best-ranking-category li {
