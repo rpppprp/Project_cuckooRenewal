@@ -238,6 +238,10 @@ a:visited {
     right:-20px;
 }
 
+.slick-disabled {
+    opacity:0.3;
+}
+
 
 /* -------- 메인팝업 -------- */
 
@@ -1089,8 +1093,8 @@ nav.rn-gnb .nav-inner {
 }
 
 .visual-control a.play-btn > svg {
-    width:20px;
-    height:20px;
+    width:22px;
+    height:22px;
 }
 
 .visual-control svg {
@@ -1380,14 +1384,14 @@ a.quick-icon .quick-txt {
 }
 
 .rn-event .event-pager {
-    width:100%;
-    margin:20px 0px 0px;
+    width:calc(100% - 20%);
+    margin:20px auto 0px;
     display:flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.rn-event .event-pager > .page {
+/* .rn-event .event-pager > .page {
     width:10px;
     height:10px;
     background:var(--color-line);
@@ -1399,7 +1403,42 @@ a.quick-icon .quick-txt {
 .rn-event .event-pager > .page.active {
     width:20px;
     background:var(--color-dark);
+} */
+
+.rn-event .event-pager .slick-dots {
+    display:flex;
+    position:static;
+    margin:0 auto;
+    justify-content: center;
 }
+
+.rn-event .event-pager .slick-dots li {
+    width:10px;
+    height:10px;
+    background:var(--color-line);
+    border-radius: var(--radius-small);
+    transition: width 0.3s;
+    margin:0 2px;
+}
+
+.rn-event .event-pager .slick-dots li.slick-active {
+    width:20px;
+    background:var(--color-dark);
+}
+
+.rn-event .event-pager .slick-dots li button {
+    width:10px;
+    height:10px;
+    margin:0 2px;
+    cursor:pointer; 
+}
+
+.rn-event .event-pager .slick-dots li button:before {
+    width:0px;
+    height:0px;
+    display: none;
+}
+
 
 
 /* -------- section 03/ 타임딜 -------- */
@@ -1575,8 +1614,8 @@ a.quick-icon .quick-txt {
     height:3px;
     margin-right:20px;
     align-self:center;
-    background-color:rgba(0,0,0,0.4);
-    background-image:linear-gradient(to right, #222, #222);
+    background-color:rgba(0,0,0,0.2);
+    background-image:linear-gradient(to right, #555, #555);
     background-size:0 100%;
     background-repeat: no-repeat;
     transition: all 0.3s ease-in-out;
@@ -1734,8 +1773,8 @@ a.quick-icon .quick-txt {
     height:3px;
     margin-right:20px;
     align-self:center;
-    background-color:rgba(0,0,0,0.4);
-    background-image:linear-gradient(to right, #222, #222);
+    background-color:rgba(0,0,0,0.2);
+    background-image:linear-gradient(to right, #555, #555);
     background-size:0 100%;
     background-repeat: no-repeat;
     transition: all 0.3s ease-in-out;
@@ -1777,7 +1816,8 @@ a.quick-icon .quick-txt {
 
 .timedeal-item .timedeal-time {
     display:flex;
-    width:80%;
+    min-width:80%;
+    max-width:90%;
     flex-direction: row;
     padding:15px 30px;
     border-radius: 50px;
@@ -1802,11 +1842,28 @@ a.quick-icon .quick-txt {
     display:flex;
     align-self:center;
     margin-right:10px;
+    font-family: var(--font);
+    height: 48px;
 }
 
 .timedeal-time .t-time li {
     align-self:center;
     display:flex;
+}
+
+.timedeal-time .t-time li.t-time_day {
+    margin-right:10px;
+}
+
+.timedeal-time .t-time li.t-time_day span {
+    align-self:flex-end;
+    font-weight:500;
+    font-size: var(--font-mid);
+    margin:0 5px 4px 5px;
+}
+
+.timedeal-time .t-time li.t-time_day:after {
+    display:none;
 }
 
 .timedeal-time .t-time li:after {
@@ -1924,14 +1981,14 @@ a.quick-icon .quick-txt {
 }
 
 .timedeal-pager {
-    width: 100%;
-    margin: 20px 0px 0px;
+    width: calc(100% - 20%);
+    margin: 20px auto 0px;
     display: flex;
     flex-direction: row;
     justify-content: center; 
 }
 
-.timedeal-pager > a.t-page {
+/* .timedeal-pager > a.t-page {
     width: 10px;
     height: 10px;
     background: var(--color-line);
@@ -1944,7 +2001,43 @@ a.quick-icon .quick-txt {
 .timedeal-pager > a.t-page.active {
     width: 20px;
     background: var(--color-dark);
+} */
+
+
+.timedeal-pager .slick-dots {
+    display:flex;
+    position:static;
+    margin:0 auto;
+    justify-content: center;
 }
+
+.timedeal-pager .slick-dots li {
+    width:10px;
+    height:10px;
+    background:var(--color-line);
+    border-radius: var(--radius-small);
+    transition: width 0.3s;
+    margin:0 2px;
+}
+
+.timedeal-pager .slick-dots li.slick-active {
+    width:20px;
+    background:var(--color-dark);
+}
+
+.timedeal-pager .slick-dots li button {
+    width:10px;
+    height:10px;
+    margin:0 2px;
+    cursor:pointer; 
+}
+
+.timedeal-pager .slick-dots li button:before {
+    width:0px;
+    height:0px;
+    display: none;
+}
+
 
 
 /* -------- section 05/ 신상품 -------- */
@@ -2067,6 +2160,7 @@ a.quick-icon .quick-txt {
 .daily-product-track .daily-product-item .daily-product-thum > img {
     display:block;
     align-self:center;
+    width:100%;
 }
 
 
@@ -2385,6 +2479,8 @@ a.quick-icon .quick-txt {
 
 .best-ranking-item .best-product-thum > img {
     align-self:center;
+    width:100%;
+    height:100%;
 }
 
 .best-product-info {

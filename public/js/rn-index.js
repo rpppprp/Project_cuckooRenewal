@@ -198,7 +198,9 @@ $('.event-wrap .evnet-track').slick({
     slidesToScroll: 1,
     centerPadding: '30px',
     prevArrow : $('.e-prev'),
-    nextArrow : $('.e-next')
+    nextArrow : $('.e-next'),
+    dots: true,
+    appendDots: $('.event-pager')
 });
 
 
@@ -256,14 +258,63 @@ new Freezeframe({
 
 //--- 타임딜 ---//
 
+// 타임딜 카운트다운
+
+const countDown = function(id, date){
+    var timer;
+
+    function updateTimer() {
+        const future = new Date(date)
+        const now = new Date();
+        const diff = future - now;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const mins = Math.floor(diff / (1000 * 60));
+        const secs = Math.floor(diff / 1000);
+        
+        if(diff < 0) {
+            clearInterval(timer);
+            return;
+        }
+        
+        const d = days;
+        const h = hours - days * 24;
+        const m = mins - hours * 60;
+        const s = secs - mins * 60;
+
+        document.getElementById(id)
+        .innerHTML =
+        '<li class="t-time_day">' + d + '<span>일</span></li>' +
+        '<li class="t-time_hour">' + h + '</li>' +
+        '<li class="t-tume-minute">' + m + '</li>' +
+        '<li class="t-time-second">' + s + '</li>';
+    }
+    timer = setInterval(updateTimer, 1000);
+    
+ 
+}
+
+//countDown('타임테이블 id', '종료시간')
+countDown('td01', '2024/12/12 00:00:00');
+countDown('td02', '2024/10/30 00:00:00');
+countDown('td03', '2024/11/01 00:00:00');
+countDown('td04', '2024/10/31 00:00:00');
+countDown('td05', '2024/10/31 00:00:00');
+
+
+
 // 타임딜 slick
 
 $('.timedeal-track').slick({
     slidesToShow: 2,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     prevArrow : $('.t-prev'),
-    nextArrow : $('.t-next')
+    nextArrow : $('.t-next'),
+    dots: true,
+    appendDots: $('.timedeal-pager')
 });
+
 
 //--- 일상 쿠쿠 ---//
 
@@ -279,18 +330,54 @@ $('.daily-product-track').slick({
 
 //--- 베스트 랭킹 ---//
 
+
 // 베스트 랭킹 카테고리 slick
 
 $('.best-ranking-category').slick({
     slidesToShow: 7,
     slidesToScroll: 1,
     infinite: false,
+    draggable: false,
     prevArrow : $('.best-ranking-prev'),
     nextArrow : $('.best-ranking-next')
 });
 
+// 베스트 랭킹 카테고리 아이콘 이벤트
+
+$(".best-ranking-track").hide();
+$(".best-ranking-track").eq(0).show();
+
+$("#rn-main").on("click", ".best-ranking-category li a.category-icon", function(){
+    var _this = $(this);
+    var _cate_btn = $(".best-ranking-category li a.category-icon");
+
+    _cate_btn.removeClass("active");
+    _this.addClass("active");
+
+    // 각 카테고리별 탭 불러오기
+
+    let _tab_id = _this.attr("data-cate");
+    let _tab = $(".best-ranking-track");
+
+    _tab.hide();
+    _tab.eq(_tab_id).show();
+    _tab.slick("unslick");// 베스트랭킹 탭 slick 초기화
+    slick_fresh(); // 베스트랭킹 탭 slick 로드
+});
+
 // 베스트 랭킹 컨텐츠 slick
 
+function slick_fresh(){
+    $('.best-ranking-track').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: false,
+        prevArrow : $('.best-prev'),
+        nextArrow : $('.best-next')
+    });    
+}
+
+slick_fresh();
 
 //--------- footer ---------//
 
