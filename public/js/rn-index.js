@@ -92,6 +92,10 @@ $("#rn-header").on("click", ".brand-gnb .brand-link", function(e){
     } else {
         brand_menu.addClass("hidden");
     }
+
+    if(brand_menu.has(e.target).length == 0 && !brand_menu.is(e.target)){
+        brand_menu.addClass("hidden");
+    }
 });
 
 // 회사소개 메뉴 열기&닫기
@@ -260,47 +264,50 @@ new Freezeframe({
 
 // 타임딜 카운트다운
 
-const countDown = function(id, date){
+const timeDeal = function(id, date) {
+    var date = document.getElementById(id).getAttribute('data-value'); // id에서 날짜(date-value) 받아오기
+    var _vDate = new Date(date); // 전달 받은 날짜
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
     var timer;
 
-    function updateTimer() {
-        const future = new Date(date)
-        const now = new Date();
-        const diff = future - now;
+    function showRemaining() {
+        var now = new Date();
+        var distDt = _vDate - now;
 
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        const mins = Math.floor(diff / (1000 * 60));
-        const secs = Math.floor(diff / 1000);
-        
-        if(diff < 0) {
+        if (distDt < 0) {
             clearInterval(timer);
+            document.getElementById(id).querySelector('.t-time')
+            .innerHTML = '<li><p class="time-end">종료</p></li>'; //타임딜 종료
+            document.getElementById(id).className += ' timedeal-end'; // 비활성화모드 추가
             return;
         }
-        
-        const d = days;
-        const h = hours - days * 24;
-        const m = mins - hours * 60;
-        const s = secs - mins * 60;
+        var days = Math.floor(distDt / _day);
+        var hours = Math.floor((distDt % _day) / _hour);
+        var minutes = Math.floor((distDt % _hour) / _minute);
+        var seconds = Math.floor((distDt % _minute) / _second);
 
-        document.getElementById(id)
-        .innerHTML =
-        '<li class="t-time_day">' + d + '<span>일</span></li>' +
-        '<li class="t-time_hour">' + h + '</li>' +
-        '<li class="t-tume-minute">' + m + '</li>' +
-        '<li class="t-time-second">' + s + '</li>';
+        document.getElementById(id).querySelector('.t-time')
+        .innerHTML = 
+        '<li class="t-time_day">' + days + '<span>일</span></li>' +
+        '<li class="t-time_hour">' + hours + '</li>' +
+        '<li class="t-tume-minute">' + minutes + '</li>' +
+        '<li class="t-time-second">' + seconds + '</li>';   
+
     }
-    timer = setInterval(updateTimer, 1000);
-    
- 
+
+    timer = setInterval(showRemaining, 1000);
 }
 
-//countDown('타임테이블 id', '종료시간')
-countDown('td01', '2024/12/12 00:00:00');
-countDown('td02', '2024/10/30 00:00:00');
-countDown('td03', '2024/11/01 00:00:00');
-countDown('td04', '2024/10/31 00:00:00');
-countDown('td05', '2024/10/31 00:00:00');
+//timeDeal('타임딜 테이블 id', '종료시간')
+timeDeal('timedeal01');
+timeDeal('timedeal02');
+timeDeal('timedeal03');
+timeDeal('timedeal04');
+timeDeal('timedeal05');
+
 
 
 
