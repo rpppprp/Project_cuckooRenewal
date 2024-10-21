@@ -599,8 +599,8 @@ form.rn-search-form .rn-search-icon > svg {
 }
 
 .global-modal-wrap .global-modal {
-    width:600px;
-    height:680px;
+    width:800px;
+    height: auto;
     background: #fff;
     border-radius: var(--obj-size-small);
     align-self: center;
@@ -613,7 +613,7 @@ form.rn-search-form .rn-search-icon > svg {
     position:relative;
     display:flex;
     width:100%;
-    height:130px;
+    height:110px;
     background: var(--color-gray);
     padding:20px 30px;
     border-bottom:1px solid var(--color-line);
@@ -3069,6 +3069,7 @@ nav.rn-fnb .site-link li a {
     color:var(--color-line);
     font-size:var(--font-small);
     transition: color 0.3s;
+    cursor:pointer;
 }
 
 nav.rn-fnb .site-link li a:hover {
