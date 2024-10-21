@@ -4,14 +4,14 @@
 $(function(){
 
 
-// 메인 팝업 paging-number
+/** 메인 팝업 paging-number */
 
 $(".main-popup-track").on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
     var index = (currentSlide ? currentSlide : slick.currentSlide) + 1; // 현재 슬라이드
     $('.main-popup-page .slick-dots').html('<b class="now">' + index + '</b><em>/</em><span class="all">' + (slick.slideCount)+'</span>');
 })
 
-// 메인 팝업 slick
+/** 메인 팝업 slick */
 
 $(".main-popup-track").slick({
     slidesToShow: 1,
@@ -26,42 +26,71 @@ $(".main-popup-track").slick({
     appendDots: $('.main-popup-page')
 });
 
-// 메인 팝업 닫기
+/** 메인 팝업 닫기 */
 
 $(".main-popup-wrap").on("click", ".main-popup-footer .main-popup-close", function(){
     var _popup = $(".main-popup-wrap");
     _popup.hide();
 });
 
-// 검색모달 열기
+/** 검색모달 열기 */
 
 let _searchBox = $(".search-modal-wrap");
 $("#rn-header").on("click", ".search-wrap .search-form", function(){
     _searchBox.removeClass("hidden");
+    document.body.style.overflow = 'hidden'; // 스크롤 제어
 });
 
-// 검색모달 닫기( 모달영역외에 클릭시 닫기 )
+/** 검색모달 닫기( 모달영역외에 클릭시 닫기) */
 
 $(document).on("mouseup", function(e){
     if(_searchBox.has(e.target).length === 0){
         _searchBox.addClass("hidden");
-    }else{
+    } else {
         _searchBox.removeClass("hidden");
     }
+    document.body.style.overflow = 'auto'; // 스크롤 제어 해제
+});
+
+
+/**--------- header --------- */
+
+/**--- Top 텍스트 slick --- */
+
+$(".top-txt-track").slick({
+    arrows: false,
+    vertical: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+});
+
+$(document).on("click", ".top-wrap .close-top", function(){
+    var _top_bn = $(".rn-top");
+    _top_bn.fadeOut(500);
+});
+
+/**--- 헤더 스크롤 --- */
+
+$(window).load(function(){
+    let _header = $("#rn-header");
+
+    $(window).on("scroll",function(){
+        let _winPos = $(this).scrollTop(); // 현재위치
+        if(_winPos >= 300){
+            _header.addClass("fixed")
+        } else {
+            _header.removeClass("fixed")
+        }
+    });
 })
 
-//--------- header ---------//
-
-let _header = $("#rn-header");
-
-
-//--- GNB ---//
+/**--- GNB --- */
 
 let _lnb_cate = $(".rn-lnb-wrap .inner > .lnb-cetegory-wrap"); // lnb 카테고리
 let _lnb = $(".rn-lnb-wrap");
 _lnb_cate.hide(); // lnb 카테고리 리셋
 
-// GNB 열기 
+/** GNB 열기 */ 
 
 $("#rn-header").on("mouseenter", ".rn-gnb .rn-nav-wrap li.nav-link", function(){
     var _this = $(this);
@@ -75,14 +104,14 @@ $("#rn-header").on("mouseenter", ".rn-gnb .rn-nav-wrap li.nav-link", function(){
     _lnb_cate.eq(data_id).show();
 });
 
-// GNB 닫기
+/** GNB 닫기 */
 
 $("#rn-header").on("mouseleave", ".rn-gnb", function(){
     $(".rn-nav-wrap > li.nav-link").removeClass("on");
     _lnb.addClass("hidden");
 })
 
-// 브랜드관 메뉴 열기&닫기
+/** 브랜드관 메뉴 열기&닫기 */
 
 $("#rn-header").on("click", ".brand-gnb .brand-link", function(e){
     e.preventDefault();
@@ -93,12 +122,18 @@ $("#rn-header").on("click", ".brand-gnb .brand-link", function(e){
         brand_menu.addClass("hidden");
     }
 
-    if(brand_menu.has(e.target).length == 0 && !brand_menu.is(e.target)){
-        brand_menu.addClass("hidden");
+});
+
+$(document).on("mouseup", function(e){
+    var _brand = $(".brand-gnb .brand-lnb");
+    if(_brand.has(e.target).length === 0){
+        _brand.addClass("hidden");
+    }else{
+        _brand.removeClass("hidden");
     }
 });
 
-// 회사소개 메뉴 열기&닫기
+/** 회사소개 메뉴 열기&닫기 */
 
 $("#rn-header").on("click", ".nav-etc .compant-btn", function(e){
     e.preventDefault();
@@ -110,7 +145,16 @@ $("#rn-header").on("click", ".nav-etc .compant-btn", function(e){
     }
 });
 
-// 검색어 vertical slick
+$(document).on("mouseup", function(e){
+    var _coper = $(".nav-etc .company-lnb");
+    if(_coper.has(e.target).length === 0){
+        _coper.addClass("hidden");
+    }else{
+        _coper.removeClass("hidden");
+    }
+});
+
+/** 검색어 vertical slick */
 
 $(".search-slide").slick({
     arrows: false,
@@ -119,19 +163,36 @@ $(".search-slide").slick({
     autoplaySpeed: 3000,
 });
 
-//--------- container ---------//
+
+/** 글로벌 팝업 열기 */
+
+let _globalModal = $(".global-modal-wrap");
+$("#rn-header").on("click", ".nav-etc .global-btn", function(e){
+    e.preventDefault();
+    _globalModal.removeClass("hidden");
+    document.body.style.overflow = 'hidden'; // 스크롤 제어
+});
+
+$(".global-modal-wrap").on("click", ".global-modal-header .global-close", function(){
+    var _popup = $(".global-modal-wrap");
+    _popup.addClass("hidden");
+    document.body.style.overflow = 'auto'; // 스크롤 제어 해제
+});
 
 
-//--- 메인빌보드 ---//
+/**--------- container ---------*/
 
-// 메인빌보드 paging-number
+
+/**--- 메인빌보드 --- */
+
+/** 메인빌보드 paging-number */
 
 $(".visual-track").on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
     var index = (currentSlide ? currentSlide : slick.currentSlide) + 1;
     $('.visual-control .slick-dots').html('<span class="now">' + index + '</span><em>/</em><span class="all">' + (slick.slideCount)+'</span>');
 })
 
-// 메인빌보드 progress bar
+/** 메인빌보드 progress bar */
 
 var _progressBar = $('.visual-nav-progress');
 var _initPercent = 100 / ($('.visual-track').find('.visual-box').length);
@@ -143,7 +204,7 @@ $(".visual-track").on('beforeChange', function(event, slick, currentSlide, nextS
     _progressBar.css('background-size', calc + '% 100%').attr('aria-valuenow', calc);
 });
 
-// 메인 빌보드 slick
+/** 메인 빌보드 slick */
 
 $('.visual-track').slick({
     slidesToShow: 1,
@@ -160,7 +221,7 @@ $('.visual-track').slick({
     appendDots: $('.pager-txt')
 });
 
-// 메인빌보드 navigation
+/** 메인빌보드 navigation */
 
 $(".visual-control .stop-btn").click(function (e) {
     e.preventDefault();
@@ -177,7 +238,7 @@ $(".visual-control .play-btn").click(function (e) {
 });
 
 
-// 메인 빌보드 더보기 팝업
+/** 메인 빌보드 더보기 팝업 */
 
 let _visualPopup = $(".visual-detail-wrap");
 $("#rn-main").on("click", ".visual-control .detail-btn", function(){
@@ -186,16 +247,18 @@ $("#rn-main").on("click", ".visual-control .detail-btn", function(){
     }else {
         _visualPopup.addClass("hidden");
     }
+    document.body.style.overflow = "hidden"; // 스크롤 제어
 });
 
 $("#rn-main").on("click", ".vs-close", function(){
     _visualPopup.addClass("hidden");
+    document.body.style.overflow = "auto"; // 스크롤 제어 해제
 });
 
 
-//--- 이벤트 ---//
+/**--- 이벤트 --- */
 
-// 이벤트 slick
+/** 이벤트 slick */
 
 $('.event-wrap .evnet-track').slick({
     slidesToShow: 3,
@@ -208,9 +271,9 @@ $('.event-wrap .evnet-track').slick({
 });
 
 
-//--- 쿠쿠라이브 ---//
+/**--- 쿠쿠라이브 ---*/
 
-// 쿠쿠 라이브 예고 progress bar
+/** 쿠쿠 라이브 예고 progress bar */
 
 var _initCclive = 100 / ($('.stream-track').find('.stream-item').length);
 
@@ -221,7 +284,7 @@ $(".stream-track").on('beforeChange', function(event, slick, currentSlide, nextS
 
 $(".stream-page-progress").css('background-size', _initCclive + '% 100%');
 
-// 쿠쿠 라이브 예고 slick
+/** 쿠쿠 라이브 예고 slick */
 
 $('.stream-track').slick({
     slidesToShow: 1,
@@ -231,7 +294,7 @@ $('.stream-track').slick({
     nextArrow : $('.s-next')
 });
 
-// 쿠쿠 라이브 progress bar
+/** 쿠쿠 라이브 progress bar */
 
 var _initCcShort = 100 / ($('.short-form-track').find('.shortform-item').length);
 
@@ -242,7 +305,7 @@ $(".short-form-track").on('beforeChange', function(event, slick, currentSlide, n
 
 $(".short-page-progress").css('background-size', _initCcShort + '% 100%');
 
-// 쿠쿠라이브 숏폼 slick
+/** 쿠쿠라이브 숏폼 slick */
 
 $('.short-form-track').slick({
     slidesToShow: 2,
@@ -251,7 +314,7 @@ $('.short-form-track').slick({
     nextArrow : $('.sh-next')
 });
 
-// 쿠쿠라이브 숏폼 gif 제어
+/** 쿠쿠라이브 숏폼 gif 제어 */
 
 new Freezeframe({
     selector : ".video-clip > img",
@@ -260,48 +323,47 @@ new Freezeframe({
 });
 
 
-//--- 타임딜 ---//
+/**--- 타임딜 --- */
 
-// 타임딜 카운트다운
+/** 타임딜 카운트다운 */
 
-const timeDeal = function(id, date) {
-    var date = document.getElementById(id).getAttribute('data-value'); // id에서 날짜(date-value) 받아오기
-    var _vDate = new Date(date); // 전달 받은 날짜
-    var _second = 1000;
-    var _minute = _second * 60;
-    var _hour = _minute * 60;
-    var _day = _hour * 24;
-    var timer;
+const timeDeal = (id) => {
+    const _element = $('#' + id);
+    const dateValue = _element.data('value'); // id에서 종료 날짜(date-value) 받아오기
+    const endDate = new Date(dateValue); // 전달받은 날짜
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
 
-    function showRemaining() {
-        var now = new Date();
-        var distDt = _vDate - now;
+    const updateTimer = () => {
+        const now = new Date();
+        const timeRemaining = endDate - now;
 
-        if (distDt < 0) {
+        if(timeRemaining < 0) {
             clearInterval(timer);
-            document.getElementById(id).querySelector('.t-time')
-            .innerHTML = '<li><p class="time-end">종료</p></li>'; //타임딜 종료
-            document.getElementById(id).className += ' timedeal-end'; // 비활성화모드 추가
+            _element.find('.t-time').html('<li><p class="time-end">종료</p></li>'); // 타임딜 종료시
+            _element.addClass('timedeal-end'); // 종료 시 비활성화 스타일 추가
             return;
         }
-        var days = Math.floor(distDt / _day);
-        var hours = Math.floor((distDt % _day) / _hour);
-        var minutes = Math.floor((distDt % _hour) / _minute);
-        var seconds = Math.floor((distDt % _minute) / _second);
 
-        document.getElementById(id).querySelector('.t-time')
-        .innerHTML = 
-        '<li class="t-time_day">' + days + '<span>일</span></li>' +
-        '<li class="t-time_hour">' + hours + '</li>' +
-        '<li class="t-tume-minute">' + minutes + '</li>' +
-        '<li class="t-time-second">' + seconds + '</li>';   
+        const days = Math.floor(timeRemaining / day);
+        const hours = Math.floor((timeRemaining % day) / hour);
+        const minutes = Math.floor((timeRemaining % hour) / minute);
+        const seconds = Math.floor((timeRemaining % minute) / second);
 
-    }
+        _element.find('.t-time').html(`
+            <li class="t-time_day">${days}<span>일</span></li>
+            <li class="t-time_hour">${hours}</li>
+            <li class="t-time_minute">${minutes}</li>
+            <li class="t-time_second">${seconds}</li>
+        `);
+    };
 
-    timer = setInterval(showRemaining, 1000);
-}
+    const timer = setInterval(updateTimer, 1000);
+};
 
-//timeDeal('타임딜 테이블 id', '종료시간')
+/**timeDeal('타임딜 테이블 id') */
 timeDeal('timedeal01');
 timeDeal('timedeal02');
 timeDeal('timedeal03');
@@ -310,8 +372,7 @@ timeDeal('timedeal05');
 
 
 
-
-// 타임딜 slick
+/** 타임딜 slick */
 
 $('.timedeal-track').slick({
     slidesToShow: 2,
@@ -323,9 +384,9 @@ $('.timedeal-track').slick({
 });
 
 
-//--- 일상 쿠쿠 ---//
+/**--- 일상 쿠쿠 --- */
 
-// 일상 쿠쿠 slick
+/** 일상 쿠쿠 slick */
 
 $('.daily-product-track').slick({
     slidesToShow: 4,
@@ -335,10 +396,9 @@ $('.daily-product-track').slick({
 });
 
 
-//--- 베스트 랭킹 ---//
+/**--- 베스트 랭킹 --- */
 
-
-// 베스트 랭킹 카테고리 slick
+/** 베스트 랭킹 카테고리 slick */
 
 $('.best-ranking-category').slick({
     slidesToShow: 7,
@@ -349,7 +409,7 @@ $('.best-ranking-category').slick({
     nextArrow : $('.best-ranking-next')
 });
 
-// 베스트 랭킹 카테고리 아이콘 이벤트
+/** 베스트 랭킹 카테고리 아이콘 이벤트 */
 
 $(".best-ranking-track").hide();
 $(".best-ranking-track").eq(0).show();
@@ -361,7 +421,7 @@ $("#rn-main").on("click", ".best-ranking-category li a.category-icon", function(
     _cate_btn.removeClass("active");
     _this.addClass("active");
 
-    // 각 카테고리별 탭 불러오기
+    /** 각 카테고리별 탭 불러오기 */
 
     let _tab_id = _this.attr("data-cate");
     let _tab = $(".best-ranking-track");
@@ -372,7 +432,7 @@ $("#rn-main").on("click", ".best-ranking-category li a.category-icon", function(
     slick_fresh(); // 베스트랭킹 탭 slick 로드
 });
 
-// 베스트 랭킹 컨텐츠 slick
+/** 베스트 랭킹 컨텐츠 slick */
 
 function slick_fresh(){
     $('.best-ranking-track').slick({
@@ -386,9 +446,10 @@ function slick_fresh(){
 
 slick_fresh();
 
-//--------- footer ---------//
 
-// 따라다니는 메뉴 - 상담버튼 열기&닫기
+/**--------- footer --------- */
+
+/**따라다니는 메뉴 - 상담버튼 열기&닫기 */
 
 $(".floating-quick .cs-btn-wrap").hide();
 $("#rn-main").on("click", ".floating-quick .cs-btn", function(){
@@ -400,14 +461,14 @@ $("#rn-main").on("click", ".cs-btn-wrap .cs-close", function(){
 });
 
 
-// 따라다니는 메뉴 - 상담버튼 고정
+/** 따라다니는 메뉴 - 상담버튼 */
 
 $(window).load(function(){
     let _fixed_box = $(".floating-quick");
     let _stop_pos = $(".rn-footer").offset().top;
 
     $(window).on("scroll",function(){
-        let _winPos = $(this).scrollTop(); //현재위치
+        let _winPos = $(this).scrollTop(); // 현재위치
         if(_winPos + 1000 >= _stop_pos){
             _fixed_box.addClass("stop")
         } else {
@@ -416,14 +477,14 @@ $(window).load(function(){
     });
 })
 
-// top 버튼 
+/** top 버튼 */ 
 
 $(document).on('click', '.top-btn', function(e){
     e.preventDefault();
     $('html, body').stop().animate({scrollTop :0})
 })
 
-// 패밀리사이트 드롭다운
+/** 패밀리사이트 드롭다운메뉴 열기&닫기 */
 
 $(".family-list").hide();
 $("#rn-footer").on("click", ".family-site .family-label", function(e){
@@ -436,5 +497,13 @@ $("#rn-footer").on("click", ".family-site .family-label", function(e){
         _dropdown.fadeIn();
     }
 });
+
+$(document).on("mouseup", function(e){
+    var _family = $(".family-site .family-list");
+    if(_family.has(e.target).length === 0){
+        _family.fadeOut();
+    }
+});
+
 
 });
