@@ -3075,7 +3075,6 @@ nav.rn-fnb .site-link li a:hover {
     color:#fff;
 }
 
-
 nav.rn-fnb .site-sns {
     margin-left:auto;
 }
@@ -3093,8 +3092,8 @@ nav.rn-fnb .site-sns > li a > svg {
     transition: all 0.3s;
 }
 
-nav.rn-fnb .site-sns > li a:hover > svg {
-    fill:#fff;
+nav.rn-fnb .site-sns > li a:hover {
+    color :#fff;
 }
 
 
