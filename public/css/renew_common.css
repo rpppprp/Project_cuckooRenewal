@@ -315,6 +315,7 @@ a:visited {
     background:rgba(0,0,0,0.3);
     justify-content: center;
     cursor: pointer;
+    color:#fff;
 }
 
 .main-popup .main-popup-content .main-popup-arrow > a.popup-prev {
