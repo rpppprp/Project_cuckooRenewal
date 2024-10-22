@@ -970,8 +970,6 @@ nav.rn-gnb .nav-inner {
 
 .nav-inner .brand-gnb a.brand-link {
     display: flex;
-    /* background: var(--color-gray);
-    color: var(--color-darkgray); */
     padding: 3px 0px 3px 10px;
     border-radius: 6px;
     justify-content: center;
@@ -1004,13 +1002,10 @@ nav.rn-gnb .nav-inner {
 .nav-inner .brand-gnb .brand-lnb {
     position: absolute;
     width: calc(100% - 10px);
-    /* top: 42px; */
     top:50px;
     left: 0px;
+    background:#fff;
     padding: 15px 20px;
-    /* background: var(--color-gray); */
-    background: #fff;
-    /* border-radius: 0px 0px 6px 6px; */
     border:1px solid var(--color-line);
     z-index:99;
 }
@@ -1029,18 +1024,6 @@ nav.rn-gnb .nav-inner {
 .nav-inner .brand-gnb .brand-lnb li a:hover {
     color:var(--color-txt);
     font-weight: 700;
-}
-
-.nav-inner .brand-gnb .brand-lnb li svg.icon {
-    width:10px;
-    height:10px;
-    transition:all 0.2s;
-    align-self:center;
-    margin-left:5px;
-}
-
-.nav-inner .brand-gnb .brand-lnb li:hover svg.icon {
-    margin-left:10px;
 }
 
 .nav-inner .nav-etc {
