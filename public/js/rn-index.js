@@ -113,15 +113,14 @@ $("#rn-header").on("mouseleave", ".rn-gnb", function(){
 
 /** 브랜드관 메뉴 열기&닫기 */
 
-$("#rn-header").on("click", ".brand-gnb .brand-link", function(e){
+$("#rn-header").on("click", ".brand-gnb", function(e){
     e.preventDefault();
-    var brand_menu = $(this).next("ul");
+    var brand_menu = $(this).find("ul");
     if(brand_menu.hasClass("hidden")){
         brand_menu.removeClass("hidden");
     } else {
         brand_menu.addClass("hidden");
     }
-
 });
 
 $(document).on("mouseup", function(e){
@@ -135,7 +134,7 @@ $(document).on("mouseup", function(e){
 
 /** 회사소개 메뉴 열기&닫기 */
 
-$("#rn-header").on("click", ".nav-etc .compant-btn", function(e){
+$("#rn-header").on("click", ".nav-etc .company-btn", function(e){
     e.preventDefault();
     var _co_menu = $(this).next("ul");
     if(_co_menu.hasClass("hidden")){

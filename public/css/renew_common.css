@@ -965,12 +965,13 @@ nav.rn-gnb .nav-inner {
     position: relative;
     display: flex;
     margin-right: 40px;
+    height:100%;
 }
 
 .nav-inner .brand-gnb a.brand-link {
     display: flex;
-    background: var(--color-gray);
-    color: var(--color-darkgray);
+    /* background: var(--color-gray);
+    color: var(--color-darkgray); */
     padding: 3px 0px 3px 10px;
     border-radius: 6px;
     justify-content: center;
@@ -980,7 +981,7 @@ nav.rn-gnb .nav-inner {
 
 .nav-inner .brand-gnb a.brand-link b {
     align-self: center;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .nav-inner .brand-gnb a.brand-link>span.dropdown-icon {
@@ -989,7 +990,7 @@ nav.rn-gnb .nav-inner {
     width: var(--obj-size-small);
     height: var(--obj-size-small);
     align-self: center;
-    margin-left:5px;
+    margin-left:0px;
 }
 
 .nav-inner .brand-gnb a.brand-link>span.dropdown-icon .icon {
@@ -1002,22 +1003,27 @@ nav.rn-gnb .nav-inner {
 
 .nav-inner .brand-gnb .brand-lnb {
     position: absolute;
-    width: calc(100% - 30px);
-    top: 42px;
+    width: calc(100% - 10px);
+    /* top: 42px; */
+    top:50px;
     left: 0px;
-    padding: 10px 15px;
-    background: var(--color-gray);
-    border-radius: 0px 0px 6px 6px;
+    padding: 15px 20px;
+    /* background: var(--color-gray); */
+    background: #fff;
+    /* border-radius: 0px 0px 6px 6px; */
+    border:1px solid var(--color-line);
     z-index:99;
 }
 
 .nav-inner .brand-gnb .brand-lnb li {
+    display:flex;
     padding: 5px 0px;
 }
 
 
 .nav-inner .brand-gnb .brand-lnb li a {
     color: var(--color-darkgray);
+    align-self:center;
 }
 
 .nav-inner .brand-gnb .brand-lnb li a:hover {
@@ -1025,6 +1031,17 @@ nav.rn-gnb .nav-inner {
     font-weight: 700;
 }
 
+.nav-inner .brand-gnb .brand-lnb li svg.icon {
+    width:10px;
+    height:10px;
+    transition:all 0.2s;
+    align-self:center;
+    margin-left:5px;
+}
+
+.nav-inner .brand-gnb .brand-lnb li:hover svg.icon {
+    margin-left:10px;
+}
 
 .nav-inner .nav-etc {
     display: flex;
@@ -1044,20 +1061,23 @@ nav.rn-gnb .nav-inner {
     cursor:pointer;
 }
 
+.company-btn span.icon {
+    margin-left:5px;
+}
+
 .company-lnb {
     position:absolute;
     top:30px;
-    left:-15px;
+    left:-20px;
     background:#fff;
     border:1px solid var(--color-line);
-    padding:5px 0px;
+    padding:15px 20px;
     z-index:99;
 }
 
 .company-lnb li {
     width:70px;
-    padding:5px 15px 5px 15px;
-    font-size:var(--font-small);
+    padding:5px 0px;
 }
 
 .company-lnb li a {
