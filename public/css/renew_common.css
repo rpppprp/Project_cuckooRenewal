@@ -780,7 +780,7 @@ form.rn-search-form .rn-search-icon > svg {
 .rn-header .rn-header-top {
     width: 100%;
     border-bottom: 1px solid var(--color-line);
-    padding: 35px 0px;
+    padding: 25px 0px;
 }
 
 .rn-header .rn-header-top .rn-header-inner {
@@ -800,6 +800,7 @@ form.rn-search-form .rn-search-icon > svg {
 
 .logo-wrap a {
     width: 150px;
+    color:var(--color-dark);
 }
 
 .logo-wrap a .logo {
@@ -3164,12 +3165,13 @@ nav.rn-fnb .site-sns > li a:hover {
 .family-wrap .family-site .family-list {
     position:absolute;
     width: calc(100% - 40px);
-    top:75px;
+    top:70px;
     left:0px;
     background:#666;
     border-radius: var(--radius-mid);
     padding:10px 20px 0px;
     z-index:1;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
 }
 
 .family-wrap .family-site .family-list li {
@@ -3179,12 +3181,21 @@ nav.rn-fnb .site-sns > li a:hover {
 
 .family-wrap .family-site .family-list li a {
     display:block;
-    color:var(--color-mid-gray);
+    color:#eee;
     transition: all 0.3s;
 }
 
 .family-wrap .family-site .family-list li a:hover {
-    color:var(--color-line);
+    color:#fff;
+    font-weight: 700;
+}
+
+.family-site .family-list li.global {
+    border-top:1px solid var(--color-darkgray); 
+}
+
+.family-site .family-list li .global-link {
+    margin:10px 0px 0px;
 }
 
 /* 회사정보 */

@@ -164,22 +164,6 @@ $(".search-slide").slick({
 });
 
 
-/** 글로벌 팝업 열기 */
-
-let _globalModal = $(".global-modal-wrap");
-$("#rn-header").on("click", ".nav-etc .global-btn", function(e){
-    e.preventDefault();
-    _globalModal.removeClass("hidden");
-    document.body.style.overflow = 'hidden'; // 스크롤 제어
-});
-
-$(".global-modal-wrap").on("click", ".global-modal-header .global-close", function(){
-    var _popup = $(".global-modal-wrap");
-    _popup.addClass("hidden");
-    document.body.style.overflow = 'auto'; // 스크롤 제어 해제
-});
-
-
 /**--------- container ---------*/
 
 
