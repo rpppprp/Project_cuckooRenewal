@@ -856,6 +856,7 @@ form.rn-search-form .rn-search-icon > svg {
     position:absolute;
     top:10px;
     right:0px;
+    z-index:10;
 }
 
 .rn-header-inner .search-wrap .search-form {
