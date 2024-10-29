@@ -775,6 +775,8 @@ form.rn-search-form .rn-search-icon > svg {
     transition: all 0.3s;
 }
 
+/* header fixed시 추가 */
+
 .rn-header.fixed {
     position:fixed !important;
     top:0px;
@@ -789,6 +791,7 @@ form.rn-search-form .rn-search-icon > svg {
     padding: 25px 0px;
 }
 
+/* header fixed시 추가 */
 
 .rn-header.fixed .rn-header-top {
     height:0px;
@@ -796,6 +799,7 @@ form.rn-search-form .rn-search-icon > svg {
 }
 
 .rn-header .rn-header-top .rn-header-inner {
+    position:relative;
     width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -808,14 +812,17 @@ form.rn-search-form .rn-search-icon > svg {
     display: flex;
     flex-direction: column;
     align-self: center;
+    transition: all 0.3s;
 }
 
+/* header fixed시 추가 */
+
 .rn-header.fixed .rn-header-top .logo-wrap {
-    position:fixed;
+    position:absolute;
+    width:auto;
     top:20px;
-    right:50%;
-    left:auto;
-    margin-right:90px;
+    left:0px;
+    z-index:10;
 }
 
 
@@ -827,7 +834,10 @@ form.rn-search-form .rn-search-icon > svg {
 .logo-wrap a .logo {
     width: 150px;
     height: 25px;
+    transition: all 0.3s;
 }
+
+/* header fixed시 추가 */
 
 .rn-header.fixed .rn-header-top .logo-wrap a .logo {
     width:120px;
@@ -840,12 +850,12 @@ form.rn-search-form .rn-search-icon > svg {
     flex-direction: row;
 }
 
+/* header fixed시 추가 */
+
 .rn-header.fixed .rn-header-top .search-wrap {
-    position:fixed;
+    position:absolute;
     top:10px;
-    left:50%;
-    right:auto;
-    margin-left:260px;
+    right:0px;
 }
 
 .rn-header-inner .search-wrap .search-form {
@@ -949,7 +959,9 @@ nav.rn-gnb {
     border-bottom: 1px solid var(--color-line);
 }
 
+
 nav.rn-gnb .nav-inner {
+    position:relative;
     width: 1200px;
     height: 60px;
     margin: 0 auto;
@@ -961,6 +973,8 @@ nav.rn-gnb .nav-inner {
     display: flex;
     flex-direction: row;
 }
+
+/* header fixed시 추가 */
 
 .rn-header.fixed .nav-inner .rn-nav-wrap {
     margin-left:170px;
@@ -1029,7 +1043,6 @@ nav.rn-gnb .nav-inner {
     fill: var(--color-darkgray);
 }
 
-
 .nav-inner .brand-gnb .brand-lnb {
     position: absolute;
     width: calc(100% - 10px);
@@ -1046,7 +1059,6 @@ nav.rn-gnb .nav-inner {
     padding: 5px 0px;
 }
 
-
 .nav-inner .brand-gnb .brand-lnb li a {
     color: var(--color-darkgray);
     align-self:center;
@@ -1062,6 +1074,8 @@ nav.rn-gnb .nav-inner {
     margin-left:auto;
     justify-content: center;
 }
+
+/* header fixed시 추가 */
 
 .rn-header.fixed .nav-etc {
     display: none;
