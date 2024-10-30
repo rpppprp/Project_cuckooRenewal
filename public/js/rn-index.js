@@ -193,6 +193,11 @@ $("#rn-header").on("click", ".icon-wrap .user-icon", function(){
     }
 });
 
+$(document).on("mouseup", function(){
+    var _account = $("ul.account-menu");
+    _account.hide();
+});
+
 
 /**--------- container ---------*/
 
