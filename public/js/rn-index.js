@@ -3,6 +3,17 @@
 
 $(function(){
 
+/** 스크롤 제어 // 241030 추가 */
+
+function scrollDisable() {
+    $('html, body').addClass('scroll-none');
+}
+
+/** 스크롤 제어 off // 241030 추가  */
+
+function scrollAble() {
+    $('html, body').removeClass('scroll-none');
+}
 
 /** 메인 팝업 paging-number */
 
@@ -11,20 +22,29 @@ $(".main-popup-track").on('init reInit afterChange', function(event, slick, curr
     $('.main-popup-page .slick-dots').html('<b class="now">' + index + '</b><em>/</em><span class="all">' + (slick.slideCount)+'</span>');
 })
 
-/** 메인 팝업 slick */
+/** 메인 팝업 slick // 241030 수정 */
 
-$(".main-popup-track").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    draggable: false,
-    cssEase: 'linear',
-    dots:true,
-    prevArrow : $('.popup-prev'),
-    nextArrow : $('.popup-next'),
-    appendDots: $('.main-popup-page')
+function _mainPopup(){
+    $(".main-popup-track").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        draggable: false,
+        cssEase: 'linear',
+        dots:true,
+        prevArrow : $('.popup-prev'),
+        nextArrow : $('.popup-next'),
+        appendDots: $('.main-popup-page')
+    });
+}
+
+// 메인팝업 불러오기 // 241030 추가
+
+$(".main-popup-wrap").show(function(){
+    _mainPopup(); // 메인팝업 오픈할 때 slick 리셋
 });
+
 
 /** 메인 팝업 닫기 */
 
@@ -38,18 +58,18 @@ $(".main-popup-wrap").on("click", ".main-popup-footer .main-popup-close", functi
 let _searchBox = $(".search-modal-wrap");
 $("#rn-header").on("click", ".search-wrap .search-form", function(){
     _searchBox.removeClass("hidden");
-    document.body.style.overflow = 'hidden'; // 스크롤 제어
+    scrollDisable();
 });
 
-/** 검색모달 닫기( 모달영역외에 클릭시 닫기) */
+/** 검색모달 닫기( 모달영역외에 클릭시 닫기) // 241030 수정*/
 
-$(document).on("mouseup", function(e){
+$(document).on("mouseup", ".search-modal-wrap", function(e){
     if(_searchBox.has(e.target).length === 0){
         _searchBox.addClass("hidden");
+        scrollAble();
     } else {
         _searchBox.removeClass("hidden");
     }
-    document.body.style.overflow = 'auto'; // 스크롤 제어 해제
 });
 
 
@@ -123,7 +143,7 @@ $("#rn-header").on("click", ".brand-gnb", function(e){
     }
 });
 
-$(document).on("mouseup", function(e){
+$(document).on("mouseup",  function(e){
     var _brand = $(".brand-gnb .brand-lnb");
     if(_brand.has(e.target).length === 0){
         _brand.addClass("hidden");
@@ -160,6 +180,17 @@ $(".search-slide").slick({
     vertical: true,
     autoplay: true,
     autoplaySpeed: 3000,
+});
+
+/** 어카운트 드롭다운 메뉴 // 241030 추가 */
+
+$("#rn-header").on("click", ".icon-wrap .user-icon", function(){
+    var _account = $(this).next("ul.account-menu");
+    if(_account.is(":visible")){
+        _account.hide();
+    } else {
+        _account.show();
+    }
 });
 
 
@@ -221,22 +252,24 @@ $(".visual-control .play-btn").click(function (e) {
 });
 
 
-/** 메인 빌보드 더보기 팝업 */
+/** 메인 빌보드 더보기 팝업 // 241030 수정 */
 
 let _visualPopup = $(".visual-detail-wrap");
 $("#rn-main").on("click", ".visual-control .detail-btn", function(){
     if(_visualPopup.hasClass("hidden")){
         _visualPopup.removeClass("hidden");
+        scrollDisable();
     }else {
         _visualPopup.addClass("hidden");
     }
-    document.body.style.overflow = "hidden"; // 스크롤 제어
 });
+
 
 $("#rn-main").on("click", ".vs-close", function(){
     _visualPopup.addClass("hidden");
-    document.body.style.overflow = "auto"; // 스크롤 제어 해제
+    scrollAble();
 });
+
 
 
 /**--- 이벤트 --- */
