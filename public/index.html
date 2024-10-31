@@ -14,20 +14,20 @@
         <!-- index js -->
         <script type="text/javascript" src="./js/rn-index.js" charset="utf-8"></script>
         <!-- svg import -->
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', e => {
               let object = document.querySelector('object');
               object.addEventListener('load', e => {
                 e.target.outerHTML = e.target.contentDocument.documentElement.outerHTML;
               });
             });
-        </script>
+        </script> -->
     </head>
     <body>
         <!-- sprite svg -->
-        <div class="icon-svg">
+        <!-- <div class="icon-svg">
             <object type="image/svg+xml" data="./images/icon/sprite-sheet.svg" width="0" height="0"></object>
-        </div>
+        </div> -->
         <!-- // sprite svg -->
 
         <!-- 메인 모달 팝업 -->
@@ -53,10 +53,10 @@
                     </ul>
                     <div class="main-popup-arrow">
                         <a class="popup-prev prev">
-                            <svg class="icon"><use xlink:href="#arrow-left"/></svg>
+                            <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-left"/></svg>
                         </a>
                         <a class="popup-next next">
-                            <svg class="icon"><use xlink:href="#arrow-right"/></svg>
+                            <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                         </a>
                     </div>
                     <div class="main-popup-page">
@@ -82,11 +82,11 @@
                         <input type="text" class="rn-search-input" placeholder="검색어를 입력해 주세요." maxlength="16">
                         <!-- 검색어 삭제 -->
                         <button class="rn-search-del">
-                            <svg class="icon search-del-icon" aria-label="닫기"><use xlink:href="#close-x"/></svg>
+                            <svg class="icon search-del-icon" aria-label="닫기"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
                         </button>
                         <!-- 검색 -->
                         <button class="rn-search-icon">
-                            <svg class="icon search-icon" aria-label="검색"><use xlink:href="#search-icon"/></svg>
+                            <svg class="icon search-icon" aria-label="검색"><use xlink:href="./images/icon/sprite-sheet.svg#search-icon"/></svg>
                         </button>
                     </form>
                     <div class="search-keyword-wrap">
@@ -97,25 +97,25 @@
                                 <a class="keyword-item">
                                     <em>밥솥</em>
                                     <span class="keyword-delete">
-                                        <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="#close-x"/></svg>
+                                        <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
                                     </span>
                                 </a>
                                 <a class="keyword-item">
                                     <em>정수기</em>
                                     <span class="keyword-delete">
-                                        <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="#close-x"/></svg>
+                                        <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
                                     </span>
                                 </a>
                                 <a class="keyword-item">
                                     <em>정수기 렌탈</em>
                                     <span class="keyword-delete">
-                                        <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="#close-x"/></svg>
+                                        <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
                                     </span>
                                 </a>
                                 <a class="keyword-item">
                                     <em>음식물처리기</em>
                                     <span class="keyword-delete">
-                                        <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="#close-x"/></svg>
+                                        <svg class="icon keyword-delete-icon" aria-label="키워드 삭제"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
                                     </span>
                                 </a>
                                 <!-- 저장된 검색어가 없을때 -->
@@ -185,21 +185,21 @@
         <!-- // 검색창 모달 -->
 
         <!-- 상단 탑배너 -->
-        <div class="rn-top">
+        <div class="rn-top" style="display:none">
             <div class="top-wrap">
                 <ul class="top-txt-track">
                     <li class="top-txt-item">
-                        1초 회원가입 시 전 상품 추가 할인 쿠폰 증정
+                        <a href="#">1초 회원가입 시 전 상품 추가 할인 쿠폰 증정</a>
                     </li>
                     <li class="top-txt-item">
-                        환승렌탈 고객 최대 5개월 면제
+                        <a href="#">환승렌탈 고객 최대 5개월 면제</a>
                     </li>
                     <li class="top-txt-item">
-                        국민/하나/농협카드 카드가 프로모션!
+                        <a href="#">국민/하나/농협카드 카드가 프로모션!</a>
                     </li>
                 </ul>
                 <a class="close-top">
-                    <svg class="icon" aria-label="닫기"><use xlink:href="#close-x"/></svg>
+                    <svg class="icon" aria-label="닫기"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
                 </a>
             </div>
         </div>
@@ -211,7 +211,7 @@
                 <div class="rn-header-inner">
                     <div class="logo-wrap">
                         <a href="/">
-                            <svg class="icon logo" aria-label="쿠쿠"><use xlink:href="#cuckoo-logo"/></svg>
+                            <svg class="icon logo" aria-label="쿠쿠"><use xlink:href="./images/icon/sprite-sheet.svg#cuckoo-logo"/></svg>
                         </a>
                     </div>
                     <div class="search-wrap">
@@ -230,21 +230,32 @@
                                 <li>리네이쳐 안마의자</li>
                             </ul>
                             <span class="search-icon">
-                                <svg class="icon" aria-label="찾기"><use xlink:href="#search-icon"/></svg>
+                                <svg class="icon" aria-label="찾기"><use xlink:href="./images/icon/sprite-sheet.svg#search-icon"/></svg>
                             </span>
                         </div>
                         <div class="icon-wrap">
                             <a class="cart-icon">
-                                <svg class="icon" aria-label="장바구니"><use xlink:href="#cart-icon"/></svg>
+                                <svg class="icon" aria-label="장바구니"><use xlink:href="./images/icon/sprite-sheet.svg#cart-icon"/></svg>
                                 <em class="add-cart-num">1</em>
                             </a>
                             <a class="user-icon">
-                                <svg class="icon" aria-label="마이페이지"><use xlink:href="#user-icon"/></svg>
+                                <!-- 241030 추가 -->
+                                <!-- 로그아웃 상태일때 -->
+                                <svg class="icon" aria-label="마이페이지"><use xlink:href="./images/icon/sprite-sheet.svg#user-icon"/></svg>
+                                <!-- 로그인 상태일때(사용시 클래스에서 hidden 지워주세요.)-->
+                                <svg class="icon hidden" aria-label="마이페이지"><use xlink:href="./images/icon/sprite-sheet.svg#user-icon-on"/></svg>
                             </a>
+                            <!-- 로그아웃 상태 -->
                             <ul class="account-menu">
                                 <li><a href="/login">로그인</a></li>
                                 <li><a href="/nonLogin">비회원 주문조회</a></li>
                                 <li><a href="/user/join">회원가입</a></li>
+                            </ul>
+                            <!-- 로그인 상태(사용시 클래스에서 hidden 지워주세요.) -->
+                            <ul class="account-menu hidden">
+                                <li><a href="/logout">로그아웃</a></li>
+                                <li><a href="/mycuckoo/userAuth">회원정보수정</a></li>
+                                <li><a href="/mycuckoo/mallOrderList">주문/배송조회</a></li>
                             </ul>
                         </div>
                     </div>                    
@@ -266,7 +277,7 @@
                         <a class="brand-link">
                             <b>브랜드관</b>
                             <span class="icon dropdown-icon">
-                                <svg class="icon"><use xlink:href="#arrow-bottom"/></svg>
+                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-bottom"/></svg>
                             </span>
                         </a>
                         <ul class="brand-lnb hidden">
@@ -286,7 +297,7 @@
                             <a class="company-btn">
                                 회사소개
                                 <span class="icon dropdown-icon">
-                                    <svg class="icon arrow-bottom-icon"><use xlink:href="#arrow-bottom"/></svg>
+                                    <svg class="icon arrow-bottom-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-bottom"/></svg>
                                 </span>
                             </a>
                             <ul class="company-lnb hidden">
@@ -309,7 +320,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">밥솥</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -330,7 +341,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">정수기</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -348,7 +359,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">주방가전</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -369,7 +380,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">소형 주방가전</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -387,7 +398,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">생활가전</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -404,7 +415,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">계절가전</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -422,7 +433,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">건강/뷰티</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -438,7 +449,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">가구</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -452,7 +463,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">커피</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -465,7 +476,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">펫 가전/용품</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -481,7 +492,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">소모품/기물류</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -498,7 +509,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">제휴 제품</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -513,7 +524,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">리퍼브 가전</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -531,7 +542,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">렌탈 제품</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -549,7 +560,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">렌탈 상담</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -569,7 +580,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">쿠쿠몰</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                 </div>
@@ -579,7 +590,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">렌탈</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                 </div>
@@ -591,7 +602,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">구독 안내</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                 </div>
@@ -601,7 +612,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">구독 제품</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                 </div>
@@ -613,7 +624,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">고객지원 홈</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                 </div>
@@ -623,7 +634,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">서비스</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -639,7 +650,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">상담</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -655,7 +666,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">렌탈 서비스</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -674,7 +685,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">제품 관리</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -689,7 +700,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">안내</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                     <ul class="lnb-sub-category">
@@ -703,7 +714,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">매장 찾기</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                 </div> 
@@ -715,7 +726,7 @@
                                     <a href="#">
                                         <h5 class="lnb-cate-title">쿠쿠 스토리</h5>
                                         <span class="lnb-more">
-                                            <svg class="icon lnb-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                            <svg class="icon lnb-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                         </span>
                                     </a>
                                 </div> 
@@ -751,7 +762,7 @@
                         <div class="visual-nav-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                         <div class="visual-control">
                             <a class="prev-btn">
-                                <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
+                                <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-left"/></svg>
                             </a>
                             <p class="pager-txt">
                                 <!-- <span class="now">2</span>
@@ -759,16 +770,16 @@
                                 <span class="all">14</span> -->
                             </p>
                             <a class="next-btn">
-                                <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                             </a>
                             <a class="stop-btn">
-                                <svg class="icon navi-icon"><use xlink:href="#stop-icon"/></svg>
+                                <svg class="icon navi-icon"><use xlink:href="./images/icon/sprite-sheet.svg#stop-icon"/></svg>
                             </a>
                             <a class="play-btn hidden">
-                                <svg class="icon navi-icon"><use xlink:href="#play-icon"/></svg>
+                                <svg class="icon navi-icon"><use xlink:href="./images/icon/sprite-sheet.svg#play-icon"/></svg>
                             </a>
                             <a class="detail-btn">
-                                <svg class="icon navi-icon"><use xlink:href="#plus-icon"/></svg>
+                                <svg class="icon navi-icon"><use xlink:href="./images/icon/sprite-sheet.svg#plus-icon"/></svg>
                             </a>
                         </div>
                     </div>
@@ -779,7 +790,7 @@
                         <div class="vs-modal-header">
                             <h2 class="tit">전체보기</h2>
                             <a class="vs-close">
-                                <svg class="icon" aria-label="닫기"><use xlink:href="#close-x"/></svg>
+                                <svg class="icon" aria-label="닫기"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
                             </a>
                         </div>
                         <div class="vs-modal-content">
@@ -969,7 +980,7 @@
                         <a href="" class="more-btn">
                             더 보기
                             <span class="more-arrow">
-                                <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                <svg class="icon more-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                             </span>
                         </a>
                     </div>
@@ -998,10 +1009,10 @@
                         </ul>
                         <div class="event-arrow arrow-track">
                             <a class="e-prev arrow-button prev">
-                                <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
+                                <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-left"/></svg>
                             </a>
                             <a class="e-next arrow-button next">
-                                <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                             </a>
                         </div>
                         <div class="event-pager">
@@ -1021,7 +1032,7 @@
                         <a href="" class="more-btn">
                             더 보기
                             <span class="more-arrow">
-                                <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                <svg class="icon more-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                             </span>
                         </a>
                     </div>
@@ -1102,10 +1113,10 @@
                                 </ul>
                                 <div class="stream-arrow arrow-track">
                                     <a class="s-prev arrow-button prev">
-                                        <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
+                                        <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-left"/></svg>
                                     </a>
                                     <a class="s-next arrow-button next">
-                                        <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                     </a>
                                 </div>
                                 <div class="stream-pager">
@@ -1127,7 +1138,7 @@
                                                 <h6 class="shortform-title">[쿠쿠티비숏클립] 요즘 가장 핫한 음식물 처리기</h6>
                                                 <div class="shortform-views">
                                                     <span class="view-icon">
-                                                        <svg class="icon"><use xlink:href="#viewing-icon"/></svg>
+                                                        <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#viewing-icon"/></svg>
                                                     </span>
                                                     <p class="views-info">
                                                         <span class="views">246</span>
@@ -1166,7 +1177,7 @@
                                                 <h6 class="shortform-title">[쿠쿠티비숏클립] #이게모게 #쿠쿠퀴즈</h6>
                                                 <div class="shortform-views">
                                                     <span class="view-icon">
-                                                        <svg class="icon"><use xlink:href="#viewing-icon"/></svg>
+                                                        <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#viewing-icon"/></svg>
                                                     </span>
                                                     <p class="views-info">
                                                         <span class="views">246</span>
@@ -1205,7 +1216,7 @@
                                                 <h6 class="shortform-title">[쿠쿠티비숏클립] #이게모게 #쿠쿠퀴즈</h6>
                                                 <div class="shortform-views">
                                                     <span class="view-icon">
-                                                        <svg class="icon"><use xlink:href="#viewing-icon"/></svg>
+                                                        <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#viewing-icon"/></svg>
                                                     </span>
                                                     <p class="views-info">
                                                         <span class="views">246</span>
@@ -1241,10 +1252,10 @@
                                 </ul>
                                 <div class="short-form-arrow arrow-track" >
                                     <a class="sh-prev arrow-button prev">
-                                        <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
+                                        <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-left"/></svg>
                                     </a>
                                     <a class="sh-next arrow-button next">
-                                        <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                        <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                     </a>
                                 </div>
                                 <div class="short-form-pager">
@@ -1265,7 +1276,7 @@
                         <a href="/mall/productList?categoryCd=34" class="more-btn">
                             더 보기
                             <span class="more-arrow">
-                                <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                <svg class="icon more-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                             </span>
                         </a>
                     </div>
@@ -1275,7 +1286,7 @@
                                 <div class="timedeal-inner" id="timedeal01" data-value="2024/10/30 23:59:59">
                                     <div class="timedeal-time">
                                         <span class="t-img">
-                                            <svg class="icon"><use xlink:href="#clock-icon"/></svg>
+                                            <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#clock-icon"/></svg>
                                         </span>
                                         <ul class="t-time">
                                             <!-- <li class="t-time_day">0<span>일</span></li>
@@ -1317,7 +1328,7 @@
                                 <div class="timedeal-inner" id="timedeal02" data-value="2024/10/31 23:59:59">
                                     <div class="timedeal-time">
                                         <span class="t-img">
-                                            <svg class="icon"><use xlink:href="#clock-icon"/></svg>
+                                            <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#clock-icon"/></svg>
                                         </span>
                                         <ul class="t-time">
                                             <!-- <li class="t-time_day">8<span>일</span></li>
@@ -1359,7 +1370,7 @@
                                 <div class="timedeal-inner" id="timedeal03" data-value="2024/10/12 23:59:59">
                                     <div class="timedeal-time">
                                         <span class="t-img">
-                                            <svg class="icon"><use xlink:href="#clock-icon"/></svg>
+                                            <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#clock-icon"/></svg>
                                         </span>
                                         <ul class="t-time">
                                             <!-- <li class="t-time_day">8<span>일</span></li>
@@ -1401,7 +1412,7 @@
                                 <div class="timedeal-inner" id="timedeal04" data-value="2024/10/17 23:59:59">
                                     <div class="timedeal-time">
                                         <span class="t-img">
-                                            <svg class="icon"><use xlink:href="#clock-icon"/></svg>
+                                            <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#clock-icon"/></svg>
                                         </span>
                                         <ul class="t-time">
                                             <!-- <li class="t-time_day">8<span>일</span></li>
@@ -1443,7 +1454,7 @@
                                 <div class="timedeal-inner" id="timedeal05" data-value="2024/10/27 23:59:59">
                                     <div class="timedeal-time">
                                         <span class="t-img">
-                                            <svg class="icon"><use xlink:href="#clock-icon"/></svg>
+                                            <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#clock-icon"/></svg>
                                         </span>
                                         <ul class="t-time">
                                             <!-- <li class="t-time_day">8<span>일</span></li>
@@ -1484,10 +1495,10 @@
                         </ul>
                         <div class="timedeal-arrow arrow-track">
                             <a class="t-prev arrow-button prev">
-                                <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
+                                <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-left"/></svg>
                             </a>
                             <a class="t-next arrow-button next">
-                                <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                             </a>
                         </div>
                         <div class="timedeal-pager">
@@ -1731,10 +1742,10 @@
                         </ul>
                         <div class="daily-product-arrow arrow-track">
                             <a class="d-prev arrow-button prev">
-                                <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
+                                <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-left"/></svg>
                             </a>
                             <a class="d-next arrow-button next">
-                                <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                             </a>
                         </div>
                     </div>
@@ -1843,7 +1854,7 @@
                                 <li>
                                     <a class="category-icon" data-cate="9">
                                         <div class="category-img cate_10">
-                                            <svg class="icon cate-logo" aria-label="쿠쿠렌탈"><use xlink:href="#cuckoo-logo"/></svg>
+                                            <svg class="icon cate-logo" aria-label="쿠쿠렌탈"><use xlink:href="./images/icon/sprite-sheet.svg#cuckoo-logo"/></svg>
                                         </div>
                                         <p class="categoty-name">
                                             쿠쿠렌탈
@@ -1853,10 +1864,10 @@
                             </ul>
                             <div class="best-ranking-category-arrow">
                                 <a class="best-ranking-prev">
-                                    <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
+                                    <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-left"/></svg>
                                 </a>
                                 <a class="best-ranking-next">
-                                    <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                    <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                 </a>
                             </div>
                         </div>
@@ -1867,7 +1878,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"> <!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="./images/sp06.jpg" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -1897,7 +1908,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="./images/sp15.jpg" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -1927,7 +1938,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="./images/sp05.jpg" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -1957,7 +1968,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="./images/sp03.jpg" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -1987,7 +1998,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="./images/sp14.jpg" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2020,7 +2031,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="./images/sp18.gif" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2050,7 +2061,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2080,7 +2091,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2110,7 +2121,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2143,7 +2154,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="./images/sp01.jpg" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2173,7 +2184,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2203,7 +2214,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2233,7 +2244,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2266,7 +2277,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="./images/sp02.jpg" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2296,7 +2307,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="./images/sp07.jpg" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2326,7 +2337,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2356,7 +2367,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2389,7 +2400,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="./images/sp08.jpg" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2419,7 +2430,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2449,7 +2460,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2479,7 +2490,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2512,7 +2523,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="./images/sp19.png" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2542,7 +2553,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2572,7 +2583,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2602,7 +2613,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2635,7 +2646,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2665,7 +2676,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2695,7 +2706,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2725,7 +2736,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2758,7 +2769,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2788,7 +2799,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2818,7 +2829,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2848,7 +2859,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2881,7 +2892,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2911,7 +2922,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2941,7 +2952,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -2971,7 +2982,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -3004,7 +3015,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -3034,7 +3045,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -3064,7 +3075,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -3094,7 +3105,7 @@
                                     <li class="best-ranking-item">
                                         <a href="#">
                                             <p class="rank-num"><!-- 순번 -->
-                                                <svg class="icon"><use xlink:href="#ribbon"/></svg>
+                                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#ribbon"/></svg>
                                             </p>
                                             <div class="best-product-thum">
                                                 <img src="" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
@@ -3125,10 +3136,10 @@
                             </div>
                             <div class="best-ranking-arrow arrow-track">
                                 <a class="best-prev arrow-button prev">
-                                    <svg class="icon arrow-icon"><use xlink:href="#arrow-left"/></svg>
+                                    <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-left"/></svg>
                                 </a>
                                 <a class="best-next arrow-button next">
-                                    <svg class="icon arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                    <svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                 </a>
                             </div>
                         </div>
@@ -3190,7 +3201,7 @@
                         <div class="qs-item">
                             <a href="/customer/customerServiceCenterFind">
                                 <div class="qs-icon">
-                                    <svg class="icon"><use xlink:href="#gear-icon"/></svg>
+                                    <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#gear-icon"/></svg>
                                 </div>
                                 <div class="qs-content">
                                     <h4 class="qs-tit">서비스 센터 찾기</h4>
@@ -3201,7 +3212,7 @@
                         <div class="qs-item">
                             <a href="/customer/customerCuckooStoreFind">
                                 <div class="qs-icon">
-                                    <svg class="icon"><use xlink:href="#location-icon"/></svg>
+                                    <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#location-icon"/></svg>
                                 </div>
                                 <div class="qs-content">
                                     <h4 class="qs-tit">쿠쿠 매장 찾기</h4>
@@ -3212,7 +3223,7 @@
                         <div class="qs-item">
                             <a href="/mycuckoo/bizTripAsList">
                                 <div class="qs-icon">
-                                    <svg class="icon"><use xlink:href="#bag-icon"/></svg>
+                                    <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#bag-icon"/></svg>
                                 </div>
                                 <div class="qs-content">
                                     <h4 class="qs-tit">출장 A/S 신청</h4>
@@ -3223,7 +3234,7 @@
                         <div class="qs-item">
                             <a href="/customer/customerSelfItemChk">
                                 <div class="qs-icon">
-                                    <svg class="icon"><use xlink:href="#repair-icon"/></svg>
+                                    <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#repair-icon"/></svg>
                                 </div>
                                 <div class="qs-content">
                                     <h4 class="qs-tit">스스로 제품 점검</h4>
@@ -3239,36 +3250,36 @@
             <div class="floating-quick stop">
                 <div class="inner">
                     <a class="cs-btn">
-                        <svg class="icon"><use xlink:href="#cs-icon"/></svg>
+                        <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#cs-icon"/></svg>
                         빠른 상담
                     </a>
                     <div class="cs-btn-wrap">
                         <a class="cs-close">
-                            <svg class="icon"><use xlink:href="#close-x"/></svg>
+                            <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
                         </a>
                         <ul class="cs-btn-list">
                             <li>
                                 <button class="rental-btn">
                                     렌탈신청문의
-                                    <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                    <svg class="icon more-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                 </button>
                             </li>
                             <li>
                                 <button class="service-ask">
                                     서비스문의
-                                    <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>
+                                    <svg class="icon more-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
                                 </button>
                             </li>
                             <li>
                                 <button class="media-ask">
                                     사진/영상상담
-                                    <svg class="icon more-arrow-icon"><use xlink:href="#arrow-right"/></svg>  
+                                    <svg class="icon more-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>  
                                 </button>
                             </li>
                         </ul>
                     </div>
                     <a class="top-btn" href="#">
-                        <svg class="icon"><use xlink:href="#top-arrow"/></svg>
+                        <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#top-arrow"/></svg>
                         위로
                     </a>
                 </div>
@@ -3319,27 +3330,27 @@
                     <ul class="fnb-wrap site-sns">
                         <li>
                             <a href="https://www.facebook.com/cuckoo1978" target="_blank">
-                                <svg class="icon"><use xlink:href="#facebook-icon"/></svg>
+                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#facebook-icon"/></svg>
                             </a>
                         </li>
                         <li>
                             <a href="https://www.youtube.com/channel/UCg2n0fxTIWxtucOKz9SVK8Q" target="_blank">
-                                <svg class="icon"><use xlink:href="#youtube-icon"/></svg>
+                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#youtube-icon"/></svg>
                             </a>
                         </li>
                         <li>
                             <a href="https://blog.naver.com/cuckoo_official" target="_blank">
-                                <svg class="icon"><use xlink:href="#blog-icon"/></svg>
+                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#blog-icon"/></svg>
                             </a>
                         </li>
                         <li>
                             <a href="https://x.com/cuckoo1978" target="_blank">
-                                <svg class="icon"><use xlink:href="#x-icon"/></svg>
+                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#x-icon"/></svg>
                             </a>
                         </li>
                         <li>
                             <a href="https://www.instagram.com/cuckoo_1978" target="_blank">
-                                <svg class="icon"><use xlink:href="#instagram-icon"/></svg>
+                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#instagram-icon"/></svg>
                             </a>
                         </li>
                     </ul>
@@ -3359,7 +3370,7 @@
                     <div class="family-site">
                         <a class="family-label">
                             패밀리 사이트
-                            <svg class="icon arrow-bottom-icon"><use xlink:href="#arrow-bottom"/></svg>
+                            <svg class="icon arrow-bottom-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-bottom"/></svg>
                         </a>
                         <ul class="family-list">
                             <li><a href="https://www.nelloshop.co.kr/" target="_blank">넬로</a></li>
@@ -3385,7 +3396,7 @@
                     <ul class="holdings-info">
                         <li>
                             <a></a>
-                            <svg class="icon cc-logo" aria-label="쿠쿠 홀딩스"><use xlink:href="#cuckoo-holdings-logo"/></svg>
+                            <svg class="icon cc-logo" aria-label="쿠쿠 홀딩스"><use xlink:href="./images/icon/sprite-sheet.svg#cuckoo-holdings-logo"/></svg>
                         </li>
                         <li>대표이사 : 구자신</li>
                         <li>본사 : 경상남도 양산시 유산공단 2길 14</li>
@@ -3394,7 +3405,7 @@
                         <li>CopyrighyⓒCuckoo Holdings All Rights Reserved.</li>
                     </ul>
                     <ul class="electronics-info">
-                        <li><svg class="icon cc-logo" aria-label="쿠쿠 일레트로닉스"><use xlink:href="#cuckoo-eletronics-logo" /></svg></li>
+                        <li><svg class="icon cc-logo" aria-label="쿠쿠 일레트로닉스"><use xlink:href="./images/icon/sprite-sheet.svg#cuckoo-eletronics-logo" /></svg></li>
                         <li>대표이사 : 구본학</li>
                         <li>본사 : 경상남도 양산시 유산공단 2길 14</li>
                         <li>사업자등록번호 : <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=3378700918" target="_blank">337-87-00918</a></li>
@@ -3405,7 +3416,7 @@
                         <li>CopyrighyⓒCuckoo Eletronics All Rights Reserved.</li>
                     </ul>
                     <ul class="homesys-info">
-                        <li><svg class="icon cc-logo" aria-label="쿠쿠 홈시스"><use xlink:href="#cuckoo-homesys-logo"/></svg></li>
+                        <li><svg class="icon cc-logo" aria-label="쿠쿠 홈시스"><use xlink:href="./images/icon/sprite-sheet.svg#cuckoo-homesys-logo"/></svg></li>
                         <li>대표이사 : 구본학</li>
                         <li>본사 : 경기도 시흥시 엠티브이북로 349</li>
                         <li>사업자등록번호 : <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=5908700993" target="_blank">590-87-00993</a></li>

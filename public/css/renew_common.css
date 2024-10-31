@@ -611,7 +611,9 @@ form.rn-search-form .rn-search-icon > svg {
 
 .rn-top {
     width: 100%;
+    min-width:100%;
     height: 50px;
+    min-height:50px;
     padding: 10px;
     background: var(--color-black);
     color: #fff;
@@ -619,6 +621,7 @@ form.rn-search-form .rn-search-icon > svg {
 
 .rn-top .top-wrap {
     width: 400px;
+    min-width:400px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -626,6 +629,8 @@ form.rn-search-form .rn-search-icon > svg {
 
 .rn-top .top-wrap .top-txt-track {
     width: calc(100% - 28px);
+    height:28px;
+    min-height:28px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -636,6 +641,10 @@ form.rn-search-form .rn-search-icon > svg {
     width: 100%;
     text-align: center;
     align-self: center;
+}
+
+.top-txt-track .top-txt-item a {
+    color:#fff;
 }
 
 .rn-top .top-wrap .close-top {

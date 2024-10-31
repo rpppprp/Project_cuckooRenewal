@@ -75,19 +75,30 @@ $(document).on("mouseup", ".search-modal-wrap", function(e){
 
 /**--------- header --------- */
 
+
 /**--- Top 텍스트 slick --- */
 
-$(".top-txt-track").slick({
-    arrows: false,
-    vertical: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-});
+function _topSlick(){
+
+    $(".top-txt-track").slick({
+        arrows: false,
+        vertical: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    });
+}
+
 
 $(document).on("click", ".top-wrap .close-top", function(){
     var _top_bn = $(".rn-top");
     _top_bn.fadeOut(500);
 });
+
+/** Top 배너 불러오기 // 241031 추가 */
+
+$(".rn-top").show(function(){
+    _topSlick();
+})
 
 /**--- 헤더 스크롤 --- */
 
