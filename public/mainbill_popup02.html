@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>쿠쿠 리뉴얼-메인 빌보드 팝업</title>
+        <!-- style sheets -->
+        <link rel="stylesheet" href="./css/slick.css">
+        <link rel="stylesheet" href="./css/slick-theme.css">
+        <link rel="stylesheet" href="./css/renew_common.css">
+        <!-- script -->
+        <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="./js/freezeframe.min.js"></script><!-- gif 제어 -->
+        <script type="text/javascript" src="./js/slick.min.js"></script>
+        <!-- index js -->
+        <script type="text/javascript" src="./js/rn-index.js" charset="utf-8"></script>
+        <style>
+
+            .visual-detail-modal .vs-modal-content .vs-detail {
+                padding:20px 10px 0px;
+            }
+
+            .vs-modal-content .vs-detail .vs-detail-item {
+                width:calc(100% / 2 - 20px);
+                padding:0px 10px 20px 10px;
+            }
+            .vs-detail-item .vs-detail-wrap .vs-detail-thumnail {
+                display:flex;
+                position:relative;
+                width:100%;
+                height:180px;
+                border-radius: 6px;
+                overflow:hidden;
+                flex-shrink: 0;
+            }
+
+            .vs-detail-item .vs-detail-wrap .vs-detail-thumnail > img {
+                position:absolute;
+                display: block;
+                left:50%;
+                transform:translate(-50%, 0%);
+                height:200px;
+            }
+
+            .vs-detail-item .vs-detail-wrap .vs-detail-txt {
+                display:none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- 메인빌보드 전체보기 팝업 -->
+        <div class="visual-detail-wrap">
+        <div class="visual-detail-modal">
+            <div class="vs-modal-header">
+                <h2 class="tit">전체보기</h2>
+                <a class="vs-close">
+                    <svg class="icon" aria-label="닫기"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
+                </a>
+            </div>
+            <div class="vs-modal-content">
+                <ul class="vs-detail">
+                    <li class="vs-detail-item">
+                        <a class="vs-detail-wrap" href="#" target="_self">
+                            <div class="vs-detail-thumnail">
+                                <img src="./images/vs_01.png">
+                            </div>
+                            <div class="vs-detail-txt">
+                                [공기청정기 기획전] 공기의 차이가 삶의 차이로 공기청정기 모음전! #미세먼지 방어템
+                            </div>
+                        </a>
+                    </li>
+                    <li class="vs-detail-item">
+                        <a class="vs-detail-wrap">
+                            <div class="vs-detail-thumnail" href="#" target="_self">
+                                <img src="./images/vs_02.png">
+                            </div>
+                            <div class="vs-detail-txt">
+                                [이달의추천템] 11월 쿠확행! 쿠쿠에서 즐기는 확실한 행복! 20%전용쿠폰+앱다운로드2만포인트+구매포인트 2%까지★
+                            </div>
+                        </a>
+                    </li>
+                    <li class="vs-detail-item">
+                        <a class="vs-detail-wrap">
+                            <div class="vs-detail-thumnail" href="#" target="_self">
+                                <img src="./images/vs_03.png">
+                            </div>
+                            <div class="vs-detail-txt">
+                                [유튜브 라이브] 11월 특가찬스 쿠쿠가 쏜다! 사일런스 밥솥 획득 기회!
+                            </div>
+                        </a>
+                    </li>
+                    <li class="vs-detail-item">
+                        <a class="vs-detail-wrap">
+                            <div class="vs-detail-thumnail" href="#" target="_self">
+                                <img src="./images/vs_04.png">
+                            </div>
+                            <div class="vs-detail-txt">
+                                [11월 렌탈 기획전] 블랙프라이데이 정수기 10개월 무료!
+                            </div>
+                        </a>
+                    </li>
+                    <li class="vs-detail-item">
+                        <a class="vs-detail-wrap">
+                            <div class="vs-detail-thumnail" href="#" target="_self">
+                                <img src="./images/vs_05.png">
+                            </div>
+                            <div class="vs-detail-txt">
+                                쿠쿠 식품 제휴 스토어! 신선한 쌀/잡곡!
+                            </div>
+                        </a>
+                    </li>
+                    <li class="vs-detail-item">
+                        <a class="vs-detail-wrap">
+                            <div class="vs-detail-thumnail" href="#" target="_self">
+                                <img src="./images/vs_06.png">
+                            </div>
+                            <div class="vs-detail-txt">
+                                재고 소진 시 끝! 창고 大 방출!
+                            </div>
+                        </a>
+                    </li>
+                    <li class="vs-detail-item">
+                        <a class="vs-detail-wrap">
+                            <div class="vs-detail-thumnail" href="#" target="_self">
+                                <img src="./images/vs_07.png">
+                            </div>
+                            <div class="vs-detail-txt">
+                                [앱 다운 기획전] 쿠쿠몰 앱 다운로드 이벤트! 앱을 통한 신규 가입 시 2만 포인트 증정!
+                            </div>
+                        </a>
+                    </li>
+                    <li class="vs-detail-item">
+                        <a class="vs-detail-wrap">
+                            <div class="vs-detail-thumnail" href="https://ad-milkt.com/main/common/cuckoo?utm_source=cuckoo_pc&utm_medium=DA&utm_campaign=pc_main&utm_content=&utm_term=%ED%95%84%EC%88%98%ED%85%9C" target="_blank">
+                                <img src="./images/vs_08.png">
+                            </div>
+                            <div class="vs-detail-txt">
+                                밀크 T 무료체험시 쿠쿠몰 3만 포인트 전원 증정! #천재교육
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- // 메인빌보드 전체보기 팝업 -->
+    </body>
+    </html>
