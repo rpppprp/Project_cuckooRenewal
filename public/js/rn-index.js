@@ -3,6 +3,10 @@
 
 $(function(){
 
+/** 스크롤 reset */
+
+history.scrollRestoration = "manual"
+
 /** 스크롤 제어 // 241030 추가 */
 
 function scrollDisable() {
@@ -41,6 +45,7 @@ function _mainPopup(){
 
 // 메인팝업 불러오기 // 241030 추가
 
+
 $(".main-popup-wrap").show(function(){
     _mainPopup(); // 메인팝업 오픈할 때 slick 리셋
 });
@@ -76,29 +81,26 @@ $(document).on("mouseup", ".search-modal-wrap", function(e){
 /**--------- header --------- */
 
 
-/**--- Top 텍스트 slick --- */
+/**--- Top 텍스트 slick --- // 241031 수정 */
 
-function _topSlick(){
 
-    $(".top-txt-track").slick({
-        arrows: false,
-        vertical: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
-    });
-}
+$(".top-txt-track").slick({
+    arrows: false,
+    vertical: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+});
 
+/** Top 배너 불러오기 // 241031 추가 */
+
+$(".rn-top").show(100, function(){
+    $(".top-txt-track").slick('refresh');
+})
 
 $(document).on("click", ".top-wrap .close-top", function(){
     var _top_bn = $(".rn-top");
     _top_bn.fadeOut(500);
 });
-
-/** Top 배너 불러오기 // 241031 추가 */
-
-$(".rn-top").show(function(){
-    _topSlick();
-})
 
 /**--- 헤더 스크롤 --- */
 
@@ -207,6 +209,49 @@ $("#rn-header").on("click", ".icon-wrap .user-icon", function(){
 $(document).on("mouseup", function(){
     var _account = $("ul.account-menu");
     _account.hide();
+});
+
+
+/** 카트 팝업 뱃지 유무 // 241104 추가 */
+
+function _cartPopupBadge(){
+    var _cNum = 0; // 카트 상품 개수 기본값(0개)
+
+    $(".mall-cart-num, .rental-cart-num, .subs-cart-num").each(function(e){
+        var _this = $(this); 
+        var _thisNum = _this.text(); // 해당 영역의 상품 개수 불러오기
+        // 카트에 담긴 상품이 없을 때 상품 개수 뱃지 비노출
+        if(_cNum == _thisNum) {
+            _this.hide();
+        }
+    });
+}
+
+_cartPopupBadge();
+
+/** 카트 팝업 열기 */
+
+$("#rn-header").on("click", ".cart-icon", function(){
+    var _cartPopup = $(".cart-popup-wrap");
+    _cartPopup.show();
+    scrollDisable();
+});
+
+/** 카트 팝업 닫기 */
+
+$("#rn-header").on("click", ".cart-popup-close", function(e){
+    e.preventDefault();
+    var _cartPopup = $(".cart-popup-wrap");
+    _cartPopup.hide();
+    scrollAble();
+});
+
+$(document).on("mouseup",".cart-popup-wrap", function(e){
+    var _cartPopup = $(".cart-popup-wrap");
+    if(_cartPopup.has(e.target).length === 0){
+        _cartPopup.hide();
+        scrollAble();
+    }
 });
 
 

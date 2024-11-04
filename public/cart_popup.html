@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>쿠쿠 리뉴얼</title>
+        <!-- style sheets -->
+        <link rel="stylesheet" href="./css/slick.css">
+        <link rel="stylesheet" href="./css/slick-theme.css">
+        <link rel="stylesheet" href="./css/renew_common.css">
+        <!-- script -->
+        <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="./js/freezeframe.min.js"></script><!-- gif 제어 -->
+        <script type="text/javascript" src="./js/slick.min.js"></script>
+        <!-- index js -->
+        <script type="text/javascript" src="./js/rn-index.js" charset="utf-8"></script>
+
+    </head>
+    <body>
+        <!-- 카트 팝업 // 231101 추가 -->
+        <div class="cart-popup-wrap">
+            <div class="cart-popup">
+                <!-- 카트 팝업 헤더 영역 -->
+                <div class="cart-popup-header">
+                    <div class="cart-popup-title">
+                        <h1 class="title-txt">
+                            장바구니
+                        </h1>
+                        <p class="txt">
+                            몰 상품과 렌탈 상품은 동시에 결제 할 수 없습니다. <br>각각의 장바구니를 확인 해주세요.
+                        </p>
+                    </div>
+                    <a class="cart-popup-close">
+                        <svg class="icon search-del-icon" aria-label="닫기"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
+                    </a>
+                </div>
+                <!-- 카트 팝업 컨텐츠 영역 -->
+                <div class="cart-popup-content">
+                    <!-- 쿠쿠몰 -->
+                    <div class="mall-box-wrap">
+                        <div class="mall-box-ctn">
+                            <h2 class="sub-title">
+                                쿠쿠몰
+                            </h2>
+                            <div class="mall-cart">
+                                <span class="mall-cart-num">1</span>
+                            </div>
+                            <div class="mall-cart-txt">
+                                <!-- 상품이 담겨 있을때 -->
+                                <p class="mall-cart-able">
+                                    현재 쿠쿠몰 장바구니에<br><span class="cart-num">1</span>개의 상품이 담겨 있습니다.
+                                </p>
+                                <!-- 담긴 상품이 없을때 -->
+                                <p class="mall-cart-disable hidden">
+                                    장바구니에<br>상품을 담아주세요.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mall-box-btn">
+                            <!-- 상품이 담겨있을 때 -->
+                            <a class="mall-cart-btn" href="/mall/cartList">결제하러 가기</a>
+                            <!-- 담긴 상품이 0개 일때 -->
+                            <a class="mall-cart-btn hidden" href="/mall/productList">상품보러 가기</a>
+                        </div>
+                    </div>
+                    <!-- //쿠쿠몰 -->
+                    <!-- 쿠쿠렌탈 -->
+                    <div class="rental-box-wrap">
+                        <div class="rental-box-ctn">
+                            <h2 class="sub-title">
+                                쿠쿠렌탈
+                            </h2>
+                            <div class="rental-cart">
+                                <span class="rental-cart-num">3</span>
+                            </div>
+                            <div class="rental-cart-txt">
+                                <!-- 상품이 담겨 있을때 -->
+                                <p class="rental-cart-able hidden">
+                                    현재 쿠쿠렌탈 장바구니에<br><span class="cart-num">1</span>개의 상품이 담겨 있습니다.
+                                </p>
+                                <!-- 담긴 상품이 없을때 -->
+                                <p class="rental-cart-disable">
+                                    장바구니에<br>상품을 담아주세요.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rental-box-btn">
+                            <!-- 상품이 담겨있을 때 -->
+                            <a class="rental-cart-btn hidden" href="/regular/cartList">결제하러 가기</a>
+                            <!-- 담긴 상품이 0개 일때 -->
+                            <a class="rental-cart-btn" href="/regular/productList">상품보러 가기</a>
+                        </div>
+                    </div>
+                    <!-- // 쿠쿠렌탈 -->
+                    <!-- 정기구독관 -->
+                    <div class="subs-box-wrap">
+                        <div class="subs-box-ctn">
+                            <h2 class="sub-title">
+                                정기구독관
+                            </h2>
+                            <div class="subs-cart">
+                                <div class="subs-cart-img"></div>
+                                <span class="subs-cart-num">0</span>
+                            </div>
+                            <div class="subs-cart-txt">
+                                <!-- 상품이 담겨 있을때 -->
+                                <p class="subs-cart-able hidden">
+                                    현재 정기구독관 장바구니에<br><span class="cart-num">1</span>개의 상품이 담겨 있습니다.
+                                </p>
+                                <!-- 담긴 상품이 없을때 -->
+                                <p class="subs-cart-disable">
+                                    장바구니에<br>상품을 담아주세요.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="subs-box-btn">
+                            <!-- 상품이 담겨있을 때 -->
+                            <a class="subs-cart-btn hidden" href="/regular/cartList">결제하러 가기</a>
+                            <!-- 담긴 상품이 0개 일때 -->
+                            <a class="subs-cart-btn" href="/regular/productList">상품보러 가기</a>
+                        </div>
+                    </div>
+                    <!-- // 정기구독관 -->
+                </div>
+            </div>
+        </div>
+
+
+        <div id="headerCartPopup" class="header_popup" style="display: block; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+            <!-- 장바구니 팝업 영역!!!!!!!!! -->
+            <div class="cart_wrap">
+                <div class="tit_wrap">
+                    <strong>장바구니</strong>
+                    <p>몰 상품과 렌탈 상품은 동시에 결제 할 수 없습니다. <br>각각의 장바구니를 확인 해주세요.</p>
+                </div>
+                <div class="amount_wrap">
+                    <div class="cart_box">
+                        <strong>쿠쿠몰</strong>
+                        <!--상품이 담겨 있을때-->
+                        <div class="amount_box">
+                            <!--담긴 상품갯수-->
+                            <span class="num" id="ui_gnb_mall_cart_cnt" style="">1</span>
+                            <!--//담긴 상품갯수-->
+                        </div>
+                        <p id="ui_gnb_mall_cart_txt">현재 쿠쿠몰 장바구니에 <br><em>1</em>개의 상품이 담겨 있습니다.</p>
+                        <!--//상품이 담겨 있을때-->
+                        <a href="/mall/cartList" data-url="https://www.cuckoo.co.kr" id="ui_gnb_mall_link_btn">결제하러 가기</a>
+                    </div>	
+                    <div class="rental_box">
+                        <strong>쿠쿠렌탈</strong>
+                        <!--상품이 0개 일때-->
+                        <div class="amount_box">
+                            <!--담긴 상품갯수 1개이상일경우 노출-->
+                            <span class="num" id="ui_gnb_rental_cart_cnt" style="display:none">0</span>
+                            <!--//담긴 상품갯수 1개이상일경우 노출-->
+                        </div>
+                        <p id="ui_gnb_mall_rental_txt">장바구니에 <br>상품을 담아주세요.</p>
+                        <!--//상품이 0개 일때-->
+                        <a href="/rental/productList" data-url="https://www.cuckoo.co.kr" id="ui_gnb_rental_link_btn">상품보러 가기</a>
+                    </div>
+                    <div class="regular_box">
+                        <strong>정기구독관</strong>
+                        <!--상품이 0개 일때-->
+                        <div class="amount_box">
+                            <!--담긴 상품갯수 1개이상일경우 노출-->
+                            <span class="num" id="ui_gnb_regular_cart_cnt" style="display:none">0</span>
+                            <!--//담긴 상품갯수 1개이상일경우 노출-->
+                        </div>
+                        <p id="ui_gnb_mall_regular_txt">장바구니에 <br>상품을 담아주세요.</p>
+                        <!--//상품이 0개 일때-->
+                        <a href="/regular/productList" data-url="https://www.cuckoo.co.kr" id="ui_gnb_regular_link_btn">상품보러 가기</a>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="header_popup_close">장바구니 팝업 닫기</button>							
+        </div>
+    </body>
+    </html>

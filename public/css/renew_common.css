@@ -412,6 +412,7 @@ a:visited {
 /* -------- 검색창 모달 -------- */
 
 .search-modal-wrap {
+    top:0px;
     position:fixed;
     width:100%;
     height:100%;
@@ -606,7 +607,11 @@ form.rn-search-form .rn-search-icon > svg {
 }
 
 
-/* -------- top -------- */
+/* -------- top --------
+
+// 241031 / rn-top, rn-top 수정
+
+------------------------*/
 
 
 .rn-top {
@@ -625,6 +630,7 @@ form.rn-search-form .rn-search-icon > svg {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    background: var(--color-black);
 }
 
 .rn-top .top-wrap .top-txt-track {
@@ -1052,6 +1058,183 @@ nav.rn-gnb .nav-inner {
 }
 
 
+/* 카트 팝업 // 241101 추가 */
+
+.cart-popup-wrap {
+    display:none;
+    position:fixed;
+    width:100%;
+    min-width:100%;
+    height:100%;
+    min-height:100%;
+    top:0px;
+    left:0px;
+    z-index:20;
+}
+
+.cart-popup-wrap:before {
+    content:"";
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+    z-index:20;
+}
+
+.cart-popup-wrap .cart-popup {
+    position:absolute;
+    top:100px;
+    left:50%;
+    width:870px;
+    background:#fff;
+    padding: 50px 0px;
+    border-radius: var(--radius-mid);
+    box-shadow:0px 0px 14px rgba(0,0,0,0.1);
+    transform:translateX(-50%);
+    z-index:20;
+}
+
+.cart-popup .cart-popup-header {
+    position:relative;
+    display:flex;
+    padding:0 50px;
+    margin-bottom:50px;
+}
+.cart-popup .cart-popup-header .title-txt {
+    font-size: var(--font-big);
+    margin-bottom:10px;
+}
+
+
+.cart-popup .cart-popup-header a.cart-popup-close {
+    position:absolute;
+    display:flex;
+    width: var(--obj-size-mid);
+    height: var(--obj-size-mid);
+    right:20px;
+    top:-30px;
+    justify-content: center;
+    cursor:pointer;
+}
+
+.cart-popup .cart-popup-header a.cart-popup-close svg {
+    width:20px;
+    height:20px;
+    align-self:center;
+}
+
+.cart-popup .cart-popup-content {
+    display:flex;
+    padding:0 50px;
+}
+
+.cart-popup .cart-popup-content .mall-box-wrap,
+.cart-popup .cart-popup-content .rental-box-wrap,
+.cart-popup .cart-popup-content .subs-box-wrap {
+    display:flex;
+    flex-direction: column;
+    width:calc(100% / 3);
+    border-right:1px solid var(--color-line);
+}
+
+.cart-popup .cart-popup-content .subs-box-wrap {
+    border-right:none;
+}
+
+.cart-popup .cart-popup-content .mall-box-wrap .sub-title,
+.cart-popup .cart-popup-content .rental-box-wrap .sub-title,
+.cart-popup .cart-popup-content .subs-box-wrap .sub-title {
+    width:100%;
+    text-align:center;
+}
+
+.mall-box-wrap .mall-box-ctn .mall-cart,
+.rental-box-wrap .rental-box-ctn .rental-cart,
+.subs-box-wrap .subs-box-ctn .subs-cart {
+    position:relative;
+    width:140px;
+    height:140px; 
+    margin:20px auto;
+    border-radius: 100%;
+}
+
+.mall-box-wrap .mall-box-ctn .mall-cart {
+    background:url('../images/cart_icon.png')center center no-repeat #fce8e9;
+}
+
+.rental-box-wrap .rental-box-ctn .rental-cart {
+    background:url('../images/rental_icon.png') center center no-repeat #e2edf1;
+}
+
+.subs-box-wrap .subs-box-ctn .subs-cart {
+    background:url('../images/regular_icon.png') center center no-repeat #e4f1e2;
+}
+
+.mall-cart .mall-cart-num,
+.rental-cart .rental-cart-num,
+.subs-cart .subs-cart-num {
+    position:absolute;
+    right:10px;
+    top:5px;
+    display:flex;
+    width:var(--obj-size-mid);
+    height:var(--obj-size-mid);
+    justify-content: center;
+    background:var(--color-primary);
+    border-radius: var(--radius-mid);
+    color:#fff;
+    font-weight: 700;
+    line-height: var(--obj-size-mid); 
+}
+
+.mall-box-wrap .mall-box-ctn,
+.rental-box-wrap .rental-box-ctn,
+.subs-box-wrap .subs-box-ctn {
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.mall-box-wrap .mall-box-ctn .mall-cart-txt,
+.rental-box-wrap .rental-box-ctn .rental-cart-txt,
+.subs-box-wrap .subs-box-ctn .subs-cart-txt { 
+    padding: 0 20px;
+}
+
+.mall-box-wrap .mall-box-ctn .mall-cart-txt .cart-num,
+.rental-box-wrap .rental-box-ctn .rental-cart-txt .cart-num,
+.subs-box-wrap .subs-box-ctn .subs-cart-txt .cart-num { 
+    font-weight: 700;
+    font-family: var(--font);
+}
+
+.mall-box-wrap .mall-box-btn,
+.rental-box-wrap .rental-box-btn,
+.subs-box-wrap .subs-box-btn {
+    display:flex;
+    flex-direction: column;
+    padding: 0 20px;
+    text-align:center;
+    margin-top:auto;
+}
+
+.mall-box-wrap .mall-box-btn a,
+.rental-box-wrap .rental-box-btn a,
+.subs-box-wrap .subs-box-btn a {
+    padding:20px 20px;
+    border-radius: var(--obj-size-mid);
+    border:1px solid var(--color-line);
+    transition: all 0.3s;
+}
+
+.mall-box-wrap .mall-box-btn a:hover,
+.rental-box-wrap .rental-box-btn a:hover,
+.subs-box-wrap .subs-box-btn a:hover {
+    background: var(--color-black);
+    color:#fff;
+}
+
 /* -------- LNB -------- */
 
 .rn-lnb-wrap {
@@ -1142,7 +1325,7 @@ nav.rn-gnb .nav-inner {
 
 .rn-visual {
     width:100%;
-    height:600px;
+    height:680px;
     border-bottom:1px solid var(--color-line);
 }
 
@@ -1359,6 +1542,8 @@ nav.rn-gnb .nav-inner {
 }
 
 .vs-detail-item .vs-detail-wrap .vs-detail-thumnail {
+    display:flex;
+    position:relative;
     width:120px;
     height:120px;
     border-radius: var(--obj-size-small);
@@ -1367,9 +1552,10 @@ nav.rn-gnb .nav-inner {
 }
 
 .vs-detail-item .vs-detail-wrap .vs-detail-thumnail > img {
+    position:absolute;
     display: block;
-    width:100%;
     height:100%;
+    right:-60px;
 }
 
 .vs-detail-item .vs-detail-wrap .vs-detail-txt {
@@ -1690,7 +1876,7 @@ a.quick-icon .quick-txt {
 
 .stream-track .stream-item .stream-video-thum {
     width:280px;
-    height:466px;
+    height:420px;
     border-radius: var(--radius-mid);
     overflow:hidden;
 }
@@ -1842,7 +2028,7 @@ a.quick-icon .quick-txt {
     position:relative;
     flex-shrink: 0;
     width:280px;
-    height:466px;
+    height:420px;
     border-radius: var(--radius-mid);
     overflow:hidden;
 }
@@ -1903,6 +2089,11 @@ a.quick-icon .quick-txt {
 
 .short-form-track .shortform-item .video-clip {
     width:100%;
+    height:100%;
+}
+
+.shortform-item .video-clip .ff-container.ff-responsive {
+    height:100%;
 }
 
 .short-form-track .shortform-item .video-clip:before {
