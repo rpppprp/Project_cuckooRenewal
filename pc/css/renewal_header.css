@@ -1,0 +1,565 @@
+@charset "UTF-8";
+
+
+/* -------- header -------- */
+
+.rn-header {
+    width:100%;
+}
+
+
+/* -------- top --------
+
+// 241031 / rn-top, rn-top 수정
+
+------------------------*/
+
+
+.rn-top {
+    width: 100%;
+    min-width:100%;
+    height: 50px;
+    min-height:50px;
+    padding: 10px;
+    background: var(--color-black);
+    color: #fff;
+}
+
+.rn-top .top-wrap {
+    width: 400px;
+    min-width:400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    background: var(--color-black);
+}
+
+.rn-top .top-wrap .top-txt-track {
+    width: calc(100% - 28px);
+    height:28px;
+    min-height:28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.top-txt-track .top-txt-item {
+    width: 100%;
+    text-align: center;
+    align-self: center;
+}
+
+.top-txt-track .top-txt-item a {
+    color:#fff;
+}
+
+.rn-top .top-wrap .close-top {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    color:#fff;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.close-top>.icon {
+    fill: #fff;
+    width: 16px;
+    height: 16px;
+    align-self: center;
+}
+
+
+/* header - gnb */
+
+.rn-header-wrap {
+    position:relative;
+    width: 100%;
+    background:#fff;
+    transition: all 0.3s;
+}
+
+/* header fixed시 추가 */
+
+.rn-header-wrap.fixed {
+    position:fixed !important;
+    top:0px;
+    left:0px;
+    z-index:11;
+    box-shadow: 0px 0px 14px rgba(0,0,0,0.1);
+}
+
+.rn-header-wrap .rn-header-top {
+    width: 100%;
+    border-bottom: 1px solid var(--color-line);
+    padding: 25px 0px;
+}
+
+/* header fixed시 추가 */
+
+.rn-header-wrap.fixed .rn-header-top {
+    height:0px;
+    padding:0px;
+}
+
+.rn-header-wrap .rn-header-top .rn-header-inner {
+    position:relative;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.rn-header-top .rn-header-inner .logo-wrap {
+    width: calc(100% - 80%);
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    transition: all 0.3s ease-out;
+}
+
+/* header fixed시 추가 */
+
+.rn-header-wrap.fixed .rn-header-top .logo-wrap {
+    position:absolute;
+    width:auto;
+    top:20px;
+    left:0px;
+    z-index:10;
+}
+
+
+.logo-wrap a {
+    width: 150px;
+    color:var(--color-dark);
+}
+
+.logo-wrap a .logo {
+    width: 150px;
+    height: 25px;
+    transition: width 0.3s ease-out;
+}
+
+/* header fixed시 추가 */
+
+.rn-header-wrap.fixed .rn-header-top .logo-wrap a .logo {
+    width:120px;
+}
+
+.rn-header-top .rn-header-inner .search-wrap {
+    width: 340px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/* header fixed시 추가 */
+
+.rn-header-wrap.fixed .rn-header-top .search-wrap {
+    position:absolute;
+    top:10px;
+    right:0px;
+    z-index:10;
+}
+
+.rn-header-inner .search-wrap .search-form {
+    position: relative;
+    width: 250px;
+    height: var(--obj-size-big);
+    background: var(--color-gray);
+    border-radius: var(--radius-big);
+    font-size: var(--font-small);
+    padding: 10px 20px;
+    cursor: pointer;
+    counter-reset : search-ranking;
+}
+
+.search-wrap .search-form .search-slide {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: calc(100% - 68px);
+    height: 20px;
+    overflow: hidden;
+}
+
+.search-wrap .search-form .search-slide li {
+    width: 100%;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.search-wrap .search-form .search-slide li:before {
+    counter-increment:search-ranking;
+    content: counter(search-ranking)'.';
+    margin-right:5px;
+}
+
+.search-wrap .search-form .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: var(--obj-size-small);
+    height: var(--obj-size-small);
+}
+
+.search-wrap .search-form .search-icon .icon {
+    width: 18px;
+    height: 18px;
+}
+
+
+.rn-header-inner .icon-wrap {
+    position:relative;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icon-wrap .cart-icon,
+.icon-wrap .user-icon {
+    position:relative;
+    width: var(--obj-size-mid);
+    height: var(--obj-size-mid);
+    margin-left: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+    color:var(--color-txt);
+}
+
+.icon-wrap .cart-icon .icon,
+.icon-wrap .user-icon .icon {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+}
+
+.icon-wrap .cart-icon .add-cart-num {
+    position:absolute;
+    display:inline-block;
+    width:18px;
+    height:18px;
+    top:-4px;
+    right:-2px;
+    background: var(--color-secondary);
+    color:#fff;
+    font-weight: 500;
+    font-size: 10px;
+    flex-shrink: 0;
+    border-radius: var(--radius-mid);
+    text-align:center;
+    line-height:18px;
+}
+
+.icon-wrap .account-menu {
+    display: none;
+    position:absolute;
+    background:#fff;
+    min-width:140px;
+    right:0px;
+    top:35px;
+    border:1px solid var(--color-line);
+    border-radius: 6px;
+    padding:10px 0px;
+    box-shadow: 0px 0px 14px rgba(0,0,0,0.1);
+    z-index:10;
+}
+
+.icon-wrap .account-menu > li {
+    padding:10px 20px;
+    font-size:var(--font-small);
+}
+
+.icon-wrap .account-menu > li a:hover {
+    font-weight: 700;
+}
+
+/* -------- GNB -------- */
+
+
+nav.rn-gnb {
+    width: 100%;
+    z-index:10;
+    border-bottom: 1px solid var(--color-line);
+}
+
+
+nav.rn-gnb .nav-inner {
+    position:relative;
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-inner .rn-nav-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+/* header fixed시 추가 */
+
+.rn-header-wrap.fixed .nav-inner .rn-nav-wrap {
+    margin-left:170px;
+}
+
+.nav-inner .rn-nav-wrap li {
+    display:flex;
+    align-self: center;
+    padding-right: 40px;
+    height:100%;
+    cursor:pointer;
+}
+
+.nav-inner .rn-nav-wrap li .nav-link_a {
+    position:relative;
+    padding:18px 0px;
+    font-weight: 500;
+    align-self:center;
+}
+
+.nav-inner .rn-nav-wrap li.on .nav-link_a:after {
+    position:absolute;
+    width:100%;
+    height:3px;
+    bottom:0px;
+    left:0px;
+    content:"";
+    background: var(--color-secondary);
+}
+
+
+.nav-inner .brand-gnb {
+    position: relative;
+    display: flex;
+    margin-right: 40px;
+    height:100%;
+}
+
+.nav-inner .brand-gnb a.brand-link {
+    display: flex;
+    padding: 3px 0px 3px 10px;
+    border-radius: 6px;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.nav-inner .brand-gnb a.brand-link b {
+    align-self: center;
+    font-weight: 700;
+}
+
+.nav-inner .brand-gnb a.brand-link > span.dropdown-icon {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    width: var(--obj-size-small);
+    height: var(--obj-size-small);
+    align-self: center;
+    margin-left:0px;
+    transition: all 0.2s;
+}
+
+.nav-inner .brand-gnb a.brand-link > span.dropdown-icon.on {
+    transform:rotate(180deg);
+}
+
+.nav-inner .brand-gnb a.brand-link > span.dropdown-icon .icon {
+    width: 10px;
+    height: 10px;
+    align-self: center;
+    fill: var(--color-darkgray);
+}
+
+
+.nav-inner .brand-gnb .brand-lnb {
+    position: absolute;
+    width: calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    top:50px;
+    left: 0px;
+    background:#fff;
+    padding: 15px 20px;
+    border:1px solid var(--color-line);
+    z-index:99;
+}
+
+.nav-inner .brand-gnb .brand-lnb li {
+    display:flex;
+    padding: 5px 0px;
+}
+
+.nav-inner .brand-gnb .brand-lnb li a {
+    color: var(--color-darkgray);
+    align-self:center;
+}
+
+.nav-inner .brand-gnb .brand-lnb li a:hover {
+    color:var(--color-txt);
+    font-weight: 700;
+}
+
+.nav-inner .nav-etc {
+    display: flex;
+    margin-left:auto;
+    justify-content: center;
+}
+
+/* header fixed시 추가 */
+
+.rn-header-wrap.fixed .nav-etc {
+    display: none;
+}
+
+.nav-inner .nav-etc > li {
+    position:relative;
+    margin-left:30px;
+    align-self:center;
+    font-family: "Noto Sans KR";
+}
+
+.nav-inner .nav-etc li a {
+    display: flex;
+    cursor:pointer;
+    justify-content: center;
+}
+
+.nav-inner .nav-etc li a em {
+    align-self: center;
+    margin-right:5px;
+}
+
+.company-btn span.icon {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    width: var(--obj-size-small);
+    height: var(--obj-size-small);
+    align-self: center;
+    transition: all 0.2s;
+}
+
+.company-btn span.icon.on {
+    transform:rotate(180deg);
+}
+
+.company-btn span.icon > svg {
+    align-self: center;
+}
+
+
+.company-lnb {
+    position:absolute;
+    top: 35px;
+    left:-20px;
+    background:#fff;
+    border:1px solid var(--color-line);
+    padding:15px 20px;
+    z-index:99;
+}
+
+.company-lnb li {
+    width:70px;
+    padding:5px 0px;
+}
+
+.company-lnb li a {
+    display: block;
+    width:100%;
+    height:100%;
+    color:var(--color-black);
+    cursor:pointer;
+    text-align: center;
+}
+
+.company-lnb li a:hover {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+
+/* -------- LNB -------- */
+
+.rn-lnb-wrap {
+    position:absolute;
+    width:100%;
+    height:auto;
+    background:#fff;
+    z-index:98;
+    /* top:150px; */
+    left:0px;
+    border-top:1px solid var(--color-line);
+    border-bottom:1px solid var(--color-line);
+    box-shadow:0px 4px 5px rgba(0,0,0,0.05);
+}
+
+.rn-lnb-wrap .inner {
+    width:1200px;
+    margin:0 auto;
+}
+
+.rn-lnb-wrap .inner .lnb-cetegory-wrap {
+    display:flex;
+    flex-wrap: wrap;
+    padding:30px 0px 50px;
+    gap:30px;
+}
+
+.rn-lnb-wrap .inner .lnb-cetegory-wrap > li {
+    width: 12%;
+}
+
+.lnb-sub-category-wrap {
+    width:100%;
+}
+
+.lnb-sub-category-wrap > a {
+    display:flex;
+    margin-bottom:10px;
+}
+
+.lnb-sub-category-wrap > a > .lnb-cate-title {
+    font-size:var(--font-normal);
+    font-weight: 700;
+    align-self:center;
+}
+
+.lnb-sub-category-wrap > a > .lnb-more {
+    display: flex;
+    width: var(--obj-size-small);
+    height: var(--obj-size-small);
+    justify-content: center;
+}
+
+.lnb-sub-category-wrap > a > .lnb-more svg.icon {
+    width:10px;
+    height:10px;
+    align-self:center;
+}
+
+.lnb-sub-category {
+    font-size: var(--font-small);
+}
+
+.lnb-sub-category > li {
+    width:100%;
+}
+
+.lnb-sub-category > li a {
+    display: block;
+    color: var(--color-darkgray);
+    padding:5px 0px;
+}
+
+.lnb-sub-category > li a:hover {
+    color:var(--color-txt);
+    text-decoration: underline;
+}

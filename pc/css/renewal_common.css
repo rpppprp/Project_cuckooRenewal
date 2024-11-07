@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+/* -------- font -------- */
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format("woff2"),
+     url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format("woff"), 
+     url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format("woff2"), 
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format("woff"), 
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');
+ }
+
+/* -------- reset -------- */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+em,
+mark {
+    font-style: normal;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#icon svg polyline,
+#icon svg path {
+    fill: inherit;
+    stroke: inherit;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+
+div {
+    box-sizing: border-box;
+}
+
+
+
+
+/* -------- root -------- */
+
+:root {
+    --color-primary: #ff5b53;
+    --color-secondary: #f3332b;
+    --color-txt: #272727;
+    --color-dark: #585856;
+    --color-darkgray: #767676;
+    --color-black: #312f2d;
+    --color-mid-gray: #999999;
+    --color-gray: #f7f7f7;
+    --color-line: #eaeaea;
+    --font-normal: 16px;
+    --font-small: 14px;
+    --font-mid: 20px;
+    --font-big: 32px;
+    --radius-small: 6px;
+    --radius-mid: 16px;
+    --radius-big: 30px;
+    --obj-size-small: 28px;
+    --obj-size-mid: 32px;
+    --obj-size-big: 40px;
+    --font:'Noto Sans KR';
+}
+
+
+/* -------- Common -------- */
+
+
+html,
+body {
+    font-family: Gotham, "Noto Sans KR", "Apple SD Gothic Neo", AppleGothic, "돋움", Dotum, Arial, Helvetica, sans-serif;
+    font-size: var(--font-normal);
+    letter-spacing: -0.25px;
+    color: var(--color-txt);
+    font-weight: 300;
+    line-height:1.5;
+}
+
+
+body {
+    background: #fff;
+    transition: all 0.2s;
+    min-width: 1280px;
+}
+
+
+.icon-svg {
+    width: 0px;
+    height: 0px;
+}
+
+article.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+a,
+a:active,
+a:visited {
+    color: var(--color-txt);
+}
+
+
+.hidden {
+    display:none !important;
+}
+
+
+.slick-slide img {
+	width:auto;
+}
+
+.slick-dots li button {
+    background:transparent;
+}
+
+
+/* 스크롤 제어 //241104 수정 */
+.scroll-none {
+    overflow:hidden !important;
+    touch-action:none;
+}
+
+/* title */
+
+.section-tit {
+    width:100%;
+    position:relative;
+    margin-bottom:40px;
+}
+
+.section-tit > h1.tit-txt {
+    font-size:var(--font-big);
+    text-align:center;
+}
+
+.section-tit > .more-btn {
+    position:absolute;
+    right:0px;
+    top:10px;
+    font-size:var(--font-small);
+    color:var(--color-darkgray);
+}
+
+.section-tit > .more-btn svg {
+    fill: var(--color-darkgray);
+}
+
+
+/* icon */
+
+.arrow-bottom-icon {
+    width:10px;
+    height:10px;
+}
+
+.arrow-icon {
+    width:16px;
+    height:16px;
+}
+
+.navi-icon {
+    width:16px;
+    height:16px;
+}
+
+.more-arrow-icon {
+    width:12px;
+    height:12px;
+}
+
+.arrow-button {
+    display: flex;
+    width:36px;
+    height:36px;
+    border-radius: var(--obj-size-mid);
+    border:1px solid var(--color-line);
+    background:#fff;
+    justify-content: center;
+    box-shadow: 1px 1px 14px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.arrow-button > svg.icon {
+    align-self: center;
+}
+
+
+.arrow-track {
+    width:100%;
+}
+
+.arrow-track > a {
+    position: absolute;
+    bottom:calc(100% / 2 - 10px);
+    cursor: pointer;
+    z-index:10;
+    color:var(--color-txt);
+}
+
+.arrow-track > a.prev {
+    left:-20px;
+}
+
+.arrow-track > a.next {
+    right:-20px;
+}
+
+.slick-disabled {
+    opacity:0.3;
+}

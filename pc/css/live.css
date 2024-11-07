@@ -1,0 +1,76 @@
+/*
+html, body{position:relative;-webkit-font-smoothing:antialiased;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, button, address, em, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, hr, input, textarea, select{margin:0;padding:0}
+body{padding:0;background:#fff;font-family:'Noto Sans KR','Dotum',sans-serif;font-weight:400;font-size:14px;color:#666;letter-spacing:-0.05em;}
+*/
+
+.main-hot-deal a{color:#222; text-decoration:none; word-break:break-all; outline:0;}
+.main-hot-deal a:link, a:visited, a:hover, a:active, a:focus{text-decoration:none;}
+
+/* 메인 > 금주의 핫딜 */
+.main-hot-deal {height:450px; background-position: center; background-repeat: no-repeat; font-family: 'Noto Sans KR','Dotum',sans-serif; font-weight: 400; -webkit-font-smoothing:antialiased;padding:0;}
+.main-hot-deal .inner {height:100%;position:relative; width:1200px; margin:0 auto;}
+.main-hot-deal h3 {position:absolute; top:80px; left:-17px; z-index:5; font-weight:normal; color:#222;}
+.main-hot-deal .btn-live-next {position:absolute; top:305px; left:100%; display:block; width:50px; height:50px; margin-left:20px; font-size:0; border-radius:50%; box-sizing:border-box; border:2px solid #fff; background:rgba(255,255,255,0.2); z-index:60;}
+.main-hot-deal .btn-live-next:before {content:''; position:absolute; top:0; left:0; display:block; width:100%; height:100%; background:url('/pc/images/timedeal/pc_deal_btn.png') center center no-repeat; opacity:0.6;}
+.main-hot-deal .live-timer-wrap {margin-bottom: 10px; text-align:center; background-color: rgb(53, 53, 53); top: 15px;
+    							 height: 106px; position: absolute; width: 100%; left: 0; vertical-align: middle; line-height: 80px;}/*여기 블랙처리*/
+.main-hot-deal .live-timer-wrap:after {content:''; display:inline-block; font-weight:300; font-size:25px; line-height:143px; margin-left:7px; color:white;}/*여기 흰색처리*/ 
+.main-hot-deal .flip-clock-wrapper {top: 40px; margin:0; font-size:10px; display:inline-block; vertical-align:top; width:auto;}
+.main-hot-deal .flip-clock-wrapper .flip {float:none;display:inline-block;}
+.main-hot-deal .flip-clock-wrapper ul{width:48px; height:48px; margin:5px; border-radius:10px;}
+.main-hot-deal .flip-clock-wrapper ul li a div div.inn {font-size:25px; background-image: url('/pc/images/timedeal/pc_dael_timebox.png'); text-shadow:none; color:#fff; font-weight:500;}
+.main-hot-deal .flip-clock-wrapper ul li {line-height:48px;}
+/*.main-hot-deal .flip-clock-wrapper ul li a div.up {border-top-left-radius:10px;border-top-right-radius:10px;}
+.main-hot-deal .flip-clock-wrapper ul li a div.down {border-bottom-left-radius:10px;border-bottom-right-radius:10px;}*/
+.main-hot-deal .flip-clock-divider{position:relative;width:14px;height:48px;float:none;display:inline-block; vertical-align:top;}
+.main-hot-deal .flip-clock-divider > * {display:none;}
+.main-hot-deal .flip-clock-divider:before {content:':'; position:absolute; top:0; left:0; display:block; width:100%; height:100%; margin-right:2px; font-weight:500; font-size:25px; line-height:48px; text-align:center; color:#ffffff;}
+.main-hot-deal .flip-clock-dot{display:none;}
+.main-hot-deal .flip-clock-divider .flip-clock-label {position:relative; top:auto; right:auto; font-size:25px; line-height:50px; text-align:center; color:rgb(255, 254, 254);}
+.main-hot-deal .flip-clock-divider.seconds{display:none;}
+.main-hot-deal .flip-clock-divider.days {width:19px;}
+.main-hot-deal .flip-clock-divider.days:before{display:none;}
+.main-hot-deal .flip-clock-divider.days .flip-clock-label {display:none;}
+/*.main-hot-deal .flip-clock-divider.minutes{display:none;}*/
+
+.main-hot-deal .live-slider {position:absolute; top:110px; right:0; width:750px; height:440px; z-index:50;}
+.main-hot-deal .live-slider-inner {position:relative; width:100%; height:100%; margin:0 auto;}
+.main-hot-deal .vertical-contents {position:absolute; top:0; left:0; width:100%; height:100%; z-index:0;}
+.main-hot-deal .vertical-contents-inner {position:relative; width:100%; height:100%;}
+.main-hot-deal .vertical-cell {position:absolute; top:0; left:0; width:100%; height:100%; overflow:visible; z-index:0; will-change:transform; box-sizing:border-box; transform-origin: 50% 0%;}
+.main-hot-deal .vertical-cell.actived .hot-deal-benefit {opacity:1;}
+.main-hot-deal .vertical-cell.actived .btn-hot-deal-item {box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);}
+
+.main-hot-deal .flip-clock-wrapper ul:nth-child(1):after{content:'DAYS';color: white; font-size: 10px; position: absolute; top: -55px; left: 13px; font-weight: 300;}
+.main-hot-deal .flip-clock-wrapper ul:nth-child(3):after{content:'HOURS';color: white; font-size: 10px; position: absolute; top: -55px; left: 9px; font-weight: 300;}
+.main-hot-deal .flip-clock-wrapper ul:nth-child(5):after{content:'MINUTES';color: white; font-size: 10px; position: absolute; top: -55px; left: 6px; font-weight: 300;}
+.main-hot-deal .flip-clock-wrapper ul:nth-child(7):after{content:'SECONDS';color: white; font-size: 10px; position: absolute; top: -55px; left: 3px; font-weight: 300;}
+
+.btn-hot-deal-item {display:block; width:750px; height:440px; margin:0 auto; padding:50px 40px; background-color:#fff; box-sizing:border-box; border-radius:15px; box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); transition:box-shadow 0.45s ease;}
+.btn-hot-deal-item:after {content:''; display:block; clear:both;}
+.btn-hot-deal-item .list-product-thumb {float:left; width:300px; margin-top: 80px;}
+.btn-hot-deal-item .list-product-thumb .thumb {width:100%;}
+.btn-hot-deal-item .list-product-thumb .thumb img {max-width:300px; max-height: 300px;}
+.btn-hot-deal-item .list-product-thumb .product-state{position:absolute;top:110px;left:20px;}
+.btn-hot-deal-item .list-product-info {float:left; width:330px;  margin-top: 140px; margin-left:40px; position:relative;}
+.btn-hot-deal-item .list-product-info .info-model {display:block; width:100%; font-size:16px; color:#999; line-height:18px;}
+.btn-hot-deal-item .list-product-info .info-title {width:100%; height:35px; font-size:18px; color:#222;line-height:28px; overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical; font-family: Gotham, "Noto Sans KR", "Apple SD Gothic Neo", AppleGothic, "돋움", Dotum, Arial, Helvetica, sans-serif; font-style: normal; font-weight: 300;}
+.btn-hot-deal-item .list-product-info .info-model + .info-title {margin-top:13px;}
+.btn-hot-deal-item .list-product-info .info-price-data {margin-top:19px; width:100%;}
+.btn-hot-deal-item .info-price-cell {position:relative; padding-left:30px; font-size:16px; vertical-align:bottom; line-height:34px; color:#666; text-align:right;}
+.btn-hot-deal-item .info-price-cell del {font-size:16px; color:rgb(190, 190, 190); margin-right:5px; }
+.btn-hot-deal-item .info-price-cell em {position:absolute; top:0; left:0; display:block; color:#222;}
+.btn-hot-deal-item .info-price-cell strong {margin:0 8px 0 10px; color:#dc4c45 !important; font-size:28px; font-weight:700;}
+.btn-hot-deal-item .info-price-cell del:only-child {margin-right:0;}
+.btn-hot-deal-item .info-grade {position:absolute; top:-2px; right:0;}
+.btn-hot-deal-item .info-grade .grade {font-size:14px; line-height:14px; color:#666; position: relative; display: inline-block;}
+.btn-hot-deal-item .list-product-info .tdtable .list-buy-number {font-size:23px; line-height:24px; border-top:1px solid #e8e8e8; font-family: Gotham, "Noto Sans KR", "Apple SD Gothic Neo", AppleGothic, "돋움", Dotum, Arial, Helvetica, sans-serif; font-weight: bold; color: #ec6331;}
+.btn-hot-deal-item .list-buy-number strong {font-weight:700; color:#0f1424;}
+.btn-hot-deal-item .info-benefit {margin-top:30px;}
+
+.btn-hot-deal-item .list-product-info .tdtable {font-size:18px; color:rgb(142, 142, 140); font-family: Gotham, "Noto Sans KR", "Apple SD Gothic Neo", AppleGothic, "돋움", Dotum, Arial, Helvetica, sans-serif; font-weight: bold;}
+.btn-hot-deal-item .list-product-info .tdtable strong {font-size: 30px; color: #7a101b;}
+.btn-hot-deal-item .list-product-info .tdtable td {padding : 10px;}
+.btn-hot-deal-item .list-product-info .tdtable del {color: rgb(190, 190, 190);}
+.btn-hot-deal-item .list-product-info .tdtable .productNm {font-size: 22px;}

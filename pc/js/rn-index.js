@@ -72,6 +72,7 @@ $(document).on("mouseup", ".search-modal-wrap", function(e){
     if(_searchBox.has(e.target).length === 0){
         _searchBox.addClass("hidden");
         scrollAble();
+        history.scrollRestoration = "auto"
     } else {
         _searchBox.removeClass("hidden");
     }
@@ -105,7 +106,7 @@ $(document).on("click", ".top-wrap .close-top", function(){
 /**--- 헤더 스크롤 --- */
 
 $(window).load(function(){
-    let _header = $("#rn-header");
+    let _header = $(".rn-header-wrap");
 
     $(window).on("scroll",function(){
         let _winPos = $(this).scrollTop(); // 현재위치
@@ -146,43 +147,52 @@ $("#rn-header").on("mouseleave", ".rn-gnb", function(){
 
 /** 브랜드관 메뉴 열기&닫기 */
 
-$("#rn-header").on("click", ".brand-gnb", function(e){
+var brand_menu = $(".brand-lnb");
+var _arrow = $('.brand-link .dropdown-icon');
+
+$("#rn-header").on("click", ".brand-gnb .brand-link", function(e){
     e.preventDefault();
-    var brand_menu = $(this).find("ul");
-    if(brand_menu.hasClass("hidden")){
-        brand_menu.removeClass("hidden");
+    if(brand_menu.is(":visible")){
+        brand_menu.hide();
+        _arrow.removeClass('on');
     } else {
-        brand_menu.addClass("hidden");
+        brand_menu.show();
+        _arrow.addClass('on');
     }
 });
 
 $(document).on("mouseup",  function(e){
-    var _brand = $(".brand-gnb .brand-lnb");
-    if(_brand.has(e.target).length === 0){
-        _brand.addClass("hidden");
-    }else{
-        _brand.removeClass("hidden");
+    var _brand = $(".brand-gnb")
+
+    if(!_brand.is(e.target) && _brand.has(e.target).length === 0) {
+        _brand.find('ul').hide();
+        _arrow.removeClass('on');
     }
 });
+
 
 /** 회사소개 메뉴 열기&닫기 */
 
+var _co_menu = $(".company-lnb");
+var _co_arrow = $('.company-btn .dropdown-icon');
+
 $("#rn-header").on("click", ".nav-etc .company-btn", function(e){
     e.preventDefault();
-    var _co_menu = $(this).next("ul");
-    if(_co_menu.hasClass("hidden")){
-        _co_menu.removeClass("hidden");
+    if(_co_menu.is(":visible")){
+        _co_menu.hide();
+        _co_arrow.removeClass('on');
     } else {
-        _co_menu.addClass("hidden");
+        _co_menu.show();
+        _co_arrow.addClass('on');
     }
 });
 
-$(document).on("mouseup", function(e){
-    var _coper = $(".nav-etc .company-lnb");
-    if(_coper.has(e.target).length === 0){
-        _coper.addClass("hidden");
-    }else{
-        _coper.removeClass("hidden");
+$(document).on("mouseup",  function(e){
+    var _comBtn = $(".nav-etc li").eq(0)
+
+    if(!_comBtn.is(e.target) && _comBtn.has(e.target).length === 0) {
+        _comBtn.find('ul').hide();
+        _co_arrow.removeClass('on');
     }
 });
 
@@ -229,7 +239,7 @@ function _cartPopupBadge(){
 
 _cartPopupBadge();
 
-/** 카트 팝업 열기 */
+/** 카트 팝업 열기 // 241104 추가 */
 
 $("#rn-header").on("click", ".cart-icon", function(){
     var _cartPopup = $(".cart-popup-wrap");
@@ -237,7 +247,7 @@ $("#rn-header").on("click", ".cart-icon", function(){
     scrollDisable();
 });
 
-/** 카트 팝업 닫기 */
+/** 카트 팝업 닫기 // 241104 추가 */
 
 $("#rn-header").on("click", ".cart-popup-close", function(e){
     e.preventDefault();
@@ -246,13 +256,6 @@ $("#rn-header").on("click", ".cart-popup-close", function(e){
     scrollAble();
 });
 
-$(document).on("mouseup",".cart-popup-wrap", function(e){
-    var _cartPopup = $(".cart-popup-wrap");
-    if(_cartPopup.has(e.target).length === 0){
-        _cartPopup.hide();
-        scrollAble();
-    }
-});
 
 
 /**--------- container ---------*/
@@ -317,20 +320,18 @@ $(".visual-control .play-btn").click(function (e) {
 
 let _visualPopup = $(".visual-detail-wrap");
 $("#rn-main").on("click", ".visual-control .detail-btn", function(){
-    if(_visualPopup.hasClass("hidden")){
-        _visualPopup.removeClass("hidden");
+    if(_visualPopup.is(":visible")){
+        _visualPopup.hide();
+    } else {
+        _visualPopup.show();
         scrollDisable();
-    }else {
-        _visualPopup.addClass("hidden");
     }
 });
 
-
 $("#rn-main").on("click", ".vs-close", function(){
-    _visualPopup.addClass("hidden");
+    _visualPopup.hide();
     scrollAble();
 });
-
 
 
 /**--- 이벤트 --- */
@@ -529,11 +530,11 @@ slick_fresh();
 /**따라다니는 메뉴 - 상담버튼 열기&닫기 */
 
 $(".floating-quick .cs-btn-wrap").hide();
-$("#rn-main").on("click", ".floating-quick .cs-btn", function(){
+$("#rn-footer").on("click", ".floating-quick .cs-btn", function(){
     $(".floating-quick .cs-btn-wrap").fadeIn();
 });
 
-$("#rn-main").on("click", ".cs-btn-wrap .cs-close", function(){
+$("#rn-footer").on("click", ".cs-btn-wrap .cs-close", function(){
     $(".floating-quick .cs-btn-wrap").fadeOut();
 });
 
@@ -546,10 +547,14 @@ $(window).load(function(){
 
     $(window).on("scroll",function(){
         let _winPos = $(this).scrollTop(); // 현재위치
-        if(_winPos + 1000 >= _stop_pos){
-            _fixed_box.addClass("stop")
+        if($(this).scrollTop() > 250){
+            if(_winPos + 1000 >= _stop_pos){
+                _fixed_box.addClass("stop")
+            } else {
+                _fixed_box.removeClass("stop")
+            }
         } else {
-            _fixed_box.removeClass("stop")
+            _fixed_box.addClass("stop")
         }
     });
 })
