@@ -4,9 +4,9 @@ const app = express();
 const PORT = 4000;
 
 // 정적 파일 불러오기
-app.use(express.static(__dirname + "/pc"));
+app.use(express.static(__dirname + "/resources/static/pc"));
 
-// 라우팅 정의
+//라우팅 정의
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
