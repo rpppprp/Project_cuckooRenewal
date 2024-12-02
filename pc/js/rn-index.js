@@ -566,11 +566,12 @@ $("#rn-main").on("click",".esg-tab-wrap li a", function(){
 $(document).on('click', '.esg-tab-wrap li a', function(e){
     e.preventDefault();
     e.stopPropagation();
+    var _section = $(this).attr('href');
     var _esgNav = $(".esg-tab-wrap");
-    var _navHeight = _esgNav.outerHeight() + 90;
+    var _navHeight = _esgNav.outerHeight();
     
     $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top - _navHeight
+        scrollTop: $(_section).offset().top - _navHeight
     }, 500);
     return false;
 })

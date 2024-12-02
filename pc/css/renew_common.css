@@ -3360,7 +3360,6 @@ a.quick-icon .quick-txt {
     height:100%;
     font-size:24px;
     text-align:center;
-    transition: all 0.3s;
 }
 
 .esg-tab .inner .esg-tab-wrap li a:before {
@@ -3372,25 +3371,18 @@ a.quick-icon .quick-txt {
     left:50%;
     bottom:-21px;
     transform:translateX(-50%);
-    transition: all 0.3s;
 }
 
 .esg-tab .inner .esg-tab-wrap li a.on {
     position:relative;
     font-weight: 500;
     color:var(--color-primary);
-    transition: all 0.3s;
 }
 
 .esg-tab .inner .esg-tab-wrap li a.on:before {
     content:"";
     position:absolute;
-    width:180px;
-    height:2px;
     background:var(--color-primary);
-    left:50%;
-    bottom:-21px;
-    transform:translateX(-50%);
 }
 
 /* esg section common */
@@ -3398,6 +3390,7 @@ a.quick-icon .quick-txt {
 #esg-section01 article,
 #esg-section02 article {
     width:100%;
+    padding:10px 0px;
 }
 
 #esg-section01 .esg-tab-title,
@@ -3476,7 +3469,7 @@ a.quick-icon .quick-txt {
 /* esg 관리체계 */
 
 .esg-management {
-    padding:0 0 120px;
+    padding:50px 0 120px;
 }
 
 .esg-management .esg-management-img {
@@ -3488,7 +3481,7 @@ a.quick-icon .quick-txt {
 /* esg 환경경영 */
 
 .esg-environment {
-    padding:80px 0px 100px;
+    padding:50px 0px 100px;
 }
 
 .esg-environment .esg-section-wrap {
