@@ -3184,6 +3184,615 @@ a.quick-icon .quick-txt {
     color: var(--color-darkgray);
 }
 
+
+
+/* -------- esg 경영 -------- */
+
+/* esg visual banner */
+.esg-visual-banner {
+    width:100%;
+}
+
+.esg-visual-banner .inner {
+    width:100%;
+    height:600px;
+}
+
+.esg-visual-bn-wrap {
+    position:relative;
+    height:600px;
+}
+
+.esg-visual-bn-wrap .esg-visual-bn-track {
+    display:flex;
+    width:100%;
+    height:600px;
+    flex-direction: row;
+    overflow:hidden;
+    flex-wrap: wrap;
+}
+
+.esg-visual-bn-wrap .esg-visual-bn-track li {
+    position:relative;
+    display:flex;
+    justify-content: center;
+    width:100%;
+}
+
+.esg-visual-bn-wrap .esg-visual-bn-track li:after {
+    position:absolute;
+    content:"";
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    background-color:rgba(0,0,0,0.2);
+    background-blend-mode : multiply;
+    z-index:1;
+}
+
+.esg-visual-bn-wrap .esg-visual-bn-track li img {
+    display:inline-block;
+}
+
+.esg-visual-bn-wrap .esg-visual-ctn {
+    position:absolute;
+    width:1200px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    z-index:1;
+}
+
+.esg-visual-bn-wrap .esg-visual-ctn .esg-visual-title {
+    font-size: 40px;
+    color:#fff;
+}
+
+.esg-visual-bn-wrap .esg-visual-ctn .esg-visual-txt {
+    color:#fff;
+    margin-top:20px;
+}
+
+.esg-visual-bn-wrap .esg-visual-pager {
+    position:absolute;
+    bottom:60px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* .esg-visual-bn-wrap .esg-visual-pager .esg-v-page {
+    width:10px;
+    height:10px;
+    background:transparent;
+    border:2px solid #fff;
+    border-radius: 10px;
+    align-self: center;
+    transition: all 0.3s;
+    cursor:pointer;
+} */
+
+/* .esg-visual-bn-wrap .esg-visual-pager .esg-v-page.active {
+    width:25px;
+    background:#fff;
+} */
+
+.esg-visual-pager .slick-dots {
+    display: flex;
+    justify-content: space-around;
+}
+
+.esg-visual-pager .slick-dots li {
+    margin:0 2px;
+    box-sizing: border-box;
+    width:auto;
+}
+
+.esg-visual-pager .slick-dots li button{
+    display:block;
+    width:10px;
+    height:10px;
+    background:transparent;
+    border:2px solid #fff;
+    border-radius: 10px;
+    align-self: center;
+    transition: all 0.3s;
+    cursor:pointer;
+    box-sizing: border-box;
+}
+
+.esg-visual-pager .slick-dots li.slick-active button {
+    width:25px;
+    background:#fff;
+}
+
+.esg-visual-pager .slick-dots li + li {
+
+    margin:0 2px;
+}
+
+.esg-visual-pager .slick-dots li button:before {
+    display: none;
+}
+
+/* esg tab gnb */
+
+.esg-tab {
+    width:100%;
+}
+
+.esg-tab .inner {
+    position:static;
+    width:1200px;
+    top:-60px;
+    border-bottom: 1px solid var(--color-line);
+    transition: all 0.3s;
+}
+
+.esg-tab .inner.fixed {
+    position:fixed;
+    width:100%;
+    min-width:100%;
+    top:40px;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    z-index:10;
+    transition: all 0.3s;
+}
+
+.esg-tab .inner .esg-tab-wrap {
+    display:flex;
+    width:500px;
+    margin:0 auto;
+    justify-content: center;
+}
+
+.esg-tab .inner .esg-tab-wrap li {
+    width:calc(100% / 2);
+    height:100%;
+    margin:50px 0px 20px;
+    box-sizing:border-box;
+}
+
+.esg-tab .inner .esg-tab-wrap li a {
+    display:block;
+    width:100%;
+    height:100%;
+    font-size:24px;
+    text-align:center;
+    transition: all 0.3s;
+}
+
+.esg-tab .inner .esg-tab-wrap li a:before {
+    content:"";
+    position:absolute;
+    width:180px;
+    height:2px;
+    background:transparent;
+    left:50%;
+    bottom:-21px;
+    transform:translateX(-50%);
+    transition: all 0.3s;
+}
+
+.esg-tab .inner .esg-tab-wrap li a.on {
+    position:relative;
+    font-weight: 500;
+    color:var(--color-primary);
+    transition: all 0.3s;
+}
+
+.esg-tab .inner .esg-tab-wrap li a.on:before {
+    content:"";
+    position:absolute;
+    width:180px;
+    height:2px;
+    background:var(--color-primary);
+    left:50%;
+    bottom:-21px;
+    transform:translateX(-50%);
+}
+
+/* esg section common */
+
+#esg-section01 article,
+#esg-section02 article {
+    width:100%;
+}
+
+#esg-section01 .esg-tab-title,
+#esg-section02 .esg-tab-title {
+    position:relative;
+    display: flex;
+    width:1200px;
+    height:400px;
+    margin:50px auto;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: var(--radius-mid);
+    overflow: hidden;
+}
+
+#esg-section01 .esg-tab-title:before,
+#esg-section02 .esg-tab-title:before {
+    position:absolute;
+    width:100%;
+    height:100%;
+    content:"";
+    background:rgba(0,0,0,0.3);
+    top:0px;
+    left:0px;
+}
+
+#esg-section01 .esg-tab-title {
+    background:url(../images/esg-tab-bg01.jpg) center center no-repeat;
+    background-size:cover;
+}
+
+#esg-section02 .esg-tab-title {
+    background:url(../images/esg-tab-bg02.jpg) center center no-repeat;
+    background-size:cover;
+}
+
+#esg-section01 .esg-tab-title h1.tit,
+#esg-section02 .esg-tab-title h1.tit {
+    position: relative;
+    font-size:48px;
+    font-weight: 700;
+    color:#fff;
+    text-align:center;
+    align-self: center;
+}
+
+#esg-section01 .esg-tab-title h5,
+#esg-section02 .esg-tab-title h5 {
+    position: relative;
+    font-size: var(--font-normal);
+    color:var(--color-line);
+    font-weight: 300;
+    text-align:center;
+    align-self: center;
+}
+
+#esg-section01 .esg-section-wrap,
+#esg-section02 .esg-section-wrap {
+    width:1200px;
+    margin:0 auto;
+}
+
+.esg-section-wrap .section-tit:before {
+    display:block;
+    content:"";
+    width:30px;
+    height:3px;
+    background:var(--color-primary);
+    margin:0 auto 5px;
+}
+.esg-section-wrap .section-tit p.title-ko {
+    color:var(--color-darkgray);
+    text-align:center;
+}
+
+/* esg 관리체계 */
+
+.esg-management {
+    padding:0 0 120px;
+}
+
+.esg-management .esg-management-img {
+    text-align:center;
+}
+
+/* esg 비전 */
+
+/* esg 환경경영 */
+
+.esg-environment {
+    padding:80px 0px 100px;
+}
+
+.esg-environment .esg-section-wrap {
+    position:relative;
+}
+
+.esg-environment-table {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+}
+
+.esg-environment-table li {
+    background:#fff;
+    border-radius: var(--radius-mid);
+    border:1px solid var(--color-line);
+}
+
+.esg-e-box {
+    padding:40px;
+}
+
+.esg-e-box .esg-e-img {
+    display:flex;
+    background:var(--color-gray);
+    width:100px;
+    height:100px;
+    justify-content: center;
+    border-radius: 100%;
+    color: var(--color-primary);
+    margin:0 auto 20px;
+}
+
+.esg-e-box .esg-e-img svg.esg-e-icon {
+    width:60px;
+    height:60px;
+    align-self: center;
+}
+
+.esg-environment-table li:nth-child(2) .esg-e-img .esg-e-icon,
+.esg-environment-table li:nth-child(3) .esg-e-img .esg-e-icon {
+    width:50px;
+    height:50px;
+}
+
+.esg-environment-table li:nth-child(4) .esg-e-img .esg-e-icon,
+.esg-environment-table li:nth-child(5) .esg-e-img .esg-e-icon,
+.esg-environment-table li:nth-child(6) .esg-e-img .esg-e-icon {
+    width:55px;
+    height:55px;
+}
+
+.esg-e-box .esg-e-ctn .esg-e-subTit {
+    font-size:var(--font-mid);
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.esg-e-box .esg-e-ctn .esg-e-txt {
+    text-align:justify;
+    word-break: break-all;
+}
+
+/* esg 안전경영 */
+
+.esg-social {
+    padding:120px 0px;
+}
+
+.esg-social .esg-social-wrap {
+    position:relative;
+}
+
+.esg-social .esg-social-wrap .esg-s-track {
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    height:420px;
+    overflow:hidden;
+}
+
+.esg-s-track li {
+    display:flex !important;
+    width:100%;
+    height:420px;
+    gap:60px;
+    box-sizing: border-box;
+}
+
+.esg-s-track li .esg-s-img {
+    width:620px;
+    height:420px;
+    overflow:hidden;
+    border-radius: var(--radius-mid);
+}
+
+.esg-s-item01 .esg-s-img {
+    background:url(../images/esg-s-01.jpg) center center no-repeat;
+}
+
+.esg-s-item02 .esg-s-img {
+    background:url(../images/esg-s-02.jpg) center center no-repeat;
+}
+
+.esg-s-item03 .esg-s-img {
+    background:url(../images/esg-s-03.jpg) center center no-repeat;
+}
+
+.esg-s-item04 .esg-s-img {
+    background:url(../images/esg-s-04.jpg) center center no-repeat;
+}
+
+.esg-s-track li .esg-s-img img {
+    display: block;
+    width:0px;
+    height:0px;
+}
+
+.esg-s-track li .esg-s-ctn {
+    width:calc(100% - 620px);
+    margin: 30px 0px 0px auto;
+}
+
+.esg-s-ctn .esg-s-tit .num {
+    font-weight: 900;
+    font-size: 48px;
+    color:var(--color-line);
+}
+
+.esg-s-ctn .esg-s-tit h2 {
+    font-size: var(--obj-size-small);
+}
+
+.esg-s-ctn .esg-s-txt {
+    width:100%;
+    padding:0 30px 0px 0px;
+    text-align:justify;
+    word-break: break-all;
+    margin-top:20px;
+}
+
+.esg-s-sub-track {
+    position:absolute;
+    display:flex;
+    width:calc(100% - 620px - 60px);
+    height:90px;
+    bottom:0px;
+    right:30px;
+    gap:10px;
+}
+
+.esg-s-sub-track .slick-dots {
+    position:static;
+    display:flex;
+    width:100%;
+    height:90px;
+}
+
+.esg-s-sub-track .slick-dots li {
+    position:relative;
+    width:calc(100% / 4);
+    height:90px;
+    border-radius: var(--radius-small);
+    overflow:hidden;
+    filter: grayscale();
+    opacity:0.5;
+    box-sizing: border-box;
+    background-size:cover;
+    transition: all 0.3s;
+}
+
+.esg-s-sub-track li.slick-active {
+    filter:none;
+    opacity:1;
+    border:2px solid var(--color-primary);
+}
+
+.esg-s-sub-track .slick-dots li div {
+    display:block;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/* esg 지배구조 */
+
+.esg-governance {
+    padding:120px 0px;
+}
+
+.esg-g-table {
+    width:100%;
+    border-top:1px solid var(--color-darkgray);
+    border-bottom:1px solid #ccc;
+}
+
+.esg-g-table tr {
+    border-bottom:1px solid #ccc;
+}
+
+.esg-g-table tr th {
+    width: calc(230px - 40px);
+    background:var(--color-gray);
+    font-size:var(--font-mid);
+    font-weight: 700;
+    padding:30px 20px;
+    vertical-align:top;
+    text-align:center;
+}
+
+.esg-g-table tr td {
+    width:calc(100% - 290px);
+    padding:30px;
+}
+
+.esg-g-table tr td .esg-g-detail {
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.esg-g-detail li {
+    display: flex;
+    gap: 30px;
+}
+
+.esg-g-detail li .esg-g-icon {
+    display: flex;
+    width:50px;
+    height:50px;
+    background:var(--color-gray);
+    color:var(--color-primary);
+    border-radius: 50px;
+    justify-content: center;
+}
+
+.esg-g-detail li .esg-g-icon svg {
+    position:relative;
+    width:26px;
+    align-self: center;
+}
+
+.esg-g-detail li:first-child .esg-g-icon svg {
+    width:22px;
+    transform:rotate(-20deg);
+}
+
+.esg-g-detail li .esg-g-ctn {
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+/* esg in cuckoo */
+
+.esg-cuckoo {
+    padding:120px 0px;
+    background:var(--color-gray);
+}
+
+.esg-cuckoo-wrap {
+    display: flex;
+    gap:30px;
+}
+
+.esg-cuckoo-wrap .esg-c-item {
+    width:calc(100% / 2);
+    background:#fff;
+    border-radius: var(--radius-mid);
+    overflow: hidden;
+}
+
+.esg-cuckoo-wrap .esg-c-item .esg-c-thum {
+    width:100%;
+    height:330px;
+}
+
+.esg-cuckoo-wrap .esg-c-item:nth-child(1) .esg-c-thum {
+    background:url(../images/esg-c-img01.jpg) center center no-repeat;
+}
+
+.esg-cuckoo-wrap .esg-c-item:nth-child(2) .esg-c-thum {
+    background:url(../images/esg-c-img02.jpg) center center no-repeat;
+}
+
+.esg-cuckoo-wrap .esg-c-item .esg-c-ctn {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding:30px 40px;
+}
+
+.esg-cuckoo-wrap .esg-c-item .esg-c-ctn .esg-c-tit {
+    font-size: var(--font-mid);
+}
+
+.esg-cuckoo-wrap .esg-c-item .esg-c-ctn .esg-c-txt {
+    text-align:justify;
+    word-break: break-all;
+}
+
 /* -------- footer -------- */
 
 .rn-footer {
