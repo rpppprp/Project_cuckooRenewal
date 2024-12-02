@@ -3548,7 +3548,7 @@ a.quick-icon .quick-txt {
 /* esg 안전경영 */
 
 .esg-social {
-    padding:120px 0px;
+    padding:50px 0px 120px;
 }
 
 .esg-social .esg-social-wrap {
@@ -3672,7 +3672,7 @@ a.quick-icon .quick-txt {
 /* esg 지배구조 */
 
 .esg-governance {
-    padding:120px 0px;
+    padding:50px 0px 120px;
 }
 
 .esg-g-table {
@@ -3741,7 +3741,7 @@ a.quick-icon .quick-txt {
 /* esg in cuckoo */
 
 .esg-cuckoo {
-    padding:120px 0px;
+    padding:80px 0px;
     background:var(--color-gray);
 }
 
