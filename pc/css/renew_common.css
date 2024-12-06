@@ -1395,6 +1395,10 @@ nav.rn-gnb .nav-inner {
     flex-wrap: wrap;
 }
 
+.rn-visual .rn-visual-wrap .visual-track .slide-list {
+    width:100% !important;
+}
+
 .visual-track .visual-box {
     display: block !important;
     width:100%;
@@ -3210,6 +3214,10 @@ a.quick-icon .quick-txt {
     flex-direction: row;
     overflow:hidden;
     flex-wrap: wrap;
+}
+
+.esg-visual-bn-wrap .esg-visual-bn-track .slick-list {
+    width:100% !important;
 }
 
 .esg-visual-bn-wrap .esg-visual-bn-track li {
