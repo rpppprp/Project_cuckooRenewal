@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58">
+    <defs>
+        <clipPath id="5cc3efm9fa">
+            <path data-name="사각형 522" style="fill:none" d="M0 0h58v58H0z"/>
+        </clipPath>
+    </defs>
+    <path data-name="사각형 523" style="fill:none" d="M0 0h58v58H0z"/>
+    <g data-name="그룹 565">
+        <g data-name="그룹 564" style="clip-path:url(#5cc3efm9fa)">
+            <path data-name="패스 278" d="M29.752 25.31a6.356 6.356 0 0 1 4.148 1.225 4.336 4.336 0 0 1 1.492 3.552v.413a4.287 4.287 0 0 1-3.048 4.392l3.168 5.953a1.023 1.023 0 0 1 .108.887 1.138 1.138 0 0 1-.588.624 1.687 1.687 0 0 1-.912.12.909.909 0 0 1-.672-.551L30.04 35.27a1.587 1.587 0 0 1-.4.048h-3.584v6.169a.848.848 0 0 1-.372.769 1.538 1.538 0 0 1-.852.24 1.479 1.479 0 0 1-.84-.24.859.859 0 0 1-.36-.769v-14.4a1.919 1.919 0 0 1 .4-1.393 2.094 2.094 0 0 1 1.452-.384zm-.5 7.968a4.577 4.577 0 0 0 2.88-.72 2.531 2.531 0 0 0 .888-2.088v-.336a2.518 2.518 0 0 0-.864-2.087 4.213 4.213 0 0 0-2.664-.7h-3.436v5.928z" style="fill:#b82a42"/>
+            <path data-name="패스 279" d="m51.842 16.12-.571-5.6s-.22-7.5-8.125-7.5H13.962c-7.9 0-8.125 7.5-8.125 7.5l-.571 5.6" style="stroke:#333;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.4px;fill:none"/>
+            <path data-name="패스 280" d="M33.258 16.53h20.057l1.95 23.164s1.627 14.982-11.954 14.982H13.994C.414 54.676 2.04 39.694 2.04 39.694L3.995 16.53h29.263z" style="stroke:#333;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.4px;fill:none"/>
+        </g>
+    </g>
+</svg>

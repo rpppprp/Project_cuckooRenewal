@@ -1,0 +1,235 @@
+@media(max-width:380px) {
+    .member_main>ul li .clear .fl+.fl {
+        margin-left: 20px;
+    }
+
+    .coupon_select>.sel_list {
+        padding: 15px;
+    }
+
+    .order_list_detail>ul>li>.tit>span.prd_num {
+        padding-left: 5px;
+        margin-left: 5px;
+    }
+}
+
+@media(max-width:360px) {
+    .prd_tab_section.incont .tbl_wrap.type_line tbody td {
+        padding-left: 10px;
+    }
+
+    .year_indesc {
+        display: block;
+    }
+
+    .year_indesc>.fl:first-child {
+        float: none;
+    }
+
+    .year_indesc>.fl:nth-child(2) {
+        float: none;
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+
+    .layer_pop {
+        min-width: 290px;
+    }
+
+    .prd_list>a>.img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .prd_list>a>.img>img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .tit_type01 {
+        font-size: 21px;
+    }
+
+    .tit_bg:before {
+        width: 171px;
+    }
+
+    #cartPop .top_txt {
+        font-size: 14px;
+    }
+
+    .invest table tr td {
+        font-size: 13px;
+    }
+
+    .review_mid_area {
+        font-size: 14px;
+    }
+
+    .wrap_layer_pop.type_confirm .layer_pop .btn_wrap>* {
+        width: 110px;
+        font-size: 13px;
+    }
+
+    .photo_review_pop .prd_tit .prd_info .ui_star_02+span {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .layer_pop {
+        min-width: 290px;
+    }
+
+    #leaveMemcom .container_pop .tit {
+        font-size: 16px;
+    }
+
+    .flex_left {
+        flex: 1;
+        min-width: 150px;
+    }
+
+    .tab .tab_btn li a {
+        font-size: 13px;
+    }
+
+    .datepicker input {
+        font-size: 12px;
+    }
+
+    .mycuckoo_sub .mycuckoo_sub_tab_cont .top_area .datepicker_wrap .datepicker {
+        width: 99px;
+    }
+
+    .input_list label {
+        margin-left: 10px
+    }
+
+    .input_arrow>* {
+        font-size: 12px !important;
+    }
+
+    .btn_m {
+        font-size: 12px;
+        padding: 12px 13px;
+    }
+
+    .rl_list>.bottom_area>.btn_wrap>button {
+        min-width: 80px;
+        width: 30.8%;
+    }
+
+    .rl_list>.mid_area>.desc>ul li span.tit {
+        display: block;
+    }
+
+    .rl_list>.mid_area>.desc>ul li span.desc {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .cs_section.cs01>.box ul li .fl+.fl {
+        font-size: 16px;
+    }
+
+    .cs_section.cs01>.box ul li .fl {
+        font-size: 16px;
+    }
+
+    .cs_section.cs01>.box {
+        padding: 25px 20px;
+    }
+
+    .self_check .tit {
+        font-size: 20px;
+    }
+
+    .prd_list .rental_list li>.price>span {
+        display: block;
+        margin-lefT: 0px;
+        margin-top: 5px;
+    }
+
+    .rating ul li:nth-child(2) {
+        margin-left: 10px;
+    }
+
+    .rating ul li:nth-child(2) span {
+        margin-left: 5px;
+    }
+
+    .btn_area .btn_radius:last-child {
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+
+    .design_check_btn {
+        top: 10px;
+        right: 5px;
+    }
+
+    .graph_tit>span {
+        display: block;
+    }
+
+    .graph_tit>span+span {
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+
+    .member_main>ul li .clear .fl {
+        float: none;
+        text-align: center;
+    }
+
+    .member_main>ul li .clear .fl .img {
+        margin: 0 auto;
+    }
+
+    .member_main>ul li .clear .fl+.fl {
+        margin-left: 0px;
+    }
+
+    .save_id>div:nth-child(2) ul li+li:before {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        background: #e0e0de;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .save_id>div {
+        float: none !important;
+    }
+
+    .save_id>div:nth-child(2) ul {
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    .contract_desc .bottom_area ul li {
+        font-size: 12px;
+    }
+
+    .btn_l {
+        font-size: 13px;
+    }
+
+    .bottom_fixed_layer_pop .bottom_area .total_price .total .price {
+        font-size: 20px;
+    }
+
+    .bottom_fixed_layer_pop .bottom_area {
+        padding: 20px 15px;
+    }
+
+    .bottom_fixed_layer_pop .top_area {
+        padding: 0 15px;
+    }
+
+    .bottom_fixed_layer_pop .bottom_area .total_price>ul li .tit {
+        width: 55px;
+    }
+}

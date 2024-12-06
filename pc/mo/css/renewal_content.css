@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+
+
+.hidden {
+    display:none;
+}
+
+
+/*---------- ESG 경영 ----------*/
+
+.esg-container {
+    width:100%;
+}
+
+.esg-container .content {
+    width:100%;
+    padding:0px;
+}
+
+.esg-e-icon, .esg-g-icon {
+    width:32px;
+    height:32px;
+}
+
+/* esg visual */
+
+.esg-visual {
+    width:100%;
+}
+
+.esg-visual .inner {
+    width:100%;
+}
+
+.esg-visual .inner .esg-visual-bn-wrap {
+    position:relative;
+    width:100%;
+}
+
+.esg-visual .inner .esg-visual-bn-wrap:before {
+    position:absolute;
+    width:100%;
+    height:100%;
+    content:"";
+    left:0px;
+    top:0px;
+    background:rgba(0,0,0,0.3);
+}
+
+.esg-visual-bn-wrap .esg-visual-bn-track {
+    display:flex;
+    width:100%;
+    height:360px;
+    overflow:hidden;
+    flex-wrap: wrap;
+}
+
+.esg-visual-bn-wrap .esg-visual-bn-track li {
+    width:100%;
+    height:100%;
+}
+
+.esg-visual .inner .esg-visual-bn-wrap .esg-visual-ctn {
+    position:absolute;
+    color:#fff;
+    width:100%;
+    left:0px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.esg-visual-bn-wrap .esg-visual-ctn .esg-visual-title {
+    font-size:24px;
+    text-align:center;
+    margin-bottom:4px;
+}
+
+.esg-visual-bn-wrap .esg-visual-ctn .esg-visual-txt {
+    width:85%;
+    font-size:15px;
+    margin:15px auto 0px;
+    text-align: center;
+    word-break: break-all;
+    line-height:140%;
+}
+
+
+/* esg tab */
+.esg-tab {
+    width:100%;
+}
+
+.esg-tab .inner {
+    padding:0px 30px;
+}
+
+.esg-tab .inner .esg-tab-wrap {
+    position:static;
+    display:flex;
+    padding:30px 0px 20px;
+    justify-content: center;
+    border-bottom:1px solid #eaeaea;
+}
+
+.esg-tab .inner .esg-tab-wrap li {
+    width:calc(100% / 2);
+    font-size:18px;
+    align-self: center;
+    text-align:center;
+}
+
+.esg-tab .inner .esg-tab-wrap li a {
+    position:relative;
+    display:block;
+}
+
+.esg-tab .inner .esg-tab-wrap li a:before {
+    position:absolute;
+    display:block;
+    width:130px;
+    height:2px;
+    content:"";
+    background:transparent;
+    left:50%;
+    bottom:-21px;
+    transform:translateX(-50%);
+}
+
+.esg-tab .inner .esg-tab-wrap li a.on:before {
+    background:#ff5b53;
+}
+
+/* esg section common */
+
+.esg-content {
+    padding:0 25px;
+}
+
+.esg-tab-title {
+    position:relative;
+    display: flex;
+    width:100%;
+    height:200px;
+    border-radius: 16px;
+    background-position:center center;
+    background-size:cover;
+    flex-direction: column;
+    justify-content: center;
+    overflow:hidden;
+    margin:30px 0px 0px;
+}
+
+.esg-tab-title:before {
+    position:absolute;
+    width:100%;
+    height:100%;
+    content:"";
+    background:rgba(0,0,0,0.2);
+    left:0px;
+    top:0px;
+}
+
+.esg-tab-title h1 {
+    position:relative;
+    font-size:24px;
+    color:#fff;
+    align-self: center;
+}
+
+.esg-tab-title h5 {
+    position:relative;
+    font-size:15px;
+    font-weight: 300;
+    color:#EAEAEA;
+    align-self: center;
+}
+
+#esg-section01 .esg-tab-title {
+    background-image: url(../images/esg-tab-bg01.jpg);
+}
+
+#esg-section02 .esg-tab-title {
+    background-image: url(../images/esg-tab-bg02.jpg);
+}
+
+.esg-section-wrap {
+    margin:40px 0px 80px;
+}
+
+.esg-section-wrap .section-tit {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    justify-content: center;
+    margin:30px 0px;
+}
+
+.esg-section-wrap .section-tit:before {
+    display: block;
+    width:30px;
+    height:2px;
+    background:#FF5B53;
+    content:"";
+    align-self: center;
+}
+
+.esg-section-wrap .section-tit h1.tit-txt {
+    padding:10px 0px 0px;
+    align-self: center;
+    text-align:center;
+}
+
+.esg-section-wrap .section-tit .title-ko {
+    width:100%;
+    font-size:13px;
+    color:#999;
+    margin:5px 0px 0px;
+    text-align:center;
+}
+
+/* ESG 관리체계 */
+
+.esg-management {
+    margin:0px 0px 80px;
+}
+
+.esg-management .esg-management-wrap {
+    width:100%;
+    height:420px;
+    overflow-x:scroll;
+    overflow-y:hidden;
+}
+
+.esg-management .esg-management-wrap .esg-management-img {
+    width:650px;
+    height:400px;
+}
+
+.esg-management-wrap .esg-management-img img {
+    display: block;
+    width:auto;
+    height:400px;
+}
