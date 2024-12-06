@@ -1395,7 +1395,7 @@ nav.rn-gnb .nav-inner {
     flex-wrap: wrap;
 }
 
-.rn-visual .rn-visual-wrap .visual-track .slide-list {
+.rn-visual .rn-visual-wrap .visual-track .slick-list {
     width:100% !important;
 }
 
