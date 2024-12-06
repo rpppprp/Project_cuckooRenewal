@@ -544,6 +544,7 @@ function esgVisual(){
         centerMode: true,
         appendDots: $('.esg-visual-pager')
     });
+    $('.esg-visual-bn-track').slick('refresh');
 }
 
 esgVisual();
