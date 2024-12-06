@@ -285,7 +285,7 @@ $(".visual-track").on('beforeChange', function(event, slick, currentSlide, nextS
 
 /** 메인 빌보드 slick */
 function mainVisual(){
-    $('.visual-track').slick('refresh').slick({
+    $('.visual-track').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -534,7 +534,7 @@ slick_fresh();
 
 /** esg visual slick */
 function esgVisual(){
-    $('.esg-visual-bn-track').slick('refresh').slick({
+    $('.esg-visual-bn-track').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
