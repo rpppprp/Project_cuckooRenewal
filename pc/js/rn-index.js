@@ -284,25 +284,20 @@ $(".visual-track").on('beforeChange', function(event, slick, currentSlide, nextS
 });
 
 /** 메인 빌보드 slick */
-function mainVisual(){
-    $('.visual-track').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        centerMode: true,
-        draggable: false,
-        cssEase: 'linear',
-        fade: true,
-        dots:true,
-        prevArrow : $('.prev-btn'),
-        nextArrow : $('.next-btn'),
-        appendDots: $('.pager-txt')
-    });    
-}
-
-mainVisual();
-
+$('.visual-track').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    centerMode: true,
+    draggable: false,
+    cssEase: 'linear',
+    fade: true,
+    dots:true,
+    prevArrow : $('.prev-btn'),
+    nextArrow : $('.next-btn'),
+    appendDots: $('.pager-txt')
+});  
 
 /** 메인빌보드 navigation */
 
@@ -533,19 +528,16 @@ slick_fresh();
 /**--- ESG --- */
 
 /** esg visual slick */
-function esgVisual(){
-    $('.esg-visual-bn-track').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: true,
-        dots:true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        centerMode: true,
-        appendDots: $('.esg-visual-pager')
-    });
-}
-
+$('.esg-visual-bn-track').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    dots:true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    centerMode: true,
+    appendDots: $('.esg-visual-pager')
+});
 
 /** esg tab nav - 따라다니는 탭 */
 $(window).load(function(){
@@ -687,7 +679,6 @@ $(document).on("mouseup", function(e){
 
 
 $(function(){
-
     mainVisual();
     esgVisual();
 })
