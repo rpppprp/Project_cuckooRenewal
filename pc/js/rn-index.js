@@ -299,7 +299,6 @@ function mainVisual(){
         nextArrow : $('.next-btn'),
         appendDots: $('.pager-txt')
     });    
-    $('.visual-track').slick('refresh');
 }
 
 mainVisual();
@@ -545,10 +544,8 @@ function esgVisual(){
         centerMode: true,
         appendDots: $('.esg-visual-pager')
     });
-    $('.esg-visual-bn-track').slick('refresh');
 }
 
-esgVisual();
 
 /** esg tab nav - 따라다니는 탭 */
 $(window).load(function(){
@@ -687,3 +684,10 @@ $(document).on("mouseup", function(e){
 
 
 });
+
+
+$(function(){
+
+    mainVisual();
+    esgVisual();
+})
