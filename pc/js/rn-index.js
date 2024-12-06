@@ -299,6 +299,7 @@ function mainVisual(){
         nextArrow : $('.next-btn'),
         appendDots: $('.pager-txt')
     });    
+    $('.visual-track').slick('refresh');
 }
 
 mainVisual();
