@@ -226,10 +226,30 @@
 }
 
 .esg-management .esg-management-wrap {
+    max-width: unset;
     width:100%;
     height:420px;
-    overflow-x:scroll;
-    overflow-y:hidden;
+    touch-action: auto;
+    overflow: auto;
+}
+
+/* scroll style */
+
+.esg-management .esg-management-wrap::-webkit-scrollbar {
+    height:6px;
+    background:#fff;
+    border:none;
+}
+
+.esg-management .esg-management-wrap::-webkit-scrollbar-track {
+    height:6px;
+    background:#fff;
+    border:none;
+}
+
+.esg-management .esg-management-wrap::-webkit-scrollbar-thumb {
+    background:#ccc;
+    border-radius:6px;
 }
 
 .esg-management .esg-management-wrap .esg-management-img {
