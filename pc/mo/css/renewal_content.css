@@ -233,6 +233,16 @@
     overflow: auto;
 }
 
+.esg-management-img {
+    width:870px;
+    margin:0 auto;
+}
+
+.esg-management-img img {
+    display: block;
+    width:100%;
+}
+
 /* scroll style */
 
 .esg-management .esg-management-wrap::-webkit-scrollbar {

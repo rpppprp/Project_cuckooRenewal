@@ -1912,6 +1912,8 @@ a.quick-icon .quick-txt {
     overflow:hidden;
 }
 
+/* 라이브 예고 ON */
+
 .stream-wrap > .stream-track .stream-item {
     flex-shrink: 0;
     width: 100%;
@@ -2004,6 +2006,7 @@ a.quick-icon .quick-txt {
 
 .live-product-ctn {
     display:flex;
+    width:100%;
     flex-direction: column;
     font-size:var(--font-small);
 }
@@ -2019,7 +2022,6 @@ a.quick-icon .quick-txt {
     line-clamp:2;
     -webkit-box-orient:vertical;
     box-orient:vertical;
-
 }
 
 .live-product-ctn .live-product-price {
@@ -2028,6 +2030,37 @@ a.quick-icon .quick-txt {
 
 .live-product-ctn .live-product-price > b {
     font-size:var(--font-normal);
+}
+
+/* 라이브 예고 OFF */
+
+.stream-item.ready .live-txt,
+.stream-item.ready .live-product-ctn .live-product-name {
+    background: linear-gradient(120deg, #eaeaea 30%, #f0f0f0 38%, #f0f0f0 40%, #eaeaea 48%);
+    border-radius: 1rem;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load 3s infinite;
+    height:1rem;
+    font-size:0px !important;
+}
+
+.stream-item.ready .live-product-ctn .live-product-price,
+.stream-item.ready .live-product-ctn .live-product-price > b {
+    max-width:70%;
+    background: linear-gradient(120deg, #eaeaea 30%, #f0f0f0 38%, #f0f0f0 40%, #eaeaea 48%);
+    border-radius: 1rem;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load 3s infinite;
+    height:1rem;
+    font-size:0px !important;
+}
+
+@keyframes load {
+    100% {
+        background-position: -100% 0;
+    }
 }
 
 .stream-pager {
@@ -3482,6 +3515,16 @@ a.quick-icon .quick-txt {
 
 .esg-management .esg-management-img {
     text-align:center;
+}
+
+.esg-management-img {
+    width:870px;
+    margin:0 auto;
+}
+
+.esg-management-img img {
+    display: block;
+    width:100%;
 }
 
 /* esg 비전 */
