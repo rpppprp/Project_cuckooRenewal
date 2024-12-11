@@ -21,7 +21,7 @@ $(window).load(function(){
 
     $(window).on("scroll",function(){
         let _winPos = $(this).scrollTop();
-        if(_winPos + 10 >= _stop_pos){
+        if(_winPos + 30 >= _stop_pos){
             _fixed_esg.addClass("fixed")
         } else {
             _fixed_esg.removeClass("fixed")
