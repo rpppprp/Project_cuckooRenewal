@@ -1965,6 +1965,7 @@ a.quick-icon .quick-txt {
 .stream-live-content .live-time > p {
     margin-left:10px;
     font-weight:500;
+    align-self: center;
 }
 
 .stream-live-content .live-tit {
@@ -2034,7 +2035,24 @@ a.quick-icon .quick-txt {
 
 /* 라이브 예고 OFF */
 
-.stream-item.ready .live-txt,
+.stream-item.ready .stream-live-content .live-time > span.live_on {
+    background:transparent;
+    color:var(--color-mid-gray);
+    border:1px solid var(--color-line);
+}
+
+.stream-item.ready .stream-live-content .live-time > p {
+    color:var(--color-darkgray);
+}
+
+.stream-item.ready .live-txt {
+    font-size:0px;
+}
+
+.stream-item.ready .live-product-ctn  {
+    width:calc(100% - 100px);
+}
+
 .stream-item.ready .live-product-ctn .live-product-name {
     background: linear-gradient(120deg, #eaeaea 30%, #f0f0f0 38%, #f0f0f0 40%, #eaeaea 48%);
     border-radius: 1rem;
@@ -2047,6 +2065,7 @@ a.quick-icon .quick-txt {
 
 .stream-item.ready .live-product-ctn .live-product-price,
 .stream-item.ready .live-product-ctn .live-product-price > b {
+    min-width:50%;
     max-width:70%;
     background: linear-gradient(120deg, #eaeaea 30%, #f0f0f0 38%, #f0f0f0 40%, #eaeaea 48%);
     border-radius: 1rem;
@@ -2080,6 +2099,7 @@ a.quick-icon .quick-txt {
     transition: all 0.3s ease-in-out;
     border-radius: 3px;
 }
+
 
 /* 쿠쿠 라이브 숏폼 */
 
