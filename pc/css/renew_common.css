@@ -3288,7 +3288,6 @@ a.quick-icon .quick-txt {
     top:0px;
     left:0px;
     background-color:rgba(0,0,0,0.2);
-    background-blend-mode : multiply;
     z-index:1;
 }
 

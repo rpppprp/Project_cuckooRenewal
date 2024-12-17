@@ -35,7 +35,7 @@
     width:100%;
 }
 
-.esg-visual .inner .esg-visual-bn-wrap:before {
+/* .esg-visual .inner .esg-visual-bn-wrap:before {
     position:absolute;
     width:100%;
     height:100%;
@@ -44,19 +44,30 @@
     top:0px;
     background:rgba(0,0,0,0.3);
     z-index: 1;
-}
+} */
 
 .esg-visual-bn-wrap .esg-visual-bn-track {
     display:flex;
     width:100%;
-    height:360px;
+    height:80vh;
     overflow:hidden;
     flex-wrap: wrap;
 }
 
 .esg-visual-bn-wrap .esg-visual-bn-track li {
+    position:relative;
     width:100%;
     height:100%;
+}
+
+.esg-visual-bn-wrap .esg-visual-bn-track li:before {
+    position:absolute;
+    width:100%;
+    height:100%;
+    content:"";
+    left:0px;
+    top:0px;
+    background:rgba(0,0,0,0.3);
 }
 
 .esg-visual .inner .esg-visual-bn-wrap .esg-visual-ctn {
@@ -70,13 +81,13 @@
 }
 
 .esg-visual-bn-wrap .esg-visual-ctn .esg-visual-title {
-    font-size:24px;
+    font-size:32px;
     text-align:center;
     margin-bottom:4px;
 }
 
 .esg-visual-bn-wrap .esg-visual-ctn .esg-visual-txt {
-    width:85%;
+    width:80%;
     font-size:15px;
     margin:15px auto 0px;
     text-align: center;
@@ -161,7 +172,7 @@
 
 .esg-tab .inner .esg-tab-wrap li {
     width:calc(100% / 2);
-    font-size:18px;
+    font-size:16px;
     align-self: center;
     text-align:center;
 }
@@ -264,7 +275,7 @@
 }
 
 .esg-section-wrap .section-tit h1.tit-txt {
-    font-size:18px;
+    font-size:20px;
     padding:10px 0px 0px;
     align-self: center;
     text-align:center;
@@ -272,7 +283,7 @@
 
 .esg-section-wrap .section-tit .title-ko {
     width:100%;
-    font-size:13px;
+    font-size:14px;
     color:#999;
     margin:5px 0px 0px;
     text-align:center;
@@ -315,6 +326,7 @@
 .esg-management .esg-management-wrap .esg-management-img {
     width:620px;
     height:400px;
+    padding:30px 0px;
 }
 
 .esg-management-wrap .esg-management-img img {
@@ -377,6 +389,8 @@
 .esg-e-box .esg-e-ctn .esg-e-txt {
     line-height:160%;
     margin-top: 6px;
+    text-align: justify;
+    word-break: break-all;
 }
 
 /* ESG 안전경영 */
@@ -410,7 +424,7 @@
 }
 
 .esg-s-track li .esg-s-ctn {
-    padding: 20px;
+    padding: 20px 0px;
 }
 
 .esg-s-track li .esg-s-ctn .esg-s-tit {
@@ -419,18 +433,21 @@
 }
 
 .esg-s-ctn .esg-s-tit .num {
-    font-size:28px;
-    font-weight: 900;
+    font-size:32px;
+    font-weight: 300;
     color:#eaeaea;
 }
 
 .esg-s-ctn .esg-s-tit h2 {
-    align-self: center;
-    margin-left:10px;
+    font-size:18px;
+    align-self: flex-end;
+    margin:0px 0px 5px 10px;
 }
 
 .esg-s-ctn .esg-s-txt {
     line-height:160%;
+    text-align: justify;
+    word-break: break-all;
 }
 
 .esg-s-sub-track {
@@ -490,14 +507,16 @@
 
 .esg-g-table th {
     font-size:18px;
-    padding:10px 0px;
+    background:#f7f7f7;
+    padding:10px 15px;
     text-align:left;
-    border-bottom:1px solid #ccc;
 }
 
 .esg-g-table td {
-    padding:20px 0px;
+    padding:20px 15px 30px;
     line-height: 160%;
+    text-align: justify;
+    word-break: break-all;
 }
 
 .esg-g-table td .esg-g-detail {
@@ -583,4 +602,6 @@
 
 .esg-c-item .esg-c-ctn .esg-c-txt {
     line-height: 160%;
+    text-align: justify;
+    word-break: break-all;
 }
