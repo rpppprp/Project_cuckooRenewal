@@ -504,26 +504,62 @@ $("#rn-main").on("click", ".best-ranking-category li a.category-icon", function(
     let _tab_id = _this.attr("data-cate");
     let _tab = $(".best-ranking-track");
 
-    _tab.hide();
-    _tab.eq(_tab_id).show();
-    _tab.slick("unslick");// 베스트랭킹 탭 slick 초기화
-    slick_fresh(); // 베스트랭킹 탭 slick 로드
+    // _tab.hide();
+    // _tab.eq(_tab_id).show();
+    // _tab.slick("unslick");// 베스트랭킹 탭 slick 초기화
+    // slick_fresh(); // 베스트랭킹 탭 slick 로드
 });
 
 /** 베스트 랭킹 컨텐츠 slick */
+// function slick_fresh(){
+//     $('.best-ranking-track').slick({
+//         slidesToShow: 4,
+//         slidesToScroll: 4,
+//         infinite: false,
+//         prevArrow : $('.best-prev'),
+//         nextArrow : $('.best-next')
+//     });    
+// }
 
-function slick_fresh(){
     $('.best-ranking-track').slick({
         slidesToShow: 4,
         slidesToScroll: 4,
         infinite: false,
         prevArrow : $('.best-prev'),
         nextArrow : $('.best-next')
-    });    
-}
+    });
 
-slick_fresh();
+// function slick_fresh() {
+//     $('.best-ranking-track').removeClass('activeSlick');
+//     var _activeSlick = $('.best-ranking-track').filter(function(){
+//         return $(this).css('display') === 'flex'
+//     }).addClass('activeSlick');
+//     var _bestRankingCount = _activeSlick.find('li').length;
 
+//     // 기존 slick 제거
+//     if ($('.best-ranking-track').hasClass('slick-initialized')) {
+//         $('.best-ranking-track').slick('unslick');
+//     }
+
+//     // slick 초기화
+//     $('.best-ranking-track').slick({
+//         slidesToShow: Math.min(_bestRankingCount, 4),
+//         slidesToScroll: 1,
+//         infinite: false,
+//         arrows: _bestRankingCount > 4, // 슬라이드가 4개 초과일 때만 화살표 활성화
+//         prevArrow: $('.best-prev'),
+//         nextArrow: $('.best-next')
+//     });
+
+//     // 화살표 버튼 처리
+//     if (_bestRankingCount <= 4) {
+//         $('.best-prev, .best-next').hide();
+//     } else {
+//         $('.best-prev, .best-next').show();
+//     }
+// }
+
+// slick_fresh();
 
 /**--- ESG --- */
 
@@ -676,9 +712,3 @@ $(document).on("mouseup", function(e){
 
 
 });
-
-
-$(function(){
-    mainVisual();
-    esgVisual();
-})

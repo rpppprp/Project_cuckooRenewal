@@ -2650,14 +2650,31 @@ a.quick-icon .quick-txt {
     margin:20px auto;
 }
 
-.new-product-content .text-wrap .new-product-btn {
-    width:120px;
+.new-product-content .text-wrap .btn-wrap {
+    display:flex;
+    width:400px;
+    gap:30px;
+    margin:auto auto 0px;
+}
+
+.new-product-content .text-wrap .btn-wrap .new-product-btn {
+    width:200px;
     margin:auto auto 0px;
     padding:15px 20px;
-    background:#fff;
     border-radius: var(--radius-big);
     cursor:pointer;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
 }
+
+.new-product-content .text-wrap .btn-wrap .w-btn {
+    background:#fff;
+}
+
+.new-product-content .text-wrap .btn-wrap .b-btn {
+    background:#222;
+    color:#fff;
+}
+
 
 /* -------- section 06/ 데일리 -------- */
 
