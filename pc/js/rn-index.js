@@ -488,7 +488,6 @@ $('.best-ranking-category').slick({
 });
 
 /** 베스트 랭킹 카테고리 아이콘 이벤트 */
-
 $(".best-ranking-track").hide();
 $(".best-ranking-track").eq(0).show();
 
@@ -504,9 +503,9 @@ $("#rn-main").on("click", ".best-ranking-category li a.category-icon", function(
     let _tab_id = _this.attr("data-cate");
     let _tab = $(".best-ranking-track");
 
-    // _tab.hide();
-    // _tab.eq(_tab_id).show();
-    // _tab.slick("unslick");// 베스트랭킹 탭 slick 초기화
+    _tab.hide();
+    _tab.eq(_tab_id).show();
+    _tab.slick("unslick");// 베스트랭킹 탭 slick 초기화
     // slick_fresh(); // 베스트랭킹 탭 slick 로드
 });
 
@@ -523,7 +522,7 @@ $("#rn-main").on("click", ".best-ranking-category li a.category-icon", function(
 
     $('.best-ranking-track').slick({
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
         infinite: false,
         prevArrow : $('.best-prev'),
         nextArrow : $('.best-next')
