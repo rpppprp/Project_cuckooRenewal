@@ -477,7 +477,7 @@ $('.daily-product-track').slick({
 /**--- 베스트 랭킹 --- */
 
 
-/** 베스트 랭킹 카테고리 slick */
+/** 베스트 랭킹 탭 slick */
 var _bestRankingCategoryCount = $('.daily-product-track .daily-product-item').length; // 슬라이드 갯수구하기
 $('.best-ranking-category').slick({
     slidesToShow: Math.min(_bestRankingCategoryCount, 7),
@@ -489,18 +489,16 @@ $('.best-ranking-category').slick({
 });
 
 /** 베스트 랭킹 컨텐츠 slick */
-
 $('.best-ranking-track').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     infinite: false,
-    arrow: true
+    arrow: true,
+    prevArrow: '<a class="best-prev arrow-button prev"><svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-left"/></svg></a>',
+    nextArrow: '<a class="best-next arrow-button next"><svg class="icon arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg></a>'
 });
 
-/** 베스트 랭킹 카테고리 아이콘 이벤트 */
-// $(".best-ranking-track").hide();
-// $(".best-ranking-track").eq(0).show();
-
+/** 베스트 랭킹 탭 전환 */
 $("#rn-main").on("click", ".best-ranking-category li a.category-icon", function(){
     var _this = $(this);
     var _cate_btn = $(".best-ranking-category li a.category-icon");
@@ -509,43 +507,11 @@ $("#rn-main").on("click", ".best-ranking-category li a.category-icon", function(
     _this.addClass("active");
 
     /** 각 카테고리별 탭 불러오기 */
-    let _tab_id = _this.data("cate");
-    // let _tab = $(".best-ranking-track");
-
-    // _tab.hide();
-    // _tab.eq(_tab_id).show();
-    // _tab.slick('unslick');// 베스트랭킹 탭 slick 초기화
-    // slick_fresh(); // 베스트랭킹 탭 slick 로드
-
+    var _tab_id = _this.data("cate");
     $(".best-ranking-track").removeClass('active');
     $(".best-ranking-track[data-cate="+ _tab_id +"]").addClass('active');
-    $(".best-ranking-track").slick('setPosition');
+    $(".best-ranking-track").slick('refresh');
 });
-
-// function slick_fresh(){
-//     var _bestRankingCount = $('.best-ranking-track').filter(function(){
-//         return $(this).css('display') === 'flex';
-//     }).find('li').length; // 슬라이드 갯수구하기
-
-//     $('.best-ranking-track').slick({
-//         slidesToShow: Math.min(_bestRankingCount, 4),
-//         slidesToScroll: 1,
-//         infinite: false,
-//         arrows: _bestRankingCount > 4, // 슬라이드가 4개 초과일 때만 화살표 활성화
-//         prevArrow: $('.best-prev'),
-//         nextArrow: $('.best-next')
-//     });
-
-//     // 화살표 활성화/비활성화 처리
-//     if (_bestRankingCount <= 4) {
-//         // 화살표 버튼 숨기기
-//         $('.best-prev, .best-next').hide();
-//     } else {
-//         // 화살표 버튼 보이기
-//         $('.best-prev, .best-next').show();
-//     }
-// }
-// slick_fresh();
 
 /**--- ESG --- */
 

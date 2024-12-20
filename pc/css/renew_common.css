@@ -2980,7 +2980,7 @@ a.quick-icon .quick-txt {
     width:100%;
     display:none;
     gap:30px;
-    overflow:hidden;
+    /* overflow:hidden; */
     padding-bottom:20px;
     counter-reset : numbering;
 }
@@ -2990,6 +2990,7 @@ a.quick-icon .quick-txt {
 }
 
 .best-ranking-track .slick-track {
+    min-width:100%;
     width: calc(100% + 30px);
 }
 
@@ -3000,6 +3001,20 @@ a.quick-icon .quick-txt {
 
 .best-ranking-track .slick-slide {
     margin: 0 15px;
+}
+
+.best-ranking-tab-content .best-ranking-track a.arrow-button {
+    position:absolute;
+    top:calc(278px / 2 - 15px);
+    z-index:2;
+}
+
+.best-ranking-tab-content .best-ranking-track a.best-prev {
+    left:-20px;
+}
+
+.best-ranking-tab-content .best-ranking-track a.best-next {
+    right:-20px;
 }
 
 .best-ranking-item {
