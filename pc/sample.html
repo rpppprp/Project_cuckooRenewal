@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick.js Tabs with Sliders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        .tab-slider {
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .tab-button.active {
+            background-color: #007bff;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 탭 버튼 슬라이더 -->
+<div class="tab-slider">
+    <div class="tab-button" data-tab="1">Tab 1</div>
+    <div class="tab-button" data-tab="2">Tab 2</div>
+    <div class="tab-button" data-tab="3">Tab 3</div>
+    <div class="tab-button" data-tab="4">Tab 4</div>
+    <div class="tab-button" data-tab="5">Tab 5</div>
+    <div class="tab-button" data-tab="6">Tab 6</div>
+    <div class="tab-button" data-tab="7">Tab 7</div>
+    <div class="tab-button" data-tab="8">Tab 8</div>
+    <div class="tab-button" data-tab="9">Tab 9</div>
+    <div class="tab-button" data-tab="10">Tab 10</div>
+</div>
+
+<!-- 탭 컨텐츠 -->
+<div class="tab-contents">
+    <div class="tab-content active" data-tab="1">
+        <div class="slider">
+            <div>Slide 1-1</div>
+            <div>Slide 1-2</div>
+            <div>Slide 1-3</div>
+        </div>
+    </div>
+    <div class="tab-content" data-tab="2">
+        <div class="slider">
+            <div>Slide 2-1</div>
+            <div>Slide 2-2</div>
+            <div>Slide 2-3</div>
+        </div>
+    </div>
+    <div class="tab-content" data-tab="3">
+        <div class="slider">
+            <div>Slide 2-1</div>
+            <div>Slide 2-2</div>
+            <div>Slide 2-3</div>
+        </div>
+    </div>
+    <div class="tab-content" data-tab="4">
+        <div class="slider">
+            <div>Slide 2-1</div>
+            <div>Slide 2-2</div>
+            <div>Slide 2-3</div>
+        </div>
+    </div>
+    <div class="tab-content" data-tab="5">
+        <div class="slider">
+            <div>Slide 2-1</div>
+            <div>Slide 2-2</div>
+            <div>Slide 2-3</div>
+        </div>
+    </div>
+    <div class="tab-content" data-tab="6">
+        <div class="slider">
+            <div>Slide 2-1</div>
+            <div>Slide 2-2</div>
+            <div>Slide 2-3</div>
+        </div>
+    </div>
+    <div class="tab-content" data-tab="7">
+        <div class="slider">
+            <div>Slide 2-1</div>
+            <div>Slide 2-2</div>
+            <div>Slide 2-3</div>
+        </div>
+    </div>
+    <div class="tab-content" data-tab="8">
+        <div class="slider">
+            <div>Slide 2-1</div>
+            <div>Slide 2-2</div>
+            <div>Slide 2-3</div>
+        </div>
+    </div>
+    <div class="tab-content" data-tab="9">
+        <div class="slider">
+            <div>Slide 2-1</div>
+            <div>Slide 2-2</div>
+            <div>Slide 2-3</div>
+        </div>
+    </div>
+    <div class="tab-content" data-tab="10">
+        <div class="slider">
+            <div>Slide 2-1</div>
+            <div>Slide 2-2</div>
+            <div>Slide 2-3</div>
+        </div>
+    </div>
+    <!-- 나머지 탭 컨텐츠는 동일한 형식으로 반복 -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // 슬릭 슬라이더 초기화
+        $('.slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true
+        });
+
+        // 탭 버튼 슬라이더 초기화
+        $('.tab-slider').slick({
+            infinite: false,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: true,
+            focusOnSelect: true
+        });
+
+        // 탭 전환 기능
+        $('.tab-slider').on('afterChange', function (event, slick, currentSlide) {
+            var $currentTab = $('.tab-button').eq(currentSlide);
+            var tabId = $currentTab.data('tab');
+            
+            $('.tab-button').removeClass('active');
+            $currentTab.addClass('active');
+            
+            $('.tab-content').removeClass('active');
+            $('.tab-content[data-tab="' + tabId + '"]').addClass('active');
+        });
+
+        // 버튼 클릭 시 탭 동기화
+        $('.tab-button').on('click', function () {
+            var index = $(this).index();
+            $('.tab-slider').slick('slickGoTo', index);
+        });
+    });
+</script>
+
+</body>
+</html>

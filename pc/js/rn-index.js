@@ -476,10 +476,11 @@ $('.daily-product-track').slick({
 
 /**--- 베스트 랭킹 --- */
 
-/** 베스트 랭킹 카테고리 slick */
 
+/** 베스트 랭킹 카테고리 slick */
+var _bestRankingCategoryCount = $('.daily-product-track .daily-product-item').length; // 슬라이드 갯수구하기
 $('.best-ranking-category').slick({
-    slidesToShow: 7,
+    slidesToShow: Math.min(_bestRankingCategoryCount, 7),
     slidesToScroll: 1,
     infinite: false,
     draggable: false,
@@ -487,9 +488,18 @@ $('.best-ranking-category').slick({
     nextArrow : $('.best-ranking-next')
 });
 
+/** 베스트 랭킹 컨텐츠 slick */
+
+$('.best-ranking-track').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: false,
+    arrow: true
+});
+
 /** 베스트 랭킹 카테고리 아이콘 이벤트 */
-$(".best-ranking-track").hide();
-$(".best-ranking-track").eq(0).show();
+// $(".best-ranking-track").hide();
+// $(".best-ranking-track").eq(0).show();
 
 $("#rn-main").on("click", ".best-ranking-category li a.category-icon", function(){
     var _this = $(this);
@@ -499,48 +509,24 @@ $("#rn-main").on("click", ".best-ranking-category li a.category-icon", function(
     _this.addClass("active");
 
     /** 각 카테고리별 탭 불러오기 */
+    let _tab_id = _this.data("cate");
+    // let _tab = $(".best-ranking-track");
 
-    let _tab_id = _this.attr("data-cate");
-    let _tab = $(".best-ranking-track");
-
-    _tab.hide();
-    _tab.eq(_tab_id).show();
-    _tab.slick("unslick");// 베스트랭킹 탭 slick 초기화
+    // _tab.hide();
+    // _tab.eq(_tab_id).show();
+    // _tab.slick('unslick');// 베스트랭킹 탭 slick 초기화
     // slick_fresh(); // 베스트랭킹 탭 slick 로드
+
+    $(".best-ranking-track").removeClass('active');
+    $(".best-ranking-track[data-cate="+ _tab_id +"]").addClass('active');
+    $(".best-ranking-track").slick('setPosition');
 });
 
-/** 베스트 랭킹 컨텐츠 slick */
 // function slick_fresh(){
-//     $('.best-ranking-track').slick({
-//         slidesToShow: 4,
-//         slidesToScroll: 4,
-//         infinite: false,
-//         prevArrow : $('.best-prev'),
-//         nextArrow : $('.best-next')
-//     });    
-// }
+//     var _bestRankingCount = $('.best-ranking-track').filter(function(){
+//         return $(this).css('display') === 'flex';
+//     }).find('li').length; // 슬라이드 갯수구하기
 
-    $('.best-ranking-track').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: false,
-        prevArrow : $('.best-prev'),
-        nextArrow : $('.best-next')
-    });
-
-// function slick_fresh() {
-//     $('.best-ranking-track').removeClass('activeSlick');
-//     var _activeSlick = $('.best-ranking-track').filter(function(){
-//         return $(this).css('display') === 'flex'
-//     }).addClass('activeSlick');
-//     var _bestRankingCount = _activeSlick.find('li').length;
-
-//     // 기존 slick 제거
-//     if ($('.best-ranking-track').hasClass('slick-initialized')) {
-//         $('.best-ranking-track').slick('unslick');
-//     }
-
-//     // slick 초기화
 //     $('.best-ranking-track').slick({
 //         slidesToShow: Math.min(_bestRankingCount, 4),
 //         slidesToScroll: 1,
@@ -550,14 +536,15 @@ $("#rn-main").on("click", ".best-ranking-category li a.category-icon", function(
 //         nextArrow: $('.best-next')
 //     });
 
-//     // 화살표 버튼 처리
+//     // 화살표 활성화/비활성화 처리
 //     if (_bestRankingCount <= 4) {
+//         // 화살표 버튼 숨기기
 //         $('.best-prev, .best-next').hide();
 //     } else {
+//         // 화살표 버튼 보이기
 //         $('.best-prev, .best-next').show();
 //     }
 // }
-
 // slick_fresh();
 
 /**--- ESG --- */
