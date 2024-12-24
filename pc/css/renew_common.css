@@ -188,7 +188,8 @@ a:visited {
 .section-tit > .more-btn {
     position:absolute;
     right:0px;
-    top:10px;
+    top:50%;
+    transform:translateY(-50%);
     font-size:var(--font-small);
     color:var(--color-darkgray);
 }
@@ -1373,7 +1374,7 @@ nav.rn-gnb .nav-inner {
 .rn-visual {
     width:100%;
     height:680px;
-    border-bottom:1px solid var(--color-line);
+    /* border-bottom:1px solid var(--color-line); */
 }
 
 .rn-visual .rn-visual-wrap {
@@ -2377,7 +2378,7 @@ a.quick-icon .quick-txt {
 
 
 .timedeal-item .timedeal-time .t-time {
-    font-size:var(--font-big);
+    font-size: 24px;
     font-weight: 900;
     display:flex;
     align-self:center;
@@ -2404,7 +2405,7 @@ a.quick-icon .quick-txt {
     align-self:flex-end;
     font-weight:500;
     font-size: var(--font-mid);
-    margin:0 5px 4px 5px;
+    margin:0 5px 2px 5px;
 }
 
 .timedeal-time .t-time li.t-time_day:after {
@@ -2450,7 +2451,6 @@ a.quick-icon .quick-txt {
     position:relative;
     width:100%;
     height:340px;
-    border-radius: var(--radius-small);
     overflow:hidden;
     background-color:#efefef;
     background-position:center center;
@@ -2502,10 +2502,14 @@ a.quick-icon .quick-txt {
 
 .timedeal-price .discount-price .price {
     font-weight: 900;
+    font-size: 28px;
+    align-self: center;
 }
 
-.timedeal-price .discount-price > em {
+.timedeal-price .discount-price > span {
+    font-size:20px;
     margin-left:3px;
+    align-self: center;
 }
 
 .timedeal-price-wrap .timedeal-price .regular-price {
@@ -2513,8 +2517,8 @@ a.quick-icon .quick-txt {
     color:var(--color-mid-gray);
     font-family: var(--font);
     font-size:var(--font-small);
-    align-self:flex-end;
-    margin:0px 0px 5px 10px;
+    align-self: center;
+    margin:7px 0px 5px 10px;
 }
 
 .timedeal-price .regular-price .price {
@@ -2585,6 +2589,9 @@ a.quick-icon .quick-txt {
     display: none;
 }
 
+.timedeal-arrow > a {
+    top: 255px;
+}
 
 
 /* -------- section 05/ 신상품 -------- */
@@ -2659,22 +2666,19 @@ a.quick-icon .quick-txt {
 
 .new-product-content .text-wrap .btn-wrap .new-product-btn {
     width:200px;
+    background:#fff;
     margin:auto auto 0px;
     padding:15px 20px;
     border-radius: var(--radius-big);
     cursor:pointer;
     box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s;
 }
 
-.new-product-content .text-wrap .btn-wrap .w-btn {
-    background:#fff;
-}
-
-.new-product-content .text-wrap .btn-wrap .b-btn {
+.new-product-content .text-wrap .btn-wrap .new-product-btn:hover {
     background:#222;
     color:#fff;
 }
-
 
 /* -------- section 06/ 데일리 -------- */
 
@@ -3005,7 +3009,7 @@ a.quick-icon .quick-txt {
 
 .best-ranking-tab-content .best-ranking-track a.arrow-button {
     position:absolute;
-    top:calc(278px / 2 - 15px);
+    top:calc(278px / 2 - 10px);
     z-index:2;
 }
 
@@ -3025,7 +3029,6 @@ a.quick-icon .quick-txt {
     border:1px solid #fff;
     border-radius: var(--radius-mid);
     transition: box-shadow 0.3s;
-
 }
 
 .best-ranking-item:hover {
@@ -3561,14 +3564,15 @@ a.quick-icon .quick-txt {
     margin:0 auto;
 }
 
-.esg-section-wrap .section-tit:before {
+/* .esg-section-wrap .section-tit:before {
     display:block;
     content:"";
     width:30px;
     height:3px;
     background:var(--color-primary);
     margin:0 auto 5px;
-}
+} */
+
 .esg-section-wrap .section-tit p.title-ko {
     color:var(--color-darkgray);
     text-align:center;
@@ -3615,7 +3619,7 @@ a.quick-icon .quick-txt {
 .esg-environment-table li {
     background:#fff;
     border-radius: var(--radius-mid);
-    border:1px solid var(--color-line);
+    /* border:1px solid var(--color-line); */
 }
 
 .esg-e-box {
@@ -4196,10 +4200,16 @@ nav.rn-fnb .site-sns > li a:hover {
     color:var(--color-mid-gray);
 }
 
-.footer-company .company-address > ul li > svg.icon {
+.footer-company .company-address > ul li > svg {
     min-width:200px;
+    max-width: 300px;
+    min-height: 40px;
     fill:var(--color-mid-gray);
 }
+
+.electronics-info li > svg {
+    width:230px;
+} 
 
 .footer-company .company-address > ul li a {
     color:var(--color-mid-gray);
