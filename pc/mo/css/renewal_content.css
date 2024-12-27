@@ -530,23 +530,25 @@
     gap: 20px;
 }
 
-.esg-g-table td .esg-g-detail li .esg-g-icon {
+.esg-g-table td .esg-g-detail li .esg-g-bg {
     display: flex;
     background:#f7f7f7;
     color:#ff5b53;
     width:50px;
+    min-width:50px;
     height:50px;
+    min-height:50px;
     border-radius: 50px;
     justify-content: center;
     flex-shrink: 0;
 }
 
-.esg-g-table td .esg-g-detail li .esg-g-icon svg {
+.esg-g-table td .esg-g-detail li .esg-g-bg svg {
     width:24px;
     align-self: center;
 }
 
-.esg-g-table td .esg-g-detail li:first-child .esg-g-icon svg {
+.esg-g-table td .esg-g-detail li:first-child .esg-g-bg svg {
     width:20px;
     transform:rotate(-15deg);
 }
