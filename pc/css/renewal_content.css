@@ -898,6 +898,7 @@ a.quick-icon .quick-txt {
     overflow:hidden;
     background-color:#efefef;
     background-position:center center;
+    background-size:contain;
     background-repeat: no-repeat;
     padding:0 20px;
 }
