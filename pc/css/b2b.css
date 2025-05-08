@@ -124,6 +124,10 @@
     margin-top: 80px;
 }
 
+.b2b-tab-title .tit {
+	font-size:var(--font-big);
+}
+
 .b2b-icon {
     width: 52px;
 }
