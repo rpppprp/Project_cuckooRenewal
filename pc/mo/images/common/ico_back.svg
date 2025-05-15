@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <clipPath id="w4k6pngmba">
+            <path data-name="사각형 2" style="fill:none" d="M0 0h19v35H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="-e-btn_&lt;">
+        <path data-name="Rectangle 9" style="fill:transparent" d="M0 0h48v48H0z"/>
+        <g data-name="Vector Smart Object">
+            <g data-name="Vector Smart Object">
+                <g data-name="그룹 4">
+                    <g data-name="그룹 3" style="clip-path:url(#w4k6pngmba)" transform="translate(15 6)">
+                        <path data-name="선 1" transform="translate(1.223 1.204)" style="stroke:#a4a1a1;stroke-linecap:round;stroke-width:2.426px;fill:none" d="M16.555 0 0 16.296"/>
+                        <path data-name="선 2" transform="translate(1.223 17.5)" style="stroke:#a4a1a1;stroke-linecap:round;stroke-width:2.426px;fill:none" d="M16.555 16.296 0 0"/>
+                    </g>
+                </g>
+            </g>
+            <path data-name="Color Overlay" d="m38.223 146.5 16.554 16.3zm0 0zm0 0 16.554-16.3zm0 0zm0 0zm0 0zm0 0z" style="fill:#111" transform="translate(-22 -123)"/>
+        </g>
+    </g>
+</svg>

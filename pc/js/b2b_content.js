@@ -78,7 +78,6 @@ $(function(){
 
 
 	/** b2b company tab contents  */
-
 	$("#rn-main").on("click", ".b2b-c-tab li a", function(e){
 		e.preventDefault();
 		var _this = $(this);
@@ -92,7 +91,7 @@ $(function(){
 		var _target = _this.data("value");
 		$(".b2b-c-content").removeClass("on");
 		$("#"+_target).addClass("on");
-
 	});
 
+	
 });

@@ -5,6 +5,9 @@ const path = require('path');
 const app = express();
 const PORT = 4000;
 
+// ejs 템플릿 사용
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 // 정적 파일 불러오기
 app.use(express.static(__dirname + "/pc"));

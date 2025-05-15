@@ -4,6 +4,12 @@
     display:none;
 }
 
+/* 스크롤 제어 //241104 수정 */
+.scroll-none {
+    overflow:hidden !important;
+    touch-action:none;
+}
+
 /*---------- ESG 경영 ----------*/
 
 .esg-container {
@@ -606,4 +612,723 @@
     line-height: 160%;
     text-align: justify;
     word-break: break-all;
+}
+
+/*---------- B2B ----------*/
+
+.b2b-container {
+    width:100%;
+}
+
+.b2b-container .content {
+    width:100%;
+    padding:0px;
+}
+
+.b2b-icon {
+    width:32px;
+    height:32px;
+}
+
+
+/* b2b common */
+
+#b2b-section01, #b2b-section02,
+#b2b-section03, #b2b-section04 {
+	padding:20px 0px 20px;
+}
+
+
+#b2b-section01 .inner .b2b-tab-title,
+#b2b-section02 .inner .b2b-tab-title,
+#b2b-section03 .inner .b2b-tab-title,
+#b2b-section04 .inner .b2b-tab-title {
+	display:flex;
+    text-align: center;
+    margin: 20px 0px;
+  	justify-content:center;
+}
+
+.b2b-tab-title .tit {
+	font-size:20px;
+	padding-top:10px;
+}
+
+/* b2b visual */
+
+.b2b-visual {
+	width:100%;
+}
+
+.b2b-visual-wrap {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 450px;
+    background:url(../images/b2b_mo_bg.png) center 40px no-repeat;
+    justify-content: center;
+    background-size:cover;
+}
+
+.b2b-visual-wrap .b2b-visual-txt {
+    padding:140px 20px;
+}
+
+.b2b-visual-wrap .b2b-visual-txt .txt {
+    font-size: 28px;
+}
+
+.b2b-visual-wrap .b2b-visual-txt .tel {
+    display: flex;
+    background: #222;
+    color: #fff;
+    max-width:180px;
+    padding: 10px 5px;
+    margin-top: 20px;
+    justify-content: center;
+    border-radius: 24px;
+}
+
+.b2b-visual-wrap .b2b-visual-txt .tel li:nth-child(2) {
+    color: #767676;
+    margin: 0 10px;
+}
+
+
+/* b2b tab */
+
+.b2b-tab {
+    width: 100%;
+}
+
+.b2b-tab .inner {
+    position: static;
+    width: calc(100% - 60px);
+    border-bottom: 1px solid #eaeaea;
+    transition: all 0.3s;
+    margin:0 auto;
+}
+
+.b2b-tab .inner.fixed {
+    position:fixed;
+    width:100%;
+    min-width:100%;
+    top:40px;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    z-index:10;
+    transition: all 0.3s;
+}
+
+.b2b-tab-scroll {
+	width:100%;
+}
+
+.b2b-tab-wrap {
+    display: flex;
+    padding: 25px 0px 11px;
+}
+
+
+.b2b-tab-wrap li {
+    position: relative;
+    width:auto;
+    height: 100%;
+    padding: 0px 20px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    flex-shrink:0;
+}
+
+.b2b-tab-wrap li a { 
+    display: inline-block;
+    font-size: 16px;
+}
+
+.b2b-tab-wrap li a:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.b2b-tab-wrap li.on a {
+
+}
+
+.b2b-tab-wrap li.on a:after {
+    background: #ff5b53;
+}
+
+
+/* B2B 사업영역 */
+
+.b2b-business {
+	padding:0 0px 40px;
+}
+
+.b2b-business-table {
+	display:flex;
+	flex-direction:column;
+}
+
+.b2b-business-table li {
+	display:flex;
+	justify-content:center;
+}
+
+.b2b-b-box {
+	display:flex;
+	gap:20px;
+    padding: 20px 30px;
+    margin: 15px 0;
+}
+
+.b2b-b-box .b2b-b-img {
+	display:flex;
+	background:#f7f7f7;
+	width:50px;
+	height:50px;
+	border-radius:100%;
+	justify-content:center;
+	flex-shrink:0;
+}
+
+.b2b-b-box .b2b-b-img .b2b-icon {
+    width: 28px;
+    align-self: center;
+}
+
+.b2b-b-ctn {
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+}
+
+.b2b-b-ctn .b2b-b-tit {
+    font-size: 18px;
+}
+
+.b2b-b-ctn .b2b-b-txt {
+	font-size:14px;
+	line-height:1.6;
+}
+
+.b2b-staff-info {
+	position:relative;
+	background:#f7f7f7;
+	padding:30px 0px 20px;
+	box-shadow:inset 0px 13px 14px rgba(0,0,0,0.05);
+}
+
+.b2b-staff-info:before {
+	position:absolute;
+	content:"";
+	width:16px;
+	height:16px;
+	background:#fff;
+	top:-8px;
+	left:50%;
+	transform:translateX(-50%) rotate(45deg);
+}
+
+.b2b-staff-box {
+	display:flex;
+	flex-direction:column;
+	text-align:center;
+}
+
+.b2b-staff-box .staff-name {
+	margin-bottom:10px;
+}
+
+.b2b-staff-box .staff-tel {
+	margin-bottom:3px;
+}
+
+.b2b-staff-box .txt {
+	color:#767676;
+	margin-top:10px;
+}
+
+.b2b-staff-box  .staff-btn {
+	display:inline-block;
+	width:120px;
+	background:#222;
+	color:#fff;
+	padding:10px 20px;
+	border-radius:50px;
+	text-align:center;
+	margin:20px auto 0px;
+}
+
+.b2b-staff-box  .staff-btn svg {
+	width:10px;
+	height:10px;
+	margin-left:5px;
+}
+
+
+/* B2B 파트너 */
+
+.b2b-partner {
+	padding:10px 0px 20px;
+}
+
+.b2b-sec02 .b2b-tab-title {
+	position:relative;
+}
+
+.b2b-sec02 .more-btn {
+	display:flex;
+	position:absolute;
+	right:30px;
+	top:15px;
+	color:#767676;
+	justify-content:center;
+}
+
+.b2b-sec02 .more-btn svg {
+	width:10px;
+	height:10px;
+	align-self:center;
+	margin-left:5px;
+}
+
+.b2b-partner-wrap {
+	background:#f7f7f7;	
+	overflow:hidden;
+}
+
+.b2b-p-track {
+	display:flex;
+	padding:30px 0px;
+}
+
+.b2b-p-track .b2b-p-item {
+	width:150px;
+	flex-shrink:0;
+	margin-right:10px;
+	text-align:center;
+    filter:grayscale(100%) opacity(60%);
+}
+
+/* B2B 파트너 팝업 */
+
+.b2b-partner-popup-wrap {
+	display:none;
+	position:fixed;
+	background:#fff;
+	width:100%;
+	height:calc(100% - 46px);
+	left:0px;
+	bottom:0px;
+	border-radius:16px 16px 0px 0px;
+	box-shadow:0px 0px 20px rgba(0,0,0,0.2);
+	z-index:10;
+}
+
+.b2b-partner-popup-wrap .b2b-partner-popup {
+	width:100%;
+	height:calc(100% - 8rem);
+}
+
+.b2b-partner-popup .b2b-partner-header {
+	display:flex;
+	height:50px;
+	justify-content:center;
+	padding:15px 25px;
+}
+
+.b2b-partner-popup .b2b-partner-header .tit {
+	font-size:18px;
+	margin:0 auto;
+	align-self:center;
+}
+
+.b2b-partner-popup .b2b-partner-header .b2b-p-close {
+	display:flex;
+	align-self:center;	
+}
+
+.b2b-partner-header .b2b-p-close svg {
+	width:16px;
+	height:16px;
+	align-self:center;
+}
+
+.b2b-partner-popup .b2b-partner-content {
+	width:100%;
+	height:calc(100% - 50px);
+	padding:10px 20px 0px;
+	overflow-y:auto;
+}
+
+.b2b-partner-popup-wrap.on .b2b-partner-content {
+    height:100%;
+}
+
+.b2b-partner-content .b2b-partner-ctnWrap {
+	margin:0px 0px 40px;
+}
+
+.b2b-partner-ctnWrap .tit {
+	background:#f7f7f7;
+	font-size:14px;
+	padding:10px;
+	text-align:center;
+}
+
+.b2b-partner-ctnWrap .b2b-partner-track {
+	display:flex;
+	flex-wrap:wrap;
+	margin-top:10px;
+}
+
+.b2b-partner-ctnWrap .b2b-partner-track li {
+	width:calc(100% / 3);
+	text-align:center;
+	padding:20px 5px 10px;
+}
+
+.b2b-partner-ctnWrap .b2b-partner-track li .b2b-partner-img {
+	width:100%;
+	height:40px;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+
+.b2b-partner-ctnWrap .b2b-partner-track li span.txt {
+	display:block;
+	font-size: 14px;
+	color:#767676;
+	margin-top:10px;
+}
+
+/* b2b partner ci */
+
+.b2b-p-01 {
+	background-image:url(../images/partner_ci/b2b_p_01.png);
+}
+
+.b2b-p-02 {
+	background-image:url(../images/partner_ci/b2b_p_02.png);
+}
+
+.b2b-p-03 {
+	background-image:url(../images/partner_ci/b2b_p_03.png);
+}
+
+.b2b-p-04 {
+	background-image:url(../images/partner_ci/b2b_p_04.png);
+}
+
+.b2b-p-05 {
+	background-image:url(../images/partner_ci/b2b_p_05.png);
+}
+
+.b2b-p-06 {
+	background-image:url(../images/partner_ci/b2b_p_06.png);
+}
+
+.b2b-p-07 {
+	background-image:url(../images/partner_ci/b2b_p_07.png);
+}
+
+.b2b-p-08 {
+	background-image:url(../images/partner_ci/b2b_p_08.png);
+}
+
+.b2b-p-09 {
+	background-image:url(../images/partner_ci/b2b_p_09.png);
+}
+
+.b2b-p-10 {
+	background-image:url(../images/partner_ci/b2b_p_10.png);
+}
+
+.b2b-p-11 {
+	background-image:url(../images/partner_ci/b2b_p_11.png);
+}
+
+.b2b-p-12 {
+	background-image:url(../images/partner_ci/b2b_p_12.png);
+}
+
+.b2b-p-13 {
+	background-image:url(../images/partner_ci/b2b_p_13.png);
+}
+
+.b2b-p-14 {
+	background-image:url(../images/partner_ci/b2b_p_14.png);
+}
+
+.b2b-p-15 {
+	background-image:url(../images/partner_ci/b2b_p_15.png);
+}
+
+.b2b-p-16 {
+	background-image:url(../images/partner_ci/b2b_p_16.png);
+}
+
+.b2b-p-17 {
+	background-image:url(../images/partner_ci/b2b_p_17.png);
+}
+
+.b2b-p-18 {
+	background-image:url(../images/partner_ci/b2b_p_18.png);
+}
+
+.b2b-p-19 {
+	background-image:url(../images/partner_ci/b2b_p_19.png);
+}
+
+.b2b-p-20 {
+	background-image:url(../images/partner_ci/b2b_p_20.png);
+}
+
+.b2b-p-21 {
+	background-image:url(../images/partner_ci/b2b_p_21.png);
+}
+
+.b2b-p-22 {
+	background-image:url(../images/partner_ci/b2b_p_22.png);
+}
+
+.b2b-p-23 {
+	background-image:url(../images/partner_ci/b2b_p_23.png);
+}
+
+.b2b-p-24 {
+	background-image:url(../images/partner_ci/b2b_p_24.png);
+}
+
+.b2b-p-24 {
+	background-image:url(../images/partner_ci/b2b_p_24.png);
+}
+
+.b2b-p-25 {
+	background-image:url(../images/partner_ci/b2b_p_25.png);
+}
+
+.b2b-p-26 {
+	background-image:url(../images/partner_ci/b2b_p_26.png);
+}
+
+.b2b-p-27 {
+	background-image:url(../images/partner_ci/b2b_p_27.png);
+}
+
+.b2b-p-28 {
+	background-image:url(../images/partner_ci/b2b_p_28.png);
+}
+
+.b2b-p-29 {
+	background-image:url(../images/partner_ci/b2b_p_29.png);
+}
+
+/* B2B 기업도입사례 */
+
+.b2b-company {
+	padding:0 0px 40px;
+}
+
+.b2b-company-wrap {
+	padding:20px 30px;
+}
+
+.b2b-c-tab {
+	display:flex;
+	width:100%;
+	margin-bottom:20px;
+}
+
+.b2b-c-tab li {
+	padding-right: 20px;
+}
+
+.b2b-c-tab li a {
+	color:#767676;
+}
+
+.b2b-c-tab li.on a {
+	color:#222;
+}
+
+.b2b-c-tab li:nth-of-type(2):before {
+	content:"|";
+	color:#eaeaea;
+    margin-right: 20px;
+}
+
+.b2b-c-tab li:nth-of-type(2):after {
+	content:"|";
+	color:#eaeaea;
+    margin-left: 20px;
+}
+
+
+.b2b-c-ctnWrap {
+	display:flex;
+	flex-direction:column;
+}
+
+.b2b-c-ctnWrap .b2b-c-content {
+	display:none;
+	flex-direction:column;
+	gap:10px;
+}
+
+.b2b-c-ctnWrap .b2b-c-content.on {
+	display:flex;
+}
+
+.b2b-c-ctnWrap .b2b-c-content .b2b-c-img {
+	position:relative;
+	width:100%;
+	height:200px;
+	background-size:cover;
+	background-position:center top;
+	border-radius:8px;
+	border:1px solid #eaeaea;
+	overflow:hidden;
+}
+
+.b2b-c-ctnWrap .b2b-c-content .b2b-c-img:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 70%;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
+}
+
+#b2b-c-1 .b2b-c-img {
+	background-image:url(../images/b2b_company_bg01.png);
+}
+
+#b2b-c-2 .b2b-c-img {
+	background-image:url(../images/b2b_company_bg02.png);
+}
+
+#b2b-c-3 .b2b-c-img {
+	background-image:url(../images/b2b_company_bg03.png);
+}
+
+
+.b2b-c-img .b2b-c-tit {
+	position:relative;
+	padding:20px;
+	color:#fff;
+	z-index:1;
+}
+
+.b2b-c-img .b2b-c-tit h4 {
+	font-size:16px;
+	margin-bottom:10px;
+	text-shadow:0px 0px 1px 0px rgba(0,0,0,0.4);
+}
+
+.b2b-c-img .b2b-c-tit p {
+	font-size:13px;	
+	text-shadow:0px 0px 1px 0px rgba(0,0,0,0.4);
+}
+
+.b2b-c-txt {
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+}
+
+.b2b-c-txt li {
+	border:1px solid #eaeaea;
+	border-radius:8px;
+	padding:15px 20px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.b2b-c-txt li a:before {
+    display: inline-block;
+    content: "";
+    background: #999;
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    margin: 0px 10px 3px 0px;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+
+/* B2B 법인고객 혜택 */
+
+.b2b-customer {
+	padding:0 0px 40px;
+}
+
+.b2b-customer-wrap {
+	padding:20px 30px;
+}
+
+.b2b-ct-table {
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+}
+
+.b2b-ct-table li {
+	margin:15px 0px;
+}
+
+.b2b-ct-table li .b2b-ct-item {
+	display:flex;
+	gap:20px;
+}
+
+.b2b-ct-item .b2b-ct-img {
+	display:flex;
+	width:50px;
+	height:50px;
+	background:#f7f7f7;
+	border-radius:50px;
+	flex-shrink:0;
+	justify-content:center;
+}
+
+.b2b-ct-item .b2b-ct-img svg {
+	width:28px;
+	align-self:center;
+}
+
+.b2b-ct-table li:nth-child(1) .b2b-ct-item .b2b-ct-img svg {
+	width:26px;
+}
+
+.b2b-ct-table li:nth-child(2) .b2b-ct-item .b2b-ct-img svg {
+	width:24px;
+}
+
+.b2b-ct-table li:nth-child(4) .b2b-ct-item .b2b-ct-img svg {
+	width:32px;
+}
+
+.b2b-ct-ctn {
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+}
+
+.b2b-ct-ctn .b2b-ct-tit {
+	margin-bottom:5px;
+}
+
+.b2b-ct-ctn .b2b-ct-txt {
+	line-height:1.6;
 }
