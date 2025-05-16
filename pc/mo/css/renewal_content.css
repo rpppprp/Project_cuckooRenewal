@@ -664,27 +664,29 @@
     position: relative;
     display: flex;
     width: 100%;
-    height: 450px;
-    background:url(../images/b2b_mo_bg.png) center 40px no-repeat;
+    height: 500px;
+    background:url(../images/b2b_mo_bg.png) center 80px no-repeat #b2aaa0;
     justify-content: center;
-    background-size:cover;
+    background-size:contain;
 }
 
 .b2b-visual-wrap .b2b-visual-txt {
-    padding:140px 20px;
+    padding:80px 20px;
 }
 
 .b2b-visual-wrap .b2b-visual-txt .txt {
     font-size: 28px;
+    color:#fff;
+    line-height:1.6;
 }
 
 .b2b-visual-wrap .b2b-visual-txt .tel {
     display: flex;
-    background: #222;
-    color: #fff;
+    background: #fff;
+    color: #222;
     max-width:180px;
     padding: 10px 5px;
-    margin-top: 20px;
+    margin-top: 10px;
     justify-content: center;
     border-radius: 24px;
 }

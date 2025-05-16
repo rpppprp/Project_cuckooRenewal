@@ -27,13 +27,13 @@
 
 .b2b-visual-wrap .b2b-visual-txt .txt {
     font-size: 40px;
-    text-shadow:1px 1px 0px #fff;
+    color:#fff;
 }
 
 .b2b-visual-wrap .b2b-visual-txt .tel {
     display: flex;
-    background: var(--color-txt);
-    color: #fff;
+    background: #fff;
+    color: var(--color-txt);
     width: 200px;
     padding: 10px;
     margin-top: 20px;

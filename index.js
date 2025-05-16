@@ -18,6 +18,7 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
+
 // // User-Agent 미들웨어 설정
 // app.use(useragent.express());
 
