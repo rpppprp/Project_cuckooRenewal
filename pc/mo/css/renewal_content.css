@@ -758,7 +758,7 @@
 }
 
 .b2b-tab-wrap li.on a {
-
+    font-weight: 700;
 }
 
 .b2b-tab-wrap li.on a:after {
