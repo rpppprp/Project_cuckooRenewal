@@ -105,6 +105,7 @@
 
 .b2b-tab-wrap li.on a {
     font-weight: 500;
+    color: var(--color-primary);
 }
 
 .b2b-tab-wrap li.on a:before {

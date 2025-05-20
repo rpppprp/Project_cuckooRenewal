@@ -1,6 +1,6 @@
 "use strict";
 
-function b2bCommon(){
+function b2bInit(){
     
 	// debounce 함수 추가
 	function debounce(func, wait) {
@@ -179,6 +179,6 @@ function b2bCommon(){
 
 $(function(){
 	
-	b2bCommon();
+	b2bInit();
 	
 });

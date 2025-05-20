@@ -759,6 +759,7 @@
 
 .b2b-tab-wrap li.on a {
     font-weight: 500;
+    color: #ff5b53;
 }
 
 .b2b-tab-wrap li.on a:after {
