@@ -35,14 +35,14 @@
     background: #fff;
     color: var(--color-txt);
     width: 200px;
-    padding: 10px;
+    padding: 5px;
     margin-top: 20px;
     justify-content: center;
     border-radius: var(--radius-big);
 }
 
 .b2b-visual-wrap .b2b-visual-txt .tel li:nth-child(2) {
-    color: var(--color-mid-gray);
+    color: var(--color-line);
     margin: 0 10px;
 }
 

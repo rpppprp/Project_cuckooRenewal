@@ -3340,12 +3340,13 @@ a.quick-icon .quick-txt {
     height:100%;
     top:0px;
     left:0px;
-    background-color:rgba(0,0,0,0.2);
+    /* background-color:rgba(0,0,0,0.2); */
     z-index:1;
 }
 
 .esg-visual-bn-wrap .esg-visual-bn-track li img {
     display:inline-block;
+    filter:brightness(0.8);
 }
 
 .esg-visual-bn-wrap .esg-visual-ctn {
