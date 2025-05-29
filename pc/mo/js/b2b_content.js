@@ -117,11 +117,13 @@ function b2bInit(){
 	var partner_swiper = new Swiper('.b2b-partner-wrap', {
         slidesPerView:"auto",
         autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-		  delay : 1000,   // 시간 설정
-		  disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+		  delay : 0,   // 시간 설정
+		  disableOnInteraction : true  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
 		},
 		loop : true,
-        loopAdditionalSlides : 1
+        loopAdditionalSlides : 1,
+		speed: 2000,
+  		freeModeMomentum: false
 	});	
 	
 	// b2b partner pop-up

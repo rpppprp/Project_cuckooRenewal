@@ -910,6 +910,9 @@
 .b2b-p-track {
 	display:flex;
 	padding:30px 0px;
+    -webkit-transition-timing-function:linear!important; 
+    -o-transition-timing-function:linear!important;
+    transition-timing-function:linear!important; 
 }
 
 .b2b-p-track .b2b-p-item {
@@ -1133,6 +1136,18 @@
 
 .b2b-p-29 {
 	background-image:url(../images/partner_ci/b2b_p_29.png);
+}
+
+.b2b-p-30 {
+	background-image:url(../images/partner_ci/b2b_p_30.png);
+}
+
+.b2b-p-31 {
+	background-image:url(../images/partner_ci/b2b_p_31.png);
+}
+
+.b2b-p-32 {
+	background-image:url(../images/partner_ci/b2b_p_32.png);
 }
 
 /* B2B 기업도입사례 */
