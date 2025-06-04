@@ -908,11 +908,10 @@
 }
 
 .b2b-p-track {
-	display:flex;
 	padding:30px 0px;
-    -webkit-transition-timing-function:linear!important; 
+    /* -webkit-transition-timing-function:linear!important; 
     -o-transition-timing-function:linear!important;
-    transition-timing-function:linear!important; 
+    transition-timing-function:linear!important;  */
 }
 
 .b2b-p-track .b2b-p-item {

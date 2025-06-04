@@ -60,19 +60,35 @@ $(function(){
 			}
 		});
 	});
+
+	/* b2b partner slick */
+	$('.b2b-p-track').slick({
+		speed: 5000,
+		autoplay: true,
+		autoplaySpeed: 0,
+		centerMode: true,
+		cssEase: 'linear',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		variableWidth: true,
+		infinite: true,
+		initialSlide: 1,
+		arrows: false,
+		buttons: false
+	})
 	
 	/** b2b partner modal popup-open */
 	$("#rn-main").on("click", ".b2b-tab-title .more-btn", function(e){
 		var _popup = $(".b2b-partner-popup-wrap");
 		e.preventDefault();
-		_popup.removeClass("hidden");
+		_popup.show();
 		$('html, body').addClass('scroll-none'); // scroll off
 	});
 
 	$("#rn-main").on("click", ".b2b-partner-header .b2b-p-close", function(e){
 		var _popup = $(".b2b-partner-popup-wrap");
 		e.preventDefault();
-		_popup.addClass("hidden");
+		_popup.hide();
 		$('html, body').removeClass('scroll-none');// scroll on
 	});
 
