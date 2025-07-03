@@ -1304,14 +1304,16 @@ nav.rn-gnb .nav-inner {
 }
 
 .rn-lnb-wrap .inner .lnb-cetegory-wrap {
-    display:flex;
-    flex-wrap: wrap;
+    /* 수정함 // 250617 */
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
     padding:30px 0px 50px;
     gap:30px;
 }
 
 .rn-lnb-wrap .inner .lnb-cetegory-wrap > li {
-    width: 12%;
+    /* width: 12%; */
+    width:146px;
 }
 
 .lnb-sub-category-wrap {
