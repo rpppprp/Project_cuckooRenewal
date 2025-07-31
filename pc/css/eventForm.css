@@ -291,17 +291,19 @@
 /* -------- 이벤트폼 / 신청자 정보 -------- */
 
 .matress-form03 input,
-.matress-form03 input:read-only {
+.matress-form03 input[readonly] {
     border:none;
     border-bottom:1px solid var(--color-line) !important;
 }
 
-.matress-form03 input:focus {
+.matress-form03 input:focus,
+.matress-form03 input:active {
     outline:none !important;
     border-bottom:1px solid var(--color-mid-gray) !important;
 }
 
-.matress-form03 input[readonly]:focus {
+.matress-form03 input[readonly]:focus,
+.matress-form03 input[readonly]:active {
     outline:none !important;
     border:none !important;
 }
