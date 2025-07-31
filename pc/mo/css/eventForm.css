@@ -359,13 +359,14 @@
 }
 
 .matress-client-address .zipcode {
-    width:70%;
+    width:calc(100% - 100px);
     background:#f7f7f7;
 }
 
 .matress-client-address .zipcode-btn {
     display:inline-block;
     background: #272727;
+    width:90px;
     height:40px;
     color:#fff;
     font-weight: 300;
