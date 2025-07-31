@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:image" content="https://recuckoo.vercel.app/mo/images/ogimage.jpg">
+    <title>쿠쿠 리뉴얼 / 이벤트 - [레스티노] 쿠쿠 매트리스 무상케어 서비스 신청폼 / 모바일</title>
+    <!-- style sheets -->
+    <link rel="stylesheet" href="../mo/css/common.css">
+    <link rel="stylesheet" href="../mo/css/common-layout.css">
+    <link rel="stylesheet" href="../mo/css/content.css">
+    <link rel="stylesheet" href="../mo/css/media.css">
+    <link rel="stylesheet" href="../mo/css/slick.css">
+    <link rel="stylesheet" href="../mo/css/slick-custom.css">
+    <link rel="stylesheet" href="../mo/css/renewal_content.css">
+    <!-- script -->
+    <script type="text/javascript" src="../mo/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../mo/js/slick.min.js"></script>
+    <script type="text/javascript" src="../mo/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../mo/js/plugin.js"></script>
+    <script type="text/javascript" src="../mo/js/imageMapResizer.min.js"></script>
+    <!-- index js -->
+    <script type="text/javascript" src="../mo/js/design_common.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../mo/js/b2b_content.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="container" layout:fragment="content">
+            <div class="content eventForm">
+                <!-- 타이틀 start -->
+                <h1 class="eventForm-tit">
+                    쿠쿠 무상 케어 서비스 신청
+                </h1>
+                <!-- 타이틀 fin -->
+
+                <!-- 본문 start -->
+                <div class="eventForm-wrap">
+                    <form id="matress-form" class="matress-form">
+                        <!-- 매트리스케어01 / 제품정보 start -->
+                        <div class="eventform-section matress-form01">
+                            <div class="eventForm-subtit">
+                                <div class="num">01</div>
+                                <h2 class="subTit">제품 정보</h2>
+                                <p class="txt">사용하시는 매트리스의 사이즈와 사용기간을 선택해주세요.</p>
+                            </div>
+                            <!-- 매트리스케어01 / 제품정보 / 사용기간 start -->
+                            <div class="eventForm-item matress-use-priod">
+                                <div class="eventForm-item-tit">
+                                    <h5>매트리스 사용기간</h5>
+                                </div>
+                                <div class="eventForm-item-wrap">
+                                    <div class="eventForm-item-content">
+                                        <input type="radio" class="period-radio" id="period-6moLess" value="6moLess" name="use-period">
+                                        <label for="period-6moLess" class="period-btn">
+                                            <span class="chk-icon">
+                                                <svg class="icon">
+                                                    <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                                </svg>
+                                            </span>
+                                            <p class="period-txt">6개월이하</p>
+                                        </label>
+                                    </div>
+                                    <div class="eventForm-item-content">
+                                        <input type="radio" class="period-radio" id="period-6m1y" value="6m1y" name="use-period">
+                                        <label for="period-6m1y" class="period-btn">
+                                            <span class="chk-icon">
+                                                <svg class="icon">
+                                                    <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                                </svg>
+                                            </span>
+                                            <p class="period-txt">6개월~1년</p>
+                                        </label>
+                                    </div>
+                                    <div class="eventForm-item-content">
+                                        <input type="radio" class="period-radio" id="period-1y3y" value="1y3y" name="use-period">
+                                        <label for="period-1y3y" class="period-btn">
+                                            <span class="chk-icon">
+                                                <svg class="icon">
+                                                    <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                                </svg>
+                                            </span>
+                                            <p class="period-txt">1~3년</p>
+                                        </label>
+                                    </div>
+                                    <div class="eventForm-item-content">
+                                        <input type="radio" class="period-radio" id="period-3y5y" value="3y5y" name="use-period">
+                                        <label for="period-3y5y" class="period-btn">
+                                            <span class="chk-icon">
+                                                <svg class="icon">
+                                                    <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                                </svg>
+                                            </span>
+                                            <p class="period-txt">3~5년</p>
+                                        </label>
+                                    </div>
+                                    <div class="eventForm-item-content">
+                                        <input type="radio" class="period-radio" id="period-5y10y" value="5y10y" name="use-period">
+                                        <label for="period-5y10y" class="period-btn">
+                                            <span class="chk-icon">
+                                                <svg class="icon">
+                                                    <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                                </svg>
+                                            </span>
+                                            <p class="period-txt">5~10년</p>
+                                        </label>
+                                    </div>
+                                    <div class="eventForm-item-content">
+                                        <input type="radio" class="period-radio" id="period-10yMore" value="10yMore" name="use-period">
+                                        <label for="period-10yMore" class="period-btn">
+                                            <span class="chk-icon">
+                                                <svg class="icon">
+                                                    <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                                </svg>
+                                            </span>
+                                            <p class="period-txt">10년이상</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 매트리스케어01 / 제품정보 / 사용기간 fin -->
+
+                            <!-- 매트리스케어01 / 제품정보 / 사이즈 start --> 
+                            <div class="eventForm-item matress-size">
+                                <div class="eventForm-item-tit">
+                                    <h5>매트리스 사이즈</h5>
+                                </div>
+                                <div class="eventForm-item-wrap">
+                                    <div class="eventForm-item-content">
+                                        <input type="radio" class="size-radio" id="size-s" value="size_s" name="matress-size">
+                                        <label for="size-s" class="size-btn">
+                                            <p class="size-txt">싱글 (S)</p>
+                                            <span class="size-icon">
+                                                <svg class="matress-icon">
+                                                    <use xlink:href="./images/icon/matress-icon.svg#s" />
+                                                </svg>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="eventForm-item-content">
+                                        <input type="radio" class="size-radio" id="size-ss" value="size_ss" name="matress-size">
+                                        <label for="size-ss" class="size-btn">
+                                            <p class="size-txt">슈퍼싱글 (SS)</p>
+                                            <span class="size-icon">
+                                                <svg class="matress-icon">
+                                                    <use xlink:href="./images/icon/matress-icon.svg#ss" />
+                                                </svg>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="eventForm-item-content">
+                                        <input type="radio" class="size-radio" id="size-d" value="size_d" name="matress-size">
+                                        <label for="size-d" class="size-btn">
+                                            <p class="size-txt">더블 (D)</p>
+                                            <span class="size-icon">
+                                                <svg class="matress-icon">
+                                                    <use xlink:href="./images/icon/matress-icon.svg#d" />
+                                                </svg>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="eventForm-item-content">
+                                        <input type="radio" class="size-radio" id="size-q" value="size_q" name="matress-size">
+                                        <label for="size-q" class="size-btn">
+                                            <p class="size-txt">퀸 (Q)</p>
+                                            <span class="size-icon">
+                                                <svg class="matress-icon">
+                                                    <use xlink:href="./images/icon/matress-icon.svg#q" />
+                                                </svg>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="eventForm-item-content">
+                                        <input type="radio" class="size-radio" id="size-k" value="size_k" name="matress-size">
+                                        <label for="size-k" class="size-btn">
+                                            <p class="size-txt">킹 (K)</p>
+                                            <span class="size-icon">
+                                                <svg class="matress-icon">
+                                                    <use xlink:href="./images/icon/matress-icon.svg#k" />
+                                                </svg>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="eventForm-item-content">
+                                        <input type="radio" class="size-radio" id="size-lk" value="size_lk" name="matress-size">
+                                        <label for="size-lk" class="size-btn">
+                                            <p class="size-txt">라지킹 (LK)</p>
+                                            <span class="size-icon">
+                                                <svg class="matress-icon">
+                                                    <use xlink:href="./images/icon/matress-icon.svg#lk" />
+                                                </svg>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 매트리스케어01 / 제품정보 / 사이즈 fin --> 
+                        </div>
+                        <!-- 매트리스케어01 / 제품정보 fin -->
+
+                        <!-- 매트리스케어02 / 서비스요청일 start -->
+                        <div class="eventform-section matress-form02">
+                            <div class="eventForm-subtit">
+                                <div class="num">02</div>
+                                <h2 class="subTit">서비스 요청일</h2>
+                                <p class="txt">
+                                    <span>신청 당일 +2일부터 최대 1개월까지 기간 내 선택하실 수 있습니다.(주말제외)</span>
+                                    <span class="chk-txt">*지역 담당 기사가 별도 연락드릴 예정이며 내부 사정에 따라, 요청하신 날짜에 서비스가 불가할 수 있습니다.</span>
+                                </p>
+                            </div>
+                            <div class="eventForm-item matress-service-date">
+                                <div class="eventForm-item-wrap">
+                                    <div class="eventForm-item-content">
+                                        <!-- calendar -->
+                                        <div id="event-request-calendar" class="event-request-calendar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                        <!-- 매트리스케어02 / 서비스요청일 fin -->
+
+                        <!-- 매트리스케어03 / 신청자 정보 start -->
+                        <div class="eventform-section matress-form03">
+                            <div class="eventForm-subtit">
+                                <div class="num">03</div>
+                                <h2 class="subTit">신청자 정보</h2>
+                                <p class="txt">
+                                    서비스 받으실 분 정보로 접수확인 문자를 발송합니다. 정확한 정보를 입력해주세요.
+                                </p>
+                            </div>
+                            <div class="eventForm-item matress-client-name">
+                                <div class="eventForm-item-tit">
+                                    <h5>이름</h5>
+                                    <em>*</em>
+                                </div>
+                                <div class="eventForm-item-wrap">
+                                    <div class="eventForm-item-content">
+                                        <input type="text" placeholder="이름을 입력해주세요" class="client-name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eventForm-item matress-client-tel">
+                                <div class="eventForm-item-tit">
+                                    <h5>휴대폰 번호</h5>
+                                    <em>*</em>
+                                </div>
+                                <div class="eventForm-item-wrap">
+                                    <div class="eventForm-item-content">
+                                        <input type="tel" placeholder="(-) 제외한 숫자만 입력해주세요." class="client-tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eventForm-item matress-client-address">
+                                <div class="eventForm-item-tit">
+                                    <h5>방문 주소</h5>
+                                    <em>*</em>
+                                </div>
+                                <div class="eventForm-item-wrap">
+                                    <div class="eventForm-item-content">
+                                        <input type="text" placeholder="우편번호" class="zipcode" readonly="readonly">
+                                        <button type="button" class="zipcode-btn">주소찾기</button>
+                                    </div>
+                                    <div class="eventForm-item-content">
+                                        <input type="text" placeholder="주소" class="address0" id="address0" readonly="readonly">
+                                    </div>
+                                    <div class="eventForm-item-content">
+                                        <input type="text" placeholder="상세주소" class="address1" id="address1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 매트리스케어04 / 신청자 정보 fin -->
+                        <div class="eventform-section matress-form04">
+                            <button type="submit" class="matressSubmit-btn">신청하기</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- 본문 fin -->
+            </div>
+        </div>
+
+        <div class="btm-fix-wrap">
+            <ul class="kakao-btn-wrap">
+                <li><button onclick="$.kakaoChat('R')">렌탈신청문의</button></li>
+                <li><button onclick="$.kakaoChat('M')">서비스문의</button></li>
+            </ul>
+            <div class="floating-top">
+                <a href="#" class="btn btn_kakao">카카오톡 상담하기</a>
+                <a href="#" class="btn btn_top">맨 상단으로 가기</a>
+            </div>
+            <div class="floating-menu">
+                <ul>
+                    <li class="menu"><a href="javascript:popAllMenu.open();">전체메뉴</a></li>
+                    <li class="my"><a href="/mycuckoo">마이쿠쿠</a></li>
+                    <li class="home"><a href="/">홈</a></li>
+                    <li class="regi"><a href="/restino">레스티노</a></li>
+                    <li class="heart"><a href="/mycuckoo/wishList">관심상품</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <div class="inner">
+                <dl class="footer-cs-info">
+                    <dt>고객센터 상담시간</dt>
+                    <dd><em>평일 : 09시~18시</em><em>토요일 : 09시~13시</em></dd>
+                    <dd>일요일, 공휴일 : 휴무</dd>
+                    <dd>제품 전화주문은 쿠쿠몰로 문의주세요.</dd>
+                </dl>
+                <div class="footer-cs-number">
+                    <dl>
+                        <dt>쿠쿠몰</dt>
+                        <dd>080-720-9999</dd>
+                    </dl>
+                    <dl>
+                        <dt>렌탈문의</dt>
+                        <dd>1577-0010</dd>
+                    </dl>
+                    <dl>
+                        <dt>서비스문의</dt>
+                        <dd>1588-8899</dd>
+                    </dl>
+                </div>
+                <ul class="footer-menu">
+                    <li><a href="/company/cuckooGuideCuckooIntroduce">회사소개</a></li>
+                    <li><a href="#" onclick="$.goPolicy(&quot;/policy/service&quot;,&quot;privacyPop&quot;);return false">이용약관</a></li>
+                    <li><a href="https://www.cuckoo.co.kr/policy/accessTerms">렌탈이용약관</a></li>
+                    <li><a href="#" onclick="$.goPolicy(&quot;/policy/privacy&quot;,&quot;privacyPop&quot;);return false;">개인정보처리방침</a></li>
+                    <li><a href="#" id="footer_safekey" onclick="cuckoo.safekey.footer(0);return false;">SAFEKEY 발급</a></li>
+                </ul>
+                <ul class="footer-sns">
+                    <li class="ig" onclick="$.externalSite('http://www.instagram.com/cuckoo_1978')"><a href="http://www.instagram.com/cuckoo_1978" target="_blank">인스타그램</a></li>
+                    <li class="yt" onclick="$.externalSite('https://www.youtube.com/channel/UCg2n0fxTIWxtucOKz9SVK8Q')"><a href="https://www.youtube.com/channel/UCg2n0fxTIWxtucOKz9SVK8Q" target="_blank">유투브</a></li>
+                    <li class="fb" onclick="$.externalSite('https://www.facebook.com/cuckoo1978')"><a href="https://www.facebook.com/cuckoo1978" target="_blank">페이스북</a></li>
+                    <li class="blog" onclick="$.externalSite('https://blog.naver.com/cuckoo_official')"><a href="https://blog.naver.com/cuckoo_official" target="_blank">블로그</a></li>
+                </ul>
+                <div class="footer-family">
+                    <select id="ui_footer_family_site">
+                        <option value="" selected="">패밀리사이트</option>
+                        <option value="https://www.nelloshop.co.kr">넬로샵</option>
+                        <option value="http://www.cuckoo.jp">일본</option>
+                        <option value="https://www.cuckoo.com.my">말레이시아</option>
+                        <option value="https://www.cuckoo.co.id">인도네시아</option>
+                        <option value="https://cuckooindia.in">인도</option>
+                        <option value="http://www.cuckoovina.com">베트남</option>
+                        <option value="http://www.cuckoo.cn">중국</option>
+                        <option value="http://welfare.cuckoo.co.kr">쿠쿠사회복지재단</option>
+                    </select>
+                </div>
+                <div class="footer-info">
+                    <div class="accordion" role="">
+                        <div class="accordion_inner">
+                            <div class="accordion_header" aria-selected="false" aria-expanded="false" role="">
+                                사업자 정보확인
+                                <button type="button" class="accordion_trg">내용열기</button>
+                            </div>
+                            <div class="accordion_contents" aria-hidden="true">
+                                <div class="address_wrap">
+                                    <p class="tit tit01"><span class="blind">쿠쿠홀딩스</span></p>
+                                    <p class="txt">대표이사 : 구자신 &nbsp; 본사 : 경상남도 양산시 유산공단2길14 <br>사업자등록번호 : 621-81-02895 <br>이메일 : webmaster@cuckoo.co.kr</p>
+                                    <copyright>COPYRIGHT©CUCKOO HOLDINGS ALL RIGHTS RESERVED</copyright>
+                                </div>
+                                <div class="address_wrap">
+                                    <p class="tit tit02"><span class="blind">쿠쿠전자</span></p>
+                                    <p class="txt">대표이사 : 구본학 &nbsp; 본사 : 경상남도 양산시 유산공단2길14<br>사업자등록번호 : 337-87-00918 <a href="#" class="goto" onclick="$.externalSite(&quot;http://www.ftc.go.kr/bizCommPop.do?wrkr_no=3378700918&quot;);return false;"></a><br>통신판매신고 : 제2017-경남양산-00367호<br>개인정보관리책임자 : 온라인유통팀 김광민<br>이메일 : cuckoomall@cuckoo.co.kr<br>구매안전서비스 : 에스크로가입정보 <a href="#" class="goto" onclick="$.externalSite(&quot;https://pgweb.tosspayments.com/ms/escrow/s_escrowYn.do?mertid=cuckooel&quot;);return false;"></a></p>
+                                    <copyright>COPYRIGHT©CUCKOO ELECTRONICS ALL RIGHTS RESERVED</copyright>
+                                </div>
+                                <div class="address_wrap">
+                                    <p class="tit tit03"><span class="blind">쿠쿠홈시스</span></p>
+                                    <p class="txt">대표이사 : 구본학 &nbsp; 본사 : 경기도 시흥시 엠티브이북로 349<br>사업자등록번호 : 590-87-00993<a href="#" class="goto" onclick="$.externalSite(&quot;http://www.ftc.go.kr/bizCommPop.do?wrkr_no=5908700993&quot;);return false;"></a><br>통신판매신고 : 제2017-경기시흥-0894호<br>개인정보관리책임자 : 마케팅팀 천승국<br>이메일 : rentalcuckoo@cuckoo.co.kr<br>B2B문의상담 : junghyun@cuckoo.co.kr <br>구매안전서비스 : 에스크로가입정보 <a href="#" class="goto" onclick="$.externalSite(&quot;https://npg.nicepay.co.kr/issue/issueEscrow.do?Mid=APG044943m&amp;CoNo=5908700993&quot;);return false;"></a></p>
+                                    <copyright>COPYRIGHT©CUCKOO HOMESYS ALL RIGHTS RESERVED</copyright>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </footer>
+    </div>
+</body>

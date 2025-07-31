@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:image" content="https://recuckoo.vercel.app/mo/images/ogimage.jpg">>
+    <title>쿠쿠 리뉴얼 / 이벤트 - [레스티노] 쿠쿠 매트리스 무상케어 서비스 신청 / 모바일</title>
+    <!-- style sheets -->
+    <link rel="stylesheet" href="../mo/css/common.css">
+    <link rel="stylesheet" href="../mo/css/common-layout.css">
+    <link rel="stylesheet" href="../mo/css/content.css">
+    <link rel="stylesheet" href="../mo/css/media.css">
+    <link rel="stylesheet" href="../mo/css/slick.css">
+    <link rel="stylesheet" href="../mo/css/slick-custom.css">
+    <link rel="stylesheet" href="../mo/css/renewal_content.css">
+    <!-- script -->
+    <script type="text/javascript" src="../mo/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../mo/js/slick.min.js"></script>
+    <script type="text/javascript" src="../mo/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../mo/js/plugin.js"></script>
+    <script type="text/javascript" src="../mo/js/imageMapResizer.min.js"></script>
+    <!-- index js -->
+    <script type="text/javascript" src="../mo/js/design_common.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../mo/js/b2b_content.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header id="header" class="sub-header">
+            <div class="inner">
+                <a href="javascript:history.back()" class="btn btn_back chatbot_h">뒤로가기</a>
+                <h1 class="title">이벤트</h1>
+                <a href="javascript:gnbSearch.open()" class="btn btn_search chatbot_h">검색하기</a>
+                <a href="javascript:popupSet.init('gnb-cart')" class="btn btn_cart chatbot_h">장바구니로 이동<span id="ui_gnb_cart_count" data-name="cart-cnt">0</span></a>
+            </div>
+        </header>
+
+        <div id="container" layout:fragment="content">
+            <div class="content board_view">
+                <div class="top_area">
+                    <div class="board_tit">[레스티노] 쿠쿠 매트리스 무상케어 서비스 신청</div>
+                    <div class="board_date">2024.07.25 ~</div>
+                    <div class="board_share">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bottom_area view_area">
+                    <p>
+                        <img src="./images/eventDetail.png" style="width: 100%;" usemap="#map1">
+                        <map name="map1">
+                            <area target="_self" alt="" title="" href="./event_careForm.html" coords="202,3468,914,3574" shape="rect">
+                        </map>
+                    </p>
+                    <p>
+                        <img src="./images/eventRestino.png" style="width: 100%;" usemap="#map2">
+                        <map name="map2">
+                            <area target="_self" alt="" title="" href="" coords="4,3,1118,400" shape="rect">
+                        </map>
+                    </p>
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('map').imageMapResize();
+                    });
+                </script>
+                <div class="comment">
+                    <div class="text_write ">
+                        <textarea th:placeholder="${session.AuthUser eq null ? '로그인 후 댓글을 작성하실 수 있습니다.' : '댓글을 입력하세요.'}" th:data-login="${session.AuthUser eq null ? 'N' : 'Y'}" style="height:90px;" id="ui_reply_content" data-max="1000"></textarea>
+                        <div class="count_txt">
+                            <div class="count_area" id="ui_limit_txt_cnt"><span >0</span> / 1000</div>
+                            <button type="button" class="btn_m common"  th:onclick="cuckoo.reply.add([[${userKey}]])">등록</button>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="tit" id="ui_relpy_total_count" th:inline="text">댓글 (0)</div>
+                        <ul class="list" id="ui_event_reply_list">				
+                            <li th:if="${eReq.pageCount == 0}">
+                                <div class="no_coment">등록된 댓글이 없습니다</div>
+                            </li>	
+                        </ul>
+                    </div>	
+                    <ul class="next_prev_list">
+                        <li th:if="${eDetail ne null && eDetail.getPreEventList() ne null}" th:with="prev=${eDetail.getPreEventList()}">
+                            <a th:href="|javascript: cuckoo.moveEvent('${prev.eventTitleLink}', '${prev.eventTitleLinkTarget}','${prev.eventIdx}');|" class="clear">
+                                <span class="fl">Prev</span><span class="fl" th:inline="text">[NEW런칭이벤트] 쿠쿠 인스퓨어 미니100 초소형 정수기 사전구매 이벤트</span>
+                            </a>
+                        </li>	
+                        <li th:if="${eDetail ne null && eDetail.getNextEventList() ne null}" th:with="next=${eDetail.getNextEventList()}">
+                            <a th:href="|javascript: cuckoo.moveEvent('${next.eventTitleLink}', '${next.eventTitleLinkTarget}','${next.eventIdx}');|" class="clear">
+                                <span class="fl">Next</span><span class="fl" th:inline="text">[더크레마] 전자동 커피머신 런칭 이벤트</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn_l common radius" id="ui_list_event_btn">목록</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btm-fix-wrap">
+            <ul class="kakao-btn-wrap">
+                <li><button onclick="$.kakaoChat('R')">렌탈신청문의</button></li>
+                <li><button onclick="$.kakaoChat('M')">서비스문의</button></li>
+            </ul>
+            <div class="floating-top">
+                <a href="#" class="btn btn_kakao">카카오톡 상담하기</a>
+                <a href="#" class="btn btn_top">맨 상단으로 가기</a>
+            </div>
+            <div class="floating-menu">
+                <ul>
+                    <li class="menu"><a href="javascript:popAllMenu.open();">전체메뉴</a></li>
+                    <li class="my"><a href="/mycuckoo">마이쿠쿠</a></li>
+                    <li class="home"><a href="/">홈</a></li>
+                    <li class="regi"><a href="/restino">레스티노</a></li>
+                    <li class="heart"><a href="/mycuckoo/wishList">관심상품</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <div class="inner">
+                <dl class="footer-cs-info">
+                    <dt>고객센터 상담시간</dt>
+                    <dd><em>평일 : 09시~18시</em><em>토요일 : 09시~13시</em></dd>
+                    <dd>일요일, 공휴일 : 휴무</dd>
+                    <dd>제품 전화주문은 쿠쿠몰로 문의주세요.</dd>
+                </dl>
+                <div class="footer-cs-number">
+                    <dl>
+                        <dt>쿠쿠몰</dt>
+                        <dd>080-720-9999</dd>
+                    </dl>
+                    <dl>
+                        <dt>렌탈문의</dt>
+                        <dd>1577-0010</dd>
+                    </dl>
+                    <dl>
+                        <dt>서비스문의</dt>
+                        <dd>1588-8899</dd>
+                    </dl>
+                </div>
+                <ul class="footer-menu">
+                    <li><a href="/company/cuckooGuideCuckooIntroduce">회사소개</a></li>
+                    <li><a href="#" onclick="$.goPolicy(&quot;/policy/service&quot;,&quot;privacyPop&quot;);return false">이용약관</a></li>
+                    <li><a href="https://www.cuckoo.co.kr/policy/accessTerms">렌탈이용약관</a></li>
+                    <li><a href="#" onclick="$.goPolicy(&quot;/policy/privacy&quot;,&quot;privacyPop&quot;);return false;">개인정보처리방침</a></li>
+                    <li><a href="#" id="footer_safekey" onclick="cuckoo.safekey.footer(0);return false;">SAFEKEY 발급</a></li>
+                </ul>
+                <ul class="footer-sns">
+                    <li class="ig" onclick="$.externalSite('http://www.instagram.com/cuckoo_1978')"><a href="http://www.instagram.com/cuckoo_1978" target="_blank">인스타그램</a></li>
+                    <li class="yt" onclick="$.externalSite('https://www.youtube.com/channel/UCg2n0fxTIWxtucOKz9SVK8Q')"><a href="https://www.youtube.com/channel/UCg2n0fxTIWxtucOKz9SVK8Q" target="_blank">유투브</a></li>
+                    <li class="fb" onclick="$.externalSite('https://www.facebook.com/cuckoo1978')"><a href="https://www.facebook.com/cuckoo1978" target="_blank">페이스북</a></li>
+                    <li class="blog" onclick="$.externalSite('https://blog.naver.com/cuckoo_official')"><a href="https://blog.naver.com/cuckoo_official" target="_blank">블로그</a></li>
+                </ul>
+                <div class="footer-family">
+                    <select id="ui_footer_family_site">
+                        <option value="" selected="">패밀리사이트</option>
+                        <option value="https://www.nelloshop.co.kr">넬로샵</option>
+                        <option value="http://www.cuckoo.jp">일본</option>
+                        <option value="https://www.cuckoo.com.my">말레이시아</option>
+                        <option value="https://www.cuckoo.co.id">인도네시아</option>
+                        <option value="https://cuckooindia.in">인도</option>
+                        <option value="http://www.cuckoovina.com">베트남</option>
+                        <option value="http://www.cuckoo.cn">중국</option>
+                        <option value="http://welfare.cuckoo.co.kr">쿠쿠사회복지재단</option>
+                    </select>
+                </div>
+                <div class="footer-info">
+                    <div class="accordion" role="">
+                        <div class="accordion_inner">
+                            <div class="accordion_header" aria-selected="false" aria-expanded="false" role="">
+                                사업자 정보확인
+                                <button type="button" class="accordion_trg">내용열기</button>
+                            </div>
+                            <div class="accordion_contents" aria-hidden="true">
+                                <div class="address_wrap">
+                                    <p class="tit tit01"><span class="blind">쿠쿠홀딩스</span></p>
+                                    <p class="txt">대표이사 : 구자신 &nbsp; 본사 : 경상남도 양산시 유산공단2길14 <br>사업자등록번호 : 621-81-02895 <br>이메일 : webmaster@cuckoo.co.kr</p>
+                                    <copyright>COPYRIGHT©CUCKOO HOLDINGS ALL RIGHTS RESERVED</copyright>
+                                </div>
+                                <div class="address_wrap">
+                                    <p class="tit tit02"><span class="blind">쿠쿠전자</span></p>
+                                    <p class="txt">대표이사 : 구본학 &nbsp; 본사 : 경상남도 양산시 유산공단2길14<br>사업자등록번호 : 337-87-00918 <a href="#" class="goto" onclick="$.externalSite(&quot;http://www.ftc.go.kr/bizCommPop.do?wrkr_no=3378700918&quot;);return false;"></a><br>통신판매신고 : 제2017-경남양산-00367호<br>개인정보관리책임자 : 온라인유통팀 김광민<br>이메일 : cuckoomall@cuckoo.co.kr<br>구매안전서비스 : 에스크로가입정보 <a href="#" class="goto" onclick="$.externalSite(&quot;https://pgweb.tosspayments.com/ms/escrow/s_escrowYn.do?mertid=cuckooel&quot;);return false;"></a></p>
+                                    <copyright>COPYRIGHT©CUCKOO ELECTRONICS ALL RIGHTS RESERVED</copyright>
+                                </div>
+                                <div class="address_wrap">
+                                    <p class="tit tit03"><span class="blind">쿠쿠홈시스</span></p>
+                                    <p class="txt">대표이사 : 구본학 &nbsp; 본사 : 경기도 시흥시 엠티브이북로 349<br>사업자등록번호 : 590-87-00993<a href="#" class="goto" onclick="$.externalSite(&quot;http://www.ftc.go.kr/bizCommPop.do?wrkr_no=5908700993&quot;);return false;"></a><br>통신판매신고 : 제2017-경기시흥-0894호<br>개인정보관리책임자 : 마케팅팀 천승국<br>이메일 : rentalcuckoo@cuckoo.co.kr<br>B2B문의상담 : junghyun@cuckoo.co.kr <br>구매안전서비스 : 에스크로가입정보 <a href="#" class="goto" onclick="$.externalSite(&quot;https://npg.nicepay.co.kr/issue/issueEscrow.do?Mid=APG044943m&amp;CoNo=5908700993&quot;);return false;"></a></p>
+                                    <copyright>COPYRIGHT©CUCKOO HOMESYS ALL RIGHTS RESERVED</copyright>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </footer>
+    </div>
+</body>

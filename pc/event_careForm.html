@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta property="og:image" content="https://recuckoo.vercel.app/images/ogimage.jpg">
+        <title>쿠쿠 리뉴얼 / 이벤트 - [레스티노] 쿠쿠 매트리스 무상케어 서비스 신청폼</title>
+        <!-- style sheets -->
+        <link rel="stylesheet" href="./css/slick.css">
+        <link rel="stylesheet" href="./css/slick-theme.css">
+        <!-- <link rel="stylesheet" href="./css/slick-custom.css"> 241104 slick custom 추가 -->
+        <link rel="stylesheet" href="./css/past/common.css"> <!-- 241105 수정  -->
+        <link rel="stylesheet" href="./css/past/content.css"> <!-- 241105 수정  -->
+        <link rel="stylesheet" href="./css/content_02.css">
+        <link rel="stylesheet" href="./css/renew_common.css">
+        <link rel="stylesheet" href="./css/eventForm.css">
+
+        <!-- script -->
+        <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="./js/slick.min.js"></script>
+        <script type="text/javascript" src="./js/imageMapResizer.min.js"></script>
+        <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="./js/eventForm.js"></script>
+        <!-- index js -->
+        <script type="text/javascript" src="./js/rn-index.js" charset="utf-8"></script>
+
+    </head>
+    <body>
+        <div id="eventFormArea" class="eventFormArea">
+            <section class="eventForm matress-care">
+                <article class="inner">
+                    <!-- 타이틀 start -->
+                    <h1 class="eventForm-tit">
+                        쿠쿠 무상 케어 서비스 신청
+                    </h1>
+                    <!-- 타이틀 fin -->
+
+                    <!-- 본문 start -->
+                    <div class="eventForm-wrap">
+                        <form id="matress-form" class="matress-form">
+                            <!-- 매트리스케어01 / 제품정보 start -->
+                            <div class="eventform-section matress-form01">
+                                <div class="eventForm-subtit">
+                                    <div class="num">01</div>
+                                    <h2 class="subTit">제품 정보</h2>
+                                    <p class="txt">사용하시는 매트리스의 사이즈와 사용기간을 선택해주세요.</p>
+                                </div>
+                                <!-- 매트리스케어01 / 제품정보 / 사용기간 start -->
+                                <div class="eventForm-item matress-use-priod">
+                                    <div class="eventForm-item-tit">
+                                        <h5>매트리스 사용기간</h5>
+                                    </div>
+                                    <div class="eventForm-item-wrap">
+                                        <div class="eventForm-item-content">
+                                            <input type="radio" class="period-radio" id="period-6moLess" value="6moLess" name="use-period">
+                                            <label for="period-6moLess" class="period-btn">
+                                                <span class="chk-icon">
+                                                    <svg class="icon">
+                                                        <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                                    </svg>
+                                                </span>
+                                                <p class="period-txt">6개월이하</p>
+                                            </label>
+                                        </div>
+                                        <div class="eventForm-item-content">
+                                            <input type="radio" class="period-radio" id="period-6m1y" value="6m1y" name="use-period">
+                                            <label for="period-6m1y" class="period-btn">
+                                                <span class="chk-icon">
+                                                    <svg class="icon">
+                                                        <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                                    </svg>
+                                                </span>
+                                                <p class="period-txt">6개월~1년</p>
+                                            </label>
+                                        </div>
+                                        <div class="eventForm-item-content">
+                                            <input type="radio" class="period-radio" id="period-1y3y" value="1y3y" name="use-period">
+                                            <label for="period-1y3y" class="period-btn">
+                                                <span class="chk-icon">
+                                                    <svg class="icon">
+                                                        <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                                    </svg>
+                                                </span>
+                                                <p class="period-txt">1~3년</p>
+                                            </label>
+                                        </div>
+                                        <div class="eventForm-item-content">
+                                            <input type="radio" class="period-radio" id="period-3y5y" value="3y5y" name="use-period">
+                                            <label for="period-3y5y" class="period-btn">
+                                                <span class="chk-icon">
+                                                    <svg class="icon">
+                                                        <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                                    </svg>
+                                                </span>
+                                                <p class="period-txt">3~5년</p>
+                                            </label>
+                                        </div>
+                                        <div class="eventForm-item-content">
+                                            <input type="radio" class="period-radio" id="period-5y10y" value="5y10y" name="use-period">
+                                            <label for="period-5y10y" class="period-btn">
+                                                <span class="chk-icon">
+                                                    <svg class="icon">
+                                                        <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                                    </svg>
+                                                </span>
+                                                <p class="period-txt">5~10년</p>
+                                            </label>
+                                        </div>
+                                        <div class="eventForm-item-content">
+                                            <input type="radio" class="period-radio" id="period-10yMore" value="10yMore" name="use-period">
+                                            <label for="period-10yMore" class="period-btn">
+                                                <span class="chk-icon">
+                                                    <svg class="icon">
+                                                        <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                                    </svg>
+                                                </span>
+                                                <p class="period-txt">10년이상</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 매트리스케어01 / 제품정보 / 사용기간 fin -->
+
+                                <!-- 매트리스케어01 / 제품정보 / 사이즈 start --> 
+                                <div class="eventForm-item matress-size">
+                                    <div class="eventForm-item-tit">
+                                        <h5>매트리스 사이즈</h5>
+                                    </div>
+                                    <div class="eventForm-item-wrap">
+                                        <div class="eventForm-item-content">
+                                            <input type="radio" class="size-radio" id="size-s" value="size_s" name="matress-size">
+                                            <label for="size-s" class="size-btn">
+                                                <p class="size-txt">싱글(S)</p>
+                                                <span class="size-icon">
+                                                    <svg class="matress-icon">
+                                                        <use xlink:href="./images/icon/matress-icon.svg#s" />
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="eventForm-item-content">
+                                            <input type="radio" class="size-radio" id="size-ss" value="size_ss" name="matress-size">
+                                            <label for="size-ss" class="size-btn">
+                                                <p class="size-txt">슈퍼싱글(SS)</p>
+                                                <span class="size-icon">
+                                                    <svg class="matress-icon">
+                                                        <use xlink:href="./images/icon/matress-icon.svg#ss" />
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="eventForm-item-content">
+                                            <input type="radio" class="size-radio" id="size-d" value="size_d" name="matress-size">
+                                            <label for="size-d" class="size-btn">
+                                                <p class="size-txt">더블(D)</p>
+                                                <span class="size-icon">
+                                                    <svg class="matress-icon">
+                                                        <use xlink:href="./images/icon/matress-icon.svg#d" />
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="eventForm-item-content">
+                                            <input type="radio" class="size-radio" id="size-q" value="size_q" name="matress-size">
+                                            <label for="size-q" class="size-btn">
+                                                <p class="size-txt">퀸(Q)</p>
+                                                <span class="size-icon">
+                                                    <svg class="matress-icon">
+                                                        <use xlink:href="./images/icon/matress-icon.svg#q" />
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="eventForm-item-content">
+                                            <input type="radio" class="size-radio" id="size-k" value="size_k" name="matress-size">
+                                            <label for="size-k" class="size-btn">
+                                                <p class="size-txt">킹(K)</p>
+                                                <span class="size-icon">
+                                                    <svg class="matress-icon">
+                                                        <use xlink:href="./images/icon/matress-icon.svg#k" />
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="eventForm-item-content">
+                                            <input type="radio" class="size-radio" id="size-lk" value="size_lk" name="matress-size">
+                                            <label for="size-lk" class="size-btn">
+                                                <p class="size-txt">라지킹(LK)</p>
+                                                <span class="size-icon">
+                                                    <svg class="matress-icon">
+                                                        <use xlink:href="./images/icon/matress-icon.svg#lk" />
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 매트리스케어01 / 제품정보 / 사이즈 fin --> 
+                            </div>
+                            <!-- 매트리스케어01 / 제품정보 fin -->
+ 
+                            <!-- 매트리스케어02 / 서비스요청일 start -->
+                            <div class="eventform-section matress-form02">
+                                <div class="eventForm-subtit">
+                                    <div class="num">02</div>
+                                    <h2 class="subTit">서비스 요청일</h2>
+                                    <p class="txt">
+                                        <span>신청 당일 +2일부터 최대 1개월까지 기간 내 선택하실 수 있습니다.(주말제외)</span>
+                                        <span class="chk-txt">*지역 담당 기사가 별도 연락드릴 예정이며 내부 사정에 따라, 요청하신 날짜에 서비스가 불가할 수 있습니다.</span>
+                                    </p>
+                                </div>
+                                <div class="eventForm-item matress-service-date">
+                                    <div class="eventForm-item-wrap">
+                                        <div class="eventForm-item-content">
+                                            <!-- calendar -->
+                                            <div id="event-request-calendar" class="event-request-calendar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+                            <!-- 매트리스케어02 / 서비스요청일 fin -->
+
+                            <!-- 매트리스케어03 / 신청자 정보 start -->
+                            <div class="eventform-section matress-form03">
+                                <div class="eventForm-subtit">
+                                    <div class="num">03</div>
+                                    <h2 class="subTit">신청자 정보</h2>
+                                    <p class="txt">
+                                        서비스 받으실 분 정보로 접수확인 문자를 발송합니다. 정확한 정보를 입력해주세요.
+                                    </p>
+                                </div>
+                                <div class="eventForm-item matress-client-name">
+                                    <div class="eventForm-item-tit">
+                                        <h5>이름</h5>
+                                        <em>*</em>
+                                    </div>
+                                    <div class="eventForm-item-wrap">
+                                        <div class="eventForm-item-content">
+                                            <input type="text" placeholder="이름을 입력해주세요" class="client-name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="eventForm-item matress-client-tel">
+                                    <div class="eventForm-item-tit">
+                                        <h5>휴대폰 번호</h5>
+                                        <em>*</em>
+                                    </div>
+                                    <div class="eventForm-item-wrap">
+                                        <div class="eventForm-item-content">
+                                            <input type="tel" placeholder="(-) 제외한 숫자만 입력해주세요." class="client-tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="eventForm-item matress-client-address">
+                                    <div class="eventForm-item-tit">
+                                        <h5>방문 주소</h5>
+                                        <em>*</em>
+                                    </div>
+                                    <div class="eventForm-item-wrap">
+                                        <div class="eventForm-item-content">
+                                            <input type="text" placeholder="우편번호" class="zipcode" readonly="readonly">
+                                            <button type="button" class="zipcode-btn">주소찾기</button>
+                                        </div>
+                                        <div class="eventForm-item-content">
+                                            <input type="text" placeholder="주소" class="address0" id="address0" readonly="readonly">
+                                        </div>
+                                        <div class="eventForm-item-content">
+                                            <input type="text" placeholder="상세주소" class="address1" id="address1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 매트리스케어04 / 신청자 정보 fin -->
+                            <div class="eventform-section matress-form04">
+                                <button type="submit" class="matressSubmit-btn">신청하기</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- 본문 fin -->
+                </article>
+            </section>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,369 @@
+@charset "UTF-8";
+
+
+/* -------- 이벤트폼 common -------- */
+
+#eventFormArea {
+    background:#f7f7f7;
+    padding: 120px 0px;
+}
+
+.eventForm-tit {
+    font-size:40px;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.eventForm-wrap {
+    background:#fff;
+    padding:80px 80px 20px;
+    border-radius: var(--radius-mid);
+}
+
+.eventForm-wrap .eventform-section {
+    padding-bottom:60px;
+}
+
+.eventform-section .eventForm-subtit {
+    display:flex;
+    flex-direction: row;
+    margin-bottom:40px;
+}
+
+.eventform-section .eventForm-subtit .num {
+    width:var(--obj-size-mid);
+    height:var(--obj-size-mid);
+    background:var(--color-txt);
+    color:#fff;
+    font-family: var(--font);
+    font-weight: 500;
+    border-radius: var(--obj-size-mid);
+    text-align:center;
+    line-height:32px;
+    align-self: center;
+    flex-shrink: 0;
+    margin-right:20px;
+}
+
+.eventform-section .eventForm-subtit .subTit {
+    min-width:120px;
+    font-size:var(--font-mid);
+    align-self:center;
+}
+
+.eventform-section .eventForm-subtit .txt {
+    font-size:var(--font-small);
+    color:var(--color-mid-gray);
+    margin-left:30px;
+    align-self:center;
+}
+
+.eventform-section .eventForm-subtit .txt span {
+    display:flex;
+    margin-top:5px;
+}
+
+.eventform-section .eventForm-subtit .txt span.chk-txt {
+    color:var(--color-primary);
+}
+
+.eventForm-item {
+    display:flex;
+    margin-bottom:30px;
+    justify-content: top;
+}
+
+.eventForm-item-tit {
+    display:flex;
+    min-width:180px;
+    margin-right:20px;
+}
+
+.eventForm-item-tit h5 {
+    font-weight: var(--font-normal);
+}
+
+.eventForm-item-tit em {
+    font-size: var(--font-mid);
+    color:var(--color-primary);
+    margin-left:5px;
+}
+
+.eventForm-item-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.eventForm-item-wrap .eventForm-item-content {
+    display:flex;
+}
+
+.eventForm-item-content label input[type="radio"] {
+    width:0px;
+    height:0px;
+}
+
+.eventForm-item-content input[type="radio"] + label:before {
+    display: none;
+}
+
+/* -------- 이벤트폼 / 제품정보 -------- */
+
+/* 매트리스 사용기간 */
+.matress-use-priod .eventForm-item-wrap .eventForm-item-content {
+    height:40px;
+}
+
+.eventForm-item-content label input[type="radio"].period-radio {
+    width:0px;
+    height:0px;
+}
+
+.eventForm-item-content label.period-btn {
+    display:flex;
+    color:var(--color-mid-gray);
+    padding:5px 25px;
+    border:1px solid var(--color-mid-gray);
+    border-radius: var(--radius-big);
+    box-sizing: border-box;
+}
+.eventForm-item-content label.period-btn p.period-txt {
+    align-self:center;
+}
+
+.eventForm-item-content input[type="radio"]:checked + label.period-btn {
+    color:#222;
+    border:2px solid #222;
+}
+
+.eventForm-item-content input[type="radio"] + label.period-btn .chk-icon .icon {
+    width:0px;
+    height:0px;
+    opacity:0;
+    transition:width .1s ease-in-out ,opacity .6s ease-in-out;
+}
+
+.eventForm-item-content input[type="radio"]:checked + label.period-btn .chk-icon .icon {
+    width:16px;
+    height:16px;
+    color:var(--color-txt);
+    margin-right:10px;
+    opacity:1;
+}
+
+/* 매트리스 사이즈 */
+
+.matress-size .eventForm-item-wrap {
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(3 ,1fr);
+    gap:20px
+}
+
+.matress-size .eventForm-item-wrap .eventForm-item-content {
+    width:100%;
+    height:80px;
+}
+
+.matress-size .eventForm-item-wrap label.size-btn {
+    width:100%;
+    display:flex;
+    border:1px solid var(--color-mid-gray);
+    padding:10px 20px;
+    border-radius: var(--radius-small);
+    justify-content: space-between;
+    box-sizing:border-box;
+}
+
+.matress-size .eventForm-item-wrap label.size-btn p.size-txt {
+    align-self:center;
+    color:var(--color-mid-gray);
+}
+
+.matress-size .eventForm-item-wrap label.size-btn .size-icon {
+    display: flex;
+    align-self:center;
+}
+
+.matress-size .eventForm-item-wrap label.size-btn .size-icon svg {
+    max-width:32px;
+    height:32px;
+    color:var(--color-mid-gray);
+}
+
+.matress-size .eventForm-item-wrap input[type="radio"]:checked + label.size-btn {
+    border:2px solid var(--color-txt);
+}
+
+.matress-size .eventForm-item-wrap input[type="radio"]:checked + label.size-btn .size-txt {
+    color:var(--color-txt);
+}
+
+.matress-size .eventForm-item-wrap input[type="radio"]:checked + label.size-btn .size-icon svg {
+    color:var(--color-txt);
+}
+
+
+/* -------- 이벤트폼 / 서비스 요청일 -------- */
+
+.matress-service-date .eventForm-item-wrap {
+    width:100%;
+}
+
+.matress-service-date .eventForm-item-content {
+    width:100%;
+    height:100%;
+}
+
+.event-request-calendar {
+    width:550px;
+    margin:0 auto;
+}
+
+.event-request-calendar .ui-datepicker {
+    width:100%;
+    height:100%;
+    position:static;
+    font-family: var(--font);
+    border:none;
+    padding:0px;
+}
+
+.event-request-calendar .ui-datepicker-title {
+    margin-bottom:20px;
+}
+
+.event-request-calendar .ui-datepicker .ui-datepicker-prev {
+    margin-left:10px;
+    padding:0 10px;
+    background:url(../images/ico_zip.png) no-repeat -307px -311px;
+}
+
+.event-request-calendar .ui-datepicker .ui-datepicker-next {
+    display:inline-block;
+    margin-right:10px;
+    padding:5px 10px;
+    background:url(../images/ico_zip.png) no-repeat -343px -311px;
+}
+
+.event-request-calendar .ui-datepicker-title .ui-datepicker-year:after {
+    content:"";
+    margin-right:5px;
+}
+
+.event-request-calendar .ui-datepicker-calendar thead th {
+    padding:0px 0px 15px;
+}
+
+.event-request-calendar .ui-datepicker-calendar thead th span {
+    color:var( --color-darkgray);
+}
+
+.event-request-calendar .ui-datepicker-calendar tbody td {
+    padding:10px 0px !important;
+    text-align:center;
+}
+
+.event-request-calendar .ui-datepicker-calendar tbody td span,
+.event-request-calendar .ui-datepicker-calendar tbody td a {
+    font-family: var(--font);
+    font-size:var(--font-normal) !important;
+    margin:0 auto; 
+}
+
+.event-request-calendar .ui-datepicker-calendar tbody td.ui-state-disabled span {
+    color:#dadada !important;
+}
+
+.event-request-calendar .ui-datepicker-calendar .ui-datepicker-current-day a {
+    border-radius: var(--radius-mid);
+}
+
+.event-request-calendar .ui-datepicker-calendar .ui-state-hover {
+    background:var(--color-line);
+    font-weight: 500;
+    color:var(--color-txt);
+    border-radius: var(--radius-mid);
+}
+
+
+/* -------- 이벤트폼 / 신청자 정보 -------- */
+
+.matress-form03 input,
+.matress-form03 input:read-only {
+    border:none;
+    border-bottom:1px solid var(--color-line) !important;
+}
+
+.matress-form03 input:focus {
+    outline:none !important;
+    border-bottom:1px solid var(--color-mid-gray) !important;
+}
+
+.matress-form03 input[readonly]:focus {
+    outline:none !important;
+    border:none !important;
+}
+
+.matress-client-name .eventForm-item-wrap,
+.matress-client-tel .eventForm-item-wrap {
+    width:100%;
+}
+
+.matress-client-address .eventForm-item-wrap {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.matress-client-name input[type="text"] {
+    width:300px;
+}
+
+.matress-client-tel input[type="tel"] {
+    width:300px;
+}
+
+.matress-client-address .zipcode {
+    width:350px;
+    background:#f7f7f7;
+}
+
+.matress-client-address .zipcode-btn {
+    display:inline-block;
+    background:var(--color-txt);
+    color:#fff;
+    font-weight: 300;
+    border-radius:var(--radius-big);
+    padding:5px 30px;
+    margin-left:10px;
+}
+
+.matress-client-address .address0,
+.matress-client-address .address1 {
+    width:100%;
+}
+
+.matress-client-address .address0 {
+    background:#f7f7f7;
+}
+
+
+/* -------- 이벤트폼 / button -------- */
+
+.matress-form04 {
+    display:flex;
+    justify-content: center;
+}
+
+.matress-form04 .matressSubmit-btn {
+    display:block;
+    width:300px;
+    background:var(--color-txt);
+    color:#fff;
+    font-size:var(--font-mid);
+    font-weight: 300;
+    padding:15px 20px;
+    border-radius: var(--radius-big);
+}
