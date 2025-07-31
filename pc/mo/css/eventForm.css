@@ -120,9 +120,24 @@
 /* -------- 이벤트폼 / 제품정보 -------- */
 
 /* 매트리스 사용기간 */
+
+.matress-use-priod .eventForm-item-wrap {
+    gap:0px;
+}
+
 .matress-use-priod .eventForm-item-wrap .eventForm-item-content {
+    width:calc(100% / 2 - 5px);
     height:40px;
 }
+
+.eventForm-item-content:nth-child(odd) {
+    margin:5px 5px 5px 0px;
+}
+
+.eventForm-item-content:nth-child(even) {
+    margin:5px 0px 5px 5px;
+}
+
 
 .eventForm-item-content label input[type="radio"].period-radio {
     width:0px;
@@ -131,12 +146,17 @@
 
 .eventForm-item-content label.period-btn {
     display:flex;
+    width: 100%;
     color: #999;
     padding:0px 20px;
     border:1px solid #999;
     border-radius: 32px;
     box-sizing: border-box;
+    text-align:center;
+    justify-content: center;
 }
+
+
 .eventForm-item-content label.period-btn p.period-txt {
     align-self:center;
 }
@@ -236,7 +256,6 @@
     width:100%;
     height:100%;
     position:static;
-    font-family: var(--font);
     border:none;
     padding:0px;
 }
