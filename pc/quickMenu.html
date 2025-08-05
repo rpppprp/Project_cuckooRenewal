@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>쿠비 테스트</title>
+        <!-- style sheets -->
+        <link rel="stylesheet" href="./css/slick.css">
+        <link rel="stylesheet" href="./css/slick-theme.css">
+        <!-- <link rel="stylesheet" href="./css/slick-custom.css"> 241104 slick custom 추가 -->
+        <link rel="stylesheet" href="./css/past/common.css"> <!-- 241105 수정  -->
+        <link rel="stylesheet" href="./css/past/content.css"> <!-- 241105 수정  -->
+        <link rel="stylesheet" href="./css/past/content_02.css">
+        <link rel="stylesheet" href="./css/renew_common.css">
+        <link rel="stylesheet" href="./css/renewal_content.css">
+        <!-- script -->
+        <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+        <!-- index js -->
+        <!-- <script type="text/javascript" src="./js/rn-index.js" charset="utf-8"></script> -->
+        <style>
+
+            .quickMenu-sample {
+                position:relative;
+                display:flex;
+                width:300px;
+                flex-wrap: wrap;
+                margin:0 auto;
+            }
+
+            .quickMenu-sample > div {
+                width:calc(100% / 2);
+                padding:30px;
+            }
+
+            .quickAll {              
+                width:100% !important;
+                margin-top:350px;
+            }
+
+            .floating-quick {
+                position:relative;
+                bottom:0px;
+            }
+
+            .cs-btn {
+                overflow: hidden;
+            }
+
+            .quickAll .floating-quick {
+                position:absolute;
+                bottom:0;
+            }
+
+            .quickAll .cs-btn-wrap {
+                width:240px;
+            }
+            
+            .quickAll .cs-btn-list {
+                width:240px;
+                box-shadow: none;
+            }
+
+            .quickAll .cs-btn-list li {
+                border-radius: var(--radius-small);
+                padding:10px;
+                margin:10px 0px;
+                border:1px solid var(--color-line);
+            }
+
+            .quickAll .cs-btn-list li button {
+                display:flex;
+                justify-content: left;
+            }
+
+            .quickAll .cs-btn-list li button div.cs-btn-img {
+                margin-right:20px;
+                align-self:center;
+            }
+
+            .quickAll .cs-btn-list li button div img {
+                min-width:36px;
+                max-width:40px;
+                height:36px;
+            }
+
+            .quickAll .cs-btn-list li button .cs-txt {
+                width:100%;
+                text-align:left;
+            }
+
+            .quickAll .cs-btn-list li button .cs-txt p {
+                width:100%;
+                text-align:left;
+                font-weight: 500;
+                font-size:16px;
+                margin-bottom:10px;
+            }
+
+            .quickAll .cs-btn-list li button .cs-txt span {
+                display: block;
+                width:100%;
+                font-size:14px !important;
+                color:#767676;
+                text-align: justify;
+                font-weight: normal;
+            }
+
+            .quickAll .cs-close {
+                display: flex;
+                width:32px;
+                height:32px;
+                background:#222;
+                border:1px solid #eaeaea;
+                justify-content: center;
+                top:-30px;
+                right:0px;
+                border-radius: 32px;
+            }
+
+            .quickAll .cs-close svg {
+                width:10px;
+                height:10px;
+                color:#fff;
+                align-self: center;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="quickMenu-sample">
+            <div class="quick01">
+                <div class="floating-quick">
+                    <div class="inner">
+                        <a class="cs-btn">
+                            <img src="./images/quick/cubee_ani01.gif">
+                            빠른 상담
+                        </a>
+                        <div class="cs-btn-wrap hidden">
+                            <a class="cs-close">
+                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
+                            </a>
+                            <ul class="cs-btn-list">
+                                <li>
+                                    <button class="rental-btn">
+                                        렌탈신청문의
+                                        <svg class="icon more-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="service-ask">
+                                        서비스문의
+                                        <svg class="icon more-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="media-ask">
+                                        사진/영상상담
+                                        <svg class="icon more-arrow-icon"><use xlink:href="./images/icon/sprite-sheet.svg#arrow-right"/></svg>  
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="top-btn" href="#">
+                            <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#top-arrow"/></svg>
+                            위로
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="quick02">
+                <div class="floating-quick">
+                    <div class="inner">
+                        <a class="cs-btn">
+                            <img src="./images/quick/cubee_ani02.gif">
+                            빠른 상담
+                        </a>
+                        <div class="cs-btn-wrap hidden">
+                            <a class="cs-close">
+                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
+                            </a>
+                            <ul class="cs-btn-list">
+                                <li>
+                                    <button class="cubee-btn">
+                                        <div class="cs-btn-img">
+                                            <img src="./images/quick/quick_cubee.svg">
+                                        </div>
+                                        <div class="quickCs-txt">
+                                            <p>쿠비 상담</p>
+                                            <span>챗봇에게 상담하기</span>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="quickCs-btn">
+                                        <div class="cs-btn-img">
+                                            <img src="./images/quick/quick_cs.svg">
+                                        </div>
+                                        <div class="cs-txt">
+                                            <p>상담사 연결</p>
+                                            <span>상담사와 빠른 상담하기</span>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="quickChk-btn">
+                                        <div class="cs-btn-img">
+                                            <img src="./images/quick/quick_chk.svg">
+                                        </div>
+                                        <div class="cs-txt">
+                                            <p>스스로 점검</p>
+                                            <span>스스로 제품 점검</span>
+                                        </div>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="top-btn" href="#">
+                            <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#top-arrow"/></svg>
+                            위로
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="quickAll">
+                <div class="floating-quick">
+                    <div class="inner">
+                        <a class="cs-btn">
+                            <img src="./images/quick/cubee_ani01.gif">
+                            빠른 상담
+                        </a>
+                        <div class="cs-btn-wrap">
+                            <a class="cs-close">
+                                <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
+                            </a>
+                            <ul class="cs-btn-list">
+                                <li>
+                                    <button class="quickCubee-btn">
+                                        <div class="cs-btn-img">
+                                            <img src="./images/quick/quick_cubee.svg">
+                                        </div>
+                                        <div class="cs-txt">
+                                            <p>쿠비 상담</p>
+                                            <span>챗봇에게 상담하기</span>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="quickCs-btn">
+                                        <div class="cs-btn-img">
+                                            <img src="./images/quick/quick_cs.svg">
+                                        </div>
+                                        <div class="cs-txt">
+                                            <p>상담사 연결</p>
+                                            <span>상담사와 빠른 상담하기</span>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="quickChk-btn">
+                                        <div class="cs-btn-img">
+                                            <img src="./images/quick/quick_chk.svg">
+                                        </div>
+                                        <div class="cs-txt">
+                                            <p>스스로 점검</p>
+                                            <span>스스로 제품 점검</span>
+                                        </div>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="top-btn" href="#">
+                            <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#top-arrow"/></svg>
+                            위로
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script>
+
+                // $(".quickAll .floating-quick .cs-btn-list").hide();
+                // $(".quickAll .floating-quick .cs-close").hide();
+                $(".quickAll .cs-btn").hide();
+
+                function openQuick(){
+                    $(".quickAll .cs-btn").click(function(){
+                        var _this = $(this);
+                        _this.fadeOut();
+                        $(".quickAll .floating-quick .cs-btn-list").delay(600).slideToggle();
+                        $(".quickAll .floating-quick .cs-close").delay(1000).fadeIn();
+                    })
+
+                }
+
+                function closeQuick(){
+                    $(".quickAll .floating-quick .cs-close").click(function(){
+                        $(this).fadeOut();
+                        $(".quickAll .floating-quick .cs-btn-list").delay(600).slideToggle();
+                        $(".quickAll .cs-btn").delay(1000).fadeIn();
+                    });
+                }
+
+                openQuick();
+                closeQuick();
+                
+            </script>
+        </div>
+    </body>
+</html>
