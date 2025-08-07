@@ -18,9 +18,512 @@
         <!-- index js -->
         <!-- <script type="text/javascript" src="./js/rn-index.js" charset="utf-8"></script> -->
         <style>
+
+            .privacy-wrap {
+                margin:50px 0px;
+            }
+
+
+            .privacy-wrap input[type="checkbox"] {
+                width:0px;
+                height:0px;
+            }
+
+            .privacy-wrap input[type="checkbox"] + label:before {
+                display:none;
+            }
+
+            .privacy-wrap input[type="checkbox"] + label .chk-box {
+                display:flex;
+                width:28px;
+                height:28px;
+                background:#fff;
+                border-radius: 3px;
+                border:2px solid #dadada;
+                box-sizing: border-box;
+                justify-content: center;
+                align-self:center;
+            }
+
+            .privacy-wrap input[type="checkbox"]:checked + label .chk-box {
+                background:#272727;
+                border-color:#272727;
+            }
+
+            .privacy-wrap input[type="checkbox"] + label .chk-box svg {
+                width:16px;
+                height:16px;
+                color:#eaeaea;
+                align-self:center;
+            }
+
+            .privacy-wrap input[type="checkbox"]:checked + label .chk-box svg {
+                color:#fff;
+            }
+
+            .privacy-wrap em.point {
+                color:#ff5b53;
+                margin-left:20px;
+                align-self:center;
+            }
+
+            .privacy-wrap .privacy-arrow {
+                position:relative;
+                display:flex;
+                width:32px;
+                height:32px;
+                justify-content: center;
+                align-self:center;
+            }
+
+            .privacy-wrap .privacy-arrow.up {
+                transform:rotate(-180deg);
+            }
+
+            .privacy-wrap .privacy-arrow svg {
+                width:16px;
+                height:16px;
+                color:#dadada;
+                align-self:center;
+            }
+
+            .privacy-wrap > div {
+                display:flex;
+            }
+
+            .privacy-wrap label {
+                width:100%;
+                display:flex;
+            }
+
+            .privacy-wrap .privacy-allCheck {
+                display:flex;
+                background:#f7f7f7;
+                padding:30px;
+                border-top:1px solid #999;
+            }
+
+            .privacy-wrap .privacy-allCheck label p {
+                font-size:20px;
+                margin-left:20px;
+                align-self:center;
+            }
+
+            .privacy-wrap .privacy-chk-box {
+                border-bottom:1px solid #eaeaea;
+            }
+
+            .privacy-wrap .privacy-chk-box .privacy-chk-tit {
+                display:flex;
+                padding:20px 30px;
+            }
+
+
+            .privacy-wrap .privacy-chk-box .privacy-chk-tit p {
+                margin-left: 10px;
+                align-self:center;
+            }
+
+            .privacy-wrap .privacy-chk-box .privacy-chk-ctn {
+                border-top:1px solid #eaeaea;
+            }
+
+            .privacy-wrap .privacy-chk-box .privacy-chk-ctn .inner {
+                font-size:14px;
+                color:#767676;
+                padding:30px;
+            }
+
+            .privacy-wrap .privacy-chk-box .privacy-chk-ctn p {
+                padding:5px 0px;
+            }
+
+            .privacy-table {
+                border:1px solid #eaeaea;
+                margin:10px 0px;
+            }
+
+            .privacy-table th {
+                color:#767676;
+                font-size:12px;
+                padding:10px;
+                border:1px solid #eaeaea;
+                text-align:center;
+            }
+
+            .privacy-table td {
+                color:#767676;
+                font-size:12px;
+                padding:10px;
+                border:1px solid #eaeaea;
+                text-align:center;
+            }
+
+
+
         </style>
     </head>
     <body>
-        <div></div>
+        <div id="rn-main" class="rn-container">
+            <section>
+                <article class="inner">
+
+                    <!-- 개인정보동의안 -->
+                    <div class="privacy-wrap">
+                        <form id="privacy-chk">
+                            <div class="privacy-allCheck">
+                                <input type="checkbox" id="allChk">
+                                <label for="allChk" class="privacy-txt">
+                                    <span class="chk-box">
+                                        <svg class="icon">
+                                            <use xlink:href="./images/icon/sprite-sheet.svg#chk-2" />
+                                        </svg>
+                                    </span>
+                                    <p>전체동의</p>
+                                </label>
+                            </div>
+                            <div class="privacy-chk-box">
+                                <div class="privacy-chk-tit">
+                                    <input type="checkbox" id="privacy-chk1">
+                                    <label for="privacy-chk1" class="privacy-txt">
+                                        <span class="chk-box">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/icon/sprite-sheet.svg#chk-2" />
+                                            </svg>
+                                        </span>
+                                        <em class="point">[필수]</em>
+                                        <p>개인정보 수집 및 이용 동의</p>
+                                    </label>
+                                    <a class="privacy-arrow">
+                                        <svg class="icon">
+                                            <use xlink:href="./images/icon/sprite-sheet.svg#arrow-bottom"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="privacy-chk-ctn">
+                                    <div class="inner">
+                                        <p class="subtit">[개인정보의 수집 및 이용(필수)]</p>
+                                        <table class="privacy-table">
+                                            <tr>
+                                                <th>정보 수집/이용 목적</th>
+                                                <th>수집 항목</th>
+                                                <th>보유 및 이용기간</th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    매트리스 케어 서비스 제공, 이벤트 내역 조회, 이벤트 신청 확인 및 안내
+                                                </td>
+                                                <td>
+                                                    이름, 생년월일, 성별, 연락처, 주소, 이메일 주소
+                                                </td>
+                                                <td>
+                                                    고객 직접요청 철회시까지
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <p class="txt">※ 고객님께서는 동의를 거부하실 권리가 있으며, 필수 항목에 대해 동의를 하지 않으시는 경우 이벤트, 서비스의 제공이 불가합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="privacy-chk-box">
+                                <div class="privacy-chk-tit">
+                                    <input type="checkbox" id="privacy-chk2" name="privacy">
+                                    <label for="privacy-chk2" class="privacy-txt">
+                                        <span class="chk-box">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/icon/sprite-sheet.svg#chk-2" />
+                                            </svg>
+                                        </span>
+                                        <em class="point">[선택]</em>
+                                        <p>마케팅활용을 위한 개인정보 수집/이용동의</p>
+                                    </label>
+                                    <a class="privacy-arrow">
+                                        <svg class="icon">
+                                            <use xlink:href="./images/icon/sprite-sheet.svg#arrow-bottom"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="privacy-chk-ctn">
+                                    <div class="inner">
+                                        <p class="subtit">[마케팅활용을 위한 개인정보 수집/이용 동의(선택)]</p>
+                                        <table class="privacy-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>정보 수집/이용 목적</th>
+                                                    <th>수집 항목</th>
+                                                    <th>보유 및 이용기간</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        상품 및 서비스 안내, 프로모션 및 이벤트 정보의 안내, 계열회사 상품 또는 서비스 안내
+                                                    </td>
+                                                    <td>
+                                                        성명, 주소, 연락처, 생년월일, CI(연계정보), DI(중복정보), 성별, 이메일 주소, 제품에 관한 정보
+                                                    </td>
+                                                    <td>
+                                                        고객 직업요청 철회시까지
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="txt">※ 마케팅 활용 동의를 한 이용자는 쿠쿠전자(주), 쿠쿠홈시스(주)에 마케팅활용 동의한 것으로 간주됩니다.</p>
+                                        <p class="txt">※ 고객님께서는 동의를 거부하실 권리가 있으며, 이 경우 회원가입은 가능하나 일부 서비스 이용 및 각종 광고, 이벤트 등의 혜택정보 제공이 제한 될 수 있습니다.</p>
+                                        <p class="txt">※ 수집된 개인정보는 동의 철회 요청시까지 보관되며, 고객님께서는 언제든지 마케팅활용동의를 철회하실 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="privacy-chk-box">
+                                <div class="privacy-chk-tit">
+                                    <input type="checkbox" id="privacy-chk3" name="privacy">
+                                    <label for="privacy-chk3" class="privacy-txt">
+                                        <span class="chk-box">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/icon/sprite-sheet.svg#chk-2" />
+                                            </svg>
+                                        </span>
+                                        <em class="point">[선택]</em>
+                                        <p>마케팅정보수신동의</p>
+                                    </label>
+                                    <a class="privacy-arrow">
+                                        <svg class="icon">
+                                            <use xlink:href="./images/icon/sprite-sheet.svg#arrow-bottom"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="privacy-chk-ctn">
+                                    <div class="inner">
+                                        <p class="subtit">[마케팅정보수신동의(선택)]</p>
+                                        <table class="privacy-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>전송내용</th>
+                                                    <th>전송방법</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        상품 및 서비스 안내, 프로모션 및 이벤트 정보의 안내, 계열회사 상품 또는 서비스에 대한 광고성 정보 전달 및 안내
+                                                    </td>
+                                                    <td>
+                                                        문자 메세지(SMS, MMS 등), 이메일, 모바일 어플리케이션, PUSH 알림, 카카오톡 등 전자적 전송매체
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="txt">※ 광고성 정보 수신동의를 한 이용자는 쿠쿠전자(주), 쿠쿠홈시스(주)에 광고성 정보 수신에 동의한 것으로 간주됩니다.</p>
+                                        <p class="txt">※ 고객님께서는 동의를 거부하실 권리가 있으며, 동의를 거부하더라도 회원가입에 영향을 미치지 않습니다.</p>
+                                        <p class="txt">※ 수집된 개인정보는 동의 철회 요청시까지 보관되며, 고객님께서는 언제든지 마케팅정보수신동의를 철회하실 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="privacy-chk-box">
+                                <div class="privacy-chk-tit">
+                                    <input type="checkbox" id="privacy-chk4" name="privacy">
+                                    <label for="privacy-chk4" class="privacy-txt">
+                                        <span class="chk-box">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/icon/sprite-sheet.svg#chk-2" />
+                                            </svg>
+                                        </span>
+                                        <em class="point">[선택]</em>
+                                        <p>개인정보 제3자 제공동의</p>
+                                    </label>
+                                    <a class="privacy-arrow">
+                                        <svg class="icon">
+                                            <use xlink:href="./images/icon/sprite-sheet.svg#arrow-bottom"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="privacy-chk-ctn"> 
+                                    <div class="inner">
+                                        <p class="subtit">[개인정보 제3자제공동의(선택)]</p>
+                                        <table class="privacy-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>제공하는 자</th>
+                                                    <th>제공받는 자</th>
+                                                    <th>제공받는 자의 이용목적</th>
+                                                    <th>제공하는 항목</th>
+                                                    <th>제공받는 자의 보유기간 및 이용기간</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td rowspan="4">
+                                                        쿠쿠전자 주식회사
+                                                    </td>
+                                                    <td>DB손해보험주식회사</td>
+                                                    <td rowspan="4">
+                                                        제휴상품 서비스 제공 및 안내
+                                                    </td>
+                                                    <td rowspan="4">
+                                                        성명, 생년월일, 전화번호, 성별, 결제수단
+                                                    </td>
+                                                    <td rowspan="10">
+                                                        서비스 이용 해지시까지 (단, 법령에 따로 정하는 경우에는 해당 기간까지 보유합니다.)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>(주)인포유금융서비스</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>(주)대명스테이션</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>주식회사 블루몬케어</td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="6">
+                                                        쿠쿠홈시스주식회사
+                                                    </td>
+                                                    <td>DB손해보험주식회사</td>
+                                                    <td rowspan="5">
+                                                        제휴상품 서비스 제공 및 안내
+                                                    </td>
+                                                    <td rowspan="5">
+                                                        성명, 생년월일, 전화번호, 성별, 결제수단
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>(주)인포유금융서비스</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>(주)대명스테이션</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>보람상조개발(주)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>주식회사 블루몬케어</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>(주)디와이인터내셔널</td>
+                                                    <td>BNPL 서비스 (롯데카드 장기할부) 제공</td>
+                                                    <td>성명, 생년월일, 전화번호,배송지정보, 성별, 외국인여부, 결제수단</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="txt">※ 마케팅 활용 동의를 한 이용자는 쿠쿠전자(주), 쿠쿠홈시스(주)에 마케팅활용 동의한 것으로 간주됩니다.</p>
+                                        <p class="txt">※ 고객님께서는 동의를 거부하실 권리가 있으며, 이 경우 회원가입은 가능하나 일부 서비스 이용 및 각종 광고, 이벤트 등의 혜택정보 제공이 제한 될 수 있습니다.</p>
+                                        <p class="txt">※ 수집된 개인정보는 동의 철회 요청시까지 보관되며, 고객님께서는 언제든지 마케팅활용동의를 철회하실 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="privacy-chk-box">
+                                <div class="privacy-chk-tit">
+                                    <input type="checkbox" id="privacy-chk5" name="privacy">
+                                    <label for="privacy-chk5" class="privacy-txt">
+                                        <span class="chk-box">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/icon/sprite-sheet.svg#chk-2" />
+                                            </svg>
+                                        </span>
+                                        <em class="point">[선택]</em>
+                                        <p>무료보험 가입동의</p>
+                                    </label>
+                                    <a class="privacy-arrow">
+                                        <svg class="icon">
+                                            <use xlink:href="./images/icon/sprite-sheet.svg#arrow-bottom"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="privacy-chk-ctn">
+                                    <div class="inner">
+                                        <p class="subtit">[무료보험 가입동의(선택)]</p>
+                                        <table class="privacy-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>제공받는자</th>
+                                                    <th>제공받는 자의 이용목적</th>
+                                                    <th>제공하는 항목</th>
+                                                    <th>제공받는 자의 보유 및 이용기간</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        DB손해보험주식회사
+                                                    </td>
+                                                    <td rowspan="2">무료보험 서비스 제공 및 안내</td>
+                                                    <td rowspan="2">성명, 주소, 휴대폰전화번호, 생년월일</td>
+                                                    <td rowspan="2">
+                                                        서비스 이용 해지시까지 (단, 법령에 따로 정하는 경우에는 해당기간까지 보유합니다.)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>(주)인포유금융서비스</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="txt">※ DB손해보험 ‘프로미고객사랑’ 무료보험 가입혜택</p>
+                                        <table class="privacy-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>담보</th>
+                                                    <th>가입금액</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>대중교통 이용 중 상해후유장해</td>
+                                                    <td>50,000,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>강력범죄 3</td>
+                                                    <td>1,000,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>가스사고후유장해</td>
+                                                    <td>10,000,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>항공기탑승중 상해후유장해</td>
+                                                    <td>50,000,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>화재폭발붕괴사고 상해후유장해</td>
+                                                    <td>10,000,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>식중독(입원기간 2일 이상)</td>
+                                                    <td>200,000원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="txt">▲ 상기 담보사항에 대한 보상은 “DB손해보험 주식회사”의 ‘프로미고객사항보험’에서 정한 내용에 따라 보상됩니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+        <!-- 개인정보동의안 -->
+                </article>
+            </section>
+        </div>
+        <script>
+
+            $(function(){
+                var _privacyCtn = $(".privacy-chk-ctn");
+                var _privacyBtn = $(".privacy-chk-tit .privacy-arrow");
+                _privacyCtn.hide();
+                _privacyBtn.click(function(){
+                    var _this = $(this);
+                    var _box = _this.parent('div.privacy-chk-tit').next('div.privacy-chk-ctn');
+
+                    if(_box.is(":visible")){
+                        _box.slideUp();
+                        _this.removeClass('up');
+                    }else {
+                        _box.slideDown();
+                        _this.addClass('up');
+                    }
+                })
+
+            })
+
+        </script>
     </body>
 </html>
