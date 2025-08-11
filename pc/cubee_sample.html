@@ -49,6 +49,7 @@
 
             .cs-btn {
                 overflow: hidden;
+                z-index:100;
             }
 
             .quickAll .floating-quick {
@@ -57,19 +58,47 @@
             }
 
             .quickAll .cs-btn-wrap {
+                position:absolute;
+                right:0px;
+                bottom:70px;
                 width:240px;
+                z-index:99;
             }
             
             .quickAll .cs-btn-list {
-                width:240px;
+                position:relative;
+                width:100%;
+                padding-top:5px;
+                transition-delay: .1s;
                 box-shadow: none;
+                background:none;
             }
 
             .quickAll .cs-btn-list li {
+                background:#fff;
                 border-radius: var(--radius-small);
                 padding:10px;
-                margin:10px 0px;
+                margin:5px 0px;
                 border:1px solid var(--color-line);
+                transition-delay: .1s;
+                bottom:0px;
+            }
+
+            .quickAll .cs-btn-list li,
+            .quickAll .cs-close {
+                opacity: 0;
+                transform: translateY(10px);
+                pointer-events: none;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .quickAll .cs-btn-list li.show,
+            .quickAll .cs-close.show {
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: auto;
+                visibility: visible;
             }
 
             .quickAll .cs-btn-list li button {
@@ -111,22 +140,26 @@
             }
 
             .quickAll .cs-close {
-                display: flex;
+                display:flex;
+                position:absolute;
                 width:32px;
                 height:32px;
                 background:#222;
                 border:1px solid #eaeaea;
-                justify-content: center;
+                text-align:center;
+                line-height:30px;
                 top:-30px;
                 right:0px;
                 border-radius: 32px;
+                cursor:pointer;
+                justify-content: center;
             }
 
             .quickAll .cs-close svg {
                 width:10px;
                 height:10px;
                 color:#fff;
-                align-self: center;
+                align-self:center;
             }
 
 
@@ -235,11 +268,11 @@
                             빠른 상담
                         </a>
                         <div class="cs-btn-wrap">
-                            <a class="cs-close">
+                            <a class="cs-close show">
                                 <svg class="icon"><use xlink:href="./images/icon/sprite-sheet.svg#close-x"/></svg>
                             </a>
                             <ul class="cs-btn-list">
-                                <li>
+                                <li class="show">
                                     <button class="quickCubee-btn">
                                         <div class="cs-btn-img">
                                             <img src="./images/quick/quick_cubee.svg">
@@ -250,7 +283,7 @@
                                         </div>
                                     </button>
                                 </li>
-                                <li>
+                                <li class="show">
                                     <button class="quickCs-btn">
                                         <div class="cs-btn-img">
                                             <img src="./images/quick/quick_cs.svg">
@@ -261,7 +294,7 @@
                                         </div>
                                     </button>
                                 </li>
-                                <li>
+                                <li class="show">
                                     <button class="quickChk-btn">
                                         <div class="cs-btn-img">
                                             <img src="./images/quick/quick_chk.svg">
@@ -283,30 +316,60 @@
             </div>
             <script>
 
-                // $(".quickAll .floating-quick .cs-btn-list").hide();
-                // $(".quickAll .floating-quick .cs-close").hide();
-                $(".quickAll .cs-btn").hide();
+            let _quickBtn = $(".quickAll .floating-quick .cs-btn");
+            let _quickMenu = $(".quickAll .floating-quick .cs-btn-list li");
+            let _quickClose = $(".quickAll .floating-quick .cs-close");
+            
+            _quickBtn.hide();
 
-                function openQuick(){
-                    $(".quickAll .cs-btn").click(function(){
-                        var _this = $(this);
-                        _this.fadeOut();
-                        $(".quickAll .floating-quick .cs-btn-list").delay(600).slideToggle();
-                        $(".quickAll .floating-quick .cs-close").delay(1000).fadeIn();
-                    })
+            let isOpen = false;
+            
+            function openQuick(){
+                _quickBtn.click(function(){
+                    var _this = $(this);
+                    _this.fadeOut();
+                    
 
-                }
-
-                function closeQuick(){
-                    $(".quickAll .floating-quick .cs-close").click(function(){
-                        $(this).fadeOut();
-                        $(".quickAll .floating-quick .cs-btn-list").delay(600).slideToggle();
-                        $(".quickAll .cs-btn").delay(1000).fadeIn();
+                    //열기 (역순)
+                    $(_quickMenu.get().reverse()).each(function(index, el) {
+                        setTimeout(() => {
+                            $(el).addClass('show');
+                        }, index * 300); // 각 요소 0.15초 간격
                     });
-                }
+                    
+                    // close 버튼
+                    setTimeout(() => {
+                        _quickClose.addClass('show');
+                    }, _quickMenu.length * 300);
+                    
+                    isOpen = true;
 
-                openQuick();
-                closeQuick();
+
+                });
+            }
+            
+            function closeQuick(){
+                _quickClose.click(function(){
+                    var _this = $(this);
+                    _this.removeClass('show');
+                    
+                    _quickMenu.each(function(index, el){
+                        setTimeout(() => {
+                            $(el).removeClass('show');
+                        }, index * 300);
+                    });
+                    
+                    _quickBtn.delay(1000).fadeIn();
+                    
+                    isOpen = false;
+                
+                })
+            }
+            
+
+            openQuick()
+            closeQuick();
+	
                 
             </script>
         </div>
