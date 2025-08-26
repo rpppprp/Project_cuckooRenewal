@@ -4,6 +4,7 @@
     "expres": "^0.0.5",
     "express": "^4.21.0",
     "express-useragent": "^1.0.15",
-    "swiper": "^11.1.15"
+    "swiper": "^11.1.15",
+    "zoomist": "^1.1.1"
   }
 }

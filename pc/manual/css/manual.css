@@ -1,0 +1,392 @@
+@charset "UTF-8";
+
+:root {
+	--color-primary: #ff5b53;
+	--color-txt: #272727;
+	--color-line: #eaeaea;
+	--color-dark-line: #dadada;
+	--color-gray: #f7f7f7;
+	--color-dark: #585856;
+	--color-mid-gray: #999999;
+	--color-dark-gray: #767676;
+    --color-black: #312f2d;
+	--font-small: 14px;
+	--font-regular: 16px;
+    --font-large: 20px;
+	--font-x-large: 32px;
+	--icon-size:16px;
+	--font:'Noto Sans KR';
+}
+
+
+/* font */
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format("woff2"),
+     url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format("woff"), 
+     url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format("woff2"), 
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format("woff"), 
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+em,
+mark {
+    font-style: normal;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+
+/* -------- Common -------- */
+
+html,
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: var(--font-regular);
+    letter-spacing: -0.25px;
+    color: var(--color-txt);
+    font-weight: 300;
+    line-height:1.5;
+}
+
+a {
+	color:var(--color-txt);
+}
+
+
+/* icon */
+
+.icon {
+	width: var(--icon-size);
+	height: var(--icon-size);
+}
+
+
+/* header */
+
+header.manual-top {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	background:var(--color-black);
+	color:#fff;
+	z-index:10;
+}
+
+header.manual-top .inner {
+	display:flex;
+	flex-direction: column;
+	width:1200px;
+	max-height:60px;
+	margin:0 auto;
+}
+
+header.manual-top .inner .manual-wrap {
+	display:flex;
+	justify-content: center;
+}
+
+header.manual-top .inner .logo {
+	display: flex;
+	width:120px;
+	height:60px;
+	margin-right:auto;
+	align-self:center;
+}
+
+header.manual-top .inner .logo-img {
+	width:120px;
+	height:20px;
+	color:#fff;
+	align-self:center;
+}
+
+header.manual-top .manual-download {
+	margin-left:auto;
+	align-self:center;
+	transition: all 2s;
+}
+
+header.manual-top .manual-download .download-btn {
+	display:flex;
+	background:transparent;
+	color:#fff;
+	border:none;
+	cursor:pointer;
+	padding:5px 0px;
+}
+
+.manual-download .download-btn:hover {
+	color:var(--color-primary);
+}
+
+.download-btn span {
+	align-self:center;
+	margin-right:10px;
+}
+
+.manual-download .download-btn:hover span {
+	color:var(--color-primary);
+}
+
+.download-btn svg.icon {
+	align-self:center;
+}
+
+.download-btn:hover svg.icon {
+	color:var(--color-primary);
+}
+
+
+/* aside */
+
+aside.navBar {
+	width:280px;
+	margin-right:auto;
+}
+
+aside.navBar .inner {
+	width: calc(100% - 20px);
+	padding:35px 10px;
+}
+
+.navBar-home {
+	display:flex;
+	width:100%;
+	height:20px;
+}
+
+.navBar-home.on {
+	font-weight: 700;
+}
+
+.navBar-home svg.icon {
+	width:10px;
+	height:10px;
+	padding:3px;
+	color:var(--color-txt);
+	align-self:center;
+}
+
+.navBar-home span {
+	margin-left:10px;
+	align-self:center;
+}
+
+.nav-item {
+	display:flex;
+	width:100%;
+	height:20px;
+	padding:20px 0px;
+	cursor:pointer;
+}
+
+.nav-item span {
+	margin-right:auto;
+}
+
+.nav-item.on span {
+	font-weight: 700;
+}
+
+.nav-item em.nav-arrow {
+	display:flex;
+	position:relative;
+	height: var(--icon-size);
+	align-self:center;
+	margin-left:auto;
+}
+
+.nav-item.on em.nav-arrow {
+	transform:rotate(180deg);
+}
+
+.nav-item em.nav-arrow svg {
+	align-self:center;
+}
+
+.dropdown-menu {
+	display:none;
+	padding-left:10px;
+}
+
+.dropdown-menu .dropdown-item {
+	display:flex;
+	font-size:var(--font-small);
+	min-height:20px;
+	color:var(--color-mid-gray);
+	padding:10px 15px;
+	cursor:pointer;
+	border-left:1px solid var(--color-dark-line);
+}
+
+.dropdown-menu .dropdown-item.on {
+	color:var(--color-primary);
+	font-weight: 700;
+	border-left:2px solid var(--color-primary);
+} 
+
+
+/* main */
+
+main.manual-main {
+	display:flex;
+	width:1200px;
+	margin:60px auto 0px;
+}
+
+
+/* section */
+
+main.manual-main section.manual-section {
+	width:calc(100% - 280px);
+	margin-left:auto;
+}
+
+section.manual-section .inner {
+	padding:30px 0px 0px 20px;
+}
+
+/* crumbs */
+
+section.manual-section .crumbs {
+	font-size:var(--font-small);
+	margin-bottom:30px;
+}
+
+section.manual-section .crumbs .crumbs-list {
+	display:flex;
+}
+
+.crumbs-list li {
+	display: flex;
+	padding:5px 10px 5px 0px;
+}
+
+.crumbs-list li:first-child::before {
+	display: none;
+} 
+
+.crumbs-list li:before {
+	position:relative;
+	display:block;
+	content:"";
+	width:10px;
+	height:10px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none' viewBox='0 0 10 6'%3E%3Cpath fill='%23272727' d='M8.646.647a.5.5 0 1 1 .707.707l-4 4a.5.5 0 0 1-.707 0l-4-4-.064-.078a.5.5 0 0 1 .693-.694l.078.065L5 4.293 8.646.647z' /%3E%3C/svg%3E");
+	background-position: center center;
+	background-repeat: no-repeat;
+	transform:rotate(-90deg);
+	align-self: center;
+	margin-right:10px;
+	filter: opacity(0.5);
+}
+
+.crumbs-list li a {
+	cursor:pointer;
+}
+
+.crumbs-list li a.home {
+	color:var(--color-mid-gray);
+}
+
+.crumbs-list li svg.icon {
+	width:10px;
+	height:10px;
+	margin-right:3px;
+}
+
+
+/* image */
+
+.manual-img-area .manual-img {
+	position:relative;
+	width:100%;
+	margin:20px 0px 30px;
+	border:1px solid var(--color-dark-line);
+}
+
+.manual-img-area .manual-img > img {
+	width:100%;
+}
+
+.manual-img .image-page {
+	position:absolute;
+	display:flex;
+	min-width:80px;
+	left:50%;
+	bottom:20px;
+	background:rgba(0,0,0,0.7);
+	color:#fff;
+	font-size: var(--font-small);
+	transform:translateX(-50%);
+	padding:5px 15px;
+	border-radius:16px;
+	z-index:5;
+	justify-content: center;
+}
+
+.manual-img .image-page span {
+	font-weight: 700;
+	margin:0 5px;
+}
+
+.manual-img .image-page em {
+	color:var(--color-dark-line);
+	margin:0 5px;
+}
