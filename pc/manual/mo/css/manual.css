@@ -61,6 +61,7 @@
 * {
     margin: 0px;
     padding: 0px;
+	-webkit-tap-highlight-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -366,7 +367,7 @@ main.manual-main section.manual-section {
 }
 
 section.manual-section .inner {
-	padding:0px 25px 20px;
+	padding:0px 10px 20px;
 }
 
 /* crumbs */
