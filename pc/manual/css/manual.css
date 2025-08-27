@@ -371,7 +371,7 @@ section.manual-section .crumbs .crumbs-list {
 	min-width:80px;
 	left:50%;
 	bottom:20px;
-	background:rgba(0,0,0,0.7);
+	background:rgba(0,0,0,0.5);
 	color:#fff;
 	font-size: var(--font-small);
 	transform:translateX(-50%);
@@ -379,6 +379,7 @@ section.manual-section .crumbs .crumbs-list {
 	border-radius:16px;
 	z-index:5;
 	justify-content: center;
+	backdrop-filter: blur(2px);
 }
 
 .manual-img .image-page span {
@@ -389,4 +390,24 @@ section.manual-section .crumbs .crumbs-list {
 .manual-img .image-page em {
 	color:var(--color-dark-line);
 	margin:0 5px;
+}
+
+.zoomist-slider {
+	background:rgba(0,0,0,0.5);
+	backdrop-filter: blur(2px);
+}
+
+.zoomist-in-zoomer, .zoomist-out-zoomer {
+	background:rgba(0,0,0,0.5);
+	backdrop-filter: blur(2px);
+}
+
+.zoomist-in-zoomer svg, .zoomist-out-zoomer svg {
+	width:16px;
+	height:16px;
+	fill:#fff;
+}
+
+.zoomist-in-zoomer:hover svg, .zoomist-out-zoomer:hover svg {
+	fill:#222;
 }
