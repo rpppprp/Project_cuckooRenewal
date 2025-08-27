@@ -304,7 +304,7 @@ section.manual-section .inner {
 
 /* crumbs */
 
-section.manual-section .crumbs {
+/* section.manual-section .crumbs {
 	font-size:var(--font-small);
 	margin-bottom:30px;
 }
@@ -349,7 +349,7 @@ section.manual-section .crumbs .crumbs-list {
 	width:10px;
 	height:10px;
 	margin-right:3px;
-}
+} */
 
 
 /* image */
