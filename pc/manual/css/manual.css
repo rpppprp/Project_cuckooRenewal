@@ -228,6 +228,10 @@ aside.navBar .inner {
 	align-self:center;
 }
 
+.navBar-menu {
+	margin-top:10px;
+}
+
 .nav-item {
 	display:flex;
 	width:100%;
