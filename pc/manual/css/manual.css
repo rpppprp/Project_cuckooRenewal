@@ -393,21 +393,25 @@ section.manual-section .crumbs .crumbs-list {
 }
 
 .zoomist-slider {
-	background:rgba(0,0,0,0.5);
-	backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(2px);
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .zoomist-in-zoomer, .zoomist-out-zoomer {
-	background:rgba(0,0,0,0.5);
-	backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(2px);
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .zoomist-in-zoomer svg, .zoomist-out-zoomer svg {
 	width:16px;
 	height:16px;
-	fill:#fff;
+	stroke:1px solid #222;
 }
 
 .zoomist-in-zoomer:hover svg, .zoomist-out-zoomer:hover svg {
-	fill:#222;
+	stroke:1px solid #fff;
 }
