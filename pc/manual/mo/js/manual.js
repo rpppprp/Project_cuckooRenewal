@@ -51,15 +51,25 @@ $(function(){
     // 모든 zoomist-container 선택
     const zoomistContainers = document.querySelectorAll('.zoomist-container');
 
-    // 각각에 Zoomist 인스턴스 생성
     zoomistContainers.forEach(container => {
-        new Zoomist(container, {
-            // 옵션 예시
-            zoomer: true,
-            draggable: true,
-            wheelable: false,
-            slider: true
+        // Zoomist 인스턴스 생성
+        const zoom = new Zoomist(container, {
+            zoomer: true,       // 확대/축소 버튼 활성화
+            draggable: true,    // 항상 드래그 가능
+            wheelable: false,   // 마우스 휠 확대 비활성화
+            slider: true        // 슬라이더 기능 활성화
         });
+
+        // 세로 스크롤 우선
+        container.style.touchAction = "pan-y";
+
+        // 드래그 이벤트 중 페이지 스크롤 유지
+        const img = container.querySelector('.zoomist-image');
+        if (img) {
+            img.addEventListener('touchmove', function (e) {
+                e.stopPropagation(); // 이미지 드래그는 막지 않고, 페이지 스크롤은 정상
+            }, { passive: false });
+        }
     });
 
 
