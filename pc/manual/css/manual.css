@@ -371,7 +371,7 @@ section.manual-section .crumbs .crumbs-list {
 	min-width:80px;
 	left:50%;
 	bottom:20px;
-	background:rgba(0,0,0,0.5);
+	background:rgba(0,0,0,0.4);
 	color:#fff;
 	font-size: var(--font-small);
 	transform:translateX(-50%);
