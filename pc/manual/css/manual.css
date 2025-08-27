@@ -415,5 +415,11 @@ section.manual-section .crumbs .crumbs-list {
 
 .zoomist-zoomer-disable {
     pointer-events: none;
-    background:var(--color-dark-line);
+    background:#fff;
+	opacity:1;
+}
+
+.zoomist-zoomer-disable svg {
+	stroke: #ddd;
+	fill:#ddd;
 }
