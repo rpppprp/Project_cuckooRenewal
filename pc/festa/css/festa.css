@@ -18,7 +18,7 @@
     margin:0 auto;
 }
 
-/* festa-top */
+/* festa - top */
 
 .module-top {
     width:100%;
@@ -30,10 +30,11 @@
     background:url(../images/banner.gif) center center no-repeat;
 }
 
+/* festa - random coupon */
+
 .rc-area {
     width:100%;
-    min-height:800px;
-    background:url(../images/bg.jpg) center center no-repeat;
+    padding:100px 0px;
 }
 
 .rc-area .wrap {
@@ -43,7 +44,7 @@
 
 .rc-area .rc-tit {
     width:100%;
-    padding:100px 0px 50px;
+    padding:0px 0px 50px;
 }
 
 .rc-area .rc-tit .subTxt {
@@ -59,10 +60,90 @@
     text-align:center;
 }
 
+.rc-area .rc-coupon-img {
+    width:100%;
+    min-height:500px;
+}
 
 
-/* festa-section // product */
+/* festa - coupon */
 
+.coupon-area {
+    width:100%;
+    padding:100px 0px;
+}
+
+.coupon-area .coupon-tit {
+    font-size:var(--font-big);
+    font-weight: 700;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.coupon-area .coupon-list {
+    width:995px;
+    display:flex;
+    flex-wrap: wrap;
+    margin:0 auto 40px;
+}
+
+.coupon-area .coupon-list .coupon-item {
+    display:flex;
+    width:480px;
+    height:120px;
+    margin:5px 0px;
+}
+
+.coupon-area .coupon-list .coupon-item:nth-child(odd) {
+    margin-right:calc(35px / 2);
+}
+
+.coupon-area .coupon-list .coupon-item:nth-child(even) {
+    margin-left:calc(35px / 2);
+}
+
+.coupon-area .coupon-list .coupon-item .coupon-txt {
+    display:flex;
+    flex-direction: column;
+    width:calc(100% / 2 - 40px);
+    margin-left:40px;
+    align-self:center;
+}
+
+.coupon-item .coupon-txt .name {
+    font-size:var(--font-normal);
+    font-weight: 700;
+    margin-bottom:5px;
+}
+
+.coupon-item .coupon-txt .subTxt {
+    font-size:var(--font-small);
+    color:var(--color-darkgray);
+}
+
+.coupon-area .coupon-list .coupon-item .coupon-sale {
+    display:flex;
+    width:calc(100% / 2 - 40px);
+    justify-content: right;
+    margin-right:40px;
+    align-self:center;
+}
+
+.coupon-item .coupon-sale .sale-num {
+    font-size:40px;
+    font-weight:700;
+}
+
+.coupon-item .coupon-sale .sale-unit {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 15px 0px 0px 5px;
+    align-self:center;
+}
+
+
+
+/* festa - section // product */
 
 .fe-content {
     width:1200px;
@@ -181,4 +262,64 @@
 .product-price .discount-price > span {
     align-self:center;
     margin-left:2px;
+}
+
+
+/* festa - event banner // cc live */
+
+.module-banner {
+    padding:100px 0px;
+}
+
+.banner-area {
+    width:1200px;
+    margin:0px auto 0px;
+}
+
+.banner-area .cc-live-section {
+    width:100%;
+    margin-bottom:100px;
+}
+
+.cc-live-section .cc-live-tit {
+    font-size:var(--font-big);
+    text-align:center;
+    font-weight: 700;
+    margin:20px 0px 40px;
+}
+
+
+
+/* festa - event banner // evnet */
+
+.banner-area .event-banner-section {
+    width:100%;
+}
+
+.event-banner-section .event-banner-tit {
+    font-size:var(--font-big);
+    text-align:center;
+    font-weight: 700;
+    margin:20px 0px 40px;
+}
+
+.banner-event {
+    display:flex;
+    flex-wrap: wrap;
+    gap:40px;
+}
+
+.banner-item {
+    height:400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: var(--radius-mid);
+}
+
+.banner-event .col-1 {
+    width:100%;
+}
+
+.banner-event .col-2 {
+    width:calc(100% / 2 - 20px);
 }

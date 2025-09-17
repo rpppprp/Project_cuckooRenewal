@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>CUCKOO - 쿠쇼페</title>
         <!-- style sheets -->
-        <link rel="stylesheet" href="./css/slick.css">
-        <link rel="stylesheet" href="./css/slick-theme.css">
+        <link rel="stylesheet" href="../css/slick.css">
+        <link rel="stylesheet" href="../css/slick-theme.css">
         <!-- <link rel="stylesheet" href="./css/slick-custom.css"> 241104 slick custom 추가 -->
         <link rel="stylesheet" href="../css/renew_common.css">
         <link rel="stylesheet" href="./css/festa.css">
@@ -782,14 +782,14 @@
             <section id="module" class="module-top">
                 <div class="visual-area"></div>
             </section>
-            <section id="module" class="module-coupon">
+            <section id="module" class="module-coupon" style="background:url(./images/bg.jpg) top center no-repeat;">
                 <div class="rc-area">
                     <div class="wrap">
                         <div class="rc-tit">
                             <p class="subTxt">매일 단 한번의 혜택</p>
                             <h1 class="tit">선착순 랜덤 쿠폰</h1>
                         </div>
-                        <div class="rc-video"></div>
+                        <div class="rc-coupon-img"></div>
                         <button class="rc-btn">공유하고 한번 더 응모하기</button>
                     </div>
                 </div>
@@ -812,10 +812,6 @@
                                     <p class="sale-num">20</p>
                                     <span class="sale-unit">%</span>
                                 </div>
-                                <div class="coupon-btn">
-                                    <span class="icon btn-icon"></span>
-                                    <p class="btn-txt">쿠폰 받기</p>
-                                </div>s
                             </div>
                             <div class="coupon-item">
                                 <div class="coupon-txt">
@@ -825,10 +821,6 @@
                                 <div class="coupon-sale">
                                     <p class="sale-num">2</p>
                                     <span class="sale-unit">%</span>
-                                </div>
-                                <div class="coupon-btn">
-                                    <span class="icon btn-icon"></span>
-                                    <p class="btn-txt">쿠폰 받기</p>
                                 </div>
                             </div>
                             <div class="coupon-item">
@@ -840,10 +832,6 @@
                                     <p class="sale-num">20,000</p>
                                     <span class="sale-unit">P</span>
                                 </div>
-                                <div class="coupon-btn">
-                                    <span class="icon btn-icon"></span>
-                                    <p class="btn-txt">쿠폰 받기</p>
-                                </div>
                             </div>
                             <div class="coupon-item">
                                 <div class="coupon-txt">
@@ -853,10 +841,6 @@
                                 <div class="coupon-sale">
                                     <p class="sale-num">7</p>
                                     <span class="sale-unit">%</span>
-                                </div>
-                                <div class="coupon-btn">
-                                    <span class="icon btn-icon"></span>
-                                    <p class="btn-txt">쿠폰 받기</p>
                                 </div>
                             </div>
                         </div>
@@ -1358,10 +1342,13 @@
                     </div>
                 </div>
             </section>
-            <section id="module" class="module-banner">
+            <section id="module" class="module-banner" style="background-color:#f7f7f7;">
                 <div class="banner-area">
                     <!-- 쿠쿠라이브 알림 배너영역 -->
                     <div class="cc-live-section">
+                        <div class="cc-live-tit">
+                            쿠쿠 라이브 알림
+                        </div>
                         <ul class="cc-live-tab">
                             <li class="cc-live-day"><a>9.2 화</a></li>
                             <li class="cc-live-day"><a>9.3 수</a></li>
@@ -1390,32 +1377,32 @@
                     </div>
                     <!-- 쿠쿠 기획전/이벤트 배너영역 -->
                     <div class="event-banner-section">
-                        <!-- 배너 가로 2열 형태 -->
-                        <div class="banner-event col-2">
-                            <div class="banner-item">
+                        <div class="event-banner-tit">
+                            기획전 / 이벤트
+                        </div>
+                        <div class="banner-event">
+                            <!-- 배너 가로 2열 형태 -->
+                            <div class="banner-item col-2" style="background-image:url(./images/sample_2.png)">
                                 <div class="banner-item-txt">
                                     <p class="sub">서큘레이터부터 제빙기까지, 25년형 계절가전 혜택</p>
                                     <h2 class="tit">시원하게 여름대비</h2>
                                 </div>
                             </div>
-                            <div class="banner-item">
+                            <div class="banner-item col-2" style="background-image:url(./images/sample_3.png)">
                                 <div class="banner-item-txt">
                                     <p class="sub">쿠쿠 공기청정기 신제품 행사 특가</p>
                                     <h2 class="tit">감성부터 성능까지</h2>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 배너 가로 1열 형태 -->
-                        <div class="banner-event col-1">
-                            <div class="banner-item">
+                            <!-- 배너 가로 1열 형태 -->
+                            <div class="banner-item col-1" style="background-image:url(./images/sample_3.png)">
                                 <div class="banner-item-txt">
                                     <p class="sub">쿠쿠 음식물처리기 신제품 행사 특가</p>
                                     <h2 class="tit">감성부터 성능까지</h2>
                                 </div>
                             </div>
-                        </div>
-                        <div class="banner-event col-1">
-                            <div class="banner-item">
+                            <!-- 배너 가로 1열 형태 -->
+                            <div class="banner-item col-1" style="background-image:url(./images/sample_4.png)">
                                 <div class="banner-item-txt">
                                     <p class="sub">내방객분들에게만 드리는 특별한 혜택</p>
                                     <h2 class="tit">오직 쿠쿠 스토어에서만!</h2>
