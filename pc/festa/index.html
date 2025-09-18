@@ -781,19 +781,21 @@
         <div id="rn-main" class="rn-container festa-container">
             <section id="module" class="module-top">
                 <div class="visual-area">
-                    <video controls width="100%">
+                    <video autoplay muted loop playsinline width="100%">
                         <source src="./images/banner.mp4" type="video/mp4" />
                     </video>
                 </div>
             </section>
-            <section id="module" class="module-coupon" >
+            <section id="module" class="module-coupon" style="background-image: url(./images/bg.jpg);">
                 <div class="rc-area">
                     <div class="wrap">
                         <div class="rc-tit">
                             <p class="subTxt">매일 단 한번의 혜택</p>
                             <h1 class="tit">선착순 랜덤 쿠폰</h1>
                         </div>
-                        <div class="rc-coupon-img"></div>
+                        <div class="rc-coupon-img">
+                            <img src="./images/rc-sample.png">
+                        </div>
                         <button class="rc-btn">공유하고 한번 더 응모하기</button>
                     </div>
                 </div>
@@ -869,7 +871,7 @@
                                         <h1 class="item-name">주방가전 위크</h1>
                                     </a>
                                 </li>
-                                <li class="week-item">
+                                <li class="week-item on">
                                     <a>
                                         <span class="item-subTxt">2 WEEK</span>
                                         <h1 class="item-name">렌탈 위크</h1>
@@ -900,7 +902,7 @@
                                         <h1 class="item-name">주방가전 위크</h1>
                                     </a>
                                 </li>
-                                <li class="week-item">
+                                <li class="week-item on">
                                     <a>
                                         <span class="item-subTxt">2 WEEK</span>
                                         <h1 class="item-name">렌탈 위크</h1>
@@ -924,7 +926,9 @@
                             <ul class="sub-event-list">
                                 <li class="sub-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             가정의 달
                                         </p>
@@ -932,7 +936,9 @@
                                 </li>
                                 <li class="sub-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             9월 가을맞이 렌탈 리프레시
                                         </p>
@@ -940,7 +946,9 @@
                                 </li>
                                 <li class="sub-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             핫세일 라이브
                                         </p>
@@ -948,15 +956,19 @@
                                 </li>
                                 <li class="sub-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             E-순환 페스티벌
                                         </p>
                                     </a>
                                 </li>
-                                <li class="sub-event-item">
+                                <li class="sub-event-item on">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             쿠쿠 베스트템
                                         </p>
@@ -964,7 +976,9 @@
                                 </li>
                                 <li class="sub-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             으뜸 효율 가전 BIG 세일전
                                         </p>
@@ -972,7 +986,9 @@
                                 </li>
                                 <li class="sub-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             두유 제조기 사전예약 특가!
                                         </p>
@@ -980,7 +996,9 @@
                                 </li>
                                 <li class="sub-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             무선청소기 기획전
                                         </p>
@@ -993,9 +1011,11 @@
                     <div class="module-tab nav-option3">
                         <div class="main-event-wrap">
                             <ul class="main-event-list">
-                                <li class="main-event-item">
+                                <li class="main-event-item on">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             가정의 달
                                         </p>
@@ -1003,7 +1023,9 @@
                                 </li>
                                 <li class="main-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             9월 가을맞이 렌탈 리프레시
                                         </p>
@@ -1011,7 +1033,9 @@
                                 </li>
                                 <li class="main-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             핫세일 라이브
                                         </p>
@@ -1019,7 +1043,9 @@
                                 </li>
                                 <li class="main-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             E-순환 페스티벌
                                         </p>
@@ -1027,7 +1053,9 @@
                                 </li>
                                 <li class="main-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             쿠쿠 베스트템
                                         </p>
@@ -1035,7 +1063,9 @@
                                 </li>
                                 <li class="main-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             으뜸 효율 가전 BIG 세일전
                                         </p>
@@ -1043,7 +1073,9 @@
                                 </li>
                                 <li class="main-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             두유 제조기 사전예약 특가!
                                         </p>
@@ -1051,7 +1083,9 @@
                                 </li>
                                 <li class="main-event-item">
                                     <a>
-                                        <span class="icon chk-icon"></span>
+                                        <svg class="icon">
+                                            <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                        </svg>
                                         <p class="event-name">
                                             무선청소기 기획전
                                         </p>
@@ -1335,6 +1369,206 @@
                                             </div>                                
                                         </a>
                                     </div>
+                                    <div class="product-item fe-product-item">
+                                        <a href="#">
+                                            <div class="product-thum fe-product-thum">
+                                                <img src="../images/product_sample.jpg">
+                                            </div>
+                                            <div class="product-info fe-product-info">
+                                                <p class="product-name fe-product-name">인스퓨어 STEAM 100 바리스타</p>
+                                                <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
+                                            </div>
+                                            <div class="product-price fe-product-price">
+                                                <div class="regular-price fe-regular-price">
+                                                    <p>589000</p>
+                                                    <span>원</span>
+                                                </div>
+                                                <div class="price-per fe-price-per">
+                                                    <b>30</b>
+                                                    <span>%</span>
+                                                </div>
+                                                <div class="discount-price fe-price">
+                                                    <p>480000</p>
+                                                    <span>원</span>
+                                                </div>
+                                            </div>                                    
+                                        </a>
+                                    </div>
+                                    <div class="product-item fe-product-item">
+                                        <a href="#">
+                                            <div class="product-thum fe-product-thum">
+                                                <img src="../images/product_sample.jpg" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
+                                            </div>
+                                            <div class="product-info fe-product-info">
+                                                <p class="product-name fe-product-name">리네이처 안마의자</p>
+                                                <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
+                                            </div>
+                                            <div class="product-price fe-product-price">
+                                                <div class="regular-price fe-regular-price">
+                                                    <p>589000</p>
+                                                    <span>원</span>
+                                                </div>                                   
+                                                <div class="price-per fe-price-per">
+                                                    <b>30</b>
+                                                    <span>%</span>
+                                                </div>
+                                                <div class="discount-price fe-price">
+                                                    <p>480000</p>
+                                                    <span>원</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="product-item fe-product-item">
+                                        <a href="#">
+                                            <div class="product-thum fe-product-thum">
+                                                <img src="../images/sp19.png" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
+                                            </div>
+                                            <div class="product-info fe-product-info">
+                                                <p class="product-name fe-product-name">프리미엄 듀얼인버터 창문형 에어컨</p>
+                                                <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
+                                            </div>
+                                            <div class="product-price fe-product-price">
+                                                <div class="regular-price fe-regular-price">
+                                                    <p>589000</p>
+                                                    <span>원</span>
+                                                </div>
+                                                <div class="price-per fe-price-per">
+                                                    <b>30</b>
+                                                    <span>%</span>
+                                                </div>
+                                                <div class="discount-price fe-price">
+                                                    <p>480000</p>
+                                                    <span>원</span>
+                                                </div>
+                                            </div>                                
+                                        </a>
+                                    </div>
+                                    <div class="product-item fe-product-item">
+                                        <a href="#">
+                                            <div class="product-thum fe-product-thum">
+                                                <img src="../images/sp13.jpg" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
+                                            </div>
+                                            <div class="product-info fe-product-info">
+                                                <p class="product-name fe-product-name">파워클론 로봇청소기R 스테이션 물걸레형</p>
+                                                <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
+                                            </div>
+                                            <div class="product-price fe-product-price">
+                                                <div class="regular-price fe-regular-price">
+                                                    <p>589000</p>
+                                                    <span>원</span>
+                                                </div>
+                                                <div class="price-per fe-price-per">
+                                                    <b>30</b>
+                                                    <span>%</span>
+                                                </div>
+                                                <div class="discount-price fe-price">
+                                                    <p>480000</p>
+                                                    <span>원</span>
+                                                </div>
+                                            </div>                                
+                                        </a>
+                                    </div>
+                                    <div class="product-item fe-product-item">
+                                        <a href="#">
+                                            <div class="product-thum fe-product-thum">
+                                                <img src="../images/sp18.gif" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
+                                            </div>
+                                            <div class="product-info fe-product-info">
+                                                <p class="product-name fe-product-name">인스퓨어 STEAM 100 바리스타</p>
+                                                <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
+                                            </div>
+                                            <div class="product-price fe-product-price">
+                                                <div class="regular-price fe-regular-price">
+                                                    <p>589000</p>
+                                                    <span>원</span>
+                                                </div>
+                                                <div class="price-per fe-price-per">
+                                                    <b>30</b>
+                                                    <span>%</span>
+                                                </div>
+                                                <div class="discount-price fe-price">
+                                                    <p>480000</p>
+                                                    <span>원</span>
+                                                </div>
+                                            </div>                                    
+                                        </a>
+                                    </div>
+                                    <div class="product-item fe-product-item">
+                                        <a href="#">
+                                            <div class="product-thum fe-product-thum">
+                                                <img src="../images/sp09.png" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
+                                            </div>
+                                            <div class="product-info fe-product-info">
+                                                <p class="product-name fe-product-name">리네이처 안마의자</p>
+                                                <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
+                                            </div>
+                                            <div class="product-price fe-product-price">
+                                                <div class="regular-price fe-regular-price">
+                                                    <p>589000</p>
+                                                    <span>원</span>
+                                                </div>                                   
+                                                <div class="price-per fe-price-per">
+                                                    <b>30</b>
+                                                    <span>%</span>
+                                                </div>
+                                                <div class="discount-price fe-price">
+                                                    <p>480000</p>
+                                                    <span>원</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="product-item fe-product-item">
+                                        <a href="#">
+                                            <div class="product-thum fe-product-thum">
+                                                <img src="../images/sp19.png" onerror="this.onerror=null; this.src='./images/no-image.jpg';">
+                                            </div>
+                                            <div class="product-info fe-product-info">
+                                                <p class="product-name fe-product-name">프리미엄 듀얼인버터 창문형 에어컨</p>
+                                                <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
+                                            </div>
+                                            <div class="product-price fe-product-price">
+                                                <div class="regular-price fe-regular-price">
+                                                    <p>589000</p>
+                                                    <span>원</span>
+                                                </div>
+                                                <div class="price-per fe-price-per">
+                                                    <b>30</b>
+                                                    <span>%</span>
+                                                </div>
+                                                <div class="discount-price fe-price">
+                                                    <p>480000</p>
+                                                    <span>원</span>
+                                                </div>
+                                            </div>                                
+                                        </a>
+                                    </div>
+                                    <div class="product-item fe-product-item">
+                                        <a href="#">
+                                            <div class="product-thum fe-product-thum">
+                                                <img src="../images/sp13.jpg">
+                                            </div>
+                                            <div class="product-info fe-product-info">
+                                                <p class="product-name fe-product-name">파워클론 로봇청소기R 스테이션 물걸레형</p>
+                                                <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
+                                            </div>
+                                            <div class="product-price fe-product-price">
+                                                <div class="regular-price fe-regular-price">
+                                                    <p>589000</p>
+                                                    <span>원</span>
+                                                </div>
+                                                <div class="price-per fe-price-per">
+                                                    <b>30</b>
+                                                    <span>%</span>
+                                                </div>
+                                                <div class="discount-price fe-price">
+                                                    <p>480000</p>
+                                                    <span>원</span>
+                                                </div>
+                                            </div>                                
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="fe-product-more">
@@ -1354,27 +1588,60 @@
                             쿠쿠 라이브 알림
                         </div>
                         <ul class="cc-live-tab">
-                            <li class="cc-live-day"><a>9.2 화</a></li>
-                            <li class="cc-live-day"><a>9.3 수</a></li>
-                            <li class="cc-live-day"><a>9.4 목</a></li>
+                            <li class="cc-live-day on">
+                                <a>
+                                    <svg class="icon">
+                                        <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
+                                    </svg>
+                                    <span>9.2 화</span>
+                                </a>
+                            </li>
+                            <li class="cc-live-day">
+                                <a>
+                                    <svg class="icon">
+                                        <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                    </svg>
+                                    <span>9.3 수</span>
+                                </a>
+                            </li>
+                            <li class="cc-live-day">
+                                <a>
+                                    <svg class="icon">
+                                        <use xlink:href="./images/icon/sprite-sheet.svg#chk-1" />
+                                    </svg>
+                                    <span>9.4 목</span>
+                                </a>
+                            </li>
                         </ul>
                         <div class="cc-live-content">
-                            <div class="cc-live-item">
+                            <div class="cc-live-item" style="background-image: url(./images/cclive-1.png);">
                                 <div class="cc-live-txt">
                                     <p class="sub">라이브 커머스에서 쿠쿠 파워클롭을 만나보세요!</p>
                                     <h2 class="tit">흡입력 만큼 강력한 라이브 혜택</h2>
+                                    <a class="cc-live-alarm">
+                                        <span>오후 7시 라이브 시작</span>
+                                        <img src="./images/broad.svg">
+                                    </a>
                                 </div>
                             </div>
-                            <div class="cc-live-item">
+                            <div class="cc-live-item" style="background-image: url(./images/cclive-2.png);">
                                 <div class="cc-live-txt">
                                     <p class="sub">라이브 커머스에서 쿠쿠 파워클롭을 만나보세요!</p>
                                     <h2 class="tit">흡입력 만큼 강력한 라이브 혜택</h2>
+                                    <a class="cc-live-alarm">
+                                        <span>오후 7시 라이브 시작</span>
+                                        <img src="./images/broad.svg">
+                                    </a>
                                 </div>
                             </div>
-                            <div class="cc-live-item">
+                            <div class="cc-live-item" style="background-image: url(./images/cclive-3.png);">
                                 <div class="cc-live-txt">
                                     <p class="sub">라이브 커머스에서 쿠쿠 파워클롭을 만나보세요!</p>
                                     <h2 class="tit">흡입력 만큼 강력한 라이브 혜택</h2>
+                                    <a class="cc-live-alarm">
+                                        <span>오후 7시 라이브 시작</span>
+                                        <img src="./images/broad.svg">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -1386,31 +1653,39 @@
                         </div>
                         <div class="banner-event">
                             <!-- 배너 가로 2열 형태 -->
-                            <div class="banner-item col-2" style="background-image:url(./images/sample_2.png)">
-                                <div class="banner-item-txt">
-                                    <p class="sub">서큘레이터부터 제빙기까지, 25년형 계절가전 혜택</p>
-                                    <h2 class="tit">시원하게 여름대비</h2>
-                                </div>
+                            <div class="banner-item col-2" style="background-image:url(./images/e-banner_1.png)">
+                                <a>
+                                    <div class="banner-item-txt">
+                                        <p class="sub">서큘레이터부터 제빙기까지, 25년형 계절가전 혜택</p>
+                                        <h2 class="tit">시원하게 여름대비</h2>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="banner-item col-2" style="background-image:url(./images/sample_3.png)">
-                                <div class="banner-item-txt">
-                                    <p class="sub">쿠쿠 공기청정기 신제품 행사 특가</p>
-                                    <h2 class="tit">감성부터 성능까지</h2>
-                                </div>
-                            </div>
-                            <!-- 배너 가로 1열 형태 -->
-                            <div class="banner-item col-1" style="background-image:url(./images/sample_3.png)">
-                                <div class="banner-item-txt">
-                                    <p class="sub">쿠쿠 음식물처리기 신제품 행사 특가</p>
-                                    <h2 class="tit">감성부터 성능까지</h2>
-                                </div>
+                            <div class="banner-item col-2" style="background-image:url(./images/e-banner_2.png)">
+                                <a>
+                                    <div class="banner-item-txt">
+                                        <p class="sub">쿠쿠 공기청정기 신제품 행사 특가</p>
+                                        <h2 class="tit">감성부터 성능까지</h2>
+                                    </div>
+                                </a>
                             </div>
                             <!-- 배너 가로 1열 형태 -->
-                            <div class="banner-item col-1" style="background-image:url(./images/sample_4.png)">
-                                <div class="banner-item-txt">
-                                    <p class="sub">내방객분들에게만 드리는 특별한 혜택</p>
-                                    <h2 class="tit">오직 쿠쿠 스토어에서만!</h2>
-                                </div>
+                            <div class="banner-item col-1" style="background-image:url(./images/e-banner_3.png)">
+                                <a>
+                                    <div class="banner-item-txt">
+                                        <p class="sub">쿠쿠 음식물처리기 신제품 행사 특가</p>
+                                        <h2 class="tit">감성부터 성능까지</h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 배너 가로 1열 형태 -->
+                            <div class="banner-item col-1" style="background-image:url(./images/e-banner_4.png)">
+                                <a>
+                                    <div class="banner-item-txt">
+                                        <p class="sub">내방객분들에게만 드리는 특별한 혜택</p>
+                                        <h2 class="tit">오직 쿠쿠 스토어에서만!</h2>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>

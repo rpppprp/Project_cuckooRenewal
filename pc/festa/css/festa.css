@@ -1,5 +1,21 @@
 @charset "UTF-8";
 
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+
+    color: inherit;
+    font: inherit;
+
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+}
 
 /* festa - common */
 
@@ -28,13 +44,23 @@
     max-width:1920px;
     height:800px;
     background:url(../images/banner.gif) center center no-repeat;
+    margin: 0 auto;
 }
 
-/* festa - random coupon */
+
+/* festa - coupon */
+
+.module-coupon {
+    background-repeat: no-repeat;
+    background-position: top center;;
+    background-size:1920px;
+}
+
+/* festa - coupon // random coupon */
 
 .rc-area {
     width:100%;
-    padding:100px 0px;
+    padding:100px 0px 0px;
 }
 
 .rc-area .wrap {
@@ -62,11 +88,23 @@
 
 .rc-area .rc-coupon-img {
     width:100%;
-    min-height:500px;
+    min-height:200px;
+    text-align:center;
 }
 
+.rc-area .rc-btn {
+    display:block;
+    width:300px;
+    height:60px;
+    color:#fff;
+    background:var(--color-txt);
+    font-size:var(--font-mid);
+    border-radius: var(--radius-big);
+    cursor:pointer;
+    margin:40px auto 0px;
+}
 
-/* festa - coupon */
+/* festa - coupon // coupon and information */
 
 .coupon-area {
     width:100%;
@@ -89,6 +127,7 @@
 
 .coupon-area .coupon-list .coupon-item {
     display:flex;
+    background:url(../images/coupon_bg.svg) center center no-repeat;
     width:480px;
     height:120px;
     margin:5px 0px;
@@ -141,13 +180,145 @@
     align-self:center;
 }
 
+.coupon-all-btn .coupon-all-download {
+    display:block;
+    width:300px;
+    height:60px;
+    color:#fff;
+    background:var(--color-txt);
+    font-size:var(--font-mid);
+    border-radius: var(--radius-big);
+    cursor:pointer;
+    margin:40px auto 0px;
+}
+
+/* festa - nav */
+
+.module-nav {
+    width:100%;
+}
+
+.module-tab {
+    width:100%;
+}
+
+.module-tab .week-wrap {
+    width:100%;
+    background:#272727;
+}
+
+.module-tab .week-wrap .week-list {
+    display:flex;
+    width:1200px;
+    margin:0 auto;
+}
+
+.week-list li.week-item {
+    width:calc(100% / 4);
+    flex-shrink: 0;
+    box-sizing:border-box;
+    border-left:1px solid #555;
+    border-right:1px solid #555;
+}
+
+.week-list li.week-item a {
+    display: flex;
+    flex-direction: column;
+    width:calc(100% - 40px);
+    padding:20px;
+    color:var(--color-mid-gray);
+}
+
+.week-list li.week-item a .item-subTxt {
+    font-size:var(--font-small);
+    font-weight: 700;
+    margin-bottom:5px;
+}
+
+.week-list li.week-item a .item-name {
+    font-size:24px;
+}
+
+.week-list li.week-item.on {
+    background:#fff;
+}
+
+.week-list li.week-item.on .item-subTxt {
+    background:#fff;
+    color:#523CA0;
+}
+
+.week-list li.week-item.on .item-name {
+    background:#fff;
+    color:#9070E5;
+}
+
+.sub-event-wrap,
+.main-event-wrap {
+    width:100%;
+    background:#fff;
+}
+
+.sub-event-wrap .sub-event-list,
+.main-event-wrap .main-event-list {
+    width:1200px;
+    margin:0 auto;
+    display: flex;
+    overflow: hidden;
+    gap: 30px;
+}
+
+.sub-event-list .sub-event-item,
+.main-event-list .main-event-item {
+    min-width:80px;
+    padding:25px 20px;
+}
+
+.sub-event-list .sub-event-item a,
+.main-event-list .main-event-item a {
+    display:flex;
+}
+
+.sub-event-list .sub-event-item a svg,
+.main-event-list .main-event-item a svg {
+    width:0px;
+    height:0px;
+    opacity: 0;
+    transition: width .1s ease-in-out, opacity .6s ease-in-out;
+    align-self:center;
+}
+
+.sub-event-list .sub-event-item a p,
+.main-event-list .main-event-item a p {
+    font-size:var(--font-small);
+    color:var(--color-mid-gray);
+    margin-left:0px;
+}
+
+.sub-event-list .sub-event-item.on a svg,
+.main-event-list .main-event-item.on a svg {
+    width:12px;
+    height:12px;
+    color:#523CA0;
+    opacity:1;
+    font-weight: 700;
+}
+
+.sub-event-list .sub-event-item.on a p,
+.main-event-list .main-event-item.on a p {
+    width:calc(100% - 17px);
+    color:#523CA0;
+    font-weight:700;
+    margin-left:5px;
+}
+
 
 
 /* festa - section // product */
 
 .fe-content {
     width:1200px;
-    margin:40px auto;
+    margin:40px auto 100px;
 }
 
 .product-wrap {
@@ -158,12 +329,12 @@
 .product-wrap .product-track {
     width:100%;
     display:flex;
-    overflow:hidden;
+    flex-wrap: wrap;
     gap:30px;
 }
 
 .product-wrap .product-track .product-item {
-    width:100%;
+    width: calc(100% / 4 - 30px);
 }
 
 .product-track .product-item .product-thum {
@@ -188,7 +359,7 @@
     padding:0 10px;
 }
 
-.product-item .product-info .d-product-name {
+.product-item .product-info .product-name {
     display: -webkit-box;
     height:52px;
     overflow: hidden;
@@ -202,7 +373,7 @@
     font-family: var(--font);
 }
 
-.product-item .product-info .d-product-code {
+.product-item .product-info .product-code {
     display:block;
     color: var(--color-darkgray);
     font-family: var(--font);
@@ -288,7 +459,94 @@
     margin:20px 0px 40px;
 }
 
+.cc-live-tab {
+    display:flex;
+    min-width:150px;
+    margin:0 auto 40px;
+    justify-content: center;
+}
 
+.cc-live-tab li {
+    padding:0px 5px;
+}
+
+.cc-live-tab li a {
+    display:flex;
+    background:#fff;
+    border-radius: var(--radius-mid);
+    border:1px solid var(--color-line);
+    padding:5px 20px;
+    justify-content: center;
+    cursor:pointer;
+}
+
+.cc-live-tab li a svg {
+    width:0px;
+    height:0px;
+    opacity: 0;
+    transition: width .1s ease-in-out, opacity .6s ease-in-out;
+    align-self:center;
+}
+
+.cc-live-tab li.on a {
+    background:var(--color-txt);
+    color:#fff;
+}
+
+.cc-live-tab li.on a svg {
+    width:10px;
+    height:10px;
+    opacity: 1;
+}
+
+.cc-live-tab li.on a span {
+    margin-left:10px;
+}
+
+.cc-live-section .cc-live-content {
+    width:100%;
+    height:500px;
+    overflow:hidden;
+    border-radius: var(--radius-mid);
+}
+
+.cc-live-content .cc-live-item {
+    position:relative;
+    width:100%;
+    height:500px;
+}
+
+.cc-live-content .cc-live-item:before {
+    position:absolute;
+    content:"";
+    display: block;
+    width:100%;
+    height:100%;
+    background:linear-gradient(transparent, rgba(0,0,0,0.5));
+    left:0px;
+    bottom:0px;
+}
+
+.cc-live-content .cc-live-item .cc-live-txt {
+    position:absolute;
+    display:flex;
+    width: calc(100% - 100px);
+    bottom:0px;
+    left:0px;
+    color:#fff;
+    padding:0px 50px 40px;
+}
+
+.cc-live-content .cc-live-item .cc-live-txt .sub {
+    width:80%;
+    font-size:var(--font-normal);
+    margin-bottom:5px;
+}
+
+.cc-live-content .cc-live-item .cc-live-txt .tit {
+    width:80%;
+    font-size:var(--font-big);
+}
 
 /* festa - event banner // evnet */
 
@@ -310,10 +568,20 @@
 }
 
 .banner-item {
+    position:relative;
     height:400px;
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
     border-radius: var(--radius-mid);
+    overflow:hidden;
+}
+
+.banner-item a {
+    position:relative;
+    display:block;
+    width:100%;
+    height:100%;
+    cursor:pointer;
 }
 
 .banner-event .col-1 {
@@ -322,4 +590,33 @@
 
 .banner-event .col-2 {
     width:calc(100% / 2 - 20px);
+}
+
+.banner-item:before {
+    position:absolute;
+    content:"";
+    display: block;
+    width:100%;
+    height:100%;
+    background:linear-gradient(transparent, rgba(0,0,0,0.5));
+    left:0px;
+    bottom:0px;
+}
+
+.banner-item .banner-item-txt {
+    position:absolute;
+    width: calc(100% - 100px);
+    bottom:0px;
+    left:0px;
+    color:#fff;
+    padding:0px 50px 40px;
+}
+
+.banner-item .banner-item-txt .sub {
+    font-size:var(--font-normal);
+    margin-bottom:5px;
+}
+
+.banner-item .banner-item-txt .tit {
+    font-size:var(--font-big);
 }
