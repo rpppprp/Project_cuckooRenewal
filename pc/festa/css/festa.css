@@ -227,6 +227,7 @@ button {
     width:calc(100% - 40px);
     padding:20px;
     color:var(--color-mid-gray);
+    cursor:pointer;
 }
 
 .week-list li.week-item a .item-subTxt {
@@ -259,24 +260,48 @@ button {
     background:#fff;
 }
 
-.sub-event-wrap .sub-event-list,
-.main-event-wrap .main-event-list {
+.sub-event-wrap .sub-event-track, 
+.main-event-wrap .main-event-track {
+    position:relative;
     width:1200px;
     margin:0 auto;
-    display: flex;
     overflow: hidden;
-    gap: 30px;
 }
+
+.sub-event-wrap .sub-event-track:after, 
+.main-event-wrap .main-event-track:after {
+    content:"";
+    display: block;
+    position:absolute;
+    width:100px;
+    height:100%;
+    right:0px;
+    top:0px;
+    background:linear-gradient(to right, transparent, #fff);
+    z-index:1;
+} 
+
+.sub-event-wrap .sub-event-list,
+.main-event-wrap .main-event-list {
+
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
 
 .sub-event-list .sub-event-item,
 .main-event-list .main-event-item {
-    min-width:80px;
-    padding:25px 20px;
+    flex: 0 0 auto;
+    padding:25px 10px;
 }
 
 .sub-event-list .sub-event-item a,
 .main-event-list .main-event-item a {
     display:flex;
+    min-width:100px;
+    flex-wrap:nowrap;
+    cursor:pointer;
 }
 
 .sub-event-list .sub-event-item a svg,
@@ -288,12 +313,20 @@ button {
     align-self:center;
 }
 
-.sub-event-list .sub-event-item a p,
-.main-event-list .main-event-item a p {
+.sub-event-list .sub-event-item a p {
+    width:auto;
     font-size:var(--font-small);
     color:var(--color-mid-gray);
     margin-left:0px;
 }
+
+.main-event-list .main-event-item a p {
+    width:auto;
+    font-size:var(--font-normal);
+    color:var(--color-mid-gray);
+    margin-left:0px;  
+}
+
 
 .sub-event-list .sub-event-item.on a svg,
 .main-event-list .main-event-item.on a svg {
@@ -312,12 +345,118 @@ button {
     margin-left:5px;
 }
 
+/* festa - section */
+
+.fe-area {
+    width:1200px;
+    margin:40px auto 0px;
+}
+
+.fe-area .fe-head {
+    margin-bottom:60px;
+}
+
+.fe-area .fe-head .fe-banner {
+    width:100%;
+    height:400px;
+    border-radius: var(--radius-mid);
+    overflow:hidden;
+}
+
+.fe-area .fe-head .fe-banner > img {
+    display: block;
+    width:100%;
+    height:100%;
+}
+
+/* festa - section // category */
+
+.fe-category {
+    padding:30px 0px;
+    border-bottom:1px solid var(--color-line);
+}
+
+.fe-category .fe-cate-spec {
+    display:flex;
+    padding:15px 0px;
+}
+
+.fe-category .fe-cate-spec .spec-tit {
+    width:120px;
+    font-weight: 700;
+    padding-left:20px;
+}
+
+.fe-category .fe-cate-spec .spec-option {
+    display:flex;
+    width:calc(100% - 140px);
+    gap:30px;
+}
+
+.fe-cate-spec .spec-option input[type="checkbox"] {
+    width:0px;
+    height:0px;
+    border:none;
+    -webkit-appearance: checkbox !important;
+    -moz-appearance: checkbox !important;
+    -ms-appearance: checkbox !important;
+    -o-appearance: checkbox !important;
+    appearance: checkbox !important;
+}
+
+.fe-cate-spec .spec-option .spec-item {
+    display: flex;
+    cursor:pointer;
+}
+
+.fe-cate-spec .spec-option label {
+    display:flex;
+    cursor: pointer;
+}
+
+.cate-item .chk-box {
+    display:flex;
+    background:#fff;
+    width:18px;
+    height:18px;
+    border-radius:3px;
+    border:1px solid #dadada;
+    justify-content: center;
+    align-self:center;
+}
+
+.cate-item .chk-box svg {
+    width:12px;
+    height:12px;
+    color:var(--color-line);
+    align-self: center;
+    stroke-width:1px;
+}
+
+.spec-item .cate-chk:checked + .cate-item .chk-box {
+    background:var(--color-txt);
+    border-color:var(--color-txt);
+    color:#fff;
+}
+
+.cate-item span {
+    margin-left:10px;
+    align-self:center;
+}
+
+.product-item .chk-box svg {
+    width:12px;
+    height:12px;
+    color:var(--color-line);
+    align-self: center;
+    stroke-width:1px;
+}
 
 
 /* festa - section // product */
 
 .fe-content {
-    width:1200px;
+    width:100%;
     margin:40px auto 100px;
 }
 
