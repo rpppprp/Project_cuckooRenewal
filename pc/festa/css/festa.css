@@ -24,11 +24,6 @@ button {
     width:100%;
 }
 
-.festa-container #module {
-    position:relative;
-    width:100%;
-}
-
 .rc-area .wrap, .coupon-area .wrap {
     width:1200px;
     margin:0 auto;
@@ -195,12 +190,27 @@ button {
 /* festa - nav */
 
 .module-nav {
+    position:static;
     width:100%;
+    top:-60px;
+    transition: all 0.3s;
+}
+
+.module-nav.fixed {
+    position: fixed;
+    width: 100%;
+    min-width: 100%;
+    top: 60px;
+    background: rgba(255, 255, 255, 0.65);
+    z-index: 10;
+    transition: all 0.3s; 
 }
 
 .module-tab {
     width:100%;
 }
+
+/* festa - nav // option1, option2 */
 
 .module-tab .week-wrap {
     width:100%;
@@ -254,22 +264,19 @@ button {
     color:#9070E5;
 }
 
-.sub-event-wrap,
-.main-event-wrap {
+.sub-event-wrap {
     width:100%;
     background:#fff;
 }
 
-.sub-event-wrap .sub-event-track, 
-.main-event-wrap .main-event-track {
+.sub-event-wrap .sub-event-track {
     position:relative;
     width:1200px;
     margin:0 auto;
     overflow: hidden;
 }
 
-.sub-event-wrap .sub-event-track:after, 
-.main-event-wrap .main-event-track:after {
+.sub-event-wrap .sub-event-track:after {
     content:"";
     display: block;
     position:absolute;
@@ -281,31 +288,27 @@ button {
     z-index:1;
 } 
 
-.sub-event-wrap .sub-event-list,
-.main-event-wrap .main-event-list {
-
+.sub-event-wrap .sub-event-list {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
 }
 
 
-.sub-event-list .sub-event-item,
-.main-event-list .main-event-item {
+.sub-event-list .sub-event-item {
     flex: 0 0 auto;
-    padding:25px 10px;
+    padding:25px 20px;
 }
 
-.sub-event-list .sub-event-item a,
-.main-event-list .main-event-item a {
+.sub-event-list .sub-event-item a {
     display:flex;
     min-width:100px;
     flex-wrap:nowrap;
     cursor:pointer;
+    justify-content: center;
 }
 
-.sub-event-list .sub-event-item a svg,
-.main-event-list .main-event-item a svg {
+.sub-event-list .sub-event-item a svg {
     width:0px;
     height:0px;
     opacity: 0;
@@ -315,9 +318,68 @@ button {
 
 .sub-event-list .sub-event-item a p {
     width:auto;
-    font-size:var(--font-small);
+    font-size:var(--font-normal);
     color:var(--color-mid-gray);
     margin-left:0px;
+}
+
+.sub-event-list .sub-event-item.on a svg {
+    width:12px;
+    height:12px;
+    color:#523CA0;
+    opacity:1;
+    font-weight: 700;
+}
+
+.sub-event-list .sub-event-item.on a p {
+    color:#523CA0;
+    font-weight:700;
+    margin-left:5px;
+}
+
+.sub-event-arrow {
+    position:relative;
+    width:1200px;
+    margin:0 auto;
+}
+
+.sub-event-arrow > a {
+    position:absolute;
+    display:flex;
+    top:-50px;
+    width:28px;
+    height:28px;
+    background:#fff;
+    border-radius:50%;
+    box-shadow:0px 0px 14px rgba(0,0,0,0.15);
+    border:1px solid var(--color-line);
+    justify-content: center;
+    z-index:1;
+    cursor:pointer;
+}
+
+.sub-event-arrow > a svg {
+    width:10px;
+    height:10px;
+    align-self:center;
+}
+
+.sub-event-arrow .sub-event-prev {
+    left:-16px;
+}
+
+.sub-event-arrow .sub-event-next {
+    right:-16px;
+}
+
+.sub-event-arrow > a.slick-disabled {
+    opacity:0;
+}
+
+/* festa - nav // option3 */
+
+.main-event-wrap {
+    background:#272727;
 }
 
 .main-event-list .main-event-item a p {
@@ -327,22 +389,119 @@ button {
     margin-left:0px;  
 }
 
+.main-event-wrap .main-event-track {
+    position:relative;
+    width:1200px;
+    margin:0 auto;
+    overflow: hidden;
+}
 
-.sub-event-list .sub-event-item.on a svg,
+.main-event-wrap .main-event-track:after {
+    content:"";
+    display: block;
+    position:absolute;
+    width:100px;
+    height:100%;
+    right:0px;
+    top:0px;
+    background:linear-gradient(to right, transparent, #272727);
+    z-index:1;
+} 
+
+.main-event-wrap .main-event-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.main-event-list .main-event-item {
+    flex: 0 0 auto;
+    padding:25px 20px;
+    justify-content: center;
+}
+
+.main-event-list .main-event-item a {
+    display:flex;
+    min-width:80px;
+    flex-wrap:nowrap;
+    cursor:pointer;
+}
+
+.main-event-list .main-event-item a:before {
+    content:"";
+    display:block;
+    width:1px;
+    height:14px;
+    background:#555;
+    align-self:center;
+    margin-right:40px;
+}
+
+.main-event-list .main-event-item:first-child a:before {
+    display: none;
+}
+
+.main-event-list .main-event-item a svg {
+    width:0px;
+    height:0px;
+    opacity: 0;
+    transition: width .1s ease-in-out, opacity .6s ease-in-out;
+    align-self:center;
+}
+
+
 .main-event-list .main-event-item.on a svg {
     width:12px;
     height:12px;
-    color:#523CA0;
+    color:#9B51E0;
     opacity:1;
     font-weight: 700;
 }
 
-.sub-event-list .sub-event-item.on a p,
 .main-event-list .main-event-item.on a p {
     width:calc(100% - 17px);
-    color:#523CA0;
+    color:#9B51E0;
     font-weight:700;
     margin-left:5px;
+}
+
+.main-event-arrow {
+    position:relative;
+    width:1200px;
+    margin:0 auto;
+}
+
+.main-event-arrow > a {
+    position:absolute;
+    display:flex;
+    top:-50px;
+    width:28px;
+    height:28px;
+    background:#fff;
+    border-radius:50%;
+    box-shadow:0px 0px 14px rgba(0,0,0,0.15);
+    border:1px solid var(--color-line);
+    justify-content: center;
+    z-index:1;
+    cursor:pointer;
+}
+
+.main-event-arrow > a svg {
+    width:10px;
+    height:10px;
+    align-self:center;
+}
+
+.main-event-arrow .main-event-prev {
+    left:-16px;
+}
+
+.main-event-arrow .main-event-next {
+    right:-16px;
+}
+
+.main-event-arrow > a.slick-disabled {
+    opacity:0;
 }
 
 /* festa - section */
@@ -385,12 +544,14 @@ button {
     width:120px;
     font-weight: 700;
     padding-left:20px;
+    align-self:center;
 }
 
 .fe-category .fe-cate-spec .spec-option {
     display:flex;
     width:calc(100% - 140px);
     gap:30px;
+    align-self:center;
 }
 
 .fe-cate-spec .spec-option input[type="checkbox"] {
@@ -444,14 +605,29 @@ button {
     align-self:center;
 }
 
-.product-item .chk-box svg {
-    width:12px;
-    height:12px;
-    color:var(--color-line);
-    align-self: center;
-    stroke-width:1px;
+.product-chk-item {
+    display:flex;
+    min-width:80px;
+    width:auto;
+    border-radius: var(--radius-big);
+    border:1px solid var(--color-line);
+    padding:5px 15px;
+    justify-content: center;
+    box-sizing:border-box;
 }
 
+.product-chk-item span {
+    color:var(--color-mid-gray);
+    align-self:center;
+}
+
+.spec-item .product-chk:checked + .product-chk-item {
+    border:2px solid var(--color-txt);
+}
+
+.spec-item .product-chk:checked + .product-chk-item span {
+    color:var(--color-txt);
+}
 
 /* festa - section // product */
 
@@ -574,6 +750,31 @@ button {
     margin-left:2px;
 }
 
+.fe-product-more {
+    width:100%;
+    margin:60px 0px 20px;
+}
+
+.fe-product-more .fe-more-btn {
+    display:flex;
+    min-width:300px;
+    font-size:var(--font-normal);
+    border:1px solid var(--color-line);
+    border-radius: var(--radius-small);
+    padding:10px 20px;
+    justify-content: center;
+    margin:0 auto;
+    cursor: pointer;
+}
+
+.fe-product-more .fe-more-btn span {
+    margin-right:10px;
+    align-self:center;
+}
+
+.fe-product-more .fe-more-btn svg {
+    align-self:center;
+}
 
 /* festa - event banner // cc live */
 
@@ -674,6 +875,7 @@ button {
     left:0px;
     color:#fff;
     padding:0px 50px 40px;
+    flex-direction: column;
 }
 
 .cc-live-content .cc-live-item .cc-live-txt .sub {
@@ -758,4 +960,18 @@ button {
 
 .banner-item .banner-item-txt .tit {
     font-size:var(--font-big);
+}
+
+/* festa - payments */
+
+.payments-area {
+    width:1200px;
+    margin:100px auto;
+}
+
+.payments-area .payments-tit {
+    font-size:var(--font-big);
+    font-weight: 700;
+    text-align:center;
+    margin-bottom:40px;
 }
