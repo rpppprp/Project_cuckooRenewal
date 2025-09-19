@@ -61,5 +61,19 @@ $(function(){
     });
     
     
+    /** festa cc-live tab */
+
+    $("#rn-main").on("click", ".cc-live-tab li", function(){
+        var _this = $(this);
+        var _cc_btn = $(".cc-live-tab li");
+    
+        _cc_btn.removeClass("on");
+        _this.addClass("on");
+    
+        /** 각 카테고리별 탭 불러오기 */
+        var _tab_id = _this.data("value");
+        $(".cc-live-item").removeClass('active');
+        $(".cc-live-item[data-value="+ _tab_id +"]").addClass('active');
+    });
 
 })

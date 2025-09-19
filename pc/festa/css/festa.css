@@ -204,6 +204,7 @@ button {
     background: rgba(255, 255, 255, 0.65);
     z-index: 10;
     transition: all 0.3s; 
+    border-bottom:1px solid var(--color-line);
 }
 
 .module-tab {
@@ -852,8 +853,13 @@ button {
 
 .cc-live-content .cc-live-item {
     position:relative;
+    display:none;
     width:100%;
     height:500px;
+}
+
+.cc-live-content .cc-live-item.active {
+    display:block;
 }
 
 .cc-live-content .cc-live-item:before {
@@ -869,24 +875,47 @@ button {
 
 .cc-live-content .cc-live-item .cc-live-txt {
     position:absolute;
-    display:flex;
-    width: calc(100% - 100px);
+    width: 100%;
     bottom:0px;
     left:0px;
     color:#fff;
     padding:0px 50px 40px;
-    flex-direction: column;
+    flex-wrap:wrap;
 }
 
 .cc-live-content .cc-live-item .cc-live-txt .sub {
-    width:80%;
+    width:calc(100% - 20px);
     font-size:var(--font-normal);
     margin-bottom:5px;
+    padding-right:20px;
 }
 
 .cc-live-content .cc-live-item .cc-live-txt .tit {
-    width:80%;
+    width:calc(100% - 20px);
     font-size:var(--font-big);
+    padding-right:20px;
+}
+
+.cc-live-txt .cc-live-alarm {
+    display:flex;
+    position:absolute;
+    right:50px;
+    bottom:40px;
+    min-width:200px;
+    background:#fff;
+    padding:10px 20px;
+    border-radius: var(--radius-big);
+    justify-content: center;
+    cursor:pointer;
+}
+
+.cc-live-txt .cc-live-alarm span {
+    margin-right:10px;
+    align-self:center;
+}
+
+.cc-live-txt .cc-live-alarm img {
+    align-self:center;
 }
 
 /* festa - event banner // evnet */
