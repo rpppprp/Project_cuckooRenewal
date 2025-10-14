@@ -38,10 +38,154 @@ button {
 .visual-area {
     max-width:1920px;
     height:800px;
-    background:url(../images/visual.png) center center no-repeat;
+    background:url(../images/banner.gif) center center no-repeat;
     margin: 0 auto;
 }
 
+
+/* festa - coupon */
+
+.module-coupon {
+    background-repeat: no-repeat;
+    background-position: top center;;
+    background-size:1920px;
+}
+
+/* festa - coupon // random coupon */
+
+.rc-area {
+    width:100%;
+    padding:100px 0px 0px;
+}
+
+.rc-area .wrap {
+    width:1200px;
+    margin:0 auto;
+}
+
+.rc-area .rc-tit {
+    width:100%;
+    padding:0px 0px 50px;
+}
+
+.rc-area .rc-tit .subTxt {
+    width:100%;
+    font-size:var(--font-mid);
+    text-align:center;
+}
+
+.rc-area .rc-tit .tit {
+    width:100%;
+    font-size:48px;
+    padding:20px 0px 0px;
+    text-align:center;
+}
+
+.rc-area .rc-coupon-img {
+    width:100%;
+    min-height:200px;
+    text-align:center;
+}
+
+.rc-area .rc-btn {
+    display:block;
+    width:300px;
+    height:60px;
+    color:#fff;
+    background:var(--color-txt);
+    font-size:var(--font-mid);
+    border-radius: var(--radius-big);
+    cursor:pointer;
+    margin:40px auto 0px;
+}
+
+/* festa - coupon // coupon and information */
+
+.coupon-area {
+    width:100%;
+    padding:100px 0px;
+}
+
+.coupon-area .coupon-tit {
+    font-size:var(--font-big);
+    font-weight: 700;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.coupon-area .coupon-list {
+    width:995px;
+    display:flex;
+    flex-wrap: wrap;
+    margin:0 auto 40px;
+}
+
+.coupon-area .coupon-list .coupon-item {
+    display:flex;
+    background:url(../images/coupon_bg.svg) center center no-repeat;
+    width:480px;
+    height:120px;
+    margin:5px 0px;
+}
+
+.coupon-area .coupon-list .coupon-item:nth-child(odd) {
+    margin-right:calc(35px / 2);
+}
+
+.coupon-area .coupon-list .coupon-item:nth-child(even) {
+    margin-left:calc(35px / 2);
+}
+
+.coupon-area .coupon-list .coupon-item .coupon-txt {
+    display:flex;
+    flex-direction: column;
+    width:calc(100% / 2 - 40px);
+    margin-left:40px;
+    align-self:center;
+}
+
+.coupon-item .coupon-txt .name {
+    font-size:var(--font-normal);
+    font-weight: 700;
+    margin-bottom:5px;
+}
+
+.coupon-item .coupon-txt .subTxt {
+    font-size:var(--font-small);
+    color:var(--color-darkgray);
+}
+
+.coupon-area .coupon-list .coupon-item .coupon-sale {
+    display:flex;
+    width:calc(100% / 2 - 40px);
+    justify-content: right;
+    margin-right:40px;
+    align-self:center;
+}
+
+.coupon-item .coupon-sale .sale-num {
+    font-size:40px;
+    font-weight:700;
+}
+
+.coupon-item .coupon-sale .sale-unit {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 15px 0px 0px 5px;
+    align-self:center;
+}
+
+.coupon-all-btn .coupon-all-download {
+    display:block;
+    width:300px;
+    height:60px;
+    color:#fff;
+    background:var(--color-txt);
+    font-size:var(--font-mid);
+    border-radius: var(--radius-big);
+    cursor:pointer;
+    margin:40px auto 0px;
+}
 
 /* festa - nav */
 
@@ -67,8 +211,7 @@ button {
     width:100%;
 }
 
-
-/* festa - nav // option1 */
+/* festa - nav // option1, option2 */
 
 .module-tab .week-wrap {
     width:100%;
@@ -91,23 +234,21 @@ button {
 
 .week-list li.week-item a {
     display: flex;
-    width:calc(100% - 60px);
-    padding:30px;
+    flex-direction: column;
+    width:calc(100% - 40px);
+    padding:20px;
     color:var(--color-mid-gray);
     cursor:pointer;
 }
 
 .week-list li.week-item a .item-subTxt {
-    color:var(--color-mid-gray);
     font-size:var(--font-small);
+    font-weight: 700;
     margin-bottom:5px;
-    align-self:center;
 }
 
 .week-list li.week-item a .item-name {
     font-size:24px;
-    margin-left:auto;
-    align-self:center;
 }
 
 .week-list li.week-item.on {
@@ -236,8 +377,7 @@ button {
     opacity:0;
 }
 
-
-/* festa - nav // option2 */
+/* festa - nav // option3 */
 
 .main-event-wrap {
     background:#272727;
@@ -365,158 +505,11 @@ button {
     opacity:0;
 }
 
-
-/* festa - coupon */
-
-.module-random {
-    background-repeat: no-repeat;
-    background-position: top center;;
-    background-size:1920px 100%;
-}
-
-/* festa - coupon // random coupon */
-
-.rc-area {
-    width:100%;
-    padding:100px 0px;
-}
-
-.rc-area .wrap {
-    width:1200px;
-    margin:0 auto;
-}
-
-.rc-area .rc-tit {
-    width:100%;
-    padding:0px 0px 50px;
-}
-
-.rc-area .rc-tit .subTxt {
-    width:100%;
-    font-size:var(--font-mid);
-    text-align:center;
-}
-
-.rc-area .rc-tit .tit {
-    width:100%;
-    font-size:48px;
-    padding:20px 0px 0px;
-    text-align:center;
-}
-
-.rc-area .rc-coupon-img {
-    width:100%;
-    min-height:200px;
-    text-align:center;
-}
-
-.rc-area .rc-btn {
-    display:block;
-    width:300px;
-    height:60px;
-    color:#fff;
-    background:var(--color-txt);
-    font-size:var(--font-mid);
-    border-radius: var(--radius-big);
-    cursor:pointer;
-    margin:40px auto 0px;
-}
-
-
-/* festa - coupon // coupon and information */
-
-.module-coupon {
-    width:100%;
-    background:#333333;
-}
-
-
-.coupon-area {
-    width:100%;
-    padding:100px 0px;
-}
-
-.coupon-area .coupon-tit {
-    color:#fff;
-    font-size:var(--font-big);
-    font-weight: 700;
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.coupon-area .coupon-list {
-    width:995px;
-    display:grid;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(2, 1fr);
-    margin:0 auto 60px;
-    gap:30px;
-}
-
-.coupon-area .coupon-list .coupon-item {
-    display:flex;
-    background:url(../images/coupon_bg.svg) center center no-repeat;
-    width:480px;
-    height:120px;
-}
-
-.coupon-area .coupon-list .coupon-item .coupon-txt {
-    display:flex;
-    flex-direction: column;
-    width:calc(100% / 2 - 40px);
-    margin-left:40px;
-    align-self:center;
-}
-
-.coupon-item .coupon-txt .name {
-    font-size:var(--font-normal);
-    font-weight: 700;
-    margin-bottom:5px;
-}
-
-.coupon-item .coupon-txt .subTxt {
-    font-size:var(--font-small);
-    color:var(--color-darkgray);
-}
-
-.coupon-area .coupon-list .coupon-item .coupon-sale {
-    display:flex;
-    width:calc(100% / 2 - 40px);
-    justify-content: right;
-    margin-right:40px;
-    align-self:center;
-}
-
-.coupon-item .coupon-sale .sale-num {
-    font-size:40px;
-    font-weight:700;
-}
-
-.coupon-item .coupon-sale .sale-unit {
-    font-size: 24px;
-    font-weight: 700;
-    padding: 15px 0px 0px 5px;
-    align-self:center;
-}
-
-.coupon-all-btn .coupon-all-download {
-    display:block;
-    width:300px;
-    height:60px;
-    color:#fff;
-    background:var(--color-txt);
-    font-size:var(--font-mid);
-    border-radius: var(--radius-big);
-    cursor:pointer;
-    margin:40px auto 0px;
-}
-
-
 /* festa - section */
 
 .fe-area {
-    width:100%;
-    margin:0px auto 0px;
+    width:1200px;
+    margin:40px auto 0px;
 }
 
 .fe-area .fe-head {
@@ -524,113 +517,123 @@ button {
 }
 
 .fe-area .fe-head .fe-banner {
-    display: flex;
     width:100%;
-    height:250px;
-    background-position: center center;
-    background-repeat: no-repeat;
+    height:400px;
+    border-radius: var(--radius-mid);
     overflow:hidden;
 }
 
-.fe-area .fe-head .fe-banner .fe-banner-wrap {
-    width:1200px;
-    margin:0 auto;
-    align-self:center;
-}
-
-.fe-banner .fe-banner-wrap .fc-banner-txt {
-    font-size:24px;
-}
-
-.fe-banner .fe-banner-wrap .fc-banner-tit {
-    font-size:56px;
+.fe-area .fe-head .fe-banner > img {
+    display: block;
+    width:100%;
+    height:100%;
 }
 
 /* festa - section // category */
 
 .fe-category {
-    width:1200px;
-    padding:60px 0px;
-    margin:0 auto;
+    padding:30px 0px;
+    border-bottom:1px solid var(--color-line);
 }
 
-/* category-tab */
-
-.fe-category .fe-cate-tab {
+.fe-category .fe-cate-spec {
     display:flex;
-    justify-content: center;
-    border:1px solid var(--color-line);
-    margin-bottom:60px;
+    padding:15px 0px;
 }
 
-.fe-category .fe-cate-tab .spec-option {
-    display: flex;
-    width:calc(100% / 5);
-    height:50px;
-    justify-content: center;
-    border-left:1px solid var(--color-line);
-}
-
-.fe-category .fe-cate-tab .spec-option a {
-    position:relative;
-    width:100%;
-    height: 100%;
-    text-align:center;
-    line-height: 50px;
-    cursor: pointer;
-}
-
-.fe-category .fe-cate-tab .spec-option.on a {
-    height:calc(100% - 2px);
-    border-bottom:2px solid var(--color-txt);
-}
-
-.fe-category .fe-cate-tab .spec-option:last-child {
-    border-right:none;
-}
-
-
-/* category-carousel */
-
-.fe-cate-carousel {
-    position:relative;
-    display:flex;
-    flex-direction: column;
-}
-
-.fe-cate-carousel .fe-cate-track {
-    display: flex;
-    gap:30px;
-    justify-content: center;
-}
-
-.fe-cate-carousel .fe-cate-track .fe-cate-item {
+.fe-category .fe-cate-spec .spec-tit {
+    width:120px;
+    font-weight: 700;
+    padding-left:20px;
     align-self:center;
 }
 
-.fe-cate-track .fe-cate-item a {
+.fe-category .fe-cate-spec .spec-option {
     display:flex;
-    flex-direction: column;
-    justify-content: center;
+    width:calc(100% - 140px);
+    gap:30px;
+    align-self:center;
+}
+
+.fe-cate-spec .spec-option input[type="checkbox"] {
+    width:0px;
+    height:0px;
+    border:none;
+    -webkit-appearance: checkbox !important;
+    -moz-appearance: checkbox !important;
+    -ms-appearance: checkbox !important;
+    -o-appearance: checkbox !important;
+    appearance: checkbox !important;
+}
+
+.fe-cate-spec .spec-option .spec-item {
+    display: flex;
     cursor:pointer;
 }
 
-.fe-cate-track .fe-cate-item a .fe-cate-img {
-    width:100px;
-    height:100px;
-    border-radius:var(--radius-mid);
-    overflow:hidden;
+.fe-cate-spec .spec-option label {
+    display:flex;
+    cursor: pointer;
 }
 
-.fe-cate-track .fe-cate-item a .fe-cate-txt {
-    text-align:center;
-    margin-top:10px;
+.cate-item .chk-box {
+    display:flex;
+    background:#fff;
+    width:18px;
+    height:18px;
+    border-radius:3px;
+    border:1px solid #dadada;
+    justify-content: center;
+    align-self:center;
+}
+
+.cate-item .chk-box svg {
+    width:12px;
+    height:12px;
+    color:var(--color-line);
+    align-self: center;
+    stroke-width:1px;
+}
+
+.spec-item .cate-chk:checked + .cate-item .chk-box {
+    background:var(--color-txt);
+    border-color:var(--color-txt);
+    color:#fff;
+}
+
+.cate-item span {
+    margin-left:10px;
+    align-self:center;
+}
+
+.product-chk-item {
+    display:flex;
+    min-width:80px;
+    width:auto;
+    border-radius: var(--radius-big);
+    border:1px solid var(--color-line);
+    padding:5px 15px;
+    justify-content: center;
+    box-sizing:border-box;
+}
+
+.product-chk-item span {
+    color:var(--color-mid-gray);
+    align-self:center;
+}
+
+.spec-item .product-chk:checked + .product-chk-item {
+    border:2px solid var(--color-txt);
+}
+
+.spec-item .product-chk:checked + .product-chk-item span {
+    color:var(--color-txt);
 }
 
 /* festa - section // product */
 
 .fe-content {
-    width:1200px;
+    width:100%;
     margin:40px auto 100px;
 }
 

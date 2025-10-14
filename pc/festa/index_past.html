@@ -20,7 +20,16 @@
     <script type="text/javascript" src="../js/rn-index.js" charset="utf-8"></script>
     <script type="text/javascript" src="./js/festa.js" charset="utf-8"></script>
     <!-- svg import -->
-    <!-- <style>
+    <!-- <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', e => {
+              let object = document.querySelector('object');
+              object.addEventListener('load', e => {
+                e.target.outerHTML = e.target.contentDocument.documentElement.outerHTML;
+              });
+            });
+        </script> -->
+
+    <style>
 
         .test-button {
             position:fixed;
@@ -77,13 +86,13 @@
             display:none;
         }
 
-    </style>  -->
+    </style> 
 </head>
 
 <body>
 
     <!-- 테스트용 버튼 -->
-    <!-- <div class="test-button">
+    <div class="test-button">
         <span class="testBtn">TEST</span>
         <h3>테스트 버튼</h3>
         <ul>
@@ -91,7 +100,7 @@
             <li class="op02"><a>Option 02. 주차별 행사 and 행사</a></li>
             <li class="op03"><a>Option 03. Only 행사</a></li>
         </ul>
-    </div> -->
+    </div>
 
     <script>
 
@@ -884,19 +893,121 @@
 
     <!-- 메인 -->
     <div id="rn-main" class="rn-container festa-container">
-        <!-- kayVisual -->
         <section id="module" class="module-top">
             <div class="visual-area">
-                <!-- <video autoplay muted loop playsinline width="100%">
+                <video autoplay muted loop playsinline width="100%">
                     <source src="./images/banner.mp4" type="video/mp4" />
-                </video> -->
+                </video>
             </div>
         </section>
-        <!-- Nav -->
+        <section id="module" class="module-coupon" style="background-image: url(./images/bg.jpg);">
+            <div class="rc-area">
+                <div class="wrap">
+                    <div class="rc-tit">
+                        <p class="subTxt">매일 단 한번의 혜택</p>
+                        <h1 class="tit">선착순 랜덤 쿠폰</h1>
+                    </div>
+                    <div class="rc-coupon-img">
+                        <img src="./images/rc-sample.png">
+                    </div>
+                    <button class="rc-btn">공유하고 한번 더 응모하기</button>
+                </div>
+            </div>
+            <!-- information -->
+            <div class="info-area">
+                <div clss="wrap"></div>
+            </div>
+            <div class="coupon-area">
+                <div class="wrap">
+                    <div class="coupon-tit">
+                        쿠폰 & 혜택
+                    </div>
+                    <div class="coupon-list">
+                        <div class="coupon-item">
+                            <div class="coupon-txt">
+                                <p class="name">8월 시즌 쿠폰</p>
+                                <span class="subTxt">쿠쿠몰 이용자 대상</span>
+                            </div>
+                            <div class="coupon-sale">
+                                <p class="sale-num">20</p>
+                                <span class="sale-unit">%</span>
+                            </div>
+                        </div>
+                        <div class="coupon-item">
+                            <div class="coupon-txt">
+                                <p class="name">구매포인트 적립</p>
+                                <span class="subTxt">구매가의 2%</span>
+                            </div>
+                            <div class="coupon-sale">
+                                <p class="sale-num">2</p>
+                                <span class="sale-unit">%</span>
+                            </div>
+                        </div>
+                        <div class="coupon-item">
+                            <div class="coupon-txt">
+                                <p class="name">앱 다운로드 쿠폰</p>
+                                <span class="subTxt">신규 다운로드 대상</span>
+                            </div>
+                            <div class="coupon-sale">
+                                <p class="sale-num">20,000</p>
+                                <span class="sale-unit">P</span>
+                            </div>
+                        </div>
+                        <div class="coupon-item">
+                            <div class="coupon-txt">
+                                <p class="name">식기세척시 특가 쿠폰</p>
+                                <span class="subTxt">구매가의 2%</span>
+                            </div>
+                            <div class="coupon-sale">
+                                <p class="sale-num">7</p>
+                                <span class="sale-unit">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coupon-all-btn">
+                        <button class="coupon-all-download">
+                            <span class="txt">쿠폰 모두 받기</span>
+                            <em class="icon all-btn-icon"></em>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="module" class="module-nav">
             <div class="nav-area">
-                <!-- 옵션1 // 주차별 행사 and 행사 -->
+                <!-- 옵션1 // Only 주차별 행사 -->
                 <div class="module-tab nav-option1">
+                    <div class="week-wrap">
+                        <ul class="week-list">
+                            <li class="week-item">
+                                <a>
+                                    <span class="item-subTxt">1 WEEK</span>
+                                    <h1 class="item-name">주방가전 위크</h1>
+                                </a>
+                            </li>
+                            <li class="week-item on">
+                                <a>
+                                    <span class="item-subTxt">2 WEEK</span>
+                                    <h1 class="item-name">렌탈 위크</h1>
+                                </a>
+                            </li>
+                            <li class="week-item">
+                                <a>
+                                    <span class="item-subTxt">3 WEEK</span>
+                                    <h1 class="item-name">시즌가전 위크</h1>
+                                </a>
+                            </li>
+                            <li class="week-item">
+                                <a>
+                                    <span class="item-subTxt">4 WEEK</span>
+                                    <h1 class="item-name">집사의 선택</h1>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 옵션2 // 주차별 행사 and 행사 -->
+                <div class="module-tab nav-option2">
                     <div class="week-wrap">
                         <ul class="week-list">
                             <li class="week-item">
@@ -1020,8 +1131,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- 옵션2 // Only 행사 -->
-                <div class="module-tab nav-option2">
+                <!-- 옵션3 // Only 행사 -->
+                <div class="module-tab nav-option3">
                     <div class="main-event-wrap">
                         <div class="main-event-track">
                             <ul class="main-event-list">
@@ -1119,170 +1230,132 @@
                 </div>
             </div>
         </section>
-
-        <!-- random coupon -->
-        <section id="module" class="module-random" style="background-image: url(./images/random-bg.jpg);">
-            <div class="rc-area">
-                <div class="wrap">
-                    <div class="rc-tit">
-                        <p class="subTxt">매일 단 한번의 혜택</p>
-                        <h1 class="tit">선착순 랜덤 쿠폰</h1>
-                    </div>
-                    <div class="rc-coupon-img">
-                        <img src="./images/rc-sample.png">
-                    </div>
-                    <button class="rc-btn">공유하고 한번 더 응모하기</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- coupon & benefit -->
-        <section id="module" class="module-coupon" >
-            <div class="coupon-area">
-                <div class="wrap">
-                    <div class="coupon-tit">
-                        쿠폰 & 혜택
-                    </div>
-                    <div class="coupon-list">
-                        <div class="coupon-item">
-                            <div class="coupon-txt">
-                                <p class="name">10월 시즌 쿠폰</p>
-                                <span class="subTxt">쿠쿠몰 이용자 대상</span>
-                            </div>
-                            <div class="coupon-sale">
-                                <p class="sale-num">20</p>
-                                <span class="sale-unit">%</span>
-                            </div>
-                        </div>
-                        <div class="coupon-item">
-                            <div class="coupon-txt">
-                                <p class="name">구매포인트 적립</p>
-                                <span class="subTxt">구매가의 2%</span>
-                            </div>
-                            <div class="coupon-sale">
-                                <p class="sale-num">2</p>
-                                <span class="sale-unit">%</span>
-                            </div>
-                        </div>
-                        <div class="coupon-item">
-                            <div class="coupon-txt">
-                                <p class="name">앱 다운로드 쿠폰</p>
-                                <span class="subTxt">신규 다운로드 대상</span>
-                            </div>
-                            <div class="coupon-sale">
-                                <p class="sale-num">20,000</p>
-                                <span class="sale-unit">P</span>
-                            </div>
-                        </div>
-                        <div class="coupon-item">
-                            <div class="coupon-txt">
-                                <p class="name">식기세척시 특가 쿠폰</p>
-                                <span class="subTxt">구매가의 2%</span>
-                            </div>
-                            <div class="coupon-sale">
-                                <p class="sale-num">7</p>
-                                <span class="sale-unit">%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="coupon-all-btn">
-                        <button class="coupon-all-download">
-                            <span class="txt">쿠폰 모두 받기</span>
-                            <em class="icon all-btn-icon"></em>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="module" class="module-info" >
-            <!-- information -->
-            <div class="info-area">
-                <div clss="wrap"></div>
-            </div>
-        </section>
-
-        <!-- module-event -->
         <section id="module" class="module-event">
             <div class="fe-area">
                 <div class="fe-section">
                     <div class="fe-head">
-                        <div class="fe-banner" style="background-image: url(./images/section-banner01.png);">
-                            <div class="fe-banner-wrap">
-                                <p class="fc-banner-txt">매일 단 한번의 혜택</p>
-                                <h3 class="fc-banner-tit">쿠쇼페 혜택</h3>
-                            </div>
+                        <div class="fe-banner">
+                            <img src="./images/section_2.png">
                         </div>
                         <div class="fe-category">
-                            <!-- option01 category-tab -->
-                            <div class="fe-cate-tab">
+                            <div class="fe-cate-spec">
+                                <div class="spec-tit">카테고리</div>
                                 <div class="spec-option">
-                                    <a>계절가전</a>
-                                </div>
-                                <div class="spec-option">
-                                    <a>생활가전</a>
-                                </div>
-                                <div class="spec-option">
-                                    <a>펫가전</a>
-                                </div>
-                                <div class="spec-option">
-                                    <a>건강가전</a>
-                                </div>
-                                <div class="spec-option">
-                                    <a>소형주방가전</a>
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="cate-chk" id="cate-1" name="cate-1" checked>
+                                        <label for="cate-1" class="cate-item">
+                                            <span class="chk-box">
+                                                <svg class="icon">
+                                                    <use xlink:href="../images/icon/sprite-sheet.svg#chk-2" />
+                                                </svg>
+                                            </span>
+                                            <span>주방가전</span>
+                                        </label>
+                                    </div>
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="cate-chk" id="cate-2" name="cate-2">
+                                        <label for="cate-2" class="cate-item">
+                                            <span class="chk-box">
+                                                <svg class="icon">
+                                                    <use xlink:href="../images/icon/sprite-sheet.svg#chk-2" />
+                                                </svg>
+                                            </span>
+                                            <span>계절가전</span>
+                                        </label>
+                                    </div>
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="cate-chk" id="cate-3" name="cate-3">
+                                        <label for="cate-3" class="cate-item">
+                                            <span class="chk-box">
+                                                <svg class="icon">
+                                                    <use xlink:href="../images/icon/sprite-sheet.svg#chk-2" />
+                                                </svg>
+                                            </span>
+                                            <span>생활가전</span>
+                                        </label>
+                                    </div>
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="cate-chk" id="cate-4" name="cate-4">
+                                        <label for="cate-4" class="cate-item">
+                                            <span class="chk-box">
+                                                <svg class="icon">
+                                                    <use xlink:href="../images/icon/sprite-sheet.svg#chk-2" />
+                                                </svg>
+                                            </span>
+                                            <input type="checkbox" class="cate-chk" id="cate-4" name="cate-4">
+                                            <span>펫가전</span>
+                                        </label>
+                                    </div>
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="cate-chk" id="cate-5" name="cate-5">
+                                        <label for="cate-5" class="cate-item">
+                                            <span class="chk-box">
+                                                <svg class="icon">
+                                                    <use xlink:href="../images/icon/sprite-sheet.svg#chk-2" />
+                                                </svg>
+                                            </span>
+                                            <span>건강가전</span>
+                                        </label>
+                                    </div>
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="cate-chk" id="cate-6" name="cate-6">
+                                        <label for="cate-6" class="cate-item">
+                                            <span class="chk-box">
+                                                <svg class="icon">
+                                                    <use xlink:href="../images/icon/sprite-sheet.svg#chk-2" />
+                                                </svg>
+                                            </span>
+                                            <span>소형주방가전</span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- option02 category-carousel -->
-                            <div class="fe-cate-carousel">
-                                <ul class="fe-cate-track">
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img01.png">
-                                            </div>
-                                            <p class="fe-cate-txt">계절가전</p>
-                                        </a>
-                                    </li>
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img02.png">
-                                            </div>
-                                            <p class="fe-cate-txt">생활가전</p>
-                                        </a>
-                                    </li>
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img03.png">
-                                            </div>
-                                            <p class="fe-cate-txt">펫가전</p>
-                                        </a>
-                                    </li>
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img04.png">
-                                            </div>
-                                            <p class="fe-cate-txt">건강가전</p>
-                                        </a>
-                                    </li>
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img05.png">
-                                            </div>
-                                            <p class="fe-cate-txt">소형주방가전</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="fe-cate-arrow">
-                                    <a class="fe-cate-prev prev">
-                                        <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-left"/></svg>
-                                    </a>
-                                    <a class="fe-cate-next next">
-                                        <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-right"/></svg>
-                                    </a>
+                            <div class="fe-cate-spec">
+                                <div class="spec-tit">제품</div>
+                                <div class="spec-option">
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="product-chk" id="product-all" name="product-all"
+                                            checked>
+                                        <label for="product-all" class="product-chk-item">
+                                            <span>전체</span>
+                                        </label>
+                                    </div>
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="product-chk" id="product-1" name="product-1">
+                                        <label for="product-1" class="product-chk-item">
+                                            <span>밥솥</span>
+                                        </label>
+                                    </div>
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="product-chk" id="product-2" name="product-2">
+                                        <label for="product-2" class="product-chk-item">
+                                            <span>식기세척기</span>
+                                        </label>
+                                    </div>
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="product-chk" id="product-3" name="product-3">
+                                        <label for="product-3" class="product-chk-item">
+                                            <span>정수기</span>
+                                        </label>
+                                    </div>
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="product-chk" id="product-4" name="product-4">
+                                        <label for="product-4" class="product-chk-item">
+                                            <span>공기청정기</span>
+                                        </label>
+                                    </div>
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="product-chk" id="product-5" name="product-5">
+                                        <label for="product-5" class="product-chk-item">
+                                            <span>인덕션레인지</span>
+                                        </label>
+                                    </div>
+                                    <div class="spec-item">
+                                        <input type="checkbox" class="product-chk" id="product-6" name="product-6">
+                                        <label for="product-6" class="product-chk-item">
+                                            <span>음식물처리기</span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1290,113 +1363,6 @@
                     <div class="fe-content">
                         <div class="product-wrap fe-product-wrap">
                             <div class="product-track fe-product-track">
-                                <div class="product-item fe-product-item">
-                                    <a href="#">
-                                        <div class="product-thum fe-product-thum">
-                                            <img src="../images/sp18.gif"
-                                                onerror="this.onerror=null; this.src='./images/no-image.jpg';">
-                                        </div>
-                                        <div class="product-info fe-product-info">
-                                            <p class="product-name fe-product-name">인스퓨어 STEAM 100 바리스타</p>
-                                            <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
-                                        </div>
-                                        <div class="product-price fe-product-price">
-                                            <div class="regular-price fe-regular-price">
-                                                <p>589000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="price-per fe-price-per">
-                                                <b>30</b>
-                                                <span>%</span>
-                                            </div>
-                                            <div class="discount-price fe-price">
-                                                <p>480000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="product-wish-btn"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-item fe-product-item">
-                                    <a href="#">
-                                        <div class="product-thum fe-product-thum">
-                                            <img src="../images/sp09.png"
-                                                onerror="this.onerror=null; this.src='./images/no-image.jpg';">
-                                        </div>
-                                        <div class="product-info fe-product-info">
-                                            <p class="product-name fe-product-name">리네이처 안마의자</p>
-                                            <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
-                                        </div>
-                                        <div class="product-price fe-product-price">
-                                            <div class="regular-price fe-regular-price">
-                                                <p>589000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="price-per fe-price-per">
-                                                <b>30</b>
-                                                <span>%</span>
-                                            </div>
-                                            <div class="discount-price fe-price">
-                                                <p>480000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="product-wish-btn"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-item fe-product-item">
-                                    <a href="#">
-                                        <div class="product-thum fe-product-thum">
-                                            <img src="../images/sp19.png"
-                                                onerror="this.onerror=null; this.src='./images/no-image.jpg';">
-                                        </div>
-                                        <div class="product-info fe-product-info">
-                                            <p class="product-name fe-product-name">프리미엄 듀얼인버터 창문형 에어컨</p>
-                                            <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
-                                        </div>
-                                        <div class="product-price fe-product-price">
-                                            <div class="regular-price fe-regular-price">
-                                                <p>589000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="price-per fe-price-per">
-                                                <b>30</b>
-                                                <span>%</span>
-                                            </div>
-                                            <div class="discount-price fe-price">
-                                                <p>480000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="product-wish-btn"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-item fe-product-item">
-                                    <a href="#">
-                                        <div class="product-thum fe-product-thum">
-                                            <img src="../images/sp13.jpg">
-                                        </div>
-                                        <div class="product-info fe-product-info">
-                                            <p class="product-name fe-product-name">파워클론 로봇청소기R 스테이션 물걸레형</p>
-                                            <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
-                                        </div>
-                                        <div class="product-price fe-product-price">
-                                            <div class="regular-price fe-regular-price">
-                                                <p>589000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="price-per fe-price-per">
-                                                <b>30</b>
-                                                <span>%</span>
-                                            </div>
-                                            <div class="discount-price fe-price">
-                                                <p>480000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="product-wish-btn"></div>
-                                        </div>
-                                    </a>
-                                </div>
                                 <div class="product-item fe-product-item">
                                     <a href="#">
                                         <div class="product-thum fe-product-thum">
@@ -1419,7 +1385,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -1446,7 +1411,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -1473,7 +1437,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -1500,140 +1463,9 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="fe-product-more">
-                            <button class="fe-more-btn">
-                                <span>상품 더 보기</span>
-                                <svg class="icon arrow-bottom-icon">
-                                    <use xlink:href="../images/icon/sprite-sheet.svg#arrow-bottom"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="module" class="module-banner">
-            <div class="banner-area">
-                <!-- 쿠쿠 기획전/이벤트 배너영역 -->
-                <div class="event-banner-section">
-                    <div class="banner-event">
-                        <!-- 배너 가로 2열 형태 -->
-                        <div class="banner-item col-2" style="background-image:url(./images/e-banner_1.png)">
-                            <a>
-                                <div class="banner-item-txt">
-                                    <p class="sub">서큘레이터부터 제빙기까지, 25년형 계절가전 혜택</p>
-                                    <h2 class="tit">시원하게 여름대비</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="banner-item col-2" style="background-image:url(./images/e-banner_2.png)">
-                            <a>
-                                <div class="banner-item-txt">
-                                    <p class="sub">쿠쿠 공기청정기 신제품 행사 특가</p>
-                                    <h2 class="tit">감성부터 성능까지</h2>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- module-event -->
-        <section id="module" class="module-event">
-            <div class="fe-area">
-                <div class="fe-section">
-                    <div class="fe-head">
-                        <div class="fe-banner" style="background-image: url(./images/section-banner02.png);">
-                            <div class="fe-banner-wrap">
-                                <p class="fc-banner-txt">매일 단 한번의 혜택</p>
-                                <h3 class="fc-banner-tit">쿠쇼페 혜택</h3>
-                            </div>
-                        </div>
-                        <div class="fe-category">
-                            <!-- option01 category-tab -->
-                            <div class="fe-cate-tab">
-                                <div class="spec-option">
-                                    <a>계절가전</a>
-                                </div>
-                                <div class="spec-option">
-                                    <a>생활가전</a>
-                                </div>
-                                <div class="spec-option">
-                                    <a>펫가전</a>
-                                </div>
-                                <div class="spec-option">
-                                    <a>건강가전</a>
-                                </div>
-                                <div class="spec-option">
-                                    <a>소형주방가전</a>
-                                </div>
-                            </div>
-                            <!-- option02 category-carousel -->
-                            <div class="fe-cate-carousel">
-                                <ul class="fe-cate-track">
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img01.png">
-                                            </div>
-                                            <p class="fe-cate-txt">계절가전</p>
-                                        </a>
-                                    </li>
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img02.png">
-                                            </div>
-                                            <p class="fe-cate-txt">생활가전</p>
-                                        </a>
-                                    </li>
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img03.png">
-                                            </div>
-                                            <p class="fe-cate-txt">펫가전</p>
-                                        </a>
-                                    </li>
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img04.png">
-                                            </div>
-                                            <p class="fe-cate-txt">건강가전</p>
-                                        </a>
-                                    </li>
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img05.png">
-                                            </div>
-                                            <p class="fe-cate-txt">소형주방가전</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="fe-cate-arrow">
-                                    <a class="fe-cate-prev prev">
-                                        <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-left"/></svg>
-                                    </a>
-                                    <a class="fe-cate-next next">
-                                        <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-right"/></svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fe-content">
-                        <div class="product-wrap fe-product-wrap">
-                            <div class="product-track fe-product-track">
                                 <div class="product-item fe-product-item">
                                     <a href="#">
                                         <div class="product-thum fe-product-thum">
@@ -1657,7 +1489,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -1684,7 +1515,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -1711,7 +1541,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -1737,7 +1566,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -1763,7 +1591,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -1790,7 +1617,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -1817,7 +1643,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -1844,387 +1669,9 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="fe-product-more">
-                            <button class="fe-more-btn">
-                                <span>상품 더 보기</span>
-                                <svg class="icon arrow-bottom-icon">
-                                    <use xlink:href="../images/icon/sprite-sheet.svg#arrow-bottom"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="module" class="module-banner">
-            <div class="banner-area">
-                <!-- 쿠쿠 기획전/이벤트 배너영역 -->
-                <div class="event-banner-section">
-                    <div class="banner-event">
-                        <!-- 배너 가로 1열 형태 -->
-                        <div class="banner-item col-1" style="background-image:url(./images/e-banner_3.png)">
-                            <a>
-                                <div class="banner-item-txt">
-                                    <p class="sub">쿠쿠 음식물처리기 신제품 행사 특가</p>
-                                    <h2 class="tit">감성부터 성능까지</h2>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="module" class="module-timeDeal">
-            <div class="fe-timeDeal-area">
-                <div class="fe-timeDeal-section">
-                    <div class="fe-timeDeal-head">
-                        <div class="fe-timeDeal-tit">
-                            타임 특가
-                        </div>
-                        <div class="fe-timeDeal-tab">
-                            <a class="on">
-                                <svg class="icon">
-                                    <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
-                                </svg>
-                                <span>이 달의 특가 (한정판매)</span>
-                            </a>
-                            <a>
-                                <svg class="icon">
-                                    <use xlink:href="../images/icon/sprite-sheet.svg#chk-1" />
-                                </svg>
-                                <span></span># 타임특가(한정판매)</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="fe-timeDeal-content">
-                        <div class="timedeal-wrap">
-                            <ul class="timedeal-track">
-                                <li class="timedeal-item">
-                                    <div class="timedeal-inner" id="timedeal01" data-value="2025/12/30 23:59:59">
-                                        <div class="timedeal-time">
-                                            <span class="t-img">
-                                                <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#clock-icon"/></svg>
-                                            </span>
-                                            <ul class="t-time">
-                                                <!-- <li class="t-time_day">0<span>일</span></li>
-                                                <li class="t-time_hour">00</li>
-                                                <li class="t-tume-minute">00</li>
-                                                <li class="t-time-second">00</li> -->
-                                            </ul>
-                                            <p class="t-quantity">
-                                                잔여
-                                                <span class="limit">306</span>
-                                                개 남음
-                                            </p>
-                                        </div>
-                                        <div class="timedeal-product">
-                                            <a href="#">
-                                                <div class="timedeal-thum" style="background-image:url(../images/sample01.jpg);"></div>
-                                                <div class="timedeal-product-info">
-                                                    <p class="t-product-name">쿠쿠 파워클론  물걸레 무선청소기</p>
-                                                    <span class="t-product-code">CVC-AME1420UG</span>
-                                                </div>
-                                                <div class="timedeal-price-wrap">
-                                                    <span class="t-txt">최대 혜택가</span>
-                                                    <div class="timedeal-price">
-                                                        <div class="discount-price">
-                                                            <p class="price">295000</p>
-                                                            <span>원</span>
-                                                        </div>
-                                                        <div class="regular-price">
-                                                            <p class="price">589000</p>
-                                                            <em>원</em>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="timedeal-item">
-                                    <div class="timedeal-inner" id="timedeal02" data-value="2024/12/31 23:59:59">
-                                        <div class="timedeal-time">
-                                            <span class="t-img">
-                                                <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#clock-icon"/></svg>
-                                            </span>
-                                            <ul class="t-time">
-                                                <!-- <li class="t-time_day">8<span>일</span></li>
-                                                <li class="t-time_hour">18</li>
-                                                <li class="t-tume-minute">18</li>
-                                                <li class="t-time-second">48</li> -->
-                                            </ul>
-                                            <p class="t-quantity">
-                                                잔여
-                                                <span class="limit">306</span>
-                                                개 남음
-                                            </p>
-                                        </div>
-                                        <div class="timedeal-product">
-                                            <a href="#">
-                                                <div class="timedeal-thum" style="background-image:url(../images/sample02.png);"></div>
-                                                <div class="timedeal-product-info">
-                                                    <p class="t-product-name">쿠쿠 파워클론  물걸레 무선청소기</p>
-                                                    <span class="t-product-code">CVC-AME1420UG</span>
-                                                </div>
-                                                <div class="timedeal-price-wrap">
-                                                    <span class="t-txt">최대 혜택가</span>
-                                                    <div class="timedeal-price">
-                                                        <div class="discount-price">
-                                                            <p class="price">295000</p>
-                                                            <span>원</span>
-                                                        </div>
-                                                        <div class="regular-price">
-                                                            <p class="price">589000</p>
-                                                            <em>원</em>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="timedeal-item">
-                                    <div class="timedeal-inner" id="timedeal03" data-value="2025/01/12 23:59:59">
-                                        <div class="timedeal-time">
-                                            <span class="t-img">
-                                                <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#clock-icon"/></svg>
-                                            </span>
-                                            <ul class="t-time">
-                                                <!-- <li class="t-time_day">8<span>일</span></li>
-                                                <li class="t-time_hour">18</li>
-                                                <li class="t-tume-minute">18</li>
-                                                <li class="t-time-second">48</li> -->
-                                            </ul>
-                                            <p class="t-quantity">
-                                                잔여
-                                                <span class="limit">306</span>
-                                                개 남음
-                                            </p>
-                                        </div>
-                                        <div class="timedeal-product">
-                                            <a href="#">
-                                                <div class="timedeal-thum" style="background-image:url(../images/product_sample.jpg);"></div>
-                                                <div class="timedeal-product-info">
-                                                    <p class="t-product-name">쿠쿠 파워클론  물걸레 무선청소기</p>
-                                                    <span class="t-product-code">CVC-AME1420UG</span>
-                                                </div>
-                                                <div class="timedeal-price-wrap">
-                                                    <span class="t-txt">최대 혜택가</span>
-                                                    <div class="timedeal-price">
-                                                        <div class="discount-price">
-                                                            <p class="price">295000</p>
-                                                            <span>원</span>
-                                                        </div>
-                                                        <div class="regular-price">
-                                                            <p class="price">589000</p>
-                                                            <em>원</em>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="timedeal-item">
-                                    <div class="timedeal-inner" id="timedeal04" data-value="2024/10/17 23:59:59">
-                                        <div class="timedeal-time">
-                                            <span class="t-img">
-                                                <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#clock-icon"/></svg>
-                                            </span>
-                                            <ul class="t-time">
-                                                <!-- <li class="t-time_day">8<span>일</span></li>
-                                                <li class="t-time_hour">18</li>
-                                                <li class="t-tume-minute">18</li>
-                                                <li class="t-time-second">48</li> -->
-                                            </ul>
-                                            <p class="t-quantity">
-                                                잔여
-                                                <span class="limit">306</span>
-                                                개 남음
-                                            </p>
-                                        </div>
-                                        <div class="timedeal-product">
-                                            <a href="#">
-                                                <div class="timedeal-thum" style="background-image:url(../images/product_sample.jpg);"></div>
-                                                <div class="timedeal-product-info">
-                                                    <p class="t-product-name">쿠쿠 파워클론  물걸레 무선청소기</p>
-                                                    <span class="t-product-code">CVC-AME1420UG</span>
-                                                </div>
-                                                <div class="timedeal-price-wrap">
-                                                    <span class="t-txt">최대 혜택가</span>
-                                                    <div class="timedeal-price">
-                                                        <div class="discount-price">
-                                                            <p class="price">295000</p>
-                                                            <span>원</span>
-                                                        </div>
-                                                        <div class="regular-price">
-                                                            <p class="price">589000</p>
-                                                            <em>원</em>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="timedeal-item">
-                                    <div class="timedeal-inner" id="timedeal05" data-value="2024/11/27 23:59:59">
-                                        <div class="timedeal-time">
-                                            <span class="t-img">
-                                                <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#clock-icon"/></svg>
-                                            </span>
-                                            <ul class="t-time">
-                                                <!-- <li class="t-time_day">8<span>일</span></li>
-                                                <li class="t-time_hour">18</li>
-                                                <li class="t-tume-minute">18</li>
-                                                <li class="t-time-second">48</li> -->
-                                            </ul>
-                                            <p class="t-quantity">
-                                                잔여
-                                                <span>306</span>
-                                                개 남음
-                                            </p>
-                                        </div>
-                                        <div class="timedeal-product">
-                                            <a href="#">
-                                                <div class="timedeal-thum" style="background-image:url(../images/product_sample.jpg);"></div>
-                                                <div class="timedeal-product-info">
-                                                    <p class="t-product-name">쿠쿠 파워클론  물걸레 무선청소기</p>
-                                                    <span class="t-product-code">CVC-AME1420UG</span>
-                                                </div>
-                                                <div class="timedeal-price-wrap">
-                                                    <span class="t-txt">최대 혜택가</span>
-                                                    <div class="timedeal-price">
-                                                        <div class="discount-price">
-                                                            <p class="price">295000</p>
-                                                            <span>원</span>
-                                                        </div>
-                                                        <div class="regular-price">
-                                                            <p class="price">589000</p>
-                                                            <em>원</em>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="timedeal-arrow arrow-track">
-                                <a class="t-prev arrow-button prev">
-                                    <svg class="icon arrow-icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-left"/></svg>
-                                </a>
-                                <a class="t-next arrow-button next">
-                                    <svg class="icon arrow-icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-right"/></svg>
-                                </a>
-                            </div>
-                            <div class="timedeal-pager">
-                                <a class="t-page active"></a>
-                                <a class="t-page"></a>
-                                <a class="t-page"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- module-event -->
-        <section id="module" class="module-event">
-            <div class="fe-area">
-                <div class="fe-section">
-                    <div class="fe-head">
-                        <div class="fe-banner" style="background-image: url(./images/section-banner03.png);">
-                            <div class="fe-banner-wrap">
-                                <p class="fc-banner-txt">매일 단 한번의 혜택</p>
-                                <h3 class="fc-banner-tit">쿠쇼페 혜택</h3>
-                            </div>
-                        </div>
-                        <div class="fe-category">
-                            <!-- option01 category-tab -->
-                            <div class="fe-cate-tab">
-                                <div class="spec-option on">
-                                    <a>계절가전</a>
-                                </div>
-                                <div class="spec-option">
-                                    <a>생활가전</a>
-                                </div>
-                                <div class="spec-option">
-                                    <a>펫가전</a>
-                                </div>
-                                <div class="spec-option">
-                                    <a>건강가전</a>
-                                </div>
-                                <div class="spec-option">
-                                    <a>소형주방가전</a>
-                                </div>
-                            </div>
-                            <!-- option02 category-carousel -->
-                            <div class="fe-cate-carousel">
-                                <ul class="fe-cate-track">
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img01.png">
-                                            </div>
-                                            <p class="fe-cate-txt">계절가전</p>
-                                        </a>
-                                    </li>
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img02.png">
-                                            </div>
-                                            <p class="fe-cate-txt">생활가전</p>
-                                        </a>
-                                    </li>
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img03.png">
-                                            </div>
-                                            <p class="fe-cate-txt">펫가전</p>
-                                        </a>
-                                    </li>
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img04.png">
-                                            </div>
-                                            <p class="fe-cate-txt">건강가전</p>
-                                        </a>
-                                    </li>
-                                    <li class="fe-cate-item">
-                                        <a>
-                                            <div class="fe-cate-img">
-                                                <img src="./images/cate-img05.png">
-                                            </div>
-                                            <p class="fe-cate-txt">소형주방가전</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="fe-cate-arrow">
-                                    <a class="fe-cate-prev prev">
-                                        <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-left"/></svg>
-                                    </a>
-                                    <a class="fe-cate-next next">
-                                        <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-right"/></svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fe-content">
-                        <div class="product-wrap fe-product-wrap">
-                            <div class="product-track fe-product-track">
                                 <div class="product-item fe-product-item">
                                     <a href="#">
                                         <div class="product-thum fe-product-thum">
@@ -2248,7 +1695,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -2275,7 +1721,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -2302,7 +1747,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -2328,114 +1772,6 @@
                                                 <p>480000</p>
                                                 <span>원</span>
                                             </div>
-                                            <div class="product-wish-btn"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-item fe-product-item">
-                                    <a href="#">
-                                        <div class="product-thum fe-product-thum">
-                                            <img src="../images/product_sample.jpg">
-                                        </div>
-                                        <div class="product-info fe-product-info">
-                                            <p class="product-name fe-product-name">인스퓨어 STEAM 100 바리스타</p>
-                                            <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
-                                        </div>
-                                        <div class="product-price fe-product-price">
-                                            <div class="regular-price fe-regular-price">
-                                                <p>589000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="price-per fe-price-per">
-                                                <b>30</b>
-                                                <span>%</span>
-                                            </div>
-                                            <div class="discount-price fe-price">
-                                                <p>480000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="product-wish-btn"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-item fe-product-item">
-                                    <a href="#">
-                                        <div class="product-thum fe-product-thum">
-                                            <img src="../images/product_sample.jpg"
-                                                onerror="this.onerror=null; this.src='./images/no-image.jpg';">
-                                        </div>
-                                        <div class="product-info fe-product-info">
-                                            <p class="product-name fe-product-name">리네이처 안마의자</p>
-                                            <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
-                                        </div>
-                                        <div class="product-price fe-product-price">
-                                            <div class="regular-price fe-regular-price">
-                                                <p>589000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="price-per fe-price-per">
-                                                <b>30</b>
-                                                <span>%</span>
-                                            </div>
-                                            <div class="discount-price fe-price">
-                                                <p>480000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="product-wish-btn"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-item fe-product-item">
-                                    <a href="#">
-                                        <div class="product-thum fe-product-thum">
-                                            <img src="../images/sp19.png"
-                                                onerror="this.onerror=null; this.src='./images/no-image.jpg';">
-                                        </div>
-                                        <div class="product-info fe-product-info">
-                                            <p class="product-name fe-product-name">프리미엄 듀얼인버터 창문형 에어컨</p>
-                                            <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
-                                        </div>
-                                        <div class="product-price fe-product-price">
-                                            <div class="regular-price fe-regular-price">
-                                                <p>589000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="price-per fe-price-per">
-                                                <b>30</b>
-                                                <span>%</span>
-                                            </div>
-                                            <div class="discount-price fe-price">
-                                                <p>480000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="product-wish-btn"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-item fe-product-item">
-                                    <a href="#">
-                                        <div class="product-thum fe-product-thum">
-                                            <img src="../images/sp13.jpg"
-                                                onerror="this.onerror=null; this.src='./images/no-image.jpg';">
-                                        </div>
-                                        <div class="product-info fe-product-info">
-                                            <p class="product-name fe-product-name">파워클론 로봇청소기R 스테이션 물걸레형</p>
-                                            <span class="product-code fe-product-code">CRP-PHTR0610FSM</span>
-                                        </div>
-                                        <div class="product-price fe-product-price">
-                                            <div class="regular-price fe-regular-price">
-                                                <p>589000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="price-per fe-price-per">
-                                                <b>30</b>
-                                                <span>%</span>
-                                            </div>
-                                            <div class="discount-price fe-price">
-                                                <p>480000</p>
-                                                <span>원</span>
-                                            </div>
-                                            <div class="product-wish-btn"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -2453,24 +1789,7 @@
                 </div>
             </div>
         </section>
-
-        <section id="module" class="modume-event-col2">
-            <div class="fe-col2-area">
-                <div class="fe-col2-section">
-                    <div class="fe-col2">
-                        <div class="fe-head"></div>
-                        <div class="fe-content"></div>
-                    </div>
-                    <div class="fe-col2">
-                        <div class="fe-head"></div>
-                        <div class="fe-content"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="module" class="module-live">
+        <section id="module" class="module-banner" style="background-color:#f7f7f7;">
             <div class="banner-area">
                 <!-- 쿠쿠라이브 알림 배너영역 -->
                 <div class="cc-live-section">
@@ -2536,22 +1855,51 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="module" class="module-store">
-            <div class="storeInfo-area">
-                <div class="store-banner" style="background-image:url(./images/e-banner_4.png)">
-                    <a href="#">
-                        <div class="banner-item-txt">
-                            <p class="sub">내방객분들에게만 드리는 특별한 혜택</p>
-                            <h2 class="tit">오직 쿠쿠 스토어에서만!</h2>
+                <!-- 쿠쿠 기획전/이벤트 배너영역 -->
+                <div class="event-banner-section">
+                    <div class="event-banner-tit">
+                        기획전 / 이벤트
+                    </div>
+                    <div class="banner-event">
+                        <!-- 배너 가로 2열 형태 -->
+                        <div class="banner-item col-2" style="background-image:url(./images/e-banner_1.png)">
+                            <a>
+                                <div class="banner-item-txt">
+                                    <p class="sub">서큘레이터부터 제빙기까지, 25년형 계절가전 혜택</p>
+                                    <h2 class="tit">시원하게 여름대비</h2>
+                                </div>
+                            </a>
                         </div>
-                    </a>
+                        <div class="banner-item col-2" style="background-image:url(./images/e-banner_2.png)">
+                            <a>
+                                <div class="banner-item-txt">
+                                    <p class="sub">쿠쿠 공기청정기 신제품 행사 특가</p>
+                                    <h2 class="tit">감성부터 성능까지</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 배너 가로 1열 형태 -->
+                        <div class="banner-item col-1" style="background-image:url(./images/e-banner_3.png)">
+                            <a>
+                                <div class="banner-item-txt">
+                                    <p class="sub">쿠쿠 음식물처리기 신제품 행사 특가</p>
+                                    <h2 class="tit">감성부터 성능까지</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 배너 가로 1열 형태 -->
+                        <div class="banner-item col-1" style="background-image:url(./images/e-banner_4.png)">
+                            <a>
+                                <div class="banner-item-txt">
+                                    <p class="sub">내방객분들에게만 드리는 특별한 혜택</p>
+                                    <h2 class="tit">오직 쿠쿠 스토어에서만!</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
         <section id="module" class="module-payments">
             <div class="payments-area">
                 <div class="wrap">
@@ -2559,7 +1907,15 @@
                         결제 시 혜택
                     </div>
                     <div class="payments-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur libero massa, placerat vitae gravida ac, aliquet congue odio. Praesent venenatis sed mauris eu venenatis. Sed sodales, nisl ut pulvinar vehicula, purus nunc rhoncus nibh, mattis pretium augue odio at massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed blandit, nibh in pulvinar tempus, dui sem faucibus sem, ac malesuada odio dui sed felis. Nullam interdum quam sit amet diam tempus imperdiet. Quisque ac ex sed nunc dictum consequat at in arcu. Aenean elementum eget magna ac pretium. Proin elementum in dolor id consequat. Suspendisse luctus, enim ac sollicitudin tincidunt, mi neque varius dolor, vitae tempor lacus mauris non leo. Duis enim metus, dignissim eu felis id, rutrum placerat risus. Aenean a tellus non leo interdum fringilla ac id sapien. Vestibulum cursus tellus sapien, in condimentum enim iaculis quis. Donec viverra nibh eu gravida rutrum. Donec nec mi eget nibh suscipit maximus. Vivamus urna odio, dapibus vel sagittis sed, fermentum quis lorem.
+
+                        Nulla eget dapibus libero. Curabitur tristique hendrerit nulla sed rutrum. Nulla facilisi. Quisque ac sodales dolor, vel consequat nisi. Phasellus auctor vitae lacus sed scelerisque. Nullam sit amet malesuada enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tempus sapien non porttitor. Nulla luctus metus nec nulla aliquam placerat sit amet ullamcorper diam. Curabitur ut finibus metus.
                         
+                        Nam egestas, urna at accumsan iaculis, diam libero varius diam, sed elementum tellus ipsum a purus. Vivamus sed tincidunt augue, eu congue quam. Morbi at vestibulum enim, a viverra nibh. Nulla mollis lobortis nisl, eget tempus nulla semper sit amet. Ut eget dolor lacus. Vivamus mattis interdum tincidunt. Morbi eleifend, leo eget ultricies auctor, purus dolor rhoncus arcu, quis tristique orci lacus a nunc. Pellentesque scelerisque libero neque, sed elementum est feugiat sed. Duis vehicula consectetur molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a erat arcu. Nam blandit, nisl id placerat rhoncus, tortor ipsum imperdiet diam, quis vestibulum mauris lacus mattis augue. Phasellus vehicula nulla felis, nec interdum nisl rhoncus id. Fusce quis ultricies massa, viverra mollis erat. Sed vel tellus dignissim, fringilla massa sed, volutpat quam.
+                        
+                        Ut lacinia nulla massa. Phasellus venenatis vitae turpis rutrum vehicula. Ut iaculis egestas tristique. Phasellus venenatis sapien vel odio sollicitudin commodo. Ut venenatis id ligula lacinia molestie. Aenean sit amet dui lacinia turpis venenatis congue. Suspendisse pretium ante augue, quis iaculis ligula laoreet eget. Aliquam tortor nibh, pulvinar quis accumsan tincidunt, aliquet ac nulla. Sed ac neque ultrices, mattis ex vel, mattis neque. Quisque iaculis finibus interdum. Quisque rutrum mattis turpis, elementum efficitur felis scelerisque in. Praesent a dignissim nisi, non ornare mauris. Duis id risus id sem ullamcorper euismod eget eget leo. Aliquam vel mauris non turpis lacinia aliquet.
+                        
+                        Fusce varius dolor et pretium pulvinar. Donec vehicula elit quis imperdiet facilisis. Aenean consequat, magna eu malesuada laoreet, magna ligula egestas ipsum, in viverra felis leo et purus. Fusce pellentesque tellus et vehicula blandit. Aenean tristique eros vulputate nibh vestibulum, non interdum erat rutrum. Vivamus sed lacinia risus. Nulla tempus leo et enim efficitur, et elementum nisl pellentesque. Pellentesque fermentum venenatis est id rutrum. Mauris aliquet risus sed justo pharetra, ultricies ultrices metus fermentum. Vestibulum ligula dolor, fringilla nec arcu et, bibendum fringilla quam. Duis cursus consequat enim sit amet efficitur. Proin sodales pellentesque nulla eu malesuada. In cursus convallis laoreet.
                     </div>
                 </div>
             </div>
