@@ -92,7 +92,7 @@ button {
 .week-list li.week-item a {
     display: flex;
     width:calc(100% - 60px);
-    padding:30px;
+    padding:20px 30px;
     color:var(--color-mid-gray);
     cursor:pointer;
 }
@@ -520,7 +520,7 @@ button {
 }
 
 .fe-area .fe-head {
-    margin-bottom:60px;
+    
 }
 
 .fe-area .fe-head .fe-banner {
@@ -575,12 +575,14 @@ button {
     position:relative;
     width:100%;
     height: 100%;
+    color:var(--color-mid-gray);
     text-align:center;
     line-height: 50px;
     cursor: pointer;
 }
 
 .fe-category .fe-cate-tab .spec-option.on a {
+    color:var(--color-txt);
     height:calc(100% - 2px);
     border-bottom:2px solid var(--color-txt);
 }
@@ -620,11 +622,44 @@ button {
     height:100px;
     border-radius:var(--radius-mid);
     overflow:hidden;
+    filter: grayscale(1) opacity(0.5);
+}
+
+.fe-cate-track .fe-cate-item.on a .fe-cate-img {
+    border:2px solid var(--color-txt);
+    filter:none;
 }
 
 .fe-cate-track .fe-cate-item a .fe-cate-txt {
+    color:var(--color-darkgray);
     text-align:center;
     margin-top:10px;
+}
+
+.fe-cate-arrow {
+    width:100%;
+    position:relative;
+}
+
+.fe-cate-arrow > a {
+    position:absolute;
+    display:flex;
+    top:-50px;
+    width:28px;
+    height:28px;
+    background:#fff;
+    border-radius:50%;
+    box-shadow:0px 0px 14px rgba(0,0,0,0.15);
+    border:1px solid var(--color-line);
+    justify-content: center;
+    z-index:1;
+    cursor:pointer;
+}
+
+.fe-cate-arrow > a svg.icon {
+    width: 10px;
+    height: 10px;
+    align-self: center;
 }
 
 /* festa - section // product */
@@ -750,16 +785,16 @@ button {
 
 .fe-product-more {
     width:100%;
-    margin:60px 0px 20px;
+    margin:80px 0px 20px;
 }
 
 .fe-product-more .fe-more-btn {
     display:flex;
     min-width:300px;
     font-size:var(--font-normal);
-    border:1px solid var(--color-line);
-    border-radius: var(--radius-small);
-    padding:10px 20px;
+    border:1px solid var(--color-txt);
+    border-radius: var(--radius-big);
+    padding:15px 20px;
     justify-content: center;
     margin:0 auto;
     cursor: pointer;
@@ -777,7 +812,7 @@ button {
 /* festa - event banner // cc live */
 
 .module-banner {
-    padding:100px 0px;
+    padding:20px 0px 100px;
 }
 
 .banner-area {
@@ -785,27 +820,338 @@ button {
     margin:0px auto 0px;
 }
 
-.banner-area .cc-live-section {
+/* festa - event banner // evnet */
+
+.banner-area .event-banner-section {
     width:100%;
-    margin-bottom:100px;
 }
 
-.cc-live-section .cc-live-tit {
+.event-banner-section .event-banner-tit {
     font-size:var(--font-big);
     text-align:center;
     font-weight: 700;
     margin:20px 0px 40px;
 }
 
-.cc-live-tab {
+.banner-event {
     display:flex;
-    min-width:150px;
-    margin:0 auto 40px;
+    flex-wrap: wrap;
+    gap:40px;
+}
+
+.banner-item {
+    position:relative;
+    height:400px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    border-radius: var(--radius-mid);
+    overflow:hidden;
+}
+
+.banner-item a {
+    position:relative;
+    display:block;
+    width:100%;
+    height:100%;
+    cursor:pointer;
+}
+
+.banner-event .col-1 {
+    width:100%;
+}
+
+.banner-event .col-2 {
+    width:calc(100% / 2 - 20px);
+    height:300px;
+}
+
+.banner-item:before {
+    position:absolute;
+    content:"";
+    display: block;
+    width:100%;
+    height:100%;
+    background:linear-gradient(transparent, rgba(0,0,0,0.5));
+    left:0px;
+    bottom:0px;
+}
+
+.banner-item .banner-item-txt {
+    position:absolute;
+    width: calc(100% - 100px);
+    bottom:0px;
+    left:0px;
+    color:#fff;
+    padding:0px 50px 40px;
+}
+
+.banner-item .banner-item-txt .sub {
+    font-size:var(--font-normal);
+    margin-bottom:5px;
+}
+
+.banner-item .banner-item-txt .tit {
+    font-size:var(--font-big);
+}
+
+
+/* festa - timeDeal */
+
+.module-timeDeal {
+    background:#f7f7f7;
+}
+
+.fe-timeDeal-area {
+    width:1200px;
+    margin:0 auto;
+    padding:80px 0px;
+}
+
+.fe-timeDeal-area .fe-timeDeal-head {
+    width:100%;
+    margin:0px 0px 40px;
+}
+
+.fe-timeDeal-area .fe-timeDeal-head .fe-timeDeal-tit {
+    font-size:40px;
+    font-weight: 500;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.fe-timeDeal-tab {
+    display: flex;
+    gap:30px;
     justify-content: center;
+}
+
+.fe-timeDeal-tab a {
+    background:#fff;
+    min-width:180px;
+    border-radius: var(--radius-big);
+    padding:10px 20px;
+    border:1px solid var(--color-line);
+    text-align:center;
+    cursor: pointer;
+}
+
+.fe-timeDeal-tab a.on {
+    background:var(--color-txt);
+    color:#fff;
+}
+
+.fe-timeDeal-tab a svg.icon {
+    width:0px;
+    height:0px;
+}
+
+.fe-timeDeal-tab a.on svg.icon {
+    width:14px;
+    height:14px;
+    color:#fff;
+}
+
+.fe-timeDeal-content .timedeal-time {
+    padding:15px 0px 0px;
+    box-shadow: none;
+    border-radius: 0;
+    border:none;
+}
+
+.fe-timeDeal-content .timedeal-time .t-img .icon {
+    width:20px;
+    height:20px;
+}
+
+
+.module-timeDeal .timedeal-arrow .arrow-button {
+    top: 150px;
+}
+
+
+/* festa - cols product event */
+
+.modume-event-col2 {
+    width:100%;
+    padding:20px 0px 100px;
+}
+
+.fe-col2-area {
+    width:1200px;
+    margin:0 auto;
+}
+
+.fe-col2-section {
+    display:flex;
+    gap:30px;
+}
+
+.fe-col2-section .fe-col2 {
+    width:calc(100% / 2);
+}
+
+.fe-col2-section .fe-col2 .fe-col2-head {
+    margin-bottom:20px;
+}
+
+.fe-col2-head .fe-col2-img {
+    width:100%;
+    height:356px;
+    overflow:hidden;
+    border-radius: var(--radius-mid);
+}
+
+.fe-col2-head .fe-col2-img img {
+    display: block;
+    width:100%;
+    height:100%;
+}
+
+.fe-col2-content {
+    display:flex;
+    flex-direction: column;
+}
+
+.fe-col2-content .col-product-item {
+    display: flex;
+    gap:30px;
+    padding:20px 10px;
+    border-bottom:1px solid var(--color-line);
+}
+
+.col-product-item .col-product-thum {
+    width:174px;
+    height:174px;
+    border-radius: var(--radius-small);
+    overflow: hidden;
+}
+
+.col-product-item .col-product-thum > img {
+    display: block;
+    width:100%;
+    height:100%;
+}
+
+.col-product-item .col-product-info {
+    display: flex;
+    flex-direction: column;
+    width:calc(100% - 204px);
+    padding:10px 0px;
+}
+
+.col-product-item .col-product-info .col-product-name {
+    font-size: var(--font-mid);
+    font-weight: 500;
+    margin-bottom:5px;
+}
+
+.col-product-item .col-product-info .col-product-code {
+    color:var(--color-darkgray);
+    font-size:var(--font-small);
+}
+
+.col-product-info .col-product-price {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:auto;
+}
+
+.col-product-price > div {
+    display: flex;
+}
+
+.col-regular-price {
+    width:100%;
+    color:var(--color-mid-gray);
+    font-size: var(--font-small);
+    text-decoration: line-through;
+}
+
+.col-discount {
+    min-width:20px;
+    color:var(--color-primary);
+    font-size: var(--font-mid);
+    font-weight: 500;
+    margin-right:10px;
+}
+
+.col-discount span {
+    font-size:var(--font-normal);
+    font-weight: 300;
+    align-self: center;
+    margin-left:3px;
+}
+
+.col-price {
+    font-size:var(--font-mid);
+}
+
+.col-price > span {
+    font-size:var(--font-normal);
+    margin-left:3px;
+}
+
+.col-product-more {
+    width: clac(100% - 20px);
+    margin-top:30px;
+    padding:0px 10px;
+}
+
+.col-more-btn {
+    display:block;
+    font-size:var(--font-mid);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-big);
+    text-align:center;
+    line-height:50px;
+    cursor:pointer;
+    transition:all 0.4s;
+}
+
+.col-more-btn:hover {
+    background:#f7f7f7;
+    font-weight: 500;
+}
+
+
+/* festa - live */
+
+.module-live {
+    background:#f7f7f7;
+    padding:20px 0px 100px;
+}
+
+.live-area {
+    width:1200px;
+    margin:0 auto;
+}
+
+
+.cc-live-section {
+    width:100%;
+}
+
+.cc-live-head {
+    display: flex;
+    margin:80px 0px 40px;
+}
+
+.cc-live-head .cc-live-tit {
+    width:30%;
+    font-size:40px;
+    font-weight: 500;
+}
+
+.cc-live-head .cc-live-tab {
+    width:70%;
+    display:flex;
+    justify-content: flex-end;
+    margin-left:auto;
 }
 
 .cc-live-tab li {
     padding:0px 5px;
+    align-self: center;
 }
 
 .cc-live-tab li a {
@@ -895,109 +1241,162 @@ button {
 
 .cc-live-txt .cc-live-alarm {
     display:flex;
+    flex-wrap: wrap;
     position:absolute;
     right:50px;
     bottom:40px;
-    min-width:200px;
+    min-width:400px;
+    height:60px;
+    background:var(--color-txt);
+    color:#fff;
+    padding:0px 30px;
+    border-radius: 32px;
+    cursor:pointer;
+}
+
+.cc-live-alarm .cc-live-comment {
+    display: flex;
+    width:40%;
+}
+
+.cc-live-comment .cc-live-img {
+    display: flex;
+    color:#fff;
+    align-self:center;
+}
+
+.cc-live-comment .cc-live-img .icon {
+    width:18px;
+    height:18px;
+    align-self:center;
+}
+
+.cc-live-comment em {
+    font-size:var(--font-small);
+    align-self: center;
+    margin-left:15px;
+}
+
+.cc-live-alarm .cc-live-time {
+    width:60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cc-live-alarm .cc-live-time > div {
+    background:var(--color-line);
+    color:#272727;
+    border-radius: 2px;
+    font-size:28px;
+    font-weight: 700;
+    padding:0px 10px;
+    align-self: center;
+}
+
+.cc-live-alarm .cc-live-time > p {
+    font-size:var(--font-normal);
+    color:var(--color-mid-gray);
+    align-self:center;
+    margin:0px 5px;
+}
+
+
+/* festa - store */
+
+.module-store {
+    width:100%;
+}
+
+.storeInfo-area {
+    width:100%;
+}
+
+.store-banner {
+    position:relative;
+    width:100%;
+    height:400px;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+
+.store-banner::after {
+    position:absolute;
+    left:0;
+    top:0;
+    display: block;
+    content:"";
+    width:100%;
+    height:400px;
+    background:linear-gradient(180deg, transparent, rgba(0,0,0,0.5));
+}
+
+.store-banner .banner-wrap {
+    display:flex;
+    width:100%;
+    height:100%;
+}
+
+.store-banner .banner-wrap .banner-item-txt {
+    width:1200px;
+    margin:0 auto 50px;
+    position:relative;
+    color:#fff;
+    align-self:end;
+    z-index:1;
+}
+
+.store-banner .banner-wrap .banner-item-txt .sub {
+    width:80%;
+    font-size:var(--font-normal);
+    margin-bottom:10px;
+}
+
+.store-banner .banner-wrap .banner-item-txt .tit {
+    width:80%;
+    font-size:var(--font-big);
+    font-weight: 700;
+}
+
+.store-banner .banner-wrap .banner-btn {
+    display: flex;
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    min-width:150px;
     background:#fff;
-    padding:10px 20px;
+    color:var(--color-txt);
+    padding:10px 30px;
     border-radius: var(--radius-big);
     justify-content: center;
-    cursor:pointer;
+    z-index:1;
+    cursor: pointer;
 }
 
-.cc-live-txt .cc-live-alarm span {
+.store-banner .banner-wrap .banner-btn .icon {
+    width:24px;
+    height:24px;
+    align-self: center;
     margin-right:10px;
-    align-self:center;
 }
 
-.cc-live-txt .cc-live-alarm img {
-    align-self:center;
-}
-
-/* festa - event banner // evnet */
-
-.banner-area .event-banner-section {
-    width:100%;
-}
-
-.event-banner-section .event-banner-tit {
-    font-size:var(--font-big);
-    text-align:center;
-    font-weight: 700;
-    margin:20px 0px 40px;
-}
-
-.banner-event {
-    display:flex;
-    flex-wrap: wrap;
-    gap:40px;
-}
-
-.banner-item {
-    position:relative;
-    height:400px;
-    background-position: top center;
-    background-repeat: no-repeat;
-    border-radius: var(--radius-mid);
-    overflow:hidden;
-}
-
-.banner-item a {
-    position:relative;
-    display:block;
-    width:100%;
-    height:100%;
-    cursor:pointer;
-}
-
-.banner-event .col-1 {
-    width:100%;
-}
-
-.banner-event .col-2 {
-    width:calc(100% / 2 - 20px);
-}
-
-.banner-item:before {
-    position:absolute;
-    content:"";
-    display: block;
-    width:100%;
-    height:100%;
-    background:linear-gradient(transparent, rgba(0,0,0,0.5));
-    left:0px;
-    bottom:0px;
-}
-
-.banner-item .banner-item-txt {
-    position:absolute;
-    width: calc(100% - 100px);
-    bottom:0px;
-    left:0px;
-    color:#fff;
-    padding:0px 50px 40px;
-}
-
-.banner-item .banner-item-txt .sub {
-    font-size:var(--font-normal);
-    margin-bottom:5px;
-}
-
-.banner-item .banner-item-txt .tit {
-    font-size:var(--font-big);
-}
 
 /* festa - payments */
 
+.module-payments {
+    width:100%;
+    background:#f7f7f7;
+    padding:100px 0px;
+}
+
 .payments-area {
     width:1200px;
-    margin:100px auto;
+    margin:0 auto;
 }
 
 .payments-area .payments-tit {
-    font-size:var(--font-big);
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 500;
     text-align:center;
     margin-bottom:40px;
 }
