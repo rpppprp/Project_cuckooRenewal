@@ -29,6 +29,19 @@ button {
     margin:0 auto;
 }
 
+.wish-btn {
+    display:flex;
+    width:28px;
+    height:28px;
+    justify-content: center;
+}
+
+.wish-btn .icon {
+    align-self:center;
+    stroke: #ccc;
+    stroke-width: 2;
+}
+
 /* festa - top */
 
 .module-top {
@@ -539,11 +552,11 @@ button {
 }
 
 .fe-banner .fe-banner-wrap .fc-banner-txt {
-    font-size:24px;
+    font-size:var(--font-mid);
 }
 
 .fe-banner .fe-banner-wrap .fc-banner-tit {
-    font-size:56px;
+    font-size:40px;
 }
 
 /* festa - section // category */
@@ -1154,6 +1167,10 @@ button {
 
 .fe-col-arrow .fe-col-next {
     right:-50px;
+}
+
+.col-wish-btn {
+    position:absolute;
 }
 
 /* festa - live */
