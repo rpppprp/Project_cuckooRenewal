@@ -30,16 +30,49 @@ button {
 }
 
 .wish-btn {
+    position:relative;
     display:flex;
-    width:28px;
-    height:28px;
+    width:32px;
+    height:32px;
     justify-content: center;
+    cursor:pointer;
+    transition:all 0.5s;
 }
 
 .wish-btn .icon {
+    width:24px;
+    height:24px;
+    color:transparent;
     align-self:center;
     stroke: #ccc;
     stroke-width: 2;
+}
+
+.wish-btn span.wish-tooltip {
+    display: none;
+    position: absolute;
+    bottom: 120%; /* 버튼 위쪽으로 표시 */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* .wish-btn .wish-tooltip.on {
+    display:block;
+    opacity:1;
+    transform:translateY(0);
+} */
+
+.wish-btn.on .icon {
+    color:var(--color-primary);
+    stroke-width: 0;
 }
 
 /* festa - top */
@@ -516,8 +549,7 @@ button {
     display:block;
     width:300px;
     height:60px;
-    color:#fff;
-    background:var(--color-txt);
+    background:#fff;
     font-size:var(--font-mid);
     border-radius: var(--radius-big);
     cursor:pointer;
@@ -743,6 +775,7 @@ button {
 }
 
 .product-price {
+    position:relative;
     padding:0 10px;
     display:flex;
     flex-wrap: wrap;
@@ -820,6 +853,12 @@ button {
 
 .fe-product-more .fe-more-btn svg {
     align-self:center;
+}
+
+.product-wish-btn {
+    position:absolute;
+    bottom:0px;
+    right:0px;
 }
 
 /* festa - event banner // cc live */
@@ -968,25 +1007,235 @@ button {
     color:#fff;
 }
 
-
-.fe-timeDeal-content .timedeal-time {
-    padding:15px 0px 0px;
-    box-shadow: none;
-    border-radius: 0;
-    border:none;
+.fe-timedeal-wrap {
+    position:relative;
+    width:100%;
 }
 
-.fe-timeDeal-content .timedeal-time .t-img .icon {
+.fe-timeDeal-content .fe-timedeal-track {
+    width:100%;
+    overflow:hidden;
+}
+
+.fe-timeDeal-content .fe-timedeal-product a {
+    display: flex;
+    width:100%;
+    border-radius: var(--radius-mid);
+    overflow: hidden;
+}
+
+.fe-timedeal-item .fe-timedeal-thum {
+    width: 600px;
+    height:320px;
+    overflow: hidden;
+    background-color: #efefef;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.fe-timedeal-item .fe-timedeal-product-wrap {
+    background:#fff;
+    width:calc(100% - 600px);
+    display: flex;
+    flex-direction: column;
+    padding:40px;
+}
+
+.fe-timedeal-item .fe-timedeal-time {
+    display:flex;
+    flex-direction: row;
+    padding:0px 0px 0px;
+    margin-bottom:20px;
+}
+
+.fe-timedeal-item .fe-timedeal-time .t-img {
+    display: flex;
+    margin-right:15px;
+    align-self:center;
+    color:var(--color-primary);
+}
+
+.fe-timedeal-item .fe-timedeal-time .t-img > .icon {
+    fill:var(--color-secondary);
+    align-self: center;
+}
+
+.fe-timedeal-item .fe-timedeal-time .t-time {
+    font-size: 24px;
+    font-weight: 700;
+    display:flex;
+    align-self:center;
+    margin-right:10px;
+    font-family: var(--font);
+    height: 48px;
+}
+
+.fe-timedeal-time .t-time li {
+    align-self:center;
+    display:flex;
+}
+
+.fe-timedeal-time .t-time li p.time-end {
+    color:var(--color-dark);
+    font-weight: 700;
+}
+
+.fe-timedeal-time .t-time li.t-time_day {
+    margin-right:10px;
+}
+
+.fe-timedeal-time .t-time li.t-time_day span {
+    align-self:flex-end;
+    font-weight:500;
+    font-size: var(--font-mid);
+    margin:0 5px 2px 5px;
+}
+
+.fe-timedeal-time .t-time li.t-time_day:after {
+    display:none;
+}
+
+.fe-timedeal-time .t-time li:after {
+    content:":";
+    font-size:var(--font-normal);
+    margin:0 10px;
+    align-self:center;
+}
+
+.fe-timedeal-time .t-time li:last-child::after {
+    display:none;
+}
+
+.fe-timeDeal-content .fe-timedeal-time .t-img .icon {
     width:20px;
     height:20px;
 }
 
 
-.module-timeDeal .timedeal-arrow .arrow-button {
+.fe-timedeal-product-info {
+    display: flex;
+    flex-direction: column;
+    margin-top:10px;
+    gap:5px;
+}
+
+.fe-timedeal-product-info .t-product-name {
+    font-size:var(--font-mid);
+    font-weight: 500;
+}
+
+.fe-timedeal-product-info .t-product-code {
+    color: var(--color-darkgray);
+    font-weight: 500;
+    font-size: var(--font-small);
+}
+
+.fe-timedeal-price-wrap {
+    display: flex;
+    margin-top:auto;
+}
+
+.fe-timedeal-price-wrap .t-txt {
+    font-size: var(--font-mid);
+    font-weight: 500;
+    margin-right: 10px;
+    align-self: center;
+}
+
+.fe-timedeal-price-wrap .fe-timedeal-price {
+    display: flex;
+    font-size: var(--font-big);
+}
+
+.fe-timedeal-price .discount-price,
+.fe-timedeal-price .regular-price {
+    display: flex;
+}
+
+.fe-timedeal-price .discount-price {
+    color: var(--color-secondary);
+    font-family: var(--font);
+    font-weight: 800;
+}
+
+.fe-timedeal-price .discount-price > span {
+    font-size: var(--font-mid);
+    margin-left: 3px;
+    align-self: center;
+    font-weight: 500;
+}
+
+.fe-timedeal-price .regular-price {
+    display: flex;
+    color: var(--color-mid-gray);
+    font-family: var(--font);
+    font-size: var(--font-small);
+    align-self: center;
+    margin: 7px 0px 5px 10px;
+}
+
+.fe-timedeal-price .regular-price .price {
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.fe-timedeal-price .regular-price > em {
+    margin-left:1px;
+    text-decoration: line-through;
+}
+
+
+.module-timeDeal .fe-timedeal-arrow .arrow-button {
     top: 150px;
     z-index:1 !important;
 }
 
+.fe-timedeal-pager {
+    width: calc(100% - 20%);
+    margin: 20px auto 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+
+.fe-timedeal-pager .slick-dots {
+    display:flex;
+    position:static;
+    margin:0 auto;
+    justify-content: center;
+}
+
+.fe-timedeal-pager .slick-dots li {
+    width:10px;
+    height:10px;
+    background:var(--color-line);
+    border-radius: var(--radius-small);
+    transition: width 0.3s;
+    margin:0 2px;
+}
+
+.fe-timedeal-pager .slick-dots li.slick-active {
+    width:20px;
+    background:var(--color-dark);
+}
+
+.fe-timedeal-pager .slick-dots li button {
+    width:10px;
+    height:10px;
+    margin:0 2px;
+    cursor:pointer;
+}
+
+.fe-timedeal-pager .slick-dots li button:before {
+    width:0px;
+    height:0px;
+    display: none;
+}
+
+.fe-timedeal-arrow > a {
+    top: 255px;
+}
 
 /* festa - cols product event */
 
@@ -1057,8 +1306,7 @@ button {
 }
 
 .col-product-item .col-product-info {
-    display: flex;
-    flex-direction: column;
+    position:relative;
     width:calc(100% - 204px);
     padding:10px 0px;
 }
@@ -1171,6 +1419,8 @@ button {
 
 .col-wish-btn {
     position:absolute;
+    right:0px;
+    bottom:0px;
 }
 
 /* festa - live */
