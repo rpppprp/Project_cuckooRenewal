@@ -170,14 +170,17 @@ $(function(){
             const days = Math.floor(remaining / live_day);
             const hours = Math.floor((remaining % live_day) / live_hour);
             const minutes = Math.floor((remaining % live_hour) / live_minute);
+            const seconds = Math.floor((remaining % live_minute) / live_second);
 
             _ccLiveElement.find('.cc-live-time').html(`
                 <div class="days">${days}</div>
                 <p>일</p>
                 <div class="hours">${hours}</div>
                 <p>시</p>
-                <div class="seconds">${minutes}</div>
+                <div class="minutes">${minutes}</div>
                 <p>분</p>
+                <div class="seconds">${seconds}</div>
+                <p>초</p>
             `);
         };
 
