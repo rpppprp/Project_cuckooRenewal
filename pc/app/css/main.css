@@ -1,0 +1,75 @@
+
+/* font */
+@import url(./pretendard.css);
+
+/* root */
+:root {
+    /* font-size */
+    --font : 'Pretendard';
+    --font-x-small : 12px;
+    --font-small : 14px;
+    --font-regular : 16px;
+    --font-menium : 18px;
+    --font-large : 20px;
+    --font-x-large : 24px;
+    /* color-pallette */
+    --color-txt : #272727;
+    --color-black : #312F2D;
+    --color-white : #fff;
+    --color-dark : #585856;
+    --color-dark-gray : #767676;
+    --color-mid-gray : #999999;
+    --color-gray : #dadada;
+    --color-light-gray : #f7f7f7;
+    --color-line : #eaeaea;
+    --color-primary : #FF5B53;
+    --color-secondary : #F3332B;
+    /* radius-size */
+    --radius-xs : 4px;
+    --radius-s : 8px;
+    --radius-m : 16px;
+    --radius-l : 24px;
+    --radius-xl : 32px;
+    /* icon-size */
+    --icon-s : 18px;
+    --icon-m : 24px;
+    --icon-l : 32px;
+}
+
+/* common */
+
+html,
+body {
+    background:var(--color-white);
+    font-family: var(--font), sans-serif;
+    font-size: var(--font-regular);
+    letter-spacing: -0.25px;
+    color: var(--color-txt);
+    font-weight: 300;
+    line-height:1.5;
+}
+
+a {
+	color:var(--color-txt);
+}
+
+
+.icon-s {
+    width:var(--icon-s);
+    height:var(--icon-s);
+}
+
+.icon-m {
+    width:var(--icon-m);
+    height:var(--icon-m);
+}
+
+.icon-l {
+    width:var(--icon-l);
+    height:var(--icon-l);
+}
+
+.tit {
+    font-size:var(--font-menium);
+    font-weight: 700;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>EasyView</title>
+        <!-- StyleSheets -->
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <!-- Script -->
+        <script src="./js/jquery-1.8.2.min.js"></script>
+    </head>
+    <body style="background:#f7f7f7">
+
+        <div class="easyView">
+            <div class="easyView-gnb">
+
+                <h1>GNB</h1>
+                <header class="header">
+                    <nav class="main-gnb gnb">
+                        <div class="container">
+                            <div class="gnb-left">
+                                <a href="/" class="logo">
+                                    <img src="./images/cuckoo_logo.svg">
+                                </a>
+                            </div>
+                            <div class="gnb-right">
+                                <a class="menu">
+                                    <svg class="icon-m">
+                                        <use xlink:href="./images/icons/spriteImg.svg#mypage" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+    
+                <h1>Sub - GNB</h1>
+                <nav class="sub-gnb gnb">
+                    <div class="container">
+                        <div class="gnb-left">
+                            <a class="back-icon">
+                                <svg class="icon-m">
+                                    <use xlink:href="./images/icons/spriteImg.svg#left-arrow" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="gnb-right">
+                            <a class="menu">
+                                <svg class="icon-m">
+                                    <use xlink:href="./images/icons/spriteImg.svg#mypage" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+    
+                <h1>Modal - GNB</h1>
+                <nav class="modal-gnb gnb">
+                    <div class="container">
+                        <div class="gnb-left">
+                            <a class="home-icon">
+                                <svg class="icon-m">
+                                    <use xlink:href="./images/icons/spriteImg.svg#home" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="gnb-right">
+                            <a class="close">
+                                <svg class="icon-m">
+                                    <use xlink:href="./images/icons/spriteImg.svg#close" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+
+            <div class="easyView-navigation">
+                <nav class="bottom-nav">
+                    <ul class="container">
+                        <li class="bottom-home" th:classappend="${selectedIndex} == '1' ? 'on' : ''">
+                            <a>
+                                <svg class="icon-m">
+                                    <use xlink:href="./images/icons/spriteImg.svg#home" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="bottom-card" th:classappend="${selectedIndex} == '2' ? 'on' : ''">
+                            <a>
+                                <svg class="icon-m">
+                                    <use xlink:href="./images/icons/spriteImg.svg#card" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="bottom-rental" th:classappend="${selectedIndex} == '3' ? 'on' : ''">
+                            <a>
+                                <svg class="icon-m">
+                                    <use xlink:href="./images/icons/spriteImg.svg#config" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="bottom-mypage" th:classappend="${selectedIndex} == '4' ? 'on' : ''">
+                            <a>
+                                <svg class="icon-m">
+                                    <use xlink:href="./images/icons/spriteImg.svg#mypage" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="bottom-menu">
+                            <a href="javascript:popAllMenu.open();">
+                                <svg class="icon-m">
+                                    <use xlink:href="./images/icons/spriteImg.svg#burger" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="easyView-icon">
+                
+                <div class=""></div>
+
+            </div>
+
+            <div class="easyview-card">
+
+                
+            </div>
+        </div>
+
+    </body>
+</html>
