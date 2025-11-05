@@ -8,8 +8,15 @@
         <link rel="stylesheet" href="./css/main.css">
         <!-- Script -->
         <script src="./js/jquery-1.8.2.min.js"></script>
+        <style>
+            .easyView {
+                width:750px;
+                margin:40px auto;
+            }
+
+        </style>
     </head>
-    <body style="background:#f7f7f7">
+    <body>
 
         <div class="easyView">
             <div class="easyView-gnb">
@@ -17,7 +24,7 @@
                 <h1>GNB</h1>
                 <header class="header">
                     <nav class="main-gnb gnb">
-                        <div class="container">
+                        <div class="wrap">
                             <div class="gnb-left">
                                 <a href="/" class="logo">
                                     <img src="./images/cuckoo_logo.svg">
@@ -25,7 +32,7 @@
                             </div>
                             <div class="gnb-right">
                                 <a class="menu">
-                                    <svg class="icon-m">
+                                    <svg class="icon-md">
                                         <use xlink:href="./images/icons/spriteImg.svg#mypage" />
                                     </svg>
                                 </a>
@@ -35,38 +42,52 @@
                 </header>
     
                 <h1>Sub - GNB</h1>
-                <nav class="sub-gnb gnb">
-                    <div class="container">
-                        <div class="gnb-left">
-                            <a class="back-icon">
-                                <svg class="icon-m">
-                                    <use xlink:href="./images/icons/spriteImg.svg#left-arrow" />
-                                </svg>
-                            </a>
+                <header class="header">
+                    <nav class="sub-gnb gnb">
+                        <div class="wrap">
+                            <div class="gnb-left">
+                                <a class="back-icon">
+                                    <svg class="icon-md">
+                                        <use xlink:href="./images/icons/spriteImg.svg#left-arrow" />
+                                    </svg>
+                                </a>
+                                <h1 class="sub-location">
+                                    위치
+                                </h1>
+                            </div>
+                            <div class="gnb-right">
+                                <a class="menu">
+                                    <svg class="icon-md">
+                                        <use xlink:href="./images/icons/spriteImg.svg#mypage" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="gnb-right">
-                            <a class="menu">
-                                <svg class="icon-m">
-                                    <use xlink:href="./images/icons/spriteImg.svg#mypage" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </nav>
+                    </nav>
+                    <div class="sub-gnb-tab">
+                        <ul class="tab-track">
+                            <li class="tab-item"><a>관리카드</a></li>
+                            <li class="tab-item"><a>내 렌탈 정보</a></li>
+                            <li class="tab-item"><a>제품 정보</a></li>
+                            <li class="tab-item"><a>고객지원</a></li>
+                            <li class="tab-item"><a>소모폼 구매</a></li>
+                            <li class="tab-item"><a>AS신청</a></li>
+                        </ul>
+                    </div>     
+                </header>
+
     
                 <h1>Modal - GNB</h1>
                 <nav class="modal-gnb gnb">
-                    <div class="container">
+                    <div class="wrap">
                         <div class="gnb-left">
-                            <a class="home-icon">
-                                <svg class="icon-m">
-                                    <use xlink:href="./images/icons/spriteImg.svg#home" />
-                                </svg>
-                            </a>
+                            <h1 class="modal-location">
+                                위치
+                            </h1>
                         </div>
                         <div class="gnb-right">
                             <a class="close">
-                                <svg class="icon-m">
+                                <svg class="icon-md">
                                     <use xlink:href="./images/icons/spriteImg.svg#close" />
                                 </svg>
                             </a>
@@ -74,42 +95,64 @@
                     </div>
                 </nav>
 
+
+                <h1>Mypage - GNB</h1>
+                <nav class="mypage-gnb gnb">
+                    <div class="wrap">
+                        <div class="gnb-left">
+                            <a class="home-icon">
+                                <svg class="icon-md">
+                                    <use xlink:href="./images/icons/spriteImg.svg#home" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="gnb-right">
+                            <a class="close">
+                                <svg class="icon-md">
+                                    <use xlink:href="./images/icons/spriteImg.svg#close" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </nav> 
+
             </div>
 
             <div class="easyView-navigation">
+
                 <nav class="bottom-nav">
-                    <ul class="container">
+                    <ul class="wrap">
                         <li class="bottom-home" th:classappend="${selectedIndex} == '1' ? 'on' : ''">
                             <a>
-                                <svg class="icon-m">
+                                <svg class="icon-md">
                                     <use xlink:href="./images/icons/spriteImg.svg#home" />
                                 </svg>
                             </a>
                         </li>
                         <li class="bottom-card" th:classappend="${selectedIndex} == '2' ? 'on' : ''">
                             <a>
-                                <svg class="icon-m">
+                                <svg class="icon-md">
                                     <use xlink:href="./images/icons/spriteImg.svg#card" />
                                 </svg>
                             </a>
                         </li>
                         <li class="bottom-rental" th:classappend="${selectedIndex} == '3' ? 'on' : ''">
                             <a>
-                                <svg class="icon-m">
+                                <svg class="icon-md">
                                     <use xlink:href="./images/icons/spriteImg.svg#config" />
                                 </svg>
                             </a>
                         </li>
                         <li class="bottom-mypage" th:classappend="${selectedIndex} == '4' ? 'on' : ''">
                             <a>
-                                <svg class="icon-m">
+                                <svg class="icon-md">
                                     <use xlink:href="./images/icons/spriteImg.svg#mypage" />
                                 </svg>
                             </a>
                         </li>
                         <li class="bottom-menu">
                             <a href="javascript:popAllMenu.open();">
-                                <svg class="icon-m">
+                                <svg class="icon-md">
                                     <use xlink:href="./images/icons/spriteImg.svg#burger" />
                                 </svg>
                             </a>
@@ -119,17 +162,215 @@
 
             </div>
 
-            <div class="easyView-icon">
-                
-                <div class=""></div>
+            <div class="easyView-container">
+
+                <div class="container"></div>
+
+                <div class="modal-container"></div>
 
             </div>
+
+            <div class="easyView-tab">
+
+                <ul class="sub-tab cols-2">
+                    <li class="sub-item">
+                        <a>
+                            <svg class="icon-sm">
+                                <use xlink:href="./images/icons/spriteImg.svg#chk" />
+                            </svg>
+                            <p class="txt">제목1</p>
+                        </a>
+                    </li>
+                    <li class="sub-item">
+                        <a>
+                            <svg class="icon-sm">
+                                <use xlink:href="./images/icons/spriteImg.svg#chk" />
+                            </svg>
+                            <p class="txt">제목2</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="sub-tab cols-3">
+                    <li class="sub-item">
+                        <a>
+                            <svg class="icon-sm">
+                                <use xlink:href="./images/icons/spriteImg.svg#chk" />
+                            </svg>
+                            <p class="txt">제목1</p>
+                        </a>
+                    </li>
+                    <li class="sub-item">
+                        <a>
+                            <svg class="icon-sm">
+                                <use xlink:href="./images/icons/spriteImg.svg#chk" />
+                            </svg>
+                            <p class="txt">제목2</p>
+                        </a>
+                    </li>
+                    <li class="sub-item">
+                        <a>
+                            <svg class="icon-sm">
+                                <use xlink:href="./images/icons/spriteImg.svg#chk" />
+                            </svg>
+                            <p class="txt">제목3</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="cate-tab support-fnq-tab">
+                    <li class="cate-tab-item fnq-item"><a>전체</a></li>
+                    <li class="cate-tab-item fnq-item"><a>제품문의</a></li>
+                    <li class="cate-tab-item fnq-item"><a>a/s관련</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="easyView-title">
+
+                <div class="title-wrap">
+                    <h1 class="tit">
+                        제목1
+                    </h1>
+                </div>
+                
+                <div class="sub-title-wrap">
+                    <h1 class="tit">
+                        제목1
+                    </h1>
+                </div>
+
+                <div class="sub-head-area">
+                    <h1 class="tit">
+                        서브타이틀
+                    </h1>
+                    <p class="txt">
+                        서브텍스트1 서브텍스트2 서브텍스트3 서브텍스트4
+                    </p>
+                </div>
+
+            </div>
+
 
             <div class="easyview-card">
 
-                
+                <div class="product-card">
+                    <div class="product-card-thum"></div>
+                    <div class="product-card-content">
+                        <div class="product-card-badge">
+                            <a class="badge-primary"></a>
+                            <a class="badge-ragular"></a>
+                        </div>
+                        <div class="product-card-name">
+                            <h1 class="name">
+                                상품명
+                            </h1>
+                            <div class="code-name">
+                                코드넘버
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="gnb-member-card">
+                    <div class="gnb-member-card-info">
+                        <div class="member-name">
+                            <h1 class="name">이름</h1>
+                        </div>
+                        <p class="member-code">코드</p>
+                    </div>
+                    <div class="gnb-member-card-icon">
+                        <a class="rounded-icon bg-w">
+                            <svg class="icon-sm">
+                                <use xlink:href="./images/icons/spriteImg.svg#chk" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mypage-member-card">
+                    <div class="mypage-member-card-info">
+                        <div class="member-name">
+                            <h1 class="name">이름</h1>
+                        </div>
+                        <p class="member-code">코드</p>
+                    </div>
+                </div>
+
+                <div class="manage-card">
+                    <div class="manage-card-info">
+                        <div class="manage-card-txt">
+                            <div class="greetings">
+                                일상을<br>쿠쿠하세요
+                            </div>
+                            <div class="manager">강남구 담당 ㅇㅇㅇ</div>
+                        </div>
+                        <div class="manage-card-img">
+                            <img src="/mo/images/easyview/cuckoo_service.svg">
+                        </div>
+                    </div?>
+                    <div class="manage-card-date">
+                        <svg class="icon-sm">
+                            <use xlink:href="/mo/images/easyview/icons/spriteImg.svg#calendar" />
+                        </svg>
+                        <div class="date">
+                            <p class="subtit">방문 예정일</p>
+                            <span class="txt">2025년 10월 28일</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
+
+
+            <div class="easyView-table">
+
+                <div class="info-table">
+                    <div class="info-rows">
+                        <div class="info-head">고객코드</div>
+                        <div class="info-ctn">2024*4508350</div>
+                    </div>
+                    <div class="info-rows">
+                        <div class="info-head">고객성명</div>
+                        <div class="info-ctn">박*호</div>
+                    </div>
+                    <div class="info-rows">
+                        <div class="info-head">제품명</div>
+                        <div class="info-ctn">쿠쿠 정수기 스팀100</div>
+                    </div>
+                    <div class="info-rows">
+                        <div class="info-head">관리유형</div>
+                        <div class="info-ctn">택배</div>
+                    </div>
+                    <div class="info-rows">
+                        <div class="info-head">관리주기</div>
+                        <div class="info-ctn">6개월</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="easyView-buttons">
+
+                <button class="btn wide-btn bg-b size-lg">
+                    <span class="txt">버튼</span>
+                </button>
+
+                <button class="btn bg-w wide-btn rounded-lg size-rg">
+                    <span class="txt">버튼</span>
+                </button>
+
+                <button class="btn bg-b rounded-sm">
+                    <span class="txt">버튼</span>
+                </button>
+
+            </div>
+
+
+        </div?>
 
     </body>
 </html>
