@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>EasyView</title>
+        <!-- StyleSheets -->
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <!-- Script -->
+        <script src="./js/jquery-1.8.2.min.js"></script>
+        <style>
+            .easyView {
+                width:750px;
+                margin:40px auto;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="easyView">
+
+            <!-- mobile menu -->
+            <div class="mobile-menu">
+                <header class="mobile-header">
+                    <div class="wrap">
+                        <div class="mo-header-left">
+                            <a class="home-btn">
+                                <svg class="icon-md">
+                                    <use xlink:href="/mo/images/easyview/icons/spriteImg.svg#home" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="mo-header-right">
+                            <a class="close-btn">
+                                <svg class="icon-md">
+                                    <use xlink:href="/mo/images/easyview/icons/spriteImg.svg#close" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <div class="modal-container">
+
+                    <section class="mobile-user-area">
+                        <div class="wrap">
+                            <div class="mobile-user-card bg-g">
+                                <div class="mo-ueser-info">
+                                    <div class="user-name">
+                                        <p class="name">CUCKOO</p>
+                                        <span>님</span>
+                                    </div>
+                                    <div class="user-code">
+                                        2024*4508350
+                                    </div>
+                                </div>
+                                <div class="mo-mypage-arrow">
+                                    <a class="btn bg-w rounded-md">
+                                        <svg class="icon-sm">
+                                            <use xlink:href="/mo/images/easyview/icons/spriteImg.svg#right" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mobile-lnb-area">
+                        <div class="wrap">
+                            <div class="mo-lnb-rental">
+                                <div class="sub-title-wrap">
+                                    <h1 class="sub-tit">렌탈 관리</h1>
+                                </div>
+                                <ul class="mo-lnb-list">
+                                    <li class="mo-lnb-link"><a href="/easyview/management/01">관리카드</a></li>
+                                    <li class="mo-lnb-link"><a href="/easyview/rental/">내 렌탈 정보</a></li>
+                                    <li class="mo-lnb-link"><a href="/easyview/product/">제품 안내</a></li>
+                                </ul>
+                            </div>
+                            <div class="mo-lnb-product">
+                                <div class="sub-title-wrap">
+                                    <h1 class="sub-tit">제품 관리</h1>
+                                </div>
+                                <ul class="mo-lnb-list">
+                                    <li class="mo-lnb-link"><a href="/easyview/support/01">고객 지원</a></li>
+                                    <li class="mo-lnb-link"><a href="/easyview/supplies/">소모품 구매</a></li>
+                                    <li class="mo-lnb-link"><a href="/easyview/request/">AS 신청</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="line"></div>
+                    <section class="mobile-cs-area">
+                        <div class="wrap">
+                            <div class="title-wrap">
+                                <h1 class="tit">
+                                    도움이 필요하신가요?
+                                </h1>
+                            </div>
+                            <div class="mobile-cs-wrap">
+                                <div class="info-table">
+                                    <div class="info-rows">
+                                        <div class="info-head">쿠쿠몰</div>
+                                        <div class="info-ctn"><a href="tel:080-720-9999">080-720-9999</a></div>
+                                    </div>
+                                    <div class="info-rows">
+                                        <div class="info-head">렌탈문의</div>
+                                        <div class="info-ctn"><a href="tel:1577-0010">1577-0010</a></div>
+                                    </div>
+                                    <div class="info-rows">
+                                        <div class="info-head">서비스 문의</div>
+                                        <div class="info-ctn"><a href="tel:1588-8899">1588-8899</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-cs-info">
+                                <span class="icon">
+                                    <svg class="icon-sm">
+                                        <use xlink:href="/mo/images/easyview/icons/spriteImg.svg#clock" />
+                                    </svg>
+                                </span>
+                                <p class="txt">
+                                    운영시간 : 9시 - 18시 (주말, 공휴일 제외)
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+            <!-- AS신청내역 -->
+            <div class="modal-wrap">
+                <header class="modal-header">
+                    <div class="wrap">
+                        <div class="modal-header-title">
+                            AS 신청 내역
+                        </div>
+                        <div class="modal-header-close">
+                            <a class="close-btn">
+                                <svg class="icon-md">
+                                    <use xlink:href="/mo/images/easyview/icons/spriteImg.svg#close" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="modal-container">
+                    <section class="as-history-area">
+                        <div class="wrap">
+                            <div class="as-history-wrap">
+                                <div class="as-history-item">
+                                    <div class="info-table">
+                                        <div class="info-rows">
+                                            <div class="info-head">처리상태</div>
+                                            <div class="info-ctn"><span class="in_progress">처리중</span></div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">제품군</div>
+                                            <div class="info-ctn">밥솥</div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">모델명</div>
+                                            <div class="info-ctn">트윈프레셔 미니 전기압력밥솥</div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">서비스 신청일</div>
+                                            <div class="info-ctn">2025-10-10</div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">서비스 예정일</div>
+                                            <div class="info-ctn">2025-10-17 13:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="as-history-item">
+                                    <div class="info-table">
+                                        <div class="info-rows">
+                                            <div class="info-head">처리상태</div>
+                                            <div class="info-ctn"><span class="confirm">진행완료</span></div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">제품군</div>
+                                            <div class="info-ctn">밥솥</div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">모델명</div>
+                                            <div class="info-ctn">트윈프레셔 미니 전기압력밥솥</div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">서비스 신청일</div>
+                                            <div class="info-ctn">2025-10-10</div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">서비스 예정일</div>
+                                            <div class="info-ctn">2025-10-17 13:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <!-- AS신청내역 -->
+            <div class="modal-wrap">
+                <header class="modal-header">
+                    <div class="wrap">
+                        <div class="modal-header-title">
+                            AS 신청 내역
+                        </div>
+                        <div class="modal-header-close">
+                            <a class="close-btn">
+                                <svg class="icon-md">
+                                    <use xlink:href="/mo/images/easyview/icons/spriteImg.svg#close" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="modal-container">
+                    <section class="as-history-area">
+                        <div class="wrap">
+                            <!-- 신청내역 없을때 -->
+                            <div class="as-hisrory-none">
+                                <div class="none-txt">
+                                    A/S 이용 내역이 없습니다.
+                                </div>
+                            </div>
+                            <!-- 신청내역 테이블 // 내용 있을때 -->
+                            <div class="as-history-wrap">
+                                <div class="as-history-item">
+                                    <div class="info-table">
+                                        <div class="info-rows">
+                                            <div class="info-head">처리상태</div>
+                                            <div class="info-ctn"><span class="in_progress">진행중</span></div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">제품군</div>
+                                            <div class="info-ctn">밥솥</div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">모델명</div>
+                                            <div class="info-ctn">트윈프레셔 미니 전기압력밥솥</div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">서비스 신청일</div>
+                                            <div class="info-ctn">2025-10-10</div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">서비스 예정일</div>
+                                            <div class="info-ctn">2025-10-17 13:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="as-history-item">
+                                    <div class="info-table">
+                                        <div class="info-rows">
+                                            <div class="info-head">처리상태</div>
+                                            <div class="info-ctn"><span class="confirm">완료</span></div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">제품군</div>
+                                            <div class="info-ctn">밥솥</div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">모델명</div>
+                                            <div class="info-ctn">트윈프레셔 미니 전기압력밥솥</div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">서비스 신청일</div>
+                                            <div class="info-ctn">2025-10-10</div>
+                                        </div>
+                                        <div class="info-rows">
+                                            <div class="info-head">서비스 예정일</div>
+                                            <div class="info-ctn">2025-10-17 13:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
