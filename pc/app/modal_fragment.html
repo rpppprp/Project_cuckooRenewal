@@ -1,4 +1,4 @@
-<!-- fragments/sheet-content-a.html -->
+<!-- 점검이력 / 바텀시트 -->
 <div th:fragment="fragment">
 	<div class="modeal-container">
 		<section class="bt-histofy-area">
@@ -28,6 +28,159 @@
 	                        <div class="info-ctn">없음</div>
 	                    </div>
 	                </div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+
+
+
+<!-- as신청 / 약관신청 -->
+<div th:fragment="fragment">
+	<div class="modeal-container">
+		<section class="bt-terms-area">
+			<div class="wrap">
+				<div class="bt-terms-title">
+					<div class="tit">
+						약관내용에 동의해주세요.
+					</div>
+				</div>
+				<div class="bt-terms-btn-wrap">
+					<input type="checkbox" id="all-terms-check" class="all-terms">
+					<label for="all-terms-check" class="btn wide-btn">
+						<span class="icon">
+							<svg class="icon-sm">
+								<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#chk" />
+							</svg>
+						</span>
+						<p class="txt">네, 모두 동의합니다.</p>
+					</label>
+				</div>
+				<div class="bt-terms-input-wrap">
+					<div class="bt-terms-input-item">
+						<input type="checkbox" class="input-chk" id="terms01">
+						<label for="terms01">
+							<span class="terms-chk rounded-sm btn">
+								<svg class="icon-sm">
+									<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#chk" />
+								</svg>
+							</span>
+							<p class="txt">개인정보 수집 및 이용 동의 (필수)</p>
+						</label>
+						<a class="terms-more">
+							<svg class="icon-sm">
+								<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#right" />
+							</svg>
+						</a>
+					</div>
+					<div class="bt-terms-input-item">
+						<input type="checkbox" class="input-chk" id="terms02">
+						<label for="terms02">
+							<span class="terms-chk rounded-sm btn">
+								<svg class="icon-sm">
+									<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#chk" />
+								</svg>
+							</span>
+							<p class="txt">마케팅 활용을 위한 개인 정보 수집/이용동의 (선택)</p>
+						</label>
+						<a class="terms-more">
+							<svg class="icon-sm">
+								<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#right" />
+							</svg>
+						</a>
+					</div>
+					<div class="bt-terms-input-item">
+						<input type="checkbox" class="input-chk" id="terms03">
+						<label for="terms03">
+							<span class="terms-chk rounded-sm btn">
+								<svg class="icon-sm">
+									<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#chk" />
+								</svg>
+							</span>
+							<p class="txt">마케팅정보수신동의 (선택)</p>
+						</label>
+						<a class="terms-more">
+							<svg class="icon-sm">
+								<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#right" />
+							</svg>
+						</a>
+					</div>
+					<div class="bt-terms-input-item">
+						<input type="checkbox" class="input-chk" id="terms04">
+						<label for="terms04">
+							<span class="terms-chk rounded-sm btn">
+								<svg class="icon-sm">
+									<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#chk" />
+								</svg>
+							</span>
+							<p class="txt">
+								개인정보 제3자 제공동의 (선택)
+							</p>
+						</label>
+						<a class="terms-more">
+							<svg class="icon-sm">
+								<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#right" />
+							</svg>
+						</a>
+					</div>
+					<div class="bt-terms-input-item">
+						<input type="checkbox" class="input-chk" id="terms05">
+						<label for="terms05">
+							<span class="terms-chk rounded-sm btn">
+								<svg class="icon-sm">
+									<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#chk" />
+								</svg>
+							</span>
+							<p class="txt">
+								무료보험 가입동의 (선택)
+							</p>
+						</label>
+						<a class="terms-more">
+							<svg class="icon-sm">
+								<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#right" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+
+
+
+<!-- 고객지원 / 셀렉트 -->
+<div th:fragment="fragment">
+	<div class="modeal-container">
+		<section class="bt-select-area">
+			<div class="wrap">
+				<div class="bt-select-title">
+					<div class="tit">
+						선택
+					</div>
+				</div>
+				<div class="bt-select-table">
+					<a class="bt-select-option rounded-sm btn wide-btn" data-value="전체">
+						<p class="txt">전체</p>
+						<svg class="icon-sm">
+							<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#chk" />
+						</svg>
+					</a>
+					<a class="bt-select-option rounded-sm btn wide-btn" data-value="관리방법">
+						<p class="txt">관리방법</p>
+						<svg class="icon-sm">
+							<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#chk" />
+						</svg>
+					</a>
+					<a class="bt-select-option rounded-sm btn wide-btn" data-value="고장자가진단">
+						<p class="txt">고장자가진단</p>
+						<svg class="icon-sm">
+							<use xlink:href="/mo/images/easyview/icons/spriteImg.svg#chk" />
+						</svg>
+					</a>
 				</div>
 			</div>
 		</section>
