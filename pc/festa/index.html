@@ -886,7 +886,7 @@
     <div id="rn-main" class="rn-container festa-container">
         <!-- kayVisual -->
         <section id="module" class="module-top">
-            <div class="visual-area">
+            <div class="visual-area" style="background:url('./images/visual.png') center center no-repeat;">
                 <!-- <video autoplay muted loop playsinline width="100%">
                     <source src="./images/banner.mp4" type="video/mp4" />
                 </video> -->
@@ -1120,8 +1120,30 @@
             </div>
         </section>
 
+
+        <!-- roulette -->
+
+        <section id="module" class="module-roulette text-b" style="background-color:#8372f8;">
+        	<div class="roulette-area">
+        		<div class="roulette-wrap">
+ 	           		<div class="roulette-head">
+	        			<h1 class="tit">
+	        				<img src="./images/roulette_sample_h.jpg">
+	        				<p>매일 오전 9시, 행운의 룰렛</p>
+	        			</h1>
+	        			<p class="txt">꽝 없는 룰렛 돌리고 쏟아지는 혜택을 만나보세요!</p>
+	        		</div>
+	        		<div class="roulette-content" style="text-align:center;">
+	        			<!-- 룰렛 추가 -->
+	        			<img src="./images/roulette_sample_c.jpg" width="70%">
+	        		</div>     		
+        		</div>
+        	</div>
+        </section>
+
+
         <!-- random coupon -->
-        <section id="module" class="module-random" style="background-image: url(./images/random-bg.jpg);">
+        <!-- <section id="module" class="module-random" style="background-image: url(./images/random-bg.jpg);">
             <div class="rc-area">
                 <div class="wrap">
                     <div class="rc-tit">
@@ -1134,7 +1156,7 @@
                     <button class="rc-btn">공유하고 한번 더 응모하기</button>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- coupon & benefit -->
         <section id="module" class="module-coupon" >
@@ -1197,10 +1219,117 @@
             </div>
         </section>
 
-        <section id="module" class="module-info" >
-            <!-- information -->
-            <div class="info-area">
-                <div clss="wrap"></div>
+        <section id="module" class="module-chk" style="background:#d5d5f1">
+        
+            <div class="check-area">
+                <div class="check-wrap">
+					<div class="check-head">
+                		<div class="check-tit">
+                			<img src="./images/check_sample_h.jpg">
+                			<p>매일 출석체크하면 추가 혜택</p>
+                		</div>
+                	</div>
+                	<div class="check-content" style="text-align:center;">
+                		<!-- 출석체크 이벤트 추가 -->
+                		<img src="./images/check_sample_c.jpg"  width="60%">
+                		<div class="check-btn-wrap" style="margin-top:60px">
+                			<img src="./images/check_sample_b.jpg" style="width:50%;">
+                            <!-- <button class="check-btn">출석체크하기</button> -->
+                		</div>
+                	</div>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <section id="module" class="module-reserve" style="background:#eaeaea">
+            <div class="reserve-area">
+                <div class="reserve-wrap">
+                	<div class="reserve-head">
+                		<div class="reserve-time-wrap">
+                			<div class="reserve-time-txt">
+                				사전 알림 신청까지
+                			</div>
+							<div class="reserve-time-table" id="timeTable" data-value="2025-11-14 17:00:00">
+								<div class="reserve-time">
+									<div class="days">00</div>
+									<p>:</p>
+									<div class="hours">00</div>
+									<p>:</p>
+									<div class="minutes">00</div>
+									<p>:</p>
+									<div class="seconds">00</div>
+								</div>
+							</div>
+                		</div>
+                		<div class="reserve-date">
+                			<p class="date">11월 14일 (금) 17:00</p>
+                			<span>오픈!</span>
+                		</div>
+                	</div>
+                	<div class="reserve-content">
+                		<div class="reserve-benefit-wrap">
+                			<div class="reserve-benefit-item">
+                				<div class="reserve-benefit-ctn">
+                					<div class="benefit-num">
+                						<p>혜택</p>
+                					</div>
+                					<h1 class="benefit-tit">
+                						사전알림 신청자 전원 N 포인트 1천원 증정
+                					</h1>
+                					<div class="benefit-txt">
+                						<p>1만명 한정</p>
+                					</div>
+                				</div>
+                				<div class="reserve-benefit-img">
+                					<img src="./images/sample_bf_01.png">
+                				</div>
+                			</div>
+                			<div class="reserve-benefit-item">
+                				<div class="reserve-benefit-ctn">
+                					<div class="benefit-num">
+                						<p>혜택</p>
+                					</div>
+                					<h1 class="benefit-tit">
+                						구매자 대상 N포인트 4만원 증정
+                					</h1>
+                					<div class="benefit-txt">
+                						<p>사전 알림후 구매자 전원 N포인트 2만원</p>
+                						<p>구매 후기 작성자 한정 N포인트 2만원</p>
+                					</div>
+                				</div>
+                				<div class="reserve-benefit-img">
+                					<img src="./images/sample_bf_02.png">
+                				</div>
+                			</div>
+                			<div class="reserve-benefit-item">
+                				<div class="reserve-benefit-ctn">
+                					<div class="benefit-num">
+                						<p>혜택</p>
+                					</div>
+                					<h1 class="benefit-tit">
+                						사전 알림을 통한 구매고객 중 20명 추천, 6인용 오브제 밥솥 증정
+                					</h1>
+                					<div class="benefit-txt">
+                						<p>60만원 상당(618,000원) 밥솥</p>
+                					</div>
+                				</div>
+                				<div class="reserve-benefit-img">
+                					<img src="./images/sample_bf_03.png">
+                				</div>
+                			</div>
+                		</div>
+                		<div class="reserve-btn-wrap">
+	                		<div class="reserve-tit">
+	                			지금 사전 알림 신청하세요!
+	                		</div>
+                			<button class="reserve-btn">
+                				사전예약 신청하기
+                			</button>
+                		</div>
+                	</div>
+                </div>
             </div>
         </section>
 
@@ -1545,6 +1674,7 @@
             </div>
         </section>
 
+        
         <section id="module" class="module-banner">
             <div class="banner-area">
                 <!-- 쿠쿠 기획전/이벤트 배너영역 -->
@@ -2872,13 +3002,15 @@
                             <div class="cc-live-txt">
                                 <p class="sub">라이브 커머스에서 쿠쿠 파워클롭을 만나보세요!</p>
                                 <h2 class="tit">흡입력 만큼 강력한 라이브 혜택</h2>
-                                <a class="cc-live-alarm">
+                                <div class="cc-live-alarm">
                                     <div class="cc-live-comment">
                                         <span class="cc-live-img">
                                             <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#clock-icon"/></svg>
                                         </span>
                                         <em>라이브까지</em>
                                     </div>
+                                    
+                                    <!-- 라이브가지 남은 시간 -->
                                     <div class="cc-live-time" data-value="2025/11/30 17:00">
                                         <!-- <div class="days">5</div>
                                         <p>일</p>
@@ -2889,6 +3021,10 @@
                                         <div class="seconds">45</div>
                                         <p>초</p> -->                                     
                                     </div>
+                                </div>
+                                <!-- 방송알림버튼 -->
+                                <a class="cc-live-alarmBtn">
+                                	<svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#bell"/></svg>
                                 </a>
                             </div>
                         </div>
@@ -2896,14 +3032,15 @@
                             <div class="cc-live-txt">
                                 <p class="sub">쿠쿠와 정수기 고민해결!</p>
                                 <h2 class="tit">정수기 라이브 단독 혜택!</h2>
-                                <a class="cc-live-alarm">
+                                <div class="cc-live-alarm">
                                     <div class="cc-live-comment">
                                         <span class="cc-live-img">
                                             <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#clock-icon"/></svg>
                                         </span>
                                         <em>라이브까지</em>
                                     </div>
-                                    <div class="cc-live-time" data-value="2025/10/30 17:00">
+                                    <!-- 라이브가지 남은 시간 -->
+                                    <div class="cc-live-time" data-value="2025/12/30 17:00">
                                         <!-- <div class="days">2</div>
                                         <p>일</p>
                                         <div class="hours">14</div>
@@ -2911,6 +3048,10 @@
                                         <div class="seconds">45</div>
                                         <p>분</p> -->
                                     </div>
+                                </div>
+                                <!-- 방송알림버튼 -->
+                                <a class="cc-live-alarmBtn">
+                                	<svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#bell"/></svg>
                                 </a>
                             </div>
                         </div>
@@ -2918,13 +3059,14 @@
                             <div class="cc-live-txt">
                                 <p class="sub">가격 낮추고 혈당도 낮춘다!</p>
                                 <h2 class="tit">저당밥솥 & 밥솥 라이브</h2>
-                                <a class="cc-live-alarm">
+                                <div class="cc-live-alarm">
                                     <div class="cc-live-comment">
                                         <span class="cc-live-img">
                                             <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#clock-icon"/></svg>
                                         </span>
                                         <em>라이브까지</em>
                                     </div>
+                                    <!-- 라이브가지 남은 시간 -->
                                     <div class="cc-live-time" data-value="2025/12/30 17:00">
                                         <!-- <div class="days">2</div>
                                         <p>일</p>
@@ -2933,6 +3075,10 @@
                                         <div class="seconds">24</div>
                                         <p>분</p> -->
                                     </div>
+                                </div>
+                                <!-- 방송알림버튼 -->
+                                <a class="cc-live-alarmBtn">
+                                	<svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#bell"/></svg>
                                 </a>
                             </div>
                         </div>
@@ -2966,6 +3112,13 @@
                     <div class="payments-tit">
                         결제 시 혜택
                     </div>
+                    
+			        <!------------------------------------------------- 
+			        	
+			        카드사&간편결제 혜택 섹션입니다.
+			        각 카드별 링크(자세히보기)는 공지사항에 혜택게시물로 연결됩니다.
+			        	
+			        --------------------------------------------------->
                     <div class="payments-content">
                         <div class="benefit-section benefig01">
                             <div class="benefit-head">
@@ -2974,52 +3127,44 @@
                             </div>
                             <div class="benefit-content">
                                 <div class="benefit-item">
-                                    <div class="benefit-img">
-                                        <img src="./images/hy.png">
-                                    </div>
+                                    <div class="benefit-img hy"></div>
                                     <div class="benefit-info">
-                                        <div class="subtit">현대카드 M포인트 할인 프로모션</div>
+                                        <div class="subtit">현대카드</div>
                                         <p class="txt">최대 5만원</p>
-                                        <a class="hyperlink">
+                                        <a class="hyperlink" href="#">
                                             <span>자세히 보기</span>
                                             <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-right"></use></svg>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="benefit-item">
-                                    <div class="benefit-img">
-                                        <img src="./images/nh.png">
-                                    </div>
+                                    <div class="benefit-img nh"></div>
                                     <div class="benefit-info">
-                                        <div class="subtit">농협카드 즉시 할인 프로모션</div>
+                                        <div class="subtit">농협카드</div>
                                         <p class="txt">최대 5만원</p>
-                                        <a class="hyperlink">
+                                        <a class="hyperlink" href="#">
                                             <span>자세히 보기</span>
                                             <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-right"></use></svg>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="benefit-item">
-                                    <div class="benefit-img">
-                                        <img src="./images/kb.png">
-                                    </div>
+                                    <div class="benefit-img kb"></div>
                                     <div class="benefit-info">
-                                        <div class="subtit">국민카드 즉시 할인 프로모션</div>
+                                        <div class="subtit">국민카드</div>
                                         <p class="txt">최대 5만원</p>
-                                        <a class="hyperlink">
+                                        <a class="hyperlink" href="#">
                                             <span>자세히 보기</span>
                                             <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-right"></use></svg>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="benefit-item">
-                                    <div class="benefit-img">
-                                        <img src="./images/sam.png">
-                                    </div>
+                                    <div class="benefit-img ss" ></div>
                                     <div class="benefit-info">
-                                        <div class="subtit">삼성카드 제휴 혜택</div>
+                                        <div class="subtit">삼성카드</div>
                                         <p class="txt">최대 5만원</p>
-                                        <a class="hyperlink">
+                                        <a class="hyperlink" href="#">
                                             <span>자세히 보기</span>
                                             <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-right"></use></svg>
                                         </a>
@@ -3034,26 +3179,22 @@
                             </div>
                             <div class="benefit-content">
                                 <div class="benefit-item">
-                                    <div class="benefit-img">
-                                        <img src="./images/payco.png">
-                                    </div>
+                                    <div class="benefit-img payco"></div>
                                     <div class="benefit-info">
-                                        <div class="subtit">페이코 최대 5만원 즉시할인 프로모션</div>
+                                        <div class="subtit">페이코</div>
                                         <p class="txt">최대 6% 할인 + 1% 추가 적립</p>
-                                        <a class="hyperlink">
+                                        <a class="hyperlink" href="#">
                                             <span>자세히 보기</span>
                                             <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-right"></use></svg>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="benefit-item">
-                                    <div class="benefit-img">
-                                        <img src="./images/toss.png">
-                                    </div>
+                                    <div class="benefit-img toss"></div>
                                     <div class="benefit-info">
-                                        <div class="subtit">토스페이 최대 2만원 할인 프로모션</div>
-                                        <p class="txt">토스 프라임 구독 고객 4% 추가 적입</p>
-                                        <a class="hyperlink">
+                                        <div class="subtit">토스페이</div>
+                                        <p class="txt">4% 추가 적립</p>
+                                        <a class="hyperlink" href="#">
                                             <span>자세히 보기</span>
                                             <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#arrow-right"></use></svg>
                                         </a>

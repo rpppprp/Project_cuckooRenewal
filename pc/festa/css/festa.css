@@ -24,10 +24,14 @@ button {
     width:100%;
 }
 
-.rc-area .wrap, .coupon-area .wrap {
-    width:1200px;
-    margin:0 auto;
+.text-w {
+	color:#fff;
 }
+
+.text-b {
+	color:var(--color-txt);
+}
+
 
 .wish-btn {
     position:relative;
@@ -84,7 +88,6 @@ button {
 .visual-area {
     max-width:1920px;
     height:800px;
-    background:url(../images/visual.png) center center no-repeat;
     margin: 0 auto;
 }
 
@@ -291,7 +294,7 @@ button {
 
 .main-event-list .main-event-item a p {
     width:auto;
-    font-size:var(--font-normal);
+    font-size:var(--font-mid);
     color:var(--color-mid-gray);
     margin-left:0px;  
 }
@@ -358,8 +361,8 @@ button {
 
 
 .main-event-list .main-event-item.on a svg {
-    width:12px;
-    height:12px;
+    width:16px;
+    height:16px;
     color:#9B51E0;
     opacity:1;
     font-weight: 700;
@@ -412,12 +415,51 @@ button {
 }
 
 
+/* festa - roulette */
+
+.module-roulette {
+	width:100%;
+}
+
+.roulette-area {
+	width:1200px;
+	margin:0 auto;
+}
+
+.roulette-wrap {
+	width:100%;
+	padding:100px 0px;
+}
+
+.roulette-wrap .roulette-head {
+    color:#fff;
+	margin:0px 0px 40px;
+}
+
+.roulette-wrap .roulette-head .tit {
+	font-size:40px;
+	font-weight:500;
+	text-align:center;
+}
+
+.roulette-wrap .roulette-head .txt {
+	font-size:var(--font-mid);
+	margin:10px 0 0px;
+	text-align:center;
+}
+
 /* festa - coupon */
 
 .module-random {
     background-repeat: no-repeat;
     background-position: top center;;
     background-size:1920px 100%;
+}
+
+
+.rc-area .wrap, .coupon-area .wrap {
+    width:1200px;
+    margin:0 auto;
 }
 
 /* festa - coupon // random coupon */
@@ -484,8 +526,8 @@ button {
 
 .coupon-area .coupon-tit {
     color:#fff;
-    font-size:var(--font-big);
-    font-weight: 700;
+    font-size:40px;
+    font-weight: 500;
     text-align:center;
     margin-bottom:40px;
 }
@@ -546,7 +588,7 @@ button {
 }
 
 .coupon-all-btn .coupon-all-download {
-    display:block;
+    display:flex;
     width:300px;
     height:60px;
     background:#fff;
@@ -554,8 +596,285 @@ button {
     border-radius: var(--radius-big);
     cursor:pointer;
     margin:40px auto 0px;
+    justify-content:center;
 }
 
+.coupon-all-btn .coupon-all-download .txt {
+	align-self:center;
+	margin-right:10px;
+}
+
+.coupon-all-btn .coupon-all-download .icon {
+	display:flex;
+	align-self:center;
+}
+
+
+.coupon-all-btn .coupon-all-download svg {
+	width:24px;
+	height:24px;
+}
+
+
+/* festa - 출석체크 */
+
+
+.module-chk {
+	width:100%;
+}
+
+.check-area {
+	width:100%;
+	padding:100px 0px;
+}
+
+.check-wrap {
+	width:1200px;
+	margin: 0 auto;
+}
+
+.check-head {
+	width:100%;
+	margin-bottom:40px;
+}
+
+.check-head .check-tit {
+	font-size:40px;
+	font-weight:500;
+	text-align:center;
+}
+
+.check-content {
+	width:100%;
+	padding:0px 0px 20px;
+}
+
+.check-btn {
+    display:block;
+    width:300px;
+    height:60px;
+    color:#fff;
+    background:var(--color-txt);
+    font-size:var(--font-mid);
+    border-radius: var(--radius-big);
+    cursor:pointer;
+    margin:40px auto 0px;
+}
+
+/* festa - reserve */
+
+
+.module-reserve {
+	width:100%;
+}
+
+.reserve-area {
+	width:100%;
+	padding:100px 0px;
+}
+
+.reserve-wrap {
+	width:1200px;
+	margin:0 auto;
+}
+
+
+.reserve-head {
+	width:100%;
+	margin-bottom:60px;
+}
+
+
+.reserve-time-wrap {
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	justify-content:center;
+}
+
+.reserve-time-wrap .reserve-time-txt {
+	color:var(--color-darkgray);
+	font-size:var(--font-mid);
+	text-align:center;
+}
+
+
+.reserve-time-table {
+	padding:10px 0px 20px;
+}
+
+.reserve-time-wrap .reserve-time {
+	display:flex;
+	justify-content:center;
+}
+
+.reserve-time-wrap .reserve-time > div {
+	position:relative;
+	font-size: 56px;
+	padding:5px 10px;
+	margin:0 5px;
+	align-self:center;
+}
+
+.reserve-time-wrap .reserve-time > div::after {
+	position:absolute;
+	font-size:var(--font-small);
+	color:var(--color-darkgray);
+	bottom:-8px;
+	left:50%;
+	transform:translateX(-50%);
+}
+
+.reserve-time .days::after {
+	content:"DAYS";
+} 
+
+.reserve-time .hours::after {
+	content:"HOURS";
+} 
+
+.reserve-time .minutes::after {
+	content:"MINS";
+} 
+
+.reserve-time .seconds::after {
+	content:"SECS";
+} 
+
+
+.reserve-time-wrap .reserve-time > p {
+	padding:5px 10px;
+	align-self:center;
+}
+
+.reserve-date {
+	display:flex;
+	min-width:300px;
+	max-width:400px;
+	background:var(--color-txt);
+	color:#fff;
+	font-size:var(--font-mid);
+	font-weight:500;
+	text-align:center;
+	margin:20px auto 0px;
+	padding:10px 30px;
+	border-radius:var(--radius-big);
+	gap:10px;
+	justify-content:center;
+}
+
+
+.reserve-content {
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	padding:0px 0px 20px;
+	gap:30px;
+}
+
+
+.reserve-benefit-wrap {
+	display:flex;
+	flex-direction:column;
+	gap:30px;
+	justify-content:center;
+	padding:0 30px;
+	counter-reset: benefit-num;
+}
+
+.reserve-benefit-wrap .reserve-benefit-item {
+	background:#fff;
+	width:calc(100% - 60px);
+	display:flex;
+	margin:0 auto;
+	padding:30px 50px;
+	counter-increment: benefit-num;
+	border-radius:var(--radius-mid);
+}
+
+.reserve-benefit-item .reserve-benefit-ctn {
+	width:calc(100% - 400px);
+	padding:20px 20px 20px 0px;
+}
+
+.reserve-benefit-ctn .benefit-num {
+	display:flex;
+	mid-width:80px;
+	max-width:100px;
+	background:var(--color-gray);
+	padding:5px 20px;
+	border-radius:var(--radius-mid);
+	justify-content:center;
+}
+
+.reserve-benefit-ctn .benefit-num::after {
+	font-size:var(--font-normal);
+	font-weight:900;
+	color:var(--color-txt);
+    content: counter(benefit-num);
+    margin-left:8px;
+}
+
+.reserve-benefit-ctn .benefit-tit {
+	font-size:var(--font-mid);
+	margin:15px 0px;
+}
+
+.benefit-txt {
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+}
+
+.benefit-txt p {
+	font-size:var(--font-small);
+	color:var(--color-darkgray);
+}
+
+.benefit-txt p::before {
+	content:"*";
+	font-size:var(--font-small);
+	color:var(--color-darkgray);
+	margin-right:5px;
+}
+
+.reserve-benefit-img {
+	width:400px;
+	display:flex;
+	justify-content:center;
+}
+
+.reserve-benefit-img img {
+	display:block;
+	max-width:300px;
+	min-width:150px;
+	align-self:center;
+	margin:0 auto;
+}
+
+.reserve-btn-wrap {
+	display:flex;
+	flex-direction:column;
+	margin:20px auto 0px;
+	gap:30px;
+}
+
+.reserve-tit {
+	font-size:40px;
+	font-weight:500;
+	text-align:center;	
+}
+
+.reserve-btn-wrap .reserve-btn {
+    width: 300px;
+    height: 60px;
+    background: var(--color-txt);
+    color:#fff;
+    font-size: var(--font-mid);
+    border-radius: var(--radius-big);
+    cursor: pointer;
+    margin: 10px auto;
+}
 
 /* festa - section */
 
@@ -565,7 +884,8 @@ button {
 }
 
 .fe-area .fe-head {
-    
+    display:flex;
+    flex-direction:column;
 }
 
 .fe-area .fe-head .fe-banner {
@@ -595,7 +915,7 @@ button {
 
 .fe-category {
     width:1200px;
-    padding:60px 0px;
+    padding:60px 0px 40px;
     margin:0 auto;
 }
 
@@ -711,7 +1031,7 @@ button {
 
 .fe-content {
     width:1200px;
-    margin:40px auto 100px;
+    margin:20px auto 100px;
 }
 
 .product-wrap {
@@ -875,6 +1195,7 @@ button {
 /* festa - event banner // evnet */
 
 .banner-area .event-banner-section {
+	position:relative;
     width:100%;
 }
 
@@ -893,7 +1214,6 @@ button {
 
 .banner-item {
     position:relative;
-    height:400px;
     background-position: top center;
     background-repeat: no-repeat;
     border-radius: var(--radius-mid);
@@ -909,7 +1229,8 @@ button {
 }
 
 .banner-event .col-1 {
-    width:100%;
+    width:100% !important;
+    height:400px;
 }
 
 .banner-event .col-2 {
@@ -946,6 +1267,13 @@ button {
     font-size:var(--font-big);
 }
 
+.banner-cols1-arrow a {
+	bottom: 200px;
+}
+
+.banner-cols2-arrow a {
+	bottom: 125px;
+}
 
 /* festa - timeDeal */
 
@@ -1552,9 +1880,10 @@ button {
     display:flex;
     flex-wrap: wrap;
     position:absolute;
-    right:50px;
-    bottom:40px;
-    min-width:400px;
+    right:130px;
+    bottom:50px;
+    min-width:460px;
+    max-width:580px;
     height:60px;
     background:rgba(0,0,0,0.3);
     color:#fff;
@@ -1607,6 +1936,28 @@ button {
     color:var(--color-mid-gray);
     align-self:center;
     margin:0px 5px;
+}
+
+
+.cc-live-alarmBtn {
+	display:flex;
+	position:absolute;
+	right:50px;
+	bottom:50px;
+	width:60px;
+	height:60px;
+	background:#fff;
+	color:var(--color-primary);
+	justify-content:center;
+	border-radius:var(--radius-big);
+	z-index:1;
+	cursor:pointer;
+}
+
+.cc-live-alarmBtn svg {
+	color:var(--color-primary);
+	align-self:center;
+	fill: transparent;
 }
 
 
@@ -1747,10 +2098,51 @@ button {
 
 .benefit-content .benefit-item {
     display:flex;
-    height:125px;
+    height:60px;
     background:#fff;
-    border-radius:var(--radius-mid);
-    overflow:hidden;
+    border-radius: 8px;
+}
+
+.benefit-content .benefit-img {
+	width:40px;
+	height:40px;
+	border-radius:8px;
+	background-size: 60%;
+	align-self:center;
+	margin-left:20px;
+}
+
+
+.benefit-content .benefit-img.hy {
+	background:url(../images/hy.png) center center no-repeat #000000;
+	background-size: 33px;
+}
+
+.benefit-content .benefit-img.nh {
+	background:url(../images/nh.png) center center no-repeat #fff;
+	border:1px solid var(--color-line);
+	background-size:19px;
+}
+
+.benefit-content .benefit-img.kb {
+	background:url(../images/kb.png) center center no-repeat #fff;
+	border:1px solid var(--color-line);
+	background-size:28px;
+}
+
+.benefit-content .benefit-img.ss {
+	background:url(../images/sam.png) center center no-repeat #2e5ce5;
+	background-size:30px;
+}
+
+.benefit-content .benefit-img.payco {
+	background:url(../images/payco.png) center center no-repeat #ff1f2e;
+	background-size:30px;
+}
+
+.benefit-content .benefit-img.toss {
+	background:url(../images/toss.png) center center no-repeat #1a5ae5;
+	background-size:30px;
 }
 
 .benefit-item .benefit-img img {
@@ -1761,28 +2153,25 @@ button {
 .benefit-item .benefit-info {
     width: calc(100% - 40px);
     display: flex;
-    flex-direction: column;
     padding:20px;
 }
 
 .benefit-item .benefit-info .subtit {
-    font-size:18px;
+    font-size:16px;
     font-weight: 700;
-    white-space: nowrap;
-    overflow:hidden;
-    text-overflow: ellipsis;
-    margin-bottom:5px;
+    margin-right:20px;
+    align-self:center;
 }
 
 .benefit-item .benefit-info .txt {
     font-size:var(--font-small);
     color:var(--color-darkgray);
-    margin-bottom:10px;
+    align-self:center;
 }
 
 .benefit-item .benefit-info .hyperlink {
     display: flex;
-    min-width:100px;
+    min-width:90px;
     font-size:var(--font-small);
     color:var(--color-mid-gray);
     margin-left:auto;

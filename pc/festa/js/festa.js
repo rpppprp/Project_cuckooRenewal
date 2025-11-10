@@ -1,9 +1,14 @@
 "use strict";
 
+
 $(function(){
 
 
-	/** festa tab - 따라다니는 탭 */
+	/**----------------------------------------
+	 * 
+	 *  festa tab - 따라다니는 탭 
+	 * 
+	 ----------------------------------------**/
 	$(window).load(function(){
 		let _fixed_tab = $(".module-nav");
 		let _stop_pos = $(".module-coupon").offset().top + 60;
@@ -18,7 +23,11 @@ $(function(){
 		});
 	});
 
-    /** festa week nav switching */ 
+    /**----------------------------------------
+	 * 
+	 * festa week nav switching 
+	 * 
+	 ----------------------------------------**/ 
 
     let week_btn = $(".week-list li");
     week_btn.click(function(){
@@ -61,6 +70,65 @@ $(function(){
         nextArrow : $('.main-event-next')
     });
     
+    
+    
+    /**----------------------------------------
+	 * 
+	 * festa Reserve Section
+	 * 
+	 ----------------------------------------**/ 
+    
+    // festa reserve time
+    
+	const $rs_timer = $("#timeTable");
+	const rs_endTime = new Date($rs_timer.data("value")).getTime();
+	
+	const $rs_days = $rs_timer.find(".days");
+	const $rs_hours = $rs_timer.find(".hours");
+	const $rs_minutes = $rs_timer.find(".minutes");
+	const $rs_seconds = $rs_timer.find(".seconds");
+	
+	let timerInterval; // 🔸 선언을 위로 올림
+	
+	function updateCountdown() {
+	    const rs_now = new Date().getTime();
+	    const rs_distance = rs_endTime - rs_now;
+	
+	    // 종료 시 처리
+	    if (rs_distance <= 0) {
+	        clearInterval(timerInterval);
+	        $rs_days.text("00");
+	        $rs_hours.text("00");
+	        $rs_minutes.text("00");
+	        $rs_seconds.text("00");
+	        $rs_timer.addClass("time-end");
+	        return;
+	    }
+	
+	    // 남은 시간 계산
+	    const rs_days = Math.floor(rs_distance / (1000 * 60 * 60 * 24));
+	    const rs_hours = Math.floor((rs_distance / (1000 * 60 * 60)) % 24);
+	    const rs_minutes = Math.floor((rs_distance / (1000 * 60)) % 60);
+	    const rs_seconds = Math.floor((rs_distance / 1000) % 60);
+	
+	    // DOM 업데이트
+	    $rs_days.text(String(rs_days).padStart(2, "0"));
+	    $rs_hours.text(String(rs_hours).padStart(2, "0"));
+	    $rs_minutes.text(String(rs_minutes).padStart(2, "0"));
+	    $rs_seconds.text(String(rs_seconds).padStart(2, "0"));
+	}
+	
+	// 최초 1회 실행 후 1초마다 갱신
+	updateCountdown();
+	timerInterval = setInterval(updateCountdown, 1000);
+	    
+    
+    /**----------------------------------------
+	 * 
+	 * festa Category
+	 * 
+	 ----------------------------------------**/ 
+    
     // festa category
 
     $(".fe-cate-tab .spec-option").click(function(){
@@ -74,6 +142,14 @@ $(function(){
         $(".fe-cate-track .fe-cate-item").removeClass('on');
         $(this).addClass('on');
     })
+    
+    
+
+    /**----------------------------------------
+	 * 
+	 * festa Time Deal
+	 * 
+	 ----------------------------------------**/ 
 
     // festa time deal
 
@@ -125,6 +201,14 @@ $(function(){
         $('.fe-timedeal-prev, .fe-timedeal-next, .fe-timedeal-pager').hide();
     }
     
+    
+    
+    /**----------------------------------------
+	 * 
+	 * festa Cuckoo Live Alarm
+	 * 
+	 ----------------------------------------**/ 
+    
     /** festa cc-live tab */
 
     $("#rn-main").on("click", ".cc-live-tab li", function(){
@@ -139,6 +223,7 @@ $(function(){
         $(".cc-live-item").removeClass('active');
         $(".cc-live-item[data-value="+ _tab_id +"]").addClass('active');
     });
+    
 
 
     // festa cc-live count down
@@ -193,6 +278,13 @@ $(function(){
     liveCountDown('cc-live02');
     liveCountDown('cc-live03');
     
+    
+    
+    /**----------------------------------------
+	 * 
+	 * festa 2 cols Product Event
+	 * 
+	 ----------------------------------------**/ 
  
     // festa cols event
 
@@ -205,6 +297,13 @@ $(function(){
         prevArrow : $('.fe-col-prev'),
         nextArrow : $('.fe-col-next')
     });
+
+
+    /**----------------------------------------
+	 * 
+	 * festa Wish Button
+	 * 
+	 ----------------------------------------**/ 
 
     // festa wish button
 
@@ -228,4 +327,5 @@ $(function(){
     });
 
 
-})
+});
+
