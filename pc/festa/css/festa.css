@@ -690,8 +690,8 @@ button {
 .check-stamp-list li {
     display:flex;
     background:url(../images/stamp_bg.svg) center center no-repeat;
-    width:200px;
-    height:200px;
+    width:180px;
+    height:180px;
     justify-content: center;
     background-size:100%;
 }
@@ -706,7 +706,7 @@ button {
 }
 
 .check-stamp-list li > div h2 {
-    font-size:var(--font-big);
+    font-size: 24px;
     font-weight: 900;
 }
 
