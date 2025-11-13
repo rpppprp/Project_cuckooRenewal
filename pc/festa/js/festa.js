@@ -11,7 +11,7 @@ $(function(){
 	 ----------------------------------------**/
 	$(window).load(function(){
 		let _fixed_tab = $(".module-nav");
-		let _stop_pos = $(".module-coupon").offset().top + 60;
+		let _stop_pos = $(".module-roulette").offset().top + 0;
 		
 		$(window).on("scroll",function(){
 			let _winPos = $(this).scrollTop();

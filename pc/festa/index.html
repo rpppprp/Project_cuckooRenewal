@@ -885,8 +885,8 @@
     <!-- 메인 -->
     <div id="rn-main" class="rn-container festa-container">
         <!-- kayVisual -->
-        <section id="module" class="module-top">
-            <div class="visual-area" style="background:url('./images/visual.png') center center no-repeat;">
+        <section id="module" class="module-top" style="background-color:#000;">
+            <div class="visual-area" style="background:url('./images/keyvisual.png') center center no-repeat;">
                 <!-- <video autoplay muted loop playsinline width="100%">
                     <source src="./images/banner.mp4" type="video/mp4" />
                 </video> -->
@@ -1123,12 +1123,12 @@
 
         <!-- roulette -->
 
-        <section id="module" class="module-roulette text-b" style="background-color:#8372f8;">
+        <section id="module" class="module-roulette text-b" style="background-color:#000000;">
         	<div class="roulette-area">
         		<div class="roulette-wrap">
  	           		<div class="roulette-head">
+                        <p class="subtit">EVENT 1</p>
 	        			<h1 class="tit">
-	        				<img src="./images/roulette_sample_h.jpg">
 	        				<p>매일 오전 9시, 행운의 룰렛</p>
 	        			</h1>
 	        			<p class="txt">꽝 없는 룰렛 돌리고 쏟아지는 혜택을 만나보세요!</p>
@@ -1136,34 +1136,24 @@
 	        		<div class="roulette-content" style="text-align:center;">
 	        			<!-- 룰렛 추가 -->
 	        			<img src="./images/roulette_sample_c.jpg" width="76%">
+                        <div class="roulette-info-wrap">
+                            <a>+ 유의사항</a>
+                        </div>
 	        		</div>     		
         		</div>
+
         	</div>
         </section>
 
-
-        <!-- random coupon -->
-        <!-- <section id="module" class="module-random" style="background-image: url(./images/random-bg.jpg);">
-            <div class="rc-area">
-                <div class="wrap">
-                    <div class="rc-tit">
-                        <p class="subTxt">매일 단 한번의 혜택</p>
-                        <h1 class="tit">선착순 랜덤 쿠폰</h1>
-                    </div>
-                    <div class="rc-coupon-img">
-                        <img src="./images/rc-sample.png">
-                    </div>
-                    <button class="rc-btn">공유하고 한번 더 응모하기</button>
-                </div>
-            </div>
-        </section> -->
-
         <!-- coupon & benefit -->
-        <section id="module" class="module-coupon" >
+        <section id="module" class="module-coupon" style="background-color:#202020;">
             <div class="coupon-area">
                 <div class="wrap">
                     <div class="coupon-tit">
-                        쿠폰 & 혜택
+                        <p class="subtit">EVENT 2</p>
+                        <h1 class="tit">
+                            쿠폰 & 혜택
+                        </h1>
                     </div>
                     <div class="coupon-list">
                         <div class="coupon-item">
@@ -1219,118 +1209,63 @@
             </div>
         </section>
 
-        <section id="module" class="module-chk" style="background:#d5d5f1">
+        <section id="module" class="module-chk" style="background:#000000">
         
             <div class="check-area">
                 <div class="check-wrap">
 					<div class="check-head">
                 		<div class="check-tit">
-                			<img src="./images/check_sample_h.jpg">
-                			<p>매일 출석체크하면 추가 혜택</p>
+                            <p class="subtit">EVENT 3</p>
+                            <h1 class="tit">
+                                매일 출석체크하면 추가 혜택
+                            </h1>
                 		</div>
                 	</div>
                 	<div class="check-content" style="text-align:center;">
+                        <ul class="check-stamp-list">
+                            <li>
+                                <div>
+                                    <p>5일 출석시</p>
+                                    <h2>5,000P</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>10일 출석시</p>
+                                    <h2>10% 쿠폰</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>15일 출석시</p>
+                                    <h2>20,000P</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>25일 출석시</p>
+                                    <h2>15% 쿠폰</h2>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="check-count-wrap">
+                            <div class="check-count-txt">
+                                <p>나의 출석 횟수</p>
+                                <h1>1</h1>
+                            </div>
+                        </div>
                 		<!-- 출석체크 이벤트 추가 -->
-                		<img src="./images/check_sample_c.jpg"  width="70%">
+                		<!-- <img src="./images/check_sample_c.jpg"  width="70%"> -->
                 		<div class="check-btn-wrap" style="margin-top:60px">
-                			<img src="./images/check_sample_b.jpg" style="width:50%;">
-                            <!-- <button class="check-btn">출석체크하기</button> -->
+                            <button class="check-btn">출석체크하기</button>
                 		</div>
+                        <div class="check-info-wrap">
+                            <a>+ 유의사항</a>
+                        </div>
                 	</div>
                 </div>
             </div>
             
-        </section>
-
-
-        <section id="module" class="module-reserve" style="background:#eaeaea">
-            <div class="reserve-area">
-                <div class="reserve-wrap">
-                	<div class="reserve-head">
-                		<div class="reserve-time-wrap">
-                			<div class="reserve-time-txt">
-                				사전 알림 신청까지
-                			</div>
-							<div class="reserve-time-table" id="timeTable" data-value="2025-11-14 17:00:00">
-								<div class="reserve-time">
-									<div class="days">00</div>
-									<p>:</p>
-									<div class="hours">00</div>
-									<p>:</p>
-									<div class="minutes">00</div>
-									<p>:</p>
-									<div class="seconds">00</div>
-								</div>
-							</div>
-                		</div>
-                		<div class="reserve-date">
-                			<p class="date">11월 14일 (금) 17:00</p>
-                			<span>오픈!</span>
-                		</div>
-                	</div>
-                	<div class="reserve-content">
-                		<div class="reserve-benefit-wrap">
-                			<div class="reserve-benefit-item">
-                				<div class="reserve-benefit-ctn">
-                					<div class="benefit-num">
-                						<p>혜택</p>
-                					</div>
-                					<h1 class="benefit-tit">
-                						사전알림 신청자 전원 N 포인트 1천원 증정
-                					</h1>
-                					<div class="benefit-txt">
-                						<p>1만명 한정</p>
-                					</div>
-                				</div>
-                				<div class="reserve-benefit-img">
-                					<img src="./images/sample_bf_01.png">
-                				</div>
-                			</div>
-                			<div class="reserve-benefit-item">
-                				<div class="reserve-benefit-ctn">
-                					<div class="benefit-num">
-                						<p>혜택</p>
-                					</div>
-                					<h1 class="benefit-tit">
-                						구매자 대상 N포인트 4만원 증정
-                					</h1>
-                					<div class="benefit-txt">
-                						<p>사전 알림후 구매자 전원 N포인트 2만원</p>
-                						<p>구매 후기 작성자 한정 N포인트 2만원</p>
-                					</div>
-                				</div>
-                				<div class="reserve-benefit-img">
-                					<img src="./images/sample_bf_02.png">
-                				</div>
-                			</div>
-                			<div class="reserve-benefit-item">
-                				<div class="reserve-benefit-ctn">
-                					<div class="benefit-num">
-                						<p>혜택</p>
-                					</div>
-                					<h1 class="benefit-tit">
-                						사전 알림을 통한 구매고객 중 20명 추천, 6인용 오브제 밥솥 증정
-                					</h1>
-                					<div class="benefit-txt">
-                						<p>60만원 상당(618,000원) 밥솥</p>
-                					</div>
-                				</div>
-                				<div class="reserve-benefit-img">
-                					<img src="./images/sample_bf_03.png">
-                				</div>
-                			</div>
-                		</div>
-                		<div class="reserve-btn-wrap">
-	                		<div class="reserve-tit">
-	                			지금 사전 알림 신청하세요!
-	                		</div>
-                			<button class="reserve-btn">
-                				사전예약 신청하기
-                			</button>
-                		</div>
-                	</div>
-                </div>
-            </div>
         </section>
 
         <!-- module-event -->

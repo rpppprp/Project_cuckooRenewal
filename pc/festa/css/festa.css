@@ -79,6 +79,19 @@ button {
     stroke-width: 0;
 }
 
+.subtit {
+    font-size:var(--font-mid);
+    color:#8371f7;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.tit {
+	font-size:40px;
+	font-weight:500;
+	text-align:center;
+}
+
 /* festa - top */
 
 .module-top {
@@ -105,9 +118,9 @@ button {
     position: fixed;
     width: 100%;
     min-width: 100%;
-    top: 60px;
+    top: 0px;
     background: rgba(255, 255, 255, 0.65);
-    z-index: 10;
+    z-index: 100;
     transition: all 0.3s; 
     border-bottom:1px solid var(--color-line);
 }
@@ -448,6 +461,19 @@ button {
 	text-align:center;
 }
 
+.roulette-content .roulette-info-wrap {
+    color:#fff;
+    margin:40px auto;
+}
+
+.roulette-info-wrap a {
+    width:100%;
+    font-size:var(--font-mid);
+    color:#dadada;
+    text-align:center;
+}
+
+
 /* festa - coupon */
 
 .module-random {
@@ -559,12 +585,13 @@ button {
 .coupon-item .coupon-txt .name {
     font-size:var(--font-normal);
     font-weight: 700;
+    color:#fff;
     margin-bottom:5px;
 }
 
 .coupon-item .coupon-txt .subTxt {
     font-size:var(--font-small);
-    color:var(--color-darkgray);
+    color:#fff;
 }
 
 .coupon-area .coupon-list .coupon-item .coupon-sale {
@@ -578,11 +605,13 @@ button {
 .coupon-item .coupon-sale .sale-num {
     font-size:40px;
     font-weight:700;
+    color:#fff;
 }
 
 .coupon-item .coupon-sale .sale-unit {
     font-size: 24px;
     font-weight: 700;
+    color:#fff;
     padding: 15px 0px 0px 5px;
     align-self:center;
 }
@@ -593,6 +622,7 @@ button {
     height:60px;
     background:#fff;
     font-size:var(--font-mid);
+    font-weight:500;
     border-radius: var(--radius-big);
     cursor:pointer;
     margin:40px auto 0px;
@@ -611,8 +641,8 @@ button {
 
 
 .coupon-all-btn .coupon-all-download svg {
-	width:24px;
-	height:24px;
+    width:18px;
+    height:18px;
 }
 
 
@@ -641,6 +671,7 @@ button {
 .check-head .check-tit {
 	font-size:40px;
 	font-weight:500;
+    color:#fff;
 	text-align:center;
 }
 
@@ -649,16 +680,86 @@ button {
 	padding:0px 0px 20px;
 }
 
+.check-stamp-list {
+    display:flex;
+    gap:50px;
+    justify-content: center;
+    margin-bottom:60px;
+}
+
+.check-stamp-list li {
+    display:flex;
+    background:url(../images/stamp_bg.svg) center center no-repeat;
+    width:200px;
+    height:200px;
+    justify-content: center;
+    background-size:100%;
+}
+
+.check-stamp-list li > div {
+    color:#7037FE;
+    align-self:center;
+}
+
+.check-stamp-list li > div p {
+    font-size:var(--font-small);
+}
+
+.check-stamp-list li > div h2 {
+    font-size:var(--font-big);
+    font-weight: 900;
+}
+
+.check-count-wrap {
+    display:flex;
+    width:300px;
+    height:300px;
+    background:url(../images/check_num.png) center center no-repeat;
+    background-size:300px;
+    margin:0 auto 40px;
+    justify-content: center;
+}
+
+.check-count-wrap .check-count-txt {
+    color:#fff;
+    align-self:center;
+}
+
+.check-count-wrap .check-count-txt p {
+    font-size:var(--font-mid);
+    margin-bottom:10px;
+}
+
+.check-count-wrap .check-count-txt h1 {
+    font-size:70px;
+}
+
+
 .check-btn {
     display:block;
     width:300px;
     height:60px;
-    color:#fff;
-    background:var(--color-txt);
+    color: #fff;
+    background: #7037fe;
     font-size:var(--font-mid);
+    font-weight:500;
     border-radius: var(--radius-big);
     cursor:pointer;
     margin:40px auto 0px;
+}
+
+
+
+.check-info-wrap {
+    color:#fff;
+    margin:40px auto 0px;
+}
+
+.check-info-wrap a {
+    width:100%;
+    font-size:var(--font-mid);
+    color:#dadada;
+    text-align:center;
 }
 
 /* festa - reserve */
