@@ -1027,7 +1027,7 @@ button {
 
 .reserve-txt-wrap .reserve-countdown-date {
     width:100%;
-    font-size:40px;
+    font-size:32px;
     color:#fff;
     text-align:center;
 }
@@ -1037,25 +1037,9 @@ button {
 }
 
 .reserve-txt-wrap .reserve-countdown-txt {
-    font-size:40px;
+    font-size:32px;
     color:#fff;
     text-align:center;
-}
-
-.reserve-date {
-	display:flex;
-	min-width:300px;
-	max-width:400px;
-	background:var(--color-txt);
-	color:#fff;
-	font-size:var(--font-mid);
-	font-weight:500;
-	text-align:center;
-	margin:20px auto 0px;
-	padding:10px 30px;
-	border-radius:var(--radius-big);
-	gap:10px;
-	justify-content:center;
 }
 
 
