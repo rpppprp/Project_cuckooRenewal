@@ -885,8 +885,8 @@
     <!-- 메인 -->
     <div id="rn-main" class="rn-container festa-container">
         <!-- kayVisual -->
-        <section id="module" class="module-top" style="background-color:#000;">
-            <div class="visual-area" style="background:url('./images/keyvisual.png') center center no-repeat;">
+        <section id="module" class="module-top" style="background-color:#00000c;">
+            <div class="visual-area" style="background:url('./images/keyvisual_cp.png') center center no-repeat;">
                 <!-- <video autoplay muted loop playsinline width="100%">
                     <source src="./images/banner.mp4" type="video/mp4" />
                 </video> -->
@@ -1135,11 +1135,38 @@
 	        		</div>
 	        		<div class="roulette-content" style="text-align:center;">
 	        			<!-- 룰렛 추가 -->
-	        			<img src="./images/roulette_sample_c.jpg" width="76%">
-                        <div class="roulette-info-wrap">
-                            <a>+ 유의사항</a>
+						<div id="app" class="roulette-item">
+							<div class="rouletter">
+					   			<div class="rouletter-bg">
+					        		<div class="rouletter-wacu">
+					        			<!-- 룰렛판 -->
+					        			<img src="./images/roulette_1.png">
+					        		</div>
+					    		</div>
+					    		<div class="rouletter-arrow"><img src="./images/roulette_3.png"></div>
+					    		<button class="rouletter-btn" onclick="roulette()"><img src="./images/roulette_2.png"></button>
+							</div>
+						</div>
+	        		</div>  
+                    <div class="roulette-info-wrap info-modal">
+                        <a>+ 유의사항</a>
+                        <div class="modal modal-container" style="display:none;">
+                            <div class="modal-wrap">
+                                <div class="modal-head">
+                                    <a class="close-icon">
+                                        <svg class="icon"><use xlink:href="/pc/images/icon/sprite-sheet.svg#close-x"/></svg>
+                                    </a>
+                                </div>
+                                <div class="modal-ctn modal-content">
+                                    <ul class="txt">
+                                        <li>내용1</li>
+                                        <li>내용2</li>
+                                        <li>내용3</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-	        		</div>     		
+                    </div>		
         		</div>
 
         	</div>
@@ -1223,7 +1250,7 @@
                 	</div>
                 	<div class="check-content" style="text-align:center;">
                         <ul class="check-stamp-list">
-                            <li>
+                            <li class="close">
                                 <div>
                                     <p>5일 출석시</p>
                                     <h2>5,000P</h2>
@@ -1261,15 +1288,19 @@
                 		</div>
                         <div class="check-info-wrap">
                             <a>+ 유의사항</a>
-	                        <div class="check-modal" style="display:none;">
-	                        	<div class="check-modal-wrap">
-		                        	<div class="check-modal-head">
+	                        <div class="modal modal-container" style="display:none;">
+	                        	<div class="modal-wrap">
+		                        	<div class="modal-head">
 			                            <a class="close-icon">
-			                                <svg class="icon"><use xlink:href="../images/icon/sprite-sheet.svg#close-x"/></svg>
+			                                <svg class="icon"><use xlink:href="/pc/images/icon/sprite-sheet.svg#close-x"/></svg>
 			                            </a>
 		                        	</div>
-		                        	<div class="check-modal-ctn">
-		                        		내용
+		                        	<div class="modal-ctn modal-content">
+		                        		<ul class="txt">
+	                                        <li>내용1</li>
+	                                        <li>내용2</li>
+	                                        <li>내용3</li>
+	                                    </ul>
 		                        	</div>
 	                        	</div>
 	                        </div>

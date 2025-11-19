@@ -326,6 +326,24 @@ $(function(){
         }
     });
 
+    
+    /**----------------------------------------
+	 * 
+	 * festa information Modal
+	 * 
+	 ----------------------------------------**/ 
+
+
+     $(".info-modal a").click(function(){
+		var _this = $(this);
+		_this.next('.modal-container').show();
+	})
+	
+	$(".modal-container .close-icon").click(function(){
+		$(".modal-container").hide();
+	})
+
+
 
 });
 
