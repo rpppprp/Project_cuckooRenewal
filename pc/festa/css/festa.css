@@ -850,6 +850,8 @@ button {
 
 .coupon-all-btn .coupon-all-download .icon {
 	display:flex;
+    width:18px;
+    height:18px;
 	align-self:center;
 }
 
