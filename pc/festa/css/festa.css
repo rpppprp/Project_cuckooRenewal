@@ -17,6 +17,12 @@ button {
     -webkit-appearance: none;
 }
 
+
+.scroll-none {
+    overflow: hidden !important;
+    touch-action: none;
+}
+
 /* festa - common */
 
 .festa-container {
@@ -100,6 +106,10 @@ button {
 
 .info-modal .modal {
 	position:relative;
+}
+
+.info-modal a {
+    cursor:pointer;
 }
 
 .info-modal .modal::before {
@@ -982,6 +992,7 @@ button {
     font-size:var(--font-mid);
     color:#dadada;
     text-align:center;
+    cursor:pointer;
 }
 
 /* festa - reserve */

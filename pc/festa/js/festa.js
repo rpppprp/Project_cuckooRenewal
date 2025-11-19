@@ -334,15 +334,16 @@ $(function(){
 	 ----------------------------------------**/ 
 
 
-     $(".info-modal a").click(function(){
+    $(".info-modal a").click(function(){
 		var _this = $(this);
 		_this.next('.modal-container').show();
+		$('html, body').addClass('scroll-none'); // scroll off
 	})
 	
 	$(".modal-container .close-icon").click(function(){
 		$(".modal-container").hide();
+		$('html, body').removeClass('scroll-none');// scroll on
 	})
-
 
 
 });
