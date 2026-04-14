@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CUCKOO Press Card Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8 md:p-16">
+
+    <div class="max-w-6xl mx-auto">
+        <header class="flex justify-between items-end mb-10 border-b border-gray-200 pb-6">
+            <h1 class="text-2xl font-black text-gray-900 tracking-tight">PRESS RELEASE</h1>
+            <span class="text-sm text-gray-400 font-medium">CUCKOO NEWS</span>
+        </header>
+
+        <div id="loading" class="text-center py-20 text-gray-400 font-medium italic">Fetching data...</div>
+
+        <div id="press-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
+            </div>
+    </div>
+
+    <script>
+        const RSS_URL = 'https://cuckoonewsletter.imweb.me/rss';
+        const FETCH_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}&count=20`;
+
+        async function fetchPressCards() {
+            try {
+                const response = await fetch(FETCH_URL);
+                const data = await response.json();
+
+                if (data.status === 'ok') {
+                    // 보도자료(/24/)만 필터링
+                    const pressItems = data.items.filter(item => item.link.includes('/24/'));
+                    renderCards(pressItems);
+                }
+            } catch (err) {
+                document.getElementById('loading').innerText = "Load Failed.";
+            }
+        }
+
+        function renderCards(items) {
+            const grid = document.getElementById('press-grid');
+            const loading = document.getElementById('loading');
+            
+            let html = '';
+            items.forEach(item => {
+                const date = new Date(item.pubDate).toLocaleDateString('ko-KR').replace(/\. /g, '.').replace(/\.$/, '');
+
+                html += `
+                    <div class="group bg-white border border-gray-200 p-8 flex flex-col justify-between min-h-[240px] hover:border-black transition-all duration-300 shadow-sm hover:shadow-xl cursor-pointer" onclick="window.open('${item.link}', '_blank')">
+                        <div>
+                            <div class="flex items-center gap-2 mb-6">
+                                <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+                                <span class="text-[10px] font-black tracking-widest text-gray-400 uppercase">Press Release</span>
+                            </div>
+                            <h2 class="text-xl font-bold text-gray-900 leading-snug group-hover:underline decoration-2 underline-offset-4 line-clamp-3">
+                                ${item.title}
+                            </h2>
+                        </div>
+                        <div class="mt-8 flex justify-between items-center border-t border-gray-100 pt-4">
+                            <span class="text-xs text-gray-400 font-mono">${date}</span>
+                            <span class="text-[10px] font-bold text-gray-900 opacity-0 group-hover:opacity-100 transition-opacity">VIEW MORE →</span>
+                        </div>
+                    </div>
+                `;
+            });
+
+            grid.innerHTML = html;
+            loading.classList.add('hidden');
+            grid.classList.remove('hidden');
+        }
+
+        fetchPressCards();
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>룰렛 팝업 레이아웃 샘플</title>
+    <style>
+        /* 전체 팝업 컨테이너 (유추된 이미지 사이즈 약 950x900) */
+        .popup-sample {
+            position: relative;
+            width: 950px;
+            height: 900px;
+            background-color: red; /* 이미지 배경: RED */
+            margin: 20px auto;
+            border: 2px solid #000;
+            overflow: hidden;
+        }
+
+        /* 공통 스타일: 영역 시각화를 위한 절대 좌표 설정 */
+        .area-box {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            opacity: 0.8;
+            border: 2px dashed white;
+        }
+
+        /* 1. 닫기 버튼 영역 (coords="837,63,917,129") */
+        /* 가로: 917-837=80px, 세로: 129-63=66px */
+        .close-btn-area {
+            left: 837px;
+            top: 63px;
+            width: 80px;
+            height: 66px;
+            background-color: blue; /* 닫기 버튼: BLUE */
+        }
+
+        /* 2. 공유하고 참여 버튼 영역 (coords="229,756,772,834") */
+        /* 가로: 772-229=543px, 세로: 834-756=78px */
+        .share-btn-area {
+            left: 229px;
+            top: 756px;
+            width: 543px;
+            height: 78px;
+            background-color: green; /* 공유/참여 버튼: GREEN */
+        }
+
+        /* 중앙 메시지 가이드 */
+        .main-content-guide {
+            position: absolute;
+            top: 300px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="popup-sample">
+        <div class="main-content-guide">
+            축하합니다!<br>
+            N등 당첨 안내 메시지 영역
+        </div>
+
+        <div class="area-box close-btn-area">
+            닫기
+        </div>
+
+        <div class="area-box share-btn-area">
+            공유하고 참여하기 / 확인
+        </div>
+    </div>
+
+    <div>
+
+
+        
+    </div>
+
+
+
+</body>
+</html>

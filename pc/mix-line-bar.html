@@ -1,0 +1,141 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=mix-line-bar
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+    <style>
+
+      .wrap {
+        width:1440px;
+        margin:50px auto;
+      }
+  
+    </style>
+
+</head>
+<body style="height: 100%; margin: 0">
+  <div class="wrap">
+    <div id="container" style="height: 600px"></div>
+  </div>
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'cross' }
+      },
+      grid: {
+        left: '3%',   // 왼쪽 여백 (수치가 작을수록 바깥으로 확장)
+        right: '4%',  // 오른쪽 여백
+        bottom: '10%', // 범례가 아래에 있다면 여유를 좀 둬야 함
+        top: '10%',    // 타이틀 공간
+        containLabel: true // 라벨(숫자 등)이 잘리지 않게 그리드 안으로 포함
+      },
+      legend: {
+        data: ['당기순이익', '현금배당금총액', '배당수익률', '배당성향'],
+        bottom: 0
+      },
+      xAxis: [
+        {
+          type: 'category',
+          data: ['2022', '2023', '2024'],
+          axisPointer: { type: 'shadow' }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          name: '금액(백만원)',
+          nameLocation: 'end', // 축의 끝(상단)에 배치
+          nameGap: 40,         // 축 라인과 텍스트 사이의 간격
+          nameTextStyle: {
+            align: 'left',      // 왼쪽 정렬
+            padding: [0, 0, 0, -40] // [상, 우, 하, 좌] 좌측 여백(음수)으로 눈금선에 맞춤
+          }
+        },
+        {
+          type: 'value',
+          name: '비율(%)',
+          nameLocation: 'end',
+          nameGap: 40,
+          nameTextStyle: {
+            align: 'right',     // 오른쪽 정렬
+            padding: [0, -40, 0, 0] // 우측 여백(음수)으로 눈금선에 맞춤
+          }
+        }
+      ],
+      series: [
+        {
+          name: '당기순이익',
+          type: 'bar',
+          tooltip: { valueFormatter: (value) => value.toLocaleString() + ' 백만원' },
+          data: [116689, 130122, 137040],
+          itemStyle: { color: '#5470c6' }
+        },
+        {
+          name: '현금배당금총액',
+          type: 'bar',
+          tooltip: { valueFormatter: (value) => value.toLocaleString() + ' 백만원' },
+          data: [24863, 34186, 37294],
+          itemStyle: { color: '#91cc75' }
+        },
+        {
+          name: '배당수익률',
+          type: 'line',
+          yAxisIndex: 1, // 오른쪽 Y축 사용
+          tooltip: { valueFormatter: (value) => value + ' %' },
+          data: [4.8, 6.6, 5.0],
+          itemStyle: { color: '#fac858' }
+        },
+        {
+          name: '배당성향',
+          type: 'line',
+          yAxisIndex: 1, // 오른쪽 Y축 사용
+          tooltip: { valueFormatter: (value) => value + ' %' },
+          data: [21.31, 26.27, 27.21],
+          itemStyle: { color: '#ee6666' }
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

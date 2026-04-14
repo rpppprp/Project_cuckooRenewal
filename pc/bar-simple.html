@@ -1,0 +1,287 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=bar-simple
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <style>
+
+    .wrap {
+      width:1440px;
+      display:flex;
+      gap:30px;
+      margin:50px auto;
+    }
+
+    .wrap > div {
+      width:calc(100% / 3);
+      min-height:450px;
+      max-height:600px;
+    }
+
+  </style>
+</head>
+<body style="height: 100%; margin: 0">
+
+  <div class="wrap">
+    <div id="container" style="height: 100%"></div>
+
+    <div id="container02" style="height: 100%"></div>
+
+    <div id="container03" style="height: 100%"></div>
+
+  </div>
+
+
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+
+    function graph01(){
+      var dom = document.getElementById('container');
+      var myChart = echarts.init(dom, null, {
+        renderer: 'canvas',
+        useDirtyRect: false
+      });
+      var app = {};
+      
+      var option;
+
+      option = {
+        title: [
+          {
+            text: '매출',
+            left: 'left',
+            textStyle: { fontSize: 18 }
+          },
+          {
+            text: '단위: 억(원)', // 서브텍스트 역할을 할 텍스트
+            right: '0%',         // 오른쪽 끝으로 배치
+            top: '15',            // 상단 여백 조절
+            textStyle: { 
+              fontSize: 14, 
+              color: '#999',
+              fontWeight: 'normal' 
+            }
+          }
+        ],
+        legend: { 
+          bottom: 'bottom', 
+          left: 'center',
+          data: ['2023년', '2024년', '2025년'] // 범례 이름 명시
+        },
+        xAxis: {
+          type: 'category',
+          data: ['2023년', '2024년', '2025년'] // X축 라벨 유지
+        },
+        yAxis: { type: 'value', scale: 'true', min: 7000 },
+        series: [
+          {
+            name: '2023년',
+            type: 'bar',
+            data: [7723, '-', '-'], // 첫 번째 칸만 데이터 입력
+            itemStyle: { color: '#999999' },
+            label: { show: true, position: 'top' },
+            barGap: '-100%' // 막대들이 겹치게 설정하여 X축 중앙에 위치시킴
+          },
+          {
+            name: '2024년',
+            type: 'bar',
+            data: ['-', 8338, '-'], // 두 번째 칸만 데이터 입력
+            itemStyle: { color: '#dbae6d' },
+            label: { show: true, position: 'top' },
+            barGap: '-100%'
+          },
+          {
+            name: '2025년',
+            type: 'bar',
+            data: ['-', '-', 9291], // 세 번째 칸만 데이터 입력
+            itemStyle: { color: '#FF5B53' },
+            label: { show: true, position: 'top' },
+            barGap: '-100%'
+          }
+        ]
+      };
+
+      if (option && typeof option === 'object') {
+        myChart.setOption(option);
+      }
+
+      window.addEventListener('resize', myChart.resize);
+
+    }
+
+    function graph02(){
+      var dom = document.getElementById('container02');
+      var myChart = echarts.init(dom, null, {
+        renderer: 'canvas',
+        useDirtyRect: false
+      });
+      var app = {};
+      
+      var option;
+
+      option = {
+        title: [
+          {
+            text: '영업이익',
+            left: 'left',
+            textStyle: { fontSize: 18 }
+          },
+          {
+            text: '단위: 억(원)', // 서브텍스트 역할을 할 텍스트
+            right: '0%',         // 오른쪽 끝으로 배치
+            top: '15',            // 상단 여백 조절
+            textStyle: { 
+              fontSize: 14, 
+              color: '#999',
+              fontWeight: 'normal' 
+            }
+          }
+        ],
+        legend: { 
+          bottom: 'bottom', 
+          left: 'center',
+          data: ['2023년', '2024년', '2025년'] // 범례 이름 명시
+        },
+        xAxis: {
+          type: 'category',
+          data: ['2023년', '2024년', '2025년'] // X축 라벨 유지
+        },
+        yAxis: { type: 'value', scale: 'true', min: 750 },
+        series: [
+          {
+            name: '2023년',
+            type: 'bar',
+            data: [866, '-', '-'], // 첫 번째 칸만 데이터 입력
+            itemStyle: { color: '#999999' },
+            label: { show: true, position: 'top' },
+            barGap: '-100%' // 막대들이 겹치게 설정하여 X축 중앙에 위치시킴
+          },
+          {
+            name: '2024년',
+            type: 'bar',
+            data: ['-', 1032, '-'], // 두 번째 칸만 데이터 입력
+            itemStyle: { color: '#dbae6d' },
+            label: { show: true, position: 'top' },
+            barGap: '-100%'
+          },
+          {
+            name: '2025년',
+            type: 'bar',
+            data: ['-', '-', 1140], // 세 번째 칸만 데이터 입력
+            itemStyle: { color: '#FF5B53' },
+            label: { show: true, position: 'top' },
+            barGap: '-100%'
+          }
+        ]
+      };
+      if (option && typeof option === 'object') {
+        myChart.setOption(option);
+      }
+
+      window.addEventListener('resize', myChart.resize);
+
+    }
+
+    function graph03(){
+      var dom = document.getElementById('container03');
+      var myChart = echarts.init(dom, null, {
+        renderer: 'canvas',
+        useDirtyRect: false
+      });
+      var app = {};
+      
+      var option;
+
+      option = {
+        title: [
+          {
+            text: '순이익',
+            left: 'left',
+            textStyle: { fontSize: 18 }
+          },
+          {
+            text: '단위: 억(원)', // 서브텍스트 역할을 할 텍스트
+            right: '0%',         // 오른쪽 끝으로 배치
+            top: '15',            // 상단 여백 조절
+            textStyle: { 
+              fontSize: 14, 
+              color: '#999',
+              fontWeight: 'normal' 
+            }
+          }
+        ],
+        legend: { 
+          bottom: 'bottom', 
+          left: 'center',
+          data: ['2023년', '2024년', '2025년'] // 범례 이름 명시
+        },
+        xAxis: {
+          type: 'category',
+          data: ['2023년', '2024년', '2025년'] // X축 라벨 유지
+        },
+        yAxis: { type: 'value', scale: 'true', min: 1200 },
+        series: [
+          {
+            name: '2023년',
+            type: 'bar',
+            data: [1301, '-', '-'], // 첫 번째 칸만 데이터 입력
+            itemStyle: { color: '#999999' },
+            label: { show: true, position: 'top' },
+            barGap: '-100%' // 막대들이 겹치게 설정하여 X축 중앙에 위치시킴
+          },
+          {
+            name: '2024년',
+            type: 'bar',
+            data: ['-', 1370, '-'], // 두 번째 칸만 데이터 입력
+            itemStyle: { color: '#dbae6d' },
+            label: { show: true, position: 'top' },
+            barGap: '-100%'
+          },
+          {
+            name: '2025년',
+            type: 'bar',
+            data: ['-', '-', 1452], // 세 번째 칸만 데이터 입력
+            itemStyle: { color: '#FF5B53' },
+            label: { show: true, position: 'top' },
+            barGap: '-100%'
+          }
+        ]
+      };
+      if (option && typeof option === 'object') {
+        myChart.setOption(option);
+      }
+
+      window.addEventListener('resize', myChart.resize);
+
+    }
+
+    graph01()
+    graph02()
+    graph03()
+
+  </script>
+</body>
+</html>

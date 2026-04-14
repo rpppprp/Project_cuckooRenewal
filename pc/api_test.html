@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CUCKOO API V2 Tech Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="referrer" content="no-referrer">
+</head>
+<body class="bg-slate-50 p-10">
+
+    <div class="max-w-5xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-2xl font-black text-gray-900 italic">CUCKOO API TEST</h1>
+            <p class="text-gray-500 text-sm">아임웹 Rest API V2 데이터 호출 테스트</p>
+        </header>
+
+        <div id="status" class="mb-6 p-4 rounded bg-white border border-gray-200 text-sm font-mono shadow-sm">
+            준비됨. 테스트 시작 버튼을 눌러주세요.
+        </div>
+
+        <button onclick="startApiTest()" class="bg-black text-white px-6 py-3 rounded-full font-bold hover:bg-red-600 transition-colors mb-10">
+            데이터 호출 시작
+        </button>
+
+        <div id="result-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+    </div>
+
+    <script>
+        const API_KEY = '46d39a0c23157732ee48c6b880699dc9d997f08685';
+        const SECRET_KEY = '8099e88f63bda9ecc66d30';
+        const BASE_URL = 'https://api.imweb.me/v2';
+
+        const statusEl = document.getElementById('status');
+
+        async function startApiTest() {
+            try {
+                // 1. 토큰 발급
+                statusEl.innerText = "Step 1: Access Token 발급 요청 중...";
+                const authRes = await fetch(`${BASE_URL}/auth`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ key: API_KEY, secret: SECRET_KEY })
+                });
+                const authData = await authRes.json();
+                
+                if (!authData.access_token) throw new Error("인증 실패: 키를 확인하세요.");
+                const token = authData.access_token;
+                statusEl.innerText = `✅ 인증 성공! 토큰: ${token.substring(0, 20)}...`;
+
+                // 2. 게시글 목록 호출
+                statusEl.innerText = "Step 2: 게시글 리스트 가져오는 중...";
+                const postRes = await fetch(`${BASE_URL}/community/posts`, {
+                    method: 'GET',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'access-token': token 
+                    }
+                });
+                const postData = await postRes.json();
+                
+                // 3. 렌더링
+                render(postData.list);
+                statusEl.innerText = `🎉 성공: 총 ${postData.list.length}개의 데이터를 가져왔습니다.`;
+
+            } catch (err) {
+                statusEl.innerText = `❌ 에러: ${err.message} (CORS 확장 프로그램을 확인하세요)`;
+                console.error(err);
+            }
+        }
+
+        function render(list) {
+            const grid = document.getElementById('result-grid');
+            grid.innerHTML = list.map(item => {
+                // 이미지 엑박 방지용 프록시 처리
+                const thumb = item.thumbnail_url 
+                    ? `https://wsrv.nl/?url=${encodeURIComponent(item.thumbnail_url)}` 
+                    : 'https://via.placeholder.com/400x250?text=No+Image';
+
+                return `
+                    <div class="bg-white border border-gray-100 shadow-sm rounded-xl overflow-hidden">
+                        <div class="aspect-video bg-gray-100">
+                            <img src="${thumb}" class="w-full h-full object-cover" referrerpolicy="no-referrer">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-gray-900 truncate mb-2">${item.title}</h3>
+                            <p class="text-xs text-gray-400 mb-4">${item.wrote_at.split(' ')[0]}</p>
+                            <div class="text-[10px] text-gray-300 font-mono">ID: ${item.idx}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+    </script>
+</body>
+</html>

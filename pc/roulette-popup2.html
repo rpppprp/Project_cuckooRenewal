@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 이미지맵 적용 샘플</title>
+    <style>
+        .popup-wrapper {
+            max-width: 950px; /* 원본 이미지 사이즈에 맞게 조절 */
+            margin: 0 auto;
+        }
+        img {
+            width: 100%; /* 이미지가 부모 너비에 맞춰 반응형으로 동작 */
+            height: auto;
+            display: block;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="popup-wrapper">
+        <img src="/images/rp.png" usemap="#popup_passible_map" alt="룰렛 결과 팝업">
+
+        <map name="popup_passible_map">
+            <area shape="rect" coords="837,63,917,129" href="javascript:void(0);" onclick="layerPopClose('popup_passible_boom');" alt="팝업닫기">
+            
+            <area shape="rect" coords="229,756,772,834" href="javascript:void(0);" onclick="shareKakao();" alt="공유하고 참여">
+        </map>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // 3. 이미지맵 리사이저 실행
+            // 이 한 줄로 모든 map 태그의 좌표가 이미지 크기에 맞춰 실시간으로 재계산됩니다.
+            $('map').imageMapResize();
+        });
+
+        // 기존 코드에 정의된 함수 예시 (연동 확인용)
+        function layerPopClose(id) {
+            alert(id + ' 팝업을 닫습니다.');
+        }
+
+        function shareKakao() {
+            alert('카카오 공유 기능을 실행합니다.');
+        }
+    </script>
+
+</body>
+</html>
