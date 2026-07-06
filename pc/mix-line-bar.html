@@ -65,13 +65,13 @@
         containLabel: true // 라벨(숫자 등)이 잘리지 않게 그리드 안으로 포함
       },
       legend: {
-        data: ['당기순이익', '현금배당금총액', '배당수익률', '배당성향'],
+        data: ['주당배당금', '배당수익률', '배당성향'],
         bottom: 0
       },
       xAxis: [
         {
           type: 'category',
-          data: ['2022', '2023', '2024'],
+          data: ['제45기', '제46기', '제47기', '제48기', '제49기'],
           axisPointer: { type: 'shadow' }
         }
       ],
@@ -99,25 +99,18 @@
       ],
       series: [
         {
-          name: '당기순이익',
+          name: '주당배당금',
           type: 'bar',
           tooltip: { valueFormatter: (value) => value.toLocaleString() + ' 백만원' },
-          data: [116689, 130122, 137040],
+          data: [700, 800, 1100, 1200, 1550],
           itemStyle: { color: '#5470c6' }
-        },
-        {
-          name: '현금배당금총액',
-          type: 'bar',
-          tooltip: { valueFormatter: (value) => value.toLocaleString() + ' 백만원' },
-          data: [24863, 34186, 37294],
-          itemStyle: { color: '#91cc75' }
         },
         {
           name: '배당수익률',
           type: 'line',
           yAxisIndex: 1, // 오른쪽 Y축 사용
           tooltip: { valueFormatter: (value) => value + ' %' },
-          data: [4.8, 6.6, 5.0],
+          data: [3.6, 4.8, 6.6, 5.0, 5.1],
           itemStyle: { color: '#fac858' }
         },
         {
@@ -125,7 +118,7 @@
           type: 'line',
           yAxisIndex: 1, // 오른쪽 Y축 사용
           tooltip: { valueFormatter: (value) => value + ' %' },
-          data: [21.31, 26.27, 27.21],
+          data: [16.82, 21.31, 26.27, 27.16, 33.09],
           itemStyle: { color: '#ee6666' }
         }
       ]

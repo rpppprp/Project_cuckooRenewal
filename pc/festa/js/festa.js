@@ -88,7 +88,7 @@ $(function(){
 	const $rs_minutes = $rs_timer.find(".minutes");
 	const $rs_seconds = $rs_timer.find(".seconds");
 	
-	let timerInterval; // 🔸 선언을 위로 올림
+	let timerInterval; // 선언을 위로 올림
 	
 	function updateCountdown() {
 	    const rs_now = new Date().getTime();

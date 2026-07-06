@@ -1,0 +1,114 @@
+
+<!--
+  사용법
+  1. 상품 상세페이지에서 통이미지(<img> 태그) 바로 아래에 이 코드 전체를 붙여넣으세요.
+  2. [1]번 구간의 값만 상품에 맞게 수정하세요.
+  3. [2]번 구간은 절대 수정하지 말고 그대로 두세요. 모든 상품에 동일하게 재사용합니다.
+  4. 상품이 바뀌면 이 파일 전체를 복사해서 [1]번 값만 다시 채운 뒤 붙여넣으면 됩니다.
+-->
+
+<!-- 기존 통이미지 (그대로 유지, 수정 불필요) -->
+<!--
+<img src="/images/product/CRP-P0610FD/detail.jpg" alt="쿠쿠 트윈프레셔 6인용 밥솥 상세이미지">
+-->
+
+<!-- ========================================================= -->
+<!-- [1] 상품별로 이 값만 수정하세요 -->
+<!-- ========================================================= -->
+<script id="cuckoo-aeo-data" type="application/json">
+    {
+      "name": "쿠쿠 트윈프레셔 전기압력밥솥 6인용 CRP-P0610FD",
+      "modelCode": "CRP-P0610FD",
+      "price": 329000,
+      "inStock": true,
+      "pageUrl": "https://www.cuckoo.co.kr/product/CRP-P0610FD",
+      "imageUrl": "https://cdn.cuckoo.co.kr/upload_cuckoo/_bo_mall/product/file_f2d28b4a-0b55-4401-b77d-1b7d2d7b9b06.png",
+      "summary": "쿠쿠 트윈프레셔 밥솥은 두 개의 압력 방식을 결합해 백미부터 잡곡까지 균일한 취사가 가능한 6인용 전기압력밥솥입니다.",
+      "features": [
+        "백미/잡곡/누룽지 등 12가지 메뉴 자동 설정",
+        "스팀워시 자동 세척 기능",
+        "보온 24시간 유지"
+      ],
+      "faqs": [
+        { "q": "잡곡밥도 가능한가요?", "a": "네, 트윈프레셔 방식으로 백미부터 잡곡, 현미까지 12가지 취사 모드를 지원합니다." },
+        { "q": "보온 유지 시간은 얼마나 되나요?", "a": "최대 24시간까지 보온 상태를 유지할 수 있습니다." }
+      ],
+      "ratingValue": 4.7,
+      "reviewCount": 312
+    }
+    </script>
+    
+    <!-- ========================================================= -->
+    <!-- [2] 아래는 수정하지 말고 모든 상품 페이지에 동일하게 붙여넣으세요 -->
+    <!-- ========================================================= -->
+    <script>
+    (function () {
+      var dataEl = document.getElementById('cuckoo-aeo-data');
+      if (!dataEl) return;
+      var p = JSON.parse(dataEl.textContent);
+    
+      /* 1) Product 구조화 데이터 생성 → <head>에 삽입 (화면엔 보이지 않음) */
+      var productLd = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": p.name,
+        "image": [p.imageUrl],
+        "description": p.summary,
+        "sku": p.modelCode,
+        "brand": { "@type": "Brand", "name": "CUCKOO" },
+        "offers": {
+          "@type": "Offer",
+          "url": p.pageUrl,
+          "priceCurrency": "KRW",
+          "price": String(p.price),
+          "availability": p.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+        }
+      };
+      if (p.reviewCount > 0) {
+        productLd.aggregateRating = {
+          "@type": "AggregateRating",
+          "ratingValue": String(p.ratingValue),
+          "reviewCount": String(p.reviewCount)
+        };
+      }
+      var productScript = document.createElement('script');
+      productScript.type = 'application/ld+json';
+      productScript.textContent = JSON.stringify(productLd);
+      document.head.appendChild(productScript);
+    
+      /* 2) FAQ 구조화 데이터 생성 → <head>에 삽입 */
+      if (p.faqs && p.faqs.length) {
+        var faqLd = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": p.faqs.map(function (f) {
+            return {
+              "@type": "Question",
+              "name": f.q,
+              "acceptedAnswer": { "@type": "Answer", "text": f.a }
+            };
+          })
+        };
+        var faqScript = document.createElement('script');
+        faqScript.type = 'application/ld+json';
+        faqScript.textContent = JSON.stringify(faqLd);
+        document.head.appendChild(faqScript);
+      }
+    
+      /* 3) 눈에 보이는 시맨틱 텍스트 블록 생성 → 통이미지 바로 아래에 노출 */
+      var featuresHtml = p.features.map(function (f) {
+        return '<li>' + f + '</li>';
+      }).join('');
+    
+      var block = document.createElement('section');
+      block.setAttribute('aria-label', '상품 상세 요약');
+      block.style.cssText = 'max-width:720px;margin:24px auto;padding:0 16px;color:#333;line-height:1.6;';
+      block.innerHTML =
+        '<h2 style="font-size:18px;font-weight:700;margin:0 0 8px;">' + p.name + '</h2>' +
+        '<p style="font-size:14px;margin:0 0 12px;">' + p.summary + '</p>' +
+        '<ul style="font-size:14px;padding-left:18px;margin:0;">' + featuresHtml + '</ul>';
+    
+      dataEl.insertAdjacentElement('afterend', block);
+    })();
+    </script>
+    

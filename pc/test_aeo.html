@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>쿠쿠 AEO 코드 테스트</title>
+</head>
+<body>
+
+    <!-- 기존 통이미지 영역 -->
+    <div style="text-align: center; background: #f5f5f5; padding: 50px 0; font-weight: bold;">
+        <img src="./images/sample_detail.jpg">
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- [1] 정수기 데이터 입력 구간 -->
+    <!-- ========================================================= -->
+    <script id="cuckoo-aeo-data" type="application/json">
+    {
+      "name": "쿠쿠 인스퓨어 MINI100 초소형 정수기",
+      "modelCode": "CP-AMS100EWH",
+      "price": 0,
+      "inStock": true,
+      "pageUrl": "https://www.cuckoo.co.kr/",
+      "imageUrl": "https://cdn.cuckoo.co.kr/upload_cuckoo/_bo_mall/product/2228346c-c3bf-4301-a89c-be586a2a4719.png",
+      "summary": "16cm 폭의 초소형 직수 정수기로 주방 공간을 효율적으로 활용할 수 있으며, 100°C 끓는 물 출수 기능과 안심 자동 살균 시스템을 갖춘 프리미엄 정수기입니다.",
+      "features": [
+        "공간을 넓히는 16cm 초슬림 미니멀 디자인",
+        "커피, 라면까지 완벽한 100°C 끓는 물 출수",
+        "취향에 맞게 조절하는 냉수 4단계 및 온수 7단계 조절",
+        "원터치 및 5일 주기 관로·코크 안심 자동 살균 시스템",
+        "중금속과 노로바이러스를 제거하는 9단계 프리미엄 필터 시스템"
+      ],
+      "faqs": [
+        { "q": "약냉수 모드는 무엇인가요?", "a": "사용자의 취향에 따라 냉수 온도를 10°C, 15°C, 20°C 등 세밀하게 조절하여 마시기 좋은 온도로 출수하는 기능입니다." },
+        { "q": "필터 교체는 혼자서도 가능한가요?", "a": "네, 전면부 도어를 열고 가볍게 돌려 빼는 원터치 방식으로 누구나 쉽게 셀프 교체가 가능합니다." }
+      ],
+      "ratingValue": 4.8,
+      "reviewCount": 150
+    }
+    </script>
+        
+    <!-- ========================================================= -->
+    <!-- [2] 로직 수행 구간 (수정 금지) -->
+    <!-- ========================================================= -->
+    <script>
+    (function () {
+      var dataEl = document.getElementById('cuckoo-aeo-data');
+      if (!dataEl) return;
+      var p = JSON.parse(dataEl.textContent);
+    
+      /* 1) Product 구조화 데이터 생성 → <head>에 삽입 */
+      var productLd = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": p.name,
+        "image": [p.imageUrl],
+        "description": p.summary,
+        "sku": p.modelCode,
+        "brand": { "@type": "Brand", "name": "CUCKOO" },
+        "offers": {
+          "@type": "Offer",
+          "url": p.pageUrl,
+          "priceCurrency": "KRW",
+          "price": String(p.price),
+          "availability": p.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+        }
+      };
+      if (p.reviewCount > 0) {
+        productLd.aggregateRating = {
+          "@type": "AggregateRating",
+          "ratingValue": String(p.ratingValue),
+          "reviewCount": String(p.reviewCount)
+        };
+      }
+      var productScript = document.createElement('script');
+      productScript.type = 'application/ld+json';
+      productScript.textContent = JSON.stringify(productLd);
+      document.head.appendChild(productScript);
+    
+      /* 2) FAQ 구조화 데이터 생성 → <head>에 삽입 */
+      if (p.faqs && p.faqs.length) {
+        var faqLd = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": p.faqs.map(function (f) {
+            return {
+              "@type": "Question",
+              "name": f.q,
+              "acceptedAnswer": { "@type": "Answer", "text": f.a }
+            };
+          })
+        };
+        var faqScript = document.createElement('script');
+        faqScript.type = 'application/ld+json';
+        faqScript.textContent = JSON.stringify(faqLd);
+        document.head.appendChild(faqScript);
+      }
+    
+      /* 3) 시맨틱 텍스트 블록 생성 → 이미지 아래 노출 */
+      var featuresHtml = p.features.map(function (f) {
+        return '<li>' + f + '</li>';
+      }).join('');
+    
+      var block = document.createElement('section');
+      block.setAttribute('aria-label', '상품 상세 요약');
+      block.style.cssText = 'max-width:720px;margin:24px auto;padding:0 16px;color:#333;line-height:1.6;';
+      block.innerHTML =
+        '<h2 style="font-size:18px;font-weight:700;margin:0 0 8px;">' + p.name + '</h2>' +
+        '<p style="font-size:14px;margin:0 0 12px;">' + p.summary + '</p>' +
+        '<ul style="font-size:14px;padding-left:18px;margin:0;">' + featuresHtml + '</ul>';
+    
+      dataEl.insertAdjacentElement('afterend', block);
+    })();
+    </script>
+
+</body>
+</html>

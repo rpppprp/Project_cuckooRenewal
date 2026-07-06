@@ -1,0 +1,197 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=bar-stack-normalization
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <style>
+
+    .wrap {
+      width:1074px;
+      margin:50px auto;
+    }
+
+  </style>
+
+</head>
+<body style="height: 100%; margin: 0">
+  <div class="wrap">
+    <div id="container" style="width:100%; height: 420px"></div>
+  </div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    // There should not be negative values in rawData
+const rawData = [
+  [100, 302, 301, 334, 390, 330, 320],
+  [320, 132, 101, 134, 90, 230, 210],
+  [220, 182, 191, 234, 290, 330, 310],
+  [150, 212, 201, 154, 190, 330, 410],
+  [820, 832, 901, 934, 1290, 1330, 1320]
+];
+const totalData = [];
+for (let i = 0; i < rawData[0].length; ++i) {
+  let sum = 0;
+  for (let j = 0; j < rawData.length; ++j) {
+    sum += rawData[j][i];
+  }
+  totalData.push(sum);
+}
+const series = [
+  'Direct',
+  'Mail Ad',
+  'Affiliate Ad',
+  'Video Ad',
+  'Search Engine'
+].map((name, sid) => {
+  return {
+    name,
+    type: 'bar',
+    stack: 'total',
+    barWidth: '60%',
+    label: {
+      show: true,
+      formatter: (params) => Math.round(params.value * 1000) / 10 + '%'
+    },
+    data: rawData[sid].map((d, did) =>
+      totalData[did] <= 0 ? 0 : d / totalData[did]
+    )
+  };
+});
+option = {
+  // 1. 전체 화면(1440px) 대비 차트 영역 비율 조절 (여백 최적화)
+  grid: {
+    top: '8%',      // 상단 여백 축소 (기존 15%)
+    bottom: '12%',  // 하단 범례 공간만 남기고 축소 (기존 15%)
+    left: '3%',     // 좌측 여백 축소 (기존 5%)
+    right: '3%',    // 우측 여백 축소 (기존 5%)
+    containLabel: true
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: { type: 'shadow' }
+  },
+  // 2. 하단 범례 설정
+  legend: {
+    bottom: '5%',
+    data: ['정수기', '공기청정기', '전기밥솥', '음식물처리기', '펫드라이룸', '합계']
+  },
+  xAxis: {
+    type: 'category',
+    data: ['2022년', '2023년', '2024년']
+  },
+  // 3. Y축 단위 및 텍스트 상단 정렬 설정
+  yAxis: {
+    type: 'value',
+    name: '사용량 (TON)',
+    nameLocation: 'end',
+    nameGap: 20,
+    nameTextStyle: {
+      align: 'left',
+      padding: [0, 0, 0, -40] // 축 라인 위로 텍스트 정렬
+    },
+    axisLabel: {
+      formatter: (value) => value.toLocaleString()
+    }
+  },
+  series: [
+    // 4. 누적 막대 데이터 (barWidth를 '35%'로 줄여서 슬림하게 처리)
+    { 
+      name: '정수기', 
+      type: 'bar', 
+      stack: 'total', 
+      barWidth: '35%', 
+      data: [151.2, 274.7, 446.2], 
+      itemStyle: { color: '#56a3f1' } 
+    },
+    { 
+      name: '공기청정기', 
+      type: 'bar', 
+      stack: 'total', 
+      barWidth: '35%', 
+      data: [132.8, 251.5, 434.5], 
+      itemStyle: { color: '#f88c3d' } 
+    },
+    { 
+      name: '전기밥솥', 
+      type: 'bar', 
+      stack: 'total', 
+      barWidth: '35%', 
+      data: [0, 16792.0, 9175.0], 
+      itemStyle: { color: '#a6a6a6' } 
+    },
+    { 
+      name: '음식물처리기', 
+      type: 'bar', 
+      stack: 'total', 
+      barWidth: '35%', 
+      data: [0, 22438.0, 29448.0], 
+      itemStyle: { color: '#ffc000' } 
+    },
+    { 
+      name: '펫드라이룸', 
+      type: 'bar', 
+      stack: 'total', 
+      barWidth: '35%', 
+      data: [0, 0, 377.0], 
+      itemStyle: { color: '#4171cd' } 
+    },
+    // 5. 합계 꺾은선 (막대와 같은 Y축을 바라보게 연동 및 상단 라벨 추가)
+    {
+      name: '합계',
+      type: 'line',
+      data: [283.9, 39756.3, 39880.7],
+      itemStyle: { color: '#70ad47' },
+      lineStyle: { width: 3 },
+      label: {
+        show: true,
+        position: 'top',
+        distance: 10,
+        color: '#000',
+        fontWeight: 'bold',
+        formatter: (params) => params.value.toLocaleString() + ' 톤'
+      }
+    }
+  ]
+};
+
+if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

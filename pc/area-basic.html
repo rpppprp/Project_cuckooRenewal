@@ -1,0 +1,111 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=area-basic
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <style>
+
+    .wrap {
+      width:1440px;
+      margin:50px auto;
+    }
+
+  </style>
+
+</head>
+<body style="height: 100%; margin: 0">
+  <div class="wrap">
+    <div id="container" style="width:680px; height: 300px"></div>
+  </div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+      tooltip: {
+        trigger: 'axis',
+        valueFormatter: (value) => value.toLocaleString() + '원'
+      },
+      grid: {
+        left: '5%',
+        right: '5%',
+        bottom: '10%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: false, // 차트 양 끝 여백 제거
+        data: [
+          '04-01', '04-03', '04-07', '04-10', '04-14', 
+          '04-17', '04-21', '04-24', '04-27'
+        ]
+      },
+      yAxis: {
+        type: 'value',
+        scale: true, // 0부터 시작하지 않고 데이터 범위에 맞춰 축 자동 조절 (필수)
+        axisLabel: {
+          formatter: (value) => value.toLocaleString()
+        }
+      },
+      series: [
+        {
+          name: '종가',
+          type: 'line',
+          smooth: true, // 선을 부드럽게
+          symbol: 'none', // 데이터 점 숨기기
+          data: [28050, 27650, 27300, 27700, 28000, 29100, 28900, 29100, 29200],
+          lineStyle: {
+            color: '#3452ff',
+            width: 2
+          },
+          areaStyle: {
+            // 하단 그라데이션 적용
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: 'rgba(52, 82, 255, 0.5)' },
+              { offset: 1, color: 'rgba(52, 82, 255, 0)' }
+            ])
+          }
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

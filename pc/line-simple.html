@@ -1,0 +1,114 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=line-simple
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <style>
+
+    .wrap {
+      width:600px;
+      margin:50px auto;
+    }
+
+  </style>
+
+</head>
+<body style="height: 100%; margin: 0">
+<div class="wrap">
+  <div id="container" style="height: 350px"></div>
+</div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  // 전체 화면 대비 여백 및 정렬 최적화
+  grid: {
+    left: '8%',
+    right: '8%',
+    top: '15%',
+    bottom: '15%',
+    containLabel: true
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  xAxis: {
+    type: 'category',
+    // 양 끝 여백을 두어 꺾은선 시작점과 끝점이 축선에 붙지 않게 처리
+    boundaryGap: true, 
+    data: ['2023년', '2024년', '2025년', '2026년(진행중)']
+  },
+  yAxis: {
+    type: 'value',
+    name: '(개)',
+    nameLocation: 'end',
+    nameGap: 20,
+    nameTextStyle: {
+      align: 'left',
+      padding: [0, 0, 0, -30] // 축 라인 위로 텍스트 정렬
+    },
+    // 데이터 범위(7~235)에 맞춰 그리드가 예쁘게 잡히도록 최대값 설정
+    min: 0,
+    max: 250,
+    interval: 50
+  },
+  series: [
+    {
+      name: '모델수',
+      type: 'line',
+      data: [7, 17, 235, 50],
+      itemStyle: { color: '#56a3f1' },
+      lineStyle: { width: 3 },
+      // 꺾은선 꼭짓점 위에 "X개 모델" 라벨 표시
+      label: {
+        show: true,
+        position: 'top', // 꼭짓점 바로 위에 배치
+        distance: 10,
+        color: '#000',
+        fontWeight: 'normal',
+        formatter: (params) => params.value + '개 모델'
+      }
+    }
+  ]
+};
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

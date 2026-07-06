@@ -1,0 +1,165 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=bar-stack-normalization
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <style>
+
+    .wrap {
+      width:1074px;
+      margin:50px auto;
+    }
+
+  </style>
+
+</head>
+<body style="height: 100%; margin: 0">
+  <div class="wrap">
+    <div id="container" style="width:100%; height: 420px"></div>
+  </div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    // There should not be negative values in rawData
+const rawData = [
+  [100, 302, 301, 334, 390, 330, 320],
+  [320, 132, 101, 134, 90, 230, 210],
+  [220, 182, 191, 234, 290, 330, 310],
+  [150, 212, 201, 154, 190, 330, 410],
+  [820, 832, 901, 934, 1290, 1330, 1320]
+];
+const totalData = [];
+for (let i = 0; i < rawData[0].length; ++i) {
+  let sum = 0;
+  for (let j = 0; j < rawData.length; ++j) {
+    sum += rawData[j][i];
+  }
+  totalData.push(sum);
+}
+const series = [
+  'Direct',
+  'Mail Ad',
+  'Affiliate Ad',
+  'Video Ad',
+  'Search Engine'
+].map((name, sid) => {
+  return {
+    name,
+    type: 'bar',
+    stack: 'total',
+    barWidth: '60%',
+    label: {
+      show: true,
+      formatter: (params) => Math.round(params.value * 1000) / 10 + '%'
+    },
+    data: rawData[sid].map((d, did) =>
+      totalData[did] <= 0 ? 0 : d / totalData[did]
+    )
+  };
+});
+option = {
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: { type: 'shadow' }
+  },
+  legend: {
+    bottom: '5%',
+    data: ['음식물처리기', '냉장고', '밥솥', '인덕션레인지', '공기청정기', '정수기', '김치냉장고', '무선청소기', '냉동고', '총계']
+  },
+  grid: {
+  top: '8%',      // 상단 여백 축소 (기존 15%)
+  bottom: '12%',  // 하단 범례 공간만 남기고 축소 (기존 15%)
+  left: '3%',     // 좌측 여백 축소 (기존 5%)
+  right: '3%',    // 우측 여백 축소 (기존 5%)
+  containLabel: true
+},
+  // 양쪽에 Y축 배치 (이미지 형태 반영)
+  yAxis: [
+    { type: 'value', min: 0, max: 120, interval: 20 },
+    { type: 'value', min: 0, max: 120, interval: 20 }
+  ],
+  xAxis: {
+    type: 'category',
+    data: ['2023', '2024', '2025']
+  },
+  series: [
+    // 1. 누적 막대 데이터 (stack 값을 동일하게 맞춤)
+    { name: '음식물처리기', type: 'bar', stack: 'total',barWidth: '35%', data: [0, 7, 10], itemStyle: { color: '#56a3f1' } },
+    { name: '냉장고', type: 'bar', stack: 'total',barWidth: '35%', data: [0, 0, 2], itemStyle: { color: '#f88c3d' } },
+    { name: '밥솥', type: 'bar', stack: 'total',barWidth: '35%', data: [0, 0, 31], itemStyle: { color: '#a6a6a6' } },
+    { name: '인덕션레인지', type: 'bar', stack: 'total',barWidth: '35%', data: [0, 0, 7], itemStyle: { color: '#ffc000' } },
+    { name: '공기청정기', type: 'bar', stack: 'total',barWidth: '35%', data: [38, 38, 38], itemStyle: { color: '#4171cd' } },
+    { name: '정수기', type: 'bar', stack: 'total',barWidth: '35%', data: [0, 4, 4], itemStyle: { color: '#70ad47' } },
+    { name: '김치냉장고', type: 'bar', stack: 'total',barWidth: '35%', data: [0, 0, 2], itemStyle: { color: '#1f4e79' } },
+    { name: '무선청소기', type: 'bar', stack: 'total',barWidth: '35%', data: [0, 0, 2], itemStyle: { color: '#843c0c' } },
+    { name: '냉동고', type: 'bar', stack: 'total',barWidth: '35%', data: [0, 0, 2], itemStyle: { color: '#595959' } },
+
+    // 2. 총계 꺾은선 데이터 및 상단 텍스트 라벨 추가
+    {
+      name: '총계',
+      type: 'line',
+      yAxisIndex: 0,
+      data: [38, 49, 98],
+      itemStyle: { color: '#806000' },
+      lineStyle: { width: 3 },
+      // 그래프 상단의 "X개 제품군 X개 모델" 텍스트 매핑
+      label: {
+        show: true,
+        position: 'top',
+        distance: 10,
+        color: '#000',
+        fontSize: 13,
+        formatter: function (params) {
+          const labels = [
+            '1개 제품군\n38개 모델',
+            '2개 제품군\n49개 모델',
+            '9개 제품군\n98개 모델'
+          ];
+          return labels[params.dataIndex];
+        }
+      }
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

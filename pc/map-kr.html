@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>CUCKOO Global Network (Leaflet)</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <style>
+        body {
+            background:#f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper {
+            background:#fff;
+            width: 100%;
+            margin: 50px auto;
+        }
+        /* 지도가 그려질 영역 */
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+        
+        /* 툴팁/팝업 세련되게 스타일 수정 (선택) */
+        .custom-popup .leaflet-popup-content-wrapper {
+            background: #333;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+        .custom-popup .leaflet-popup-tip {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            // 1. 지도 초기화: 한국 중심 좌표 [위도, 경도] 설정 및 줌 레벨(5) 지정
+            // 전 세계가 적당히 보이면서 한국이 중심에 오도록 잡았습니다.
+            const map = L.map('map').setView([36.0000, 127.5000], 5);
+
+            // 2. 무료 지도 타일(디자인) 로드 - CartoDB Positron (깔끔한 그레이톤 배경)
+            // 기업에서 무료로 쓸 수 있고 마커가 가장 돋보이는 오픈소스 타일입니다.
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd',
+                maxZoom: 20
+            }).addTo(map);
+
+            // 3. 커스텀 빨간색 마커 아이콘 설정
+            const redIcon = L.divIcon({
+                className: 'custom-marker',
+                html: `<div style="
+                    width: 14px; 
+                    height: 14px; 
+                    background-color: #E30613; 
+                    border: 3px solid #fff; 
+                    border-radius: 50%; 
+                    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+                "></div>`,
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
+            });
+
+            // 4. 마커 데이터 및 상시 노출될 팝업 텍스트 설정
+            // 4. 실제 주소 기반 마커 데이터 갱신 (좌표 수정 완료)
+            const locations = [
+                { 
+                    name: '쿠쿠전자 & 홀딩스 & 사회복지재단<br><span style="font-size:12px; color:#aaa;">경상남도 양산시 유산공단2길 14</span>', 
+                    coords: [35.3468, 129.0125] 
+                },
+                { 
+                    name: '쿠쿠홈시스<br><span style="font-size:12px; color:#aaa;">경기도 시흥시 엠티브이북로 349</span>', 
+                    coords: [37.3195, 126.6980] 
+                },
+                { 
+                    name: '엔탑<br><span style="font-size:12px; color:#aaa;">경상남도 양산시 충렬로 129</span>', 
+                    coords: [35.3512, 129.0195] // 양산 내에서 쿠쿠전자와 겹치지 않도록 미세 조정
+                }
+            ];
+
+            // 5. 지도에 마커 찍기 및 툴팁 연결
+            locations.forEach(function(loc) {
+                L.marker(loc.coords, { icon: redIcon })
+                 .addTo(map)
+                 .bindPopup(loc.name, { 
+                     className: 'custom-popup', 
+                     closeButton: false, 
+                     offset: [0, -5] 
+                 })
+                 .openPopup(); // 이 코드를 넣으면 마우스 안 올려도 툴팁이 상시 노출됩니다.
+            });
+        });
+    </script>
+
+</body>
+</html>
